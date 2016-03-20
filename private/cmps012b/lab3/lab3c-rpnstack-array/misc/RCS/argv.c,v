@@ -1,0 +1,149 @@
+head	1.6;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.6
+date	2013.09.25.21.08.47;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2013.09.25.21.08.34;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.09.25.21.08.21;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.09.25.20.23.16;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.04.10.03.33.23;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.01.23.01.16.06;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@-
+@
+text
+@// $Id: argv.c,v 1.5 2013-09-25 14:08:34-07 - - $
+
+//
+// NAME
+//    argv - display the argument vector
+//
+// SYNOPSIS
+//    argv [operands...]
+//
+// DESCRIPTION
+//    Whatever arguments are given are printed out.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (int argc, char **argv) {
+   for (int argi = 0; argi < argc; ++argi) {
+      printf ("argv[%d]=(%s)\n", argi, argv[argi]);
+   }
+   return EXIT_SUCCESS;
+}
+
+//TEST// ./argv hello world foo bar baz >argv.lis1 2>&1
+//TEST// ./argv *.c >argv.lis2 2>&1
+//TEST// mkpspdf argv.ps argv.c* argv.lis?
+
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: argv.c,v 1.4 2013-09-25 14:08:21-07 - - $
+d20 1
+a20 1
+   };
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: argv.c,v 1.3 2013-09-25 13:23:16-07 - - $
+d25 1
+a25 1
+//TEST// ./argv *.c pstatus) >argv.lis2 2>&1
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: argv.c,v 1.2 2013-04-09 20:33:23-07 - - $
+d24 2
+a25 2
+//TEST// (./argv hello world foo bar baz; pstatus) >argv.lis1 2>&1
+//TEST// (./argv *.c; pstatus) >argv.lis2 2>&1
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: argv.c,v 1.1 2013-01-22 17:16:06-08 - - $
+d24 2
+a25 2
+//TEST// runprog -x argv.lis1 ./argv hello world foo bar baz
+//TEST// runprog -x argv.lis2 ./argv *.c
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: argv.c,v 1.6 2011-01-14 18:03:01-08 - - $
+d24 2
+a25 3
+//TEST// runprog -x argv.lis1 ./argv *.c
+//TEST// runprog -x argv.lis2 ./argv $PWD
+//TEST// runprog -x argv.lis3 ./argv 'foo bar' "    baz|qux   "
+@

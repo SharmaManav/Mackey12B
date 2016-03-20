@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting catbyline.c
+catbyline.c:
+     $Id: catbyline.c,v 1.5 2014-01-28 17:59:24-08 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 catbyline.c
+	-o catbyline -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f catbyline.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished catbyline.c

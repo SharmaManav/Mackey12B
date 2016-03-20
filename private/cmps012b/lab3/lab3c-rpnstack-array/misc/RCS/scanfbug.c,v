@@ -1,0 +1,227 @@
+head	1.9;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.9
+date	2013.09.25.21.54.29;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2013.01.23.02.05.49;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2013.01.23.02.05.09;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2013.01.23.02.04.19;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2013.01.23.02.03.52;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.01.23.02.02.41;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.01.23.02.01.28;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.01.23.02.01.13;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.01.23.01.58.56;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.9
+log
+@-
+@
+text
+@// $Id: scanfbug.c,v 1.8 2013-01-22 18:05:49-08 - - $
+//
+// NAME
+//    scanfbug - illustrate bug in scanf.
+//
+// DESCRIPTION
+//    Uses %lg to read and print numbers or errors out for non-numbers.
+//    But fails to recognize a lone + or - on input.
+
+
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (void) {
+   int exit_status = EXIT_SUCCESS;
+   for (;;) {
+      double number;
+      int scanrc = scanf ("%lg", &number);
+      if (scanrc == EOF) break;
+      if (scanrc == 1) {
+         printf ("number = %.15g\n", number);
+      }else {
+         exit_status = EXIT_FAILURE;
+         char buffer[1024];
+         scanrc = scanf ("%1023s", buffer);
+         assert (scanrc == 1);
+         printf ("bad input \"%s\"\n", buffer);
+      }
+   }
+   return exit_status;
+}
+
+/*
+//TEST// (echo 34 92.6 123foob + - 38 - + +3 -33 infinity \
+//TEST// +infinity -infinity nan - 43 end \
+//TEST// | ./scanfbug; echo status = $?) >scanfbug.lis 2>&1
+//TEST// mkpspdf scanfbug.ps scanfbug.c* scanfbug.lis
+*/
+
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: scanfbug.c,v 1.7 2013-01-22 18:05:09-08 - - $
+d34 4
+a37 3
+//TEST// echo 34 92.6 123foob + - 38 - + +3 -33 infinity >scanfbug.in
+//TEST// echo +infinity -infinity nan - 43 end >>scanfbug.in
+//TEST// runprog -0scanfbug.in -x scanfbug.lis ./scanfbug
+d39 1
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: scanfbug.c,v 1.6 2013-01-22 18:04:19-08 - - $
+d34 2
+a35 3
+/*
+//TEST// echo 34 92.6 123foob + - 38 - + +3 -33 infinity \
+//TEST// -infinity nan - 43 >scanfbug.in
+a37 1
+*/
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: scanfbug.c,v 1.5 2013-01-22 18:03:52-08 - - $
+d34 3
+a36 1
+//TEST// echo 34 92.6 123foob + - 38 - + +3 -33 infinity >scanfbug.in
+d39 1
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: scanfbug.c,v 1.4 2013-01-22 18:02:41-08 - - $
+d28 1
+a28 1
+         fprintf (stderr, "bad input \"%s\"\n", buffer);
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: scanfbug.c,v 1.3 2013-01-22 18:01:28-08 - - $
+d34 2
+a35 3
+/*
+//TEST// echo 34 92.6 123foob + - 38 - + +3 -33 infinity \
+//TEST// | runprog -0- -x scanfbug.lis ./scanfbug
+a36 1
+*/
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: scanfbug.c,v 1.2 2013-01-22 18:01:13-08 - - $
+d36 1
+a36 1
+//TEST// | runprog -x scanfbug.lis ./scanfbug
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: scanfbug.c,v 1.1 2013-01-22 17:58:56-08 - - $
+d34 1
+d38 1
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id$
+d4 1
+a4 1
+//    stdinbug - illustrate bug in scanf.
+d33 5
+@

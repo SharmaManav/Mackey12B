@@ -1,0 +1,55 @@
+$Id: SCORE,v 1.5 2015-01-08 18:54:01-08 - - $
+
+Verify that the student has submitted files that satisfy the
+requirements of each sections.
+
+Assign 3 points for each satisfactory file and 0 for an
+unsatisfactory file or no file submitted.
+
+(1a) hello.java
+     - has an RCS Id with at least version 1.3
+     - satisfies specifications
+
+(2a) mkhello
+     - has #!/bin/bash
+     - has the x bit turned on
+     - has an RCS Id
+
+(2b) mkhello
+     - when run, creates a jar file called hello and removes
+       the Manifest and hello.class files.
+
+(3a) testhello
+     - has the #! and an RCS Id, x bit set
+     - run the script.
+
+(3b) testhello
+     - when the script is run, creates 6 files.
+       test1.out has the message
+       test1.err is empty
+       test1.status says status is 0
+       test2.out is empty
+       test2.err has the usage message
+       test2.status says status is 1
+
+(4a) ~/.bashrc
+     - contains the lines required by this section
+       (may have more lines as well)
+
+(5a) ~/.bashrc
+     - contains the aliases required by section (5)
+       (may have more lines as well)
+
+(6a) links
+     contains the correct information about the link to 12B
+     from their home directory
+
+(7a) grep for submits
+
+(xx) ./check
+     run the check script from the .score directory
+     there should be no complaints about submitted files
+
+TOTALSCORE=
+min 1, max 30
+

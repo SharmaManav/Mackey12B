@@ -1,0 +1,3006 @@
+%PDF-1.4
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 10 Tf
+1 0 0 1 72 744 Tm
+113.45 Tw
+(STRFTIME\(3\) Linux)Tj
+202.34 0 Td
+(Programmer')Tj
+2.5 Tc
+52.7699 0 Td
+(sM)Tj
+0 Tc
+15.2801 0 Td
+(anual STRFTIME\(3\))Tj
+-0.219 Tc
+/R10 10.95 Tf
+-270.39 -36 Td
+(NA)Tj
+0 Tc
+15.593 0 Td
+(ME)Tj
+/R8 10 Tf
+20.407 -12 Td
+0 Tw
+(strftime \255 format date and time)Tj
+/R10 10.95 Tf
+-36 -16.8 Td
+(SYNOPSIS)Tj
+/R10 10 Tf
+36 -12 Td
+(#include <time.h>)Tj
+24 TL
+(size_t strftime\(char *)'
+/R12 10 Tf
+90.8602 0 Td
+(s)Tj
+2.5 Tc
+/R10 10 Tf
+4.16016 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+(ize_t)Tj
+/R12 10 Tf
+22.8699 0 Td
+(max)Tj
+2.5 Tc
+/R10 10 Tf
+17.1898 0 Td
+(,c)Tj
+0 Tc
+9.43984 0 Td
+(onst char *)Tj
+/R12 10 Tf
+49.1898 0 Td
+(format)Tj
+/R10 10 Tf
+27.35 0 Td
+(,)Tj
+-189.95 -12 Td
+(const struct tm *)Tj
+/R12 10 Tf
+71.5 0 Td
+(tm)Tj
+/R10 10 Tf
+10.3199 0 Td
+(\);)Tj
+/R10 10.95 Tf
+-157.82 -16.8 Td
+(DESCRIPTION)Tj
+/R8 10 Tf
+36 -12 Td
+(The)Tj
+/R10 10 Tf
+18.2801 0 Td
+(strftime)Tj
+/R8 10 Tf
+33.8699 0 Td
+0.23 Tw
+(\(\) function formats the brok)Tj
+111.91 0 Td
+(en-do)Tj
+22.5199 0 Td
+(wn time)Tj
+/R12 10 Tf
+35.5898 0 Td
+(tm)Tj
+/R8 10 Tf
+13.05 0 Td
+(according to the format speci\214cation)Tj
+/R12 10 Tf
+152.26 0 Td
+(format)Tj
+/R8 10 Tf
+30.0801 0 Td
+(and)Tj
+-417.56 -12 Td
+0 Tw
+(places the result in the character array)Tj
+/R12 10 Tf
+154.45 0 Td
+(s)Tj
+/R8 10 Tf
+6.66016 0 Td
+(of size)Tj
+/R12 10 Tf
+28.8801 0 Td
+(max)Tj
+/R8 10 Tf
+17.1898 0 Td
+(.)Tj
+-207.18 -16.8 Td
+0.071 Tw
+(The format speci\214cation is a null-terminated string and may contain special character sequences called)Tj
+/R12 10 Tf
+414.234 0 Td
+(con-)Tj
+-414.234 -12 Td
+(ver)Tj
+12.6699 0 Td
+0.227 Tw
+(sion speci\214cations)Tj
+2.727 Tc
+/R8 10 Tf
+74.107 0 Td
+(,e)Tj
+0 Tc
+9.66719 0 Td
+0.226 Tw
+(ach of which is introduced by a \b%\b character and terminated by some other charac-)Tj
+-96.4441 -12 Td
+2.439 Tw
+[(ter kno)24.9939(wn as a)]TJ
+/R12 10 Tf
+70.0461 0 Td
+[(con)40.0159(ver)]TJ
+26.7098 0 Td
+(sion speci\214er c)Tj
+64.718 0 Td
+[(har)15.0146(acter)]TJ
+7.439 Tc
+/R8 10 Tf
+35.0199 0 Td
+(.A)Tj
+0 Tc
+17.159 0 Td
+(ll other character sequences are)Tj
+/R12 10 Tf
+140.196 0 Td
+(or)Tj
+8.51992 0 Td
+2.44 Tw
+(dinary c)Tj
+35.3398 0 Td
+[(har)15.0146(acter)]TJ
+-397.709 -12 Td
+(sequences)Tj
+/R8 10 Tf
+40.8102 0 Td
+(.)Tj
+-40.8102 -16.8 Td
+0.647 Tw
+[(The characters of ordinary character sequences \(including the null byte\) are copied v)14.9854(erbatim from)]TJ
+/R12 10 Tf
+404.648 0 Td
+(format)Tj
+/R8 10 Tf
+-404.648 -12 Td
+(to)Tj
+/R12 10 Tf
+10.2801 0 Td
+(s)Tj
+5 Tc
+/R8 10 Tf
+4.16016 0 Td
+(.H)Tj
+-0.25 Tc
+14.7199 0 Td
+(ow)Tj
+11.9699 0 Td
+-2.15 Tw
+(ev e)Tj
+-0.4 Tc
+13.4801 0 Td
+0.8 Tw
+(r, t)Tj
+0 Tc
+10.7102 0 Td
+0 Tw
+(he characters of con)Tj
+-0.15 Tc
+79.8398 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+[(rsion speci\214cations are replaced as follo)25.0146(ws:)]TJ
+/R10 10 Tf
+-154.45 -16.8 Td
+(%a)Tj
+/R8 10 Tf
+36 0 Td
+[(The abbre)24.9841(viated weekday name according to the current locale.)]TJ
+/R10 10 Tf
+-36 -16.8 Td
+(%A)Tj
+/R8 10 Tf
+36 0 Td
+(The full weekday name according to the current locale.)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%b)Tj
+/R8 10 Tf
+36 0 Td
+[(The abbre)24.9841(viated month name according to the current locale.)]TJ
+/R10 10 Tf
+-36 -16.8 Td
+(%B)Tj
+/R8 10 Tf
+36 0 Td
+(The full month name according to the current locale.)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%c)Tj
+/R8 10 Tf
+36 0 Td
+(The preferred date and time representation for the current locale.)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%C)Tj
+/R8 10 Tf
+36 0 Td
+[(The century number \(year/100\) as a 2-digit inte)14.9927(ger)]TJ
+2.5 Tc
+201.75 0 Td
+(.\()Tj
+0 Tc
+8.33008 0 Td
+(SU\))Tj
+/R10 10 Tf
+-246.08 -16.8 Td
+(%d)Tj
+/R8 10 Tf
+36 0 Td
+(The day of the month as a decimal number \(range 01 to 31\).)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%D)Tj
+/R8 10 Tf
+36 0 Td
+(Equi)Tj
+-0.25 Tc
+18.6398 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+1.174 Tw
+(lent to)Tj
+/R10 10 Tf
+30.1281 0 Td
+(%m/%d/%y)Tj
+6.174 Tc
+/R8 10 Tf
+54.45 0 Td
+(.\()Tj
+-1 Tc
+12.0039 0 Td
+(Ye)Tj
+0 Tc
+10.6602 0 Td
+(cch\212for Americans only)Tj
+6.175 Tc
+103.338 0 Td
+(.A)Tj
+0 Tc
+15.8949 0 Td
+1.175 Tw
+(mericans should note that in other)Tj
+-254.305 -12 Td
+(countries)Tj
+/R10 10 Tf
+39.827 0 Td
+(%d/%m/%y)Tj
+/R8 10 Tf
+57.6172 0 Td
+0.667 Tw
+[(is rather common.)-566.702(This means that in international conte)14.9902(xt this format is)]TJ
+-97.4441 -12 Td
+0 Tw
+(ambiguous and should not be used.\) \(SU\))Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%e)Tj
+/R8 10 Tf
+36 0 Td
+[(Lik)10.0159(e)]TJ
+/R10 10 Tf
+21.7297 0 Td
+(%d)Tj
+3.5 Tc
+/R8 10 Tf
+15.5602 0 Td
+(,t)Tj
+0 Tc
+8.78008 0 Td
+1 Tw
+(he day of the month as a decimal number)Tj
+3.5 Tc
+172.57 0 Td
+(,b)Tj
+0 Tc
+10.8 0 Td
+(ut a leading zero is replaced by a space.)Tj
+-229.44 -12 Td
+(\(SU\))Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%E)Tj
+/R8 10 Tf
+36 0 Td
+0 Tw
+(Modi\214er: use alternati)Tj
+-0.15 Tc
+88.6301 0 Td
+0.3 Tw
+(ve f)Tj
+0 Tc
+15.1199 0 Td
+0 Tw
+(ormat, see belo)Tj
+-0.65 Tc
+60.5699 0 Td
+1.3 Tw
+(w. \()Tj
+0 Tc
+14.9 0 Td
+(SU\))Tj
+/R10 10 Tf
+-215.22 -16.8 Td
+(%F)Tj
+/R8 10 Tf
+36 0 Td
+(Equi)Tj
+-0.25 Tc
+18.6398 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+0 Tw
+(lent to)Tj
+/R10 10 Tf
+27.7801 0 Td
+[(%Y)92(-%m-%d)]TJ
+/R8 10 Tf
+59.35 0 Td
+(\(the ISO 8601 date format\). \(C99\))Tj
+/R10 10 Tf
+-150.96 -16.8 Td
+(%G)Tj
+/R8 10 Tf
+36 0 Td
+0.325 Tw
+[(The ISO)-250.016(8601 week-based year \(see NO)40(TES\) with century as a decimal number)]TJ
+5.325 Tc
+323.095 0 Td
+(.T)Tj
+0 Tc
+13.9352 0 Td
+(he 4-digit year)Tj
+-337.03 -12 Td
+0.933 Tw
+(corresponding to the ISO week number \(see)Tj
+/R10 10 Tf
+185.102 0 Td
+(%V)Tj
+/R8 10 Tf
+17.2199 0 Td
+3.434 Tw
+(\). This)Tj
+32.9781 0 Td
+0.934 Tw
+[(has the same format and v)25.0098(alue as)]TJ
+/R10 10 Tf
+140.978 0 Td
+(%Y)Tj
+/R8 10 Tf
+17.2199 0 Td
+(,)Tj
+-0.15 Tc
+-393.498 -12 Td
+(ex)Tj
+0 Tc
+9.28984 0 Td
+0.329 Tw
+(cept that if the ISO week number belongs to the pre)Tj
+209.67 0 Td
+0.328 Tw
+[(vious or ne)14.9902(xt year)]TJ
+2.828 Tc
+72.3641 0 Td
+(,t)Tj
+0 Tc
+8.10781 0 Td
+(hat year is used instead.)Tj
+-299.432 -12 Td
+(\(TZ\))Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%g)Tj
+/R8 10 Tf
+36 0 Td
+[(Lik)10.0159(e)]TJ
+/R10 10 Tf
+20.7297 0 Td
+(%G)Tj
+2.5 Tc
+/R8 10 Tf
+17.7801 0 Td
+(,b)Tj
+0 Tc
+9.8 0 Td
+0 Tw
+(ut without century)Tj
+2.5 Tc
+72.6801 0 Td
+(,t)Tj
+0 Tc
+7.78008 0 Td
+(hat is, with a 2-digit year \(00-99\). \(TZ\))Tj
+/R10 10 Tf
+-164.77 -16.8 Td
+(%h)Tj
+/R8 10 Tf
+36 0 Td
+(Equi)Tj
+-0.25 Tc
+18.6398 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(lent to)Tj
+/R10 10 Tf
+27.7801 0 Td
+(%b)Tj
+5 Tc
+/R8 10 Tf
+15.5602 0 Td
+(.\()Tj
+0 Tc
+10.8301 0 Td
+(SU\))Tj
+/R10 10 Tf
+-118 -16.8 Td
+(%H)Tj
+/R8 10 Tf
+36 0 Td
+(The hour as a decimal number using a 24-hour clock \(range 00 to 23\).)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%I)Tj
+/R8 10 Tf
+36 0 Td
+(The hour as a decimal number using a 12-hour clock \(range 01 to 12\).)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%j)Tj
+/R8 10 Tf
+36 0 Td
+(The day of the year as a decimal number \(range 001 to 366\).)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%k)Tj
+/R8 10 Tf
+36 0 Td
+1.257 Tw
+(The hour \(24-hour clock\) as a decimal number \(range 0 to 23\); single digits are preceded by a)Tj
+12 TL
+2.5 Tw
+(blank. \(See)'
+49.9898 0 Td
+(also)Tj
+/R10 10 Tf
+18.6102 0 Td
+(%H)Tj
+/R8 10 Tf
+17.7801 0 Td
+(.\) \(TZ\))Tj
+/R10 10 Tf
+-122.38 -16.8 Td
+(%l)Tj
+/R8 10 Tf
+36 0 Td
+1.257 Tw
+(The hour \(12-hour clock\) as a decimal number \(range 1 to 12\); single digits are preceded by a)Tj
+2.5 Tw
+(blank. \(See)'
+49.9898 0 Td
+(also)Tj
+/R10 10 Tf
+18.6102 0 Td
+(%I)Tj
+/R8 10 Tf
+13.8898 0 Td
+(.\) \(TZ\))Tj
+/R10 10 Tf
+-118.49 -16.8 Td
+(%m)Tj
+/R8 10 Tf
+36 0 Td
+0 Tw
+(The month as a decimal number \(range 01 to 12\).)Tj
+-72 -52.8 Td
+186.51 Tw
+(GNU 2013-06-28)Tj
+463 0 Td
+(1)Tj
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+7405
+endobj
+17 0 obj
+<</Length 18 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 10 Tf
+1 0 0 1 72 744 Tm
+113.45 Tw
+(STRFTIME\(3\) Linux)Tj
+202.34 0 Td
+(Programmer')Tj
+2.5 Tc
+52.7699 0 Td
+(sM)Tj
+0 Tc
+15.2801 0 Td
+(anual STRFTIME\(3\))Tj
+/R10 10 Tf
+-234.39 -36 Td
+(%M)Tj
+/R8 10 Tf
+36 0 Td
+0 Tw
+(The minute as a decimal number \(range 00 to 59\).)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%n)Tj
+2.5 Tc
+/R8 10 Tf
+36 0 Td
+(An)Tj
+-0.25 Tc
+14.7199 0 Td
+(ew)Tj
+0 Tc
+11.4102 0 Td
+(line character)Tj
+2.5 Tc
+53.5898 0 Td
+(.\()Tj
+0 Tc
+8.33008 0 Td
+(SU\))Tj
+/R10 10 Tf
+-124.05 -16.8 Td
+(%O)Tj
+/R8 10 Tf
+36 0 Td
+(Modi\214er: use alternati)Tj
+-0.15 Tc
+88.6301 0 Td
+0.3 Tw
+(ve f)Tj
+0 Tc
+15.1199 0 Td
+0 Tw
+(ormat, see belo)Tj
+-0.65 Tc
+60.5699 0 Td
+1.3 Tw
+(w. \()Tj
+0 Tc
+14.9 0 Td
+(SU\))Tj
+/R10 10 Tf
+-215.22 -16.8 Td
+(%p)Tj
+/R8 10 Tf
+36 0 Td
+0.575 Tw
+(Either "AM" or "PM" according to the gi)Tj
+-0.15 Tc
+168.135 0 Td
+(ve)Tj
+3.075 Tc
+9.28984 0 Td
+(nt)Tj
+0 Tc
+10.8551 0 Td
+[(ime v)25(alue, or the corresponding strings for the cur)]TJ
+204.39 0 Td
+(-)Tj
+-392.67 -12 Td
+0 Tw
+[(rent locale.)-500(Noon is treated as "PM" and midnight as "AM".)]TJ
+/R10 10 Tf
+-36 -16.8 Td
+(%P)Tj
+/R8 10 Tf
+36 0 Td
+[(Lik)10.0159(e)]TJ
+/R10 10 Tf
+20.7297 0 Td
+(%p)Tj
+-0.2 Tc
+/R8 10 Tf
+18.0602 0 Td
+(bu)Tj
+2.5 Tc
+9.8 0 Td
+[(ti)249.984(nl)]TJ
+-0.25 Tc
+18.3402 0 Td
+(ow)Tj
+0 Tc
+11.9699 0 Td
+(ercase: "am" or "pm" or a corresponding string for the current locale. \(GNU\))Tj
+/R10 10 Tf
+-114.9 -16.8 Td
+(%r)Tj
+/R8 10 Tf
+36 0 Td
+1.05 Tw
+(The time in a.m. or p.m. notation.)Tj
+147.069 0 Td
+1.049 Tw
+(In the POSIX locale this is equi)Tj
+-0.25 Tc
+132.704 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(lent to)Tj
+/R10 10 Tf
+29.8781 0 Td
+(%I:%M:%S %p)Tj
+/R8 10 Tf
+74.659 0 Td
+(.)Tj
+-393.5 -12 Td
+(\(SU\))Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%R)Tj
+/R8 10 Tf
+36 0 Td
+1.623 Tw
+(The time in 24-hour notation \()Tj
+/R10 10 Tf
+129.495 0 Td
+(%H:%M)Tj
+/R8 10 Tf
+40.55 0 Td
+4.123 Tw
+(\). \(SU\))Tj
+-0.15 Tc
+36.0172 0 Td
+(Fo)Tj
+4.124 Tc
+10.4102 0 Td
+(rav)Tj
+0 Tc
+20.868 0 Td
+1.624 Tw
+(ersion including the seconds, see)Tj
+/R10 10 Tf
+141.99 0 Td
+(%T)Tj
+/R8 10 Tf
+-379.33 -12 Td
+(belo)Tj
+-0.65 Tc
+16.9699 0 Td
+(w.)Tj
+0 Tc
+/R10 10 Tf
+-52.9699 -16.8 Td
+(%s)Tj
+/R8 10 Tf
+36 0 Td
+0 Tw
+(The number of seconds since the Epoch, 1970-01-01 00:00:00 +0000 \(UTC\). \(TZ\))Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%S)Tj
+/R8 10 Tf
+36 0 Td
+0.494 Tw
+[(The second as a decimal number \(range 00 to 60\).)-549.385(\(The range is up to 60 to allo)]TJ
+2.994 Tc
+328.918 0 Td
+(wf)Tj
+0 Tc
+13.5441 0 Td
+(or occasional)Tj
+-342.462 -12 Td
+0 Tw
+(leap seconds.\))Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%t)Tj
+2.5 Tc
+/R8 10 Tf
+36 0 Td
+(At)Tj
+0 Tc
+12.5 0 Td
+(ab character)Tj
+2.5 Tc
+48.0301 0 Td
+(.\()Tj
+0 Tc
+8.33008 0 Td
+(SU\))Tj
+/R10 10 Tf
+-104.86 -16.8 Td
+(%T)Tj
+/R8 10 Tf
+36 0 Td
+(The time in 24-hour notation \()Tj
+/R10 10 Tf
+121.38 0 Td
+(%H:%M:%S)Tj
+/R8 10 Tf
+59.4398 0 Td
+2.5 Tw
+(\). \(SU\))Tj
+/R10 10 Tf
+-216.82 -16.8 Td
+(%u)Tj
+/R8 10 Tf
+36 0 Td
+0 Tw
+[(The day of the week as a decimal, range 1 to 7, Monday being 1.)-500(See also)]TJ
+/R10 10 Tf
+299.66 0 Td
+(%w)Tj
+5 Tc
+/R8 10 Tf
+17.2199 0 Td
+(.\()Tj
+0 Tc
+10.8301 0 Td
+(SU\))Tj
+/R10 10 Tf
+-363.71 -16.8 Td
+(%U)Tj
+/R8 10 Tf
+36 0 Td
+0.699 Tw
+(The week number of the current year as a decimal number)Tj
+3.2 Tc
+239.85 0 Td
+(,r)Tj
+0 Tc
+9.03008 0 Td
+0.7 Tw
+(ange 00 to 53, starting with the \214rst)Tj
+-248.88 -12 Td
+0 Tw
+[(Sunday as the \214rst day of week 01.)-500(See also)]TJ
+/R10 10 Tf
+180.53 0 Td
+(%V)Tj
+/R8 10 Tf
+19.7199 0 Td
+(and)Tj
+/R10 10 Tf
+16.9398 0 Td
+(%W)Tj
+/R8 10 Tf
+20 0 Td
+(.)Tj
+/R10 10 Tf
+-273.19 -16.8 Td
+(%V)Tj
+/R8 10 Tf
+36 0 Td
+0.047 Tw
+[(The ISO)-250.004(8601 week number \(see NO)]TJ
+148.685 0 Td
+0.046 Tw
+(TES\) of the current year as a decimal number)Tj
+2.546 Tc
+182.138 0 Td
+(,r)Tj
+0 Tc
+8.37617 0 Td
+(ange 01 to 53,)Tj
+-339.199 -12 Td
+0.83 Tw
+(where week 1 is the \214rst week that has at least 4 days in the ne)Tj
+3.33 Tc
+262.43 0 Td
+(wy)Tj
+0 Tc
+15.55 0 Td
+(ear)Tj
+5.83 Tc
+11.6602 0 Td
+(.S)Tj
+0 Tc
+13.8898 0 Td
+(ee also)Tj
+/R10 10 Tf
+31.65 0 Td
+(%U)Tj
+/R8 10 Tf
+20.55 0 Td
+(and)Tj
+/R10 10 Tf
+17.7699 0 Td
+(%W)Tj
+/R8 10 Tf
+20 0 Td
+(.)Tj
+-393.5 -12 Td
+(\(SU\))Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%w)Tj
+/R8 10 Tf
+36 0 Td
+0 Tw
+[(The day of the week as a decimal, range 0 to 6, Sunday being 0.)-500(See also)]TJ
+/R10 10 Tf
+296.33 0 Td
+(%u)Tj
+/R8 10 Tf
+15.5602 0 Td
+(.)Tj
+/R10 10 Tf
+-347.89 -16.8 Td
+(%W)Tj
+/R8 10 Tf
+36 0 Td
+0.7 Tw
+(The week number of the current year as a decimal number)Tj
+3.199 Tc
+239.86 0 Td
+(,r)Tj
+0 Tc
+9.02891 0 Td
+0.699 Tw
+(ange 00 to 53, starting with the \214rst)Tj
+-248.889 -12 Td
+0 Tw
+(Monday as the \214rst day of week 01.)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%x)Tj
+/R8 10 Tf
+36 0 Td
+(The preferred date representation for the current locale without the time.)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%X)Tj
+/R8 10 Tf
+36 0 Td
+(The preferred time representation for the current locale without the date.)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%y)Tj
+/R8 10 Tf
+36 0 Td
+(The year as a decimal number without a century \(range 00 to 99\).)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(%Y)Tj
+/R8 10 Tf
+36 0 Td
+[(The year as a decimal number including the century)64.9927(.)]TJ
+/R10 10 Tf
+-36 -16.8 Td
+(%z)Tj
+/R8 10 Tf
+36 0 Td
+(The)Tj
+/R12 10 Tf
+17.6898 0 Td
+(+hhmm)Tj
+/R8 10 Tf
+34.0102 0 Td
+(or)Tj
+/R12 10 Tf
+10.8398 0 Td
+(-hhmm)Tj
+/R8 10 Tf
+30.5898 0 Td
+[(numeric timezone \(that is, the hour and minute of)24.9902(fset from UTC\). \(SU\))]TJ
+/R10 10 Tf
+-129.13 -16.8 Td
+(%Z)Tj
+/R8 10 Tf
+36 0 Td
+[(The timezone name or abbre)24.9854(viation.)]TJ
+/R10 10 Tf
+-36 -16.8 Td
+(%+)Tj
+/R8 10 Tf
+36 0 Td
+(The date and time in)Tj
+/R10 10 Tf
+84.7102 0 Td
+(date)Tj
+/R8 10 Tf
+18.3301 0 Td
+(\(1\) format. \(TZ\) \(Not supported in glibc2.\))Tj
+/R10 10 Tf
+-139.04 -16.8 Td
+(%%)Tj
+2.5 Tc
+/R8 10 Tf
+36 0 Td
+(Al)Tj
+0 Tc
+12.5 0 Td
+[(iteral \b%\b character)55.0073(.)]TJ
+-48.5 -16.8 Td
+0.156 Tw
+(Some con)Tj
+-0.15 Tc
+39.4762 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion speci\214cations can be modi\214ed by preceding the con)Tj
+-0.15 Tc
+230.258 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+0.157 Tw
+(rsion speci\214er character by the)Tj
+/R10 10 Tf
+126.025 0 Td
+(E)Tj
+/R8 10 Tf
+9.32695 0 Td
+(or)Tj
+/R10 10 Tf
+-423.666 -12 Td
+(O)Tj
+/R12 10 Tf
+11.3949 0 Td
+(modi\214er)Tj
+/R8 10 Tf
+37.2949 0 Td
+0.735 Tw
+(to indicate that an alternati)Tj
+-0.15 Tc
+109.34 0 Td
+1.035 Tw
+(ve f)Tj
+0 Tc
+15.8551 0 Td
+0.735 Tw
+[(ormat should be used.)-573.516(If the alternati)]TJ
+-0.15 Tc
+153.58 0 Td
+1.035 Tw
+(ve f)Tj
+0 Tc
+15.8551 0 Td
+0.735 Tw
+(ormat or speci\214cation)Tj
+-343.32 -12 Td
+0.207 Tw
+[(does not e)14.9939(xist for the current locale, the beha)]TJ
+180.986 0 Td
+0.208 Tw
+(vior will be as if the unmodi\214ed con)Tj
+-0.15 Tc
+146.326 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion speci\214cation were)Tj
+-336.602 -12 Td
+0.005 Tw
+(used. \(SU\) The Single UNIX Speci\214cation mentions)Tj
+/R10 10 Tf
+212.794 0 Td
+(%Ec)Tj
+/R8 10 Tf
+21.1102 0 Td
+(,)Tj
+/R10 10 Tf
+5.00391 0 Td
+(%EC)Tj
+/R8 10 Tf
+23.8898 0 Td
+(,)Tj
+/R10 10 Tf
+5.00391 0 Td
+(%Ex)Tj
+/R8 10 Tf
+21.6699 0 Td
+(,)Tj
+/R10 10 Tf
+5.00391 0 Td
+(%EX)Tj
+/R8 10 Tf
+23.8898 0 Td
+(,)Tj
+/R10 10 Tf
+5.00391 0 Td
+(%Ey)Tj
+/R8 10 Tf
+21.6699 0 Td
+(,)Tj
+/R10 10 Tf
+5.00391 0 Td
+(%EY)Tj
+/R8 10 Tf
+23.8898 0 Td
+(,)Tj
+/R10 10 Tf
+5.00391 0 Td
+(%Od)Tj
+/R8 10 Tf
+23.3398 0 Td
+(,)Tj
+/R10 10 Tf
+5.00391 0 Td
+(%Oe)Tj
+/R8 10 Tf
+22.2199 0 Td
+(,)Tj
+/R10 10 Tf
+-429.501 -12 Td
+(%OH)Tj
+/R8 10 Tf
+25.5602 0 Td
+(,)Tj
+/R10 10 Tf
+5.325 0 Td
+(%OI)Tj
+/R8 10 Tf
+21.6699 0 Td
+(,)Tj
+/R10 10 Tf
+5.325 0 Td
+(%Om)Tj
+/R8 10 Tf
+26.1102 0 Td
+(,)Tj
+/R10 10 Tf
+5.325 0 Td
+(%OM)Tj
+/R8 10 Tf
+27.2199 0 Td
+(,)Tj
+/R10 10 Tf
+5.325 0 Td
+(%OS)Tj
+/R8 10 Tf
+23.3398 0 Td
+(,)Tj
+/R10 10 Tf
+5.325 0 Td
+(%Ou)Tj
+/R8 10 Tf
+23.3398 0 Td
+(,)Tj
+/R10 10 Tf
+5.325 0 Td
+(%OU)Tj
+/R8 10 Tf
+25 0 Td
+(,)Tj
+/R10 10 Tf
+5.32617 0 Td
+[(%O)49.9927(V)]TJ
+/R8 10 Tf
+24.5 0 Td
+(,)Tj
+/R10 10 Tf
+5.32617 0 Td
+(%Ow)Tj
+/R8 10 Tf
+25 0 Td
+(,)Tj
+/R10 10 Tf
+5.32617 0 Td
+[(%O)49.9927(W)]TJ
+/R8 10 Tf
+27.2801 0 Td
+(,)Tj
+/R10 10 Tf
+5.32617 0 Td
+(%Oy)Tj
+2.826 Tc
+/R8 10 Tf
+22.7801 0 Td
+(,w)Tj
+0 Tc
+12.5461 0 Td
+0.326 Tw
+[(here the ef)25.0049(fect of the)]TJ
+/R10 10 Tf
+86.6199 0 Td
+(O)Tj
+/R8 10 Tf
+-424.221 -12 Td
+0.324 Tw
+(modi\214er is to use alternati)Tj
+-0.15 Tc
+105.486 0 Td
+0.624 Tw
+(ve n)Tj
+0 Tc
+17.1141 0 Td
+0.324 Tw
+(umeric symbols \(say)Tj
+2.824 Tc
+82.768 0 Td
+(,r)Tj
+0 Tc
+8.65391 0 Td
+0.323 Tw
+(oman numerals\), and that of the E modi\214er is to use a)Tj
+-214.022 -12 Td
+0 Tw
+(locale-dependent alternati)Tj
+-0.15 Tc
+103.33 0 Td
+0.3 Tw
+(ve r)Tj
+0 Tc
+15.1199 0 Td
+(epresentation.)Tj
+-118.45 -16.8 Td
+0 Tw
+[(The brok)9.99268(en-do)25.0073(wn time structure)]TJ
+/R12 10 Tf
+131.42 0 Td
+(tm)Tj
+/R8 10 Tf
+12.8199 0 Td
+(is de\214ned in)Tj
+/R12 10 Tf
+51.3898 0 Td
+[(<time)15.0073(.h>)]TJ
+5 Tc
+/R8 10 Tf
+38.0699 0 Td
+(.S)Tj
+0 Tc
+13.0602 0 Td
+(ee also)Tj
+/R10 10 Tf
+29.9898 0 Td
+(ctime)Tj
+/R8 10 Tf
+23.3199 0 Td
+(\(3\).)Tj
+/R10 10.95 Tf
+-336.07 -16.8 Td
+[(RETURN V)134.961(ALUE)]TJ
+/R8 10 Tf
+36 -12 Td
+(Pro)Tj
+13.7398 0 Td
+0.8 Tw
+(vided that the result string, including the terminating null byte, does not e)Tj
+303.33 0 Td
+(xceed)Tj
+/R12 10 Tf
+27 0 Td
+(max)Tj
+/R8 10 Tf
+20.4898 0 Td
+(bytes,)Tj
+/R10 10 Tf
+26.9102 0 Td
+(strftime)Tj
+/R8 10 Tf
+33.8699 0 Td
+<2829>Tj
+-425.34 -12 Td
+0.381 Tw
+[(returns the number of bytes \(e)14.9927(xcluding the terminating null byte\) placed in the array)]TJ
+/R12 10 Tf
+344.013 0 Td
+(s)Tj
+5.38 Tc
+/R8 10 Tf
+4.16016 0 Td
+(.I)Tj
+2.88 Tc
+11.2102 0 Td
+(ft)Tj
+0 Tc
+8.98984 0 Td
+0.38 Tw
+(he length of the)Tj
+-368.373 -12 Td
+0.853 Tw
+[(result string \(including the terminating null byte\) w)9.99756(ould e)]TJ
+236.564 0 Td
+(xceed)Tj
+/R12 10 Tf
+27.0531 0 Td
+(max)Tj
+/R8 10 Tf
+20.543 0 Td
+0.854 Tw
+(bytes, then)Tj
+/R10 10 Tf
+47.5379 0 Td
+(strftime)Tj
+/R8 10 Tf
+33.8699 0 Td
+(\(\) returns 0, and)Tj
+-401.568 -43.2 Td
+186.51 Tw
+(GNU 2013-06-28)Tj
+463 0 Td
+(2)Tj
+ET
+Q
+Q
+endstream
+endobj
+18 0 obj
+9647
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 10 Tf
+1 0 0 1 72 744 Tm
+113.45 Tw
+(STRFTIME\(3\) Linux)Tj
+202.34 0 Td
+(Programmer')Tj
+2.5 Tc
+52.7699 0 Td
+(sM)Tj
+0 Tc
+15.2801 0 Td
+(anual STRFTIME\(3\))Tj
+-234.39 -36 Td
+0.205 Tw
+[(the contents of the array are unde\214ned.)-520.5(\(This beha)20.0073(vior applies since at least libc 4.4.4; v)14.9902(ery old v)14.9854(ersions of)]TJ
+12 TL
+0 Tw
+T*[(libc, such as libc 4.4.1, w)9.99268(ould return)]TJ
+/R12 10 Tf
+148.32 0 Td
+(max)Tj
+/R8 10 Tf
+19.6898 0 Td
+[(if the array w)10.0146(as too small.\))]TJ
+-168.01 -16.8 Td
+0.138 Tw
+[(Note that the return v)24.9817(alue 0 does not necessarily indicate an error)]TJ
+5.138 Tc
+261.488 0 Td
+(.F)Tj
+0 Tc
+13.048 0 Td
+0.139 Tw
+[(or e)15.0024(xample, in man)]TJ
+2.639 Tc
+77.327 0 Td
+(yl)Tj
+0 Tc
+10.4191 0 Td
+(ocales)Tj
+/R10 10 Tf
+27.6289 0 Td
+(%p)Tj
+/R8 10 Tf
+18.1988 0 Td
+(yields)Tj
+-408.11 -12 Td
+0 Tw
+[(an empty string.)-500(An empty)]TJ
+/R12 10 Tf
+113.91 0 Td
+(format)Tj
+/R8 10 Tf
+29.85 0 Td
+(string will lik)Tj
+-0.25 Tc
+53.8 0 Td
+(ew)Tj
+0 Tc
+11.4102 0 Td
+(ise yield an empty string.)Tj
+/R10 10.95 Tf
+-244.97 -16.8 Td
+[(ENVIR)30.0404(ONMENT)]TJ
+/R8 10 Tf
+36 -12 Td
+[(The en)40.0159(vironment v)24.9841(ariables)]TJ
+/R10 10 Tf
+109.05 0 Td
+(TZ)Tj
+/R8 10 Tf
+15.8398 0 Td
+(and)Tj
+/R10 10 Tf
+16.9398 0 Td
+(LC_TIME)Tj
+/R8 10 Tf
+48.0602 0 Td
+(are used.)Tj
+-1.04 Tc
+/R10 10.95 Tf
+-225.89 -16.8 Td
+(AT)Tj
+0 Tc
+14.1695 0 Td
+[(TRIB)10.0332(UTES)]TJ
+-0.15 Tc
+/R8 10 Tf
+21.8305 -12 Td
+(Fo)Tj
+2.5 Tc
+10.4102 0 Td
+[(ra)250.007(ne)]TJ
+0 Tc
+22.0598 0 Td
+(xplanation of the terms used in this section, see)Tj
+/R10 10 Tf
+191.65 0 Td
+[(attrib)20.0146(utes)]TJ
+/R8 10 Tf
+41.4598 0 Td
+(\(7\).)Tj
+ET
+Q
+4 w
+1 J
+1 j
+0 G
+1080.25 6003.25 m
+3213.25 6003.25 l
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 10 Tf
+1 0 0 1 113 590.8 Tm
+14.16 Tw
+(Interface Attrib)Tj
+81.9898 0 Td
+27.41 Tw
+(ute V)Tj
+49.5398 0 Td
+(alue)Tj
+ET
+Q
+1080.25 5863.25 m
+3213.25 5863.25 l
+S
+q
+10 0 0 10 0 0 cm BT
+/R8 10 Tf
+1 0 0 1 168.53 576.8 Tm
+[(Thread safety)-1500(MT)91.9922(-Safe en)]TJ
+2.5 Tc
+116.42 0 Td
+(vl)Tj
+0 Tc
+10.2801 0 Td
+(ocale)Tj
+/R10 10 Tf
+-182.23 0 Td
+(strftime)Tj
+/R8 10 Tf
+33.8699 0 Td
+<2829>Tj
+ET
+Q
+1080.25 5723.25 m
+3213.25 5723.25 l
+S
+3213.25 5723.25 m
+3213.25 6003.25 l
+S
+1080.25 5723.25 m
+1080.25 6003.25 l
+S
+2307.25 5723.25 m
+2307.25 6003.25 l
+S
+1610.25 5723.25 m
+1610.25 6003.25 l
+S
+q
+10 0 0 10 0 0 cm BT
+/R10 10.95 Tf
+1 0 0 1 72 560 Tm
+[(CONFORMING T)18.0029(O)]TJ
+/R8 10 Tf
+36 -12 Td
+0.664 Tw
+(SVr4, C89, C99.)Tj
+73.941 0 Td
+0.663 Tw
+(There are strict inclusions between the set of con)Tj
+-0.15 Tc
+200.414 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsions gi)Tj
+-0.15 Tc
+34.5828 0 Td
+(ve)Tj
+3.163 Tc
+9.28984 0 Td
+[(ni)316.304(nA)]TJ
+0 Tc
+26.3258 0 Td
+(NSI C \(unmark)Tj
+62.8859 0 Td
+(ed\),)Tj
+-416.729 -12 Td
+2.055 Tw
+(those gi)Tj
+-0.15 Tc
+33.1949 0 Td
+(ve)Tj
+4.555 Tc
+9.28984 0 Td
+[(ni)455.485(nt)]TJ
+0 Tc
+24.6703 0 Td
+2.056 Tw
+[(he Single UNIX Speci\214cation \(mark)9.99268(ed SU\), those gi)]TJ
+-0.15 Tc
+224.572 0 Td
+(ve)Tj
+4.556 Tc
+9.28984 0 Td
+[(ni)455.605(nO)]TJ
+0 Tc
+29.1121 0 Td
+(lson')Tj
+4.556 Tc
+19.45 0 Td
+(st)Tj
+0 Tc
+11.2262 0 Td
+(imezone package)Tj
+-360.805 -12 Td
+(\(mark)Tj
+23.7801 0 Td
+0.673 Tw
+(ed TZ\), and those gi)Tj
+-0.15 Tc
+83.2621 0 Td
+(ve)Tj
+3.173 Tc
+9.28984 0 Td
+[(ni)317.288(ng)]TJ
+0 Tc
+24.1262 0 Td
+[(libc \(mark)9.98779(ed GNU\), e)14.9976(xcept that)]TJ
+/R10 10 Tf
+132.525 0 Td
+(%+)Tj
+/R8 10 Tf
+18.873 0 Td
+(is not supported in glibc2.)Tj
+112.534 0 Td
+0.672 Tw
+(On the)Tj
+-404.39 -12 Td
+0.452 Tw
+(other hand glibc2 has se)Tj
+-0.15 Tc
+98.2078 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(ral more e)Tj
+41.2941 0 Td
+2.952 Tw
+(xtensions. POSIX.1)Tj
+85.0738 0 Td
+0.452 Tw
+(only refers to ANSI C; POSIX.2 describes under)Tj
+/R10 10 Tf
+-233.866 -12 Td
+(date)Tj
+/R8 10 Tf
+18.3301 0 Td
+2.074 Tw
+(\(1\) se)Tj
+-0.15 Tc
+24.3141 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(ral e)Tj
+19.4141 0 Td
+2.073 Tw
+(xtensions that could apply to)Tj
+/R10 10 Tf
+127.865 0 Td
+(strftime)Tj
+/R8 10 Tf
+33.8699 0 Td
+(\(\) as well.)Tj
+50.9289 0 Td
+(The)Tj
+/R10 10 Tf
+20.123 0 Td
+(%F)Tj
+/R8 10 Tf
+20.6828 0 Td
+(con)Tj
+-0.15 Tc
+14.0398 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion is in C99 and)Tj
+-348.147 -12 Td
+(POSIX.1-2001.)Tj
+24 TL
+0.321 Tw
+(In SUSv2, the)'
+/R10 10 Tf
+59.8531 0 Td
+(%S)Tj
+/R8 10 Tf
+18.3809 0 Td
+[(speci\214er allo)24.9829(wed a range of 00 to 61, to allo)]TJ
+2.822 Tc
+178.469 0 Td
+(wf)Tj
+0 Tc
+13.3719 0 Td
+0.322 Tw
+(or the theoretical possibility of a minute)Tj
+-270.075 -12 Td
+0 Tw
+(that included a double leap second \(there ne)Tj
+-0.15 Tc
+175.54 0 Td
+(ve)Tj
+2.5 Tc
+9.28984 0 Td
+(rh)Tj
+0 Tc
+10.8301 0 Td
+(as been such a minute\).)Tj
+/R10 10.95 Tf
+-231.66 -16.8 Td
+[(NO)39.99(TES)]TJ
+/R10 10 Tf
+15 -12 Td
+(ISO 8601 week dates)Tj
+21 -12 Td
+(%G)Tj
+/R8 10 Tf
+17.7801 0 Td
+(,)Tj
+/R10 10 Tf
+5.19883 0 Td
+(%g)Tj
+2.699 Tc
+/R8 10 Tf
+15 0 Td
+(,a)Tj
+0 Tc
+9.63906 0 Td
+(nd)Tj
+/R10 10 Tf
+12.698 0 Td
+(%V)Tj
+/R8 10 Tf
+19.918 0 Td
+0.198 Tw
+[(yield v)24.9951(alues calculated from the week-based year de\214ned by the ISO)-250.01(8601 standard.)]TJ
+343.436 0 Td
+(In)Tj
+-423.67 -12 Td
+0.287 Tw
+(this system, weeks start on a Monday)Tj
+2.788 Tc
+150.782 0 Td
+(,a)Tj
+0 Tc
+9.72813 0 Td
+0.288 Tw
+(nd are numbered from 01, for the \214rst week, up to 52 or 53, for the)Tj
+-160.51 -12 Td
+0.775 Tw
+(last week.)Tj
+-0.8 Tc
+46.5398 0 Td
+(We)Tj
+0 Tc
+13.0801 0 Td
+0.774 Tw
+[(ek 1 is the \214rst week where four or more days f)10.0024(all within the ne)]TJ
+3.274 Tc
+264.326 0 Td
+(wy)Tj
+0 Tc
+15.4941 0 Td
+(ear \(or)Tj
+3.274 Tc
+26.7441 0 Td
+(,s)Tj
+0 Tc
+9.66406 0 Td
+[(ynon)15(ymously)65(,)]TJ
+-375.848 -12 Td
+0.125 Tw
+(week 01 is: the \214rst week of the year that contains a Thursday; or)Tj
+2.626 Tc
+262.565 0 Td
+(,t)Tj
+0 Tc
+7.90586 0 Td
+0.126 Tw
+(he week that has 4 January in it\).)Tj
+137.648 0 Td
+(When)Tj
+-408.119 -12 Td
+0.096 Tw
+[(three of fe)24.9963(wer days of the \214rst calendar week of the ne)]TJ
+2.596 Tc
+218.536 0 Td
+(wy)Tj
+0 Tc
+14.816 0 Td
+[(ear f)10.0073(all within that year)]TJ
+2.595 Tc
+93.1937 0 Td
+(,t)Tj
+0 Tc
+7.875 0 Td
+0.095 Tw
+(hen the ISO 8601 week-)Tj
+-334.421 -12 Td
+0.188 Tw
+(based system counts those days as part of week 53 of the preceding year)Tj
+5.189 Tc
+290.994 0 Td
+(.F)Tj
+0 Tc
+13.0988 0 Td
+0.189 Tw
+[(or e)15(xample, 1 January 2010 is a)]TJ
+-304.093 -12 Td
+(Friday)Tj
+3.562 Tc
+25.4602 0 Td
+(,m)Tj
+0 Tc
+13.8422 0 Td
+1.062 Tw
+[(eaning that just three days of that calendar week f)10.0024(all in 2010.)-606.201(Thus, the ISO)]TJ
+321.938 0 Td
+1.061 Tw
+(8601 week-based)Tj
+-361.24 -12 Td
+0.063 Tw
+(system considers these days to be part of week 53 \()Tj
+/R10 10 Tf
+205.59 0 Td
+(%V)Tj
+2.563 Tc
+/R8 10 Tf
+17.2199 0 Td
+[(\)o)256.304(ft)]TJ
+0 Tc
+19.566 0 Td
+(he year 2009 \()Tj
+/R10 10 Tf
+57.6691 0 Td
+(%G)Tj
+/R8 10 Tf
+17.7801 0 Td
+[(\); week 01 of ISO)-249.995(8601 year)]TJ
+-317.825 -12 Td
+0 Tw
+(2010 starts on Monday)Tj
+2.5 Tc
+91.2898 0 Td
+(,4J)Tj
+0 Tc
+16.3898 0 Td
+(anuary 2010.)Tj
+/R10 10 Tf
+-128.68 -16.8 Td
+(Glibc notes)Tj
+/R8 10 Tf
+21 -12 Td
+2.524 Tw
+[(Glibc pro)15.0171(vides some e)15.0195(xtensions for con)]TJ
+-0.15 Tc
+170.51 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+2.523 Tw
+[(rsion speci\214cations.)-752.295(\(These e)14.9951(xtensions are not speci\214ed in)]TJ
+-179.8 -12 Td
+0.662 Tw
+[(POSIX.1-2001, b)19.9963(ut a fe)]TJ
+3.162 Tc
+96.2461 0 Td
+(wo)Tj
+0 Tc
+15.382 0 Td
+[(ther systems pro)15.0171(vide similar features.\))-566.201(Between the \b%\b character and the con-)]TJ
+-0.15 Tc
+-111.628 -12 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+0.751 Tw
+(rsion speci\214er character)Tj
+3.251 Tc
+96.6219 0 Td
+[(,a)325.098(no)]TJ
+0 Tc
+23.4422 0 Td
+(ptional)Tj
+/R12 10 Tf
+32.941 0 Td
+[<8D61>10(g)]TJ
+/R8 10 Tf
+18.3711 0 Td
+(and \214eld)Tj
+/R12 10 Tf
+39.0621 0 Td
+(width)Tj
+/R8 10 Tf
+25.7609 0 Td
+(may be speci\214ed.)Tj
+76.9621 0 Td
+0.75 Tw
+(\(These precede the)Tj
+/R10 10 Tf
+80.2699 0 Td
+(E)Tj
+/R8 10 Tf
+9.91992 0 Td
+(or)Tj
+/R10 10 Tf
+11.5801 0 Td
+(O)Tj
+/R8 10 Tf
+-424.221 -12 Td
+0 Tw
+(modi\214ers, if present.\))Tj
+T*[(The follo)25.0159(wing \215ag characters are permitted:)]TJ
+/R10 10 Tf
+16.8 TL
+(_)'
+/R8 10 Tf
+36 0 Td
+[(\(underscore\) P)15.0159(ad a numeric result string with spaces.)]TJ
+/R10 10 Tf
+-36 -16.8 Td
+<AD>Tj
+/R8 10 Tf
+36 0 Td
+(\(dash\) Do not pad a numeric result string.)Tj
+/R10 10 Tf
+-36 -16.8 Td
+(0)Tj
+-0.15 Tc
+/R8 10 Tf
+36 0 Td
+(Pa)Tj
+3.49 Tc
+9.85 0 Td
+(dan)Tj
+0 Tc
+21.4199 0 Td
+0.991 Tw
+(umeric result string with zeros e)Tj
+-0.15 Tc
+133.295 0 Td
+(ve)Tj
+3.491 Tc
+9.28984 0 Td
+[(ni)349.092(ft)]TJ
+0 Tc
+20.8723 0 Td
+(he con)Tj
+-0.15 Tc
+26.9711 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion speci\214er character uses space-pad-)Tj
+-230.988 -12 Td
+0 Tw
+[(ding by def)10(ault.)]TJ
+/R10 10 Tf
+-36 -16.8 Td
+(^)Tj
+/R8 10 Tf
+36 0 Td
+(Con)Tj
+-0.15 Tc
+16.2699 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rt alphabetic characters in result string to upper case.)Tj
+/R10 10 Tf
+-61.5598 -16.8 Td
+(#)Tj
+/R8 10 Tf
+36 0 Td
+(Sw)Tj
+12.6801 0 Td
+0.437 Tw
+[(ap the case of the result string.)-543.691(\(This \215ag w)]TJ
+179.083 0 Td
+0.436 Tw
+(orks only with certain con)Tj
+-0.15 Tc
+105.774 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion speci\214er charac-)Tj
+-306.827 -12 Td
+0 Tw
+(ters, and of these, it is only really useful with)Tj
+/R10 10 Tf
+182.76 0 Td
+(%Z)Tj
+/R8 10 Tf
+16.6699 0 Td
+(.\))Tj
+-235.43 -16.8 Td
+0.312 Tw
+(An optional decimal width speci\214er may follo)Tj
+2.813 Tc
+186.052 0 Td
+(wt)Tj
+0 Tc
+12.8129 0 Td
+0.313 Tw
+[(he \(possibly absent\) \215ag.)-531.318(If the natural size of the \214eld is)]TJ
+-198.865 -12 Td
+0 Tw
+(smaller than this width, then the result string is padded \(on the left\) to the speci\214ed width.)Tj
+-36 -65.6 Td
+186.51 Tw
+(GNU 2013-06-28)Tj
+463 0 Td
+(3)Tj
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+9475
+endobj
+27 0 obj
+<</Length 28 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 10 Tf
+1 0 0 1 72 744 Tm
+113.45 Tw
+(STRFTIME\(3\) Linux)Tj
+202.34 0 Td
+(Programmer')Tj
+2.5 Tc
+52.7699 0 Td
+(sM)Tj
+0 Tc
+15.2801 0 Td
+(anual STRFTIME\(3\))Tj
+-0.11 Tc
+/R10 10.95 Tf
+-270.39 -36 Td
+(BU)Tj
+0 Tc
+15.0996 0 Td
+(GS)Tj
+/R8 10 Tf
+20.9004 -12 Td
+0.48 Tw
+[(If the output string w)9.98413(ould e)]TJ
+111.31 0 Td
+(xceed)Tj
+/R12 10 Tf
+26.6801 0 Td
+(max)Tj
+/R8 10 Tf
+20.1699 0 Td
+(bytes,)Tj
+/R12 10 Tf
+26.7801 0 Td
+(errno)Tj
+/R8 10 Tf
+25.3801 0 Td
+(is)Tj
+/R12 10 Tf
+10.0102 0 Td
+(not)Tj
+/R8 10 Tf
+16.4398 0 Td
+2.98 Tw
+(set. This)Tj
+39.85 0 Td
+(mak)Tj
+17.1199 0 Td
+0.48 Tw
+(es it impossible to distinguish this)Tj
+-293.74 -12 Td
+3.77 Tw
+(error case from cases where the)Tj
+/R12 10 Tf
+153.421 0 Td
+(format)Tj
+/R8 10 Tf
+33.6211 0 Td
+3.771 Tw
+[(string le)14.9902(gitimately produces a zero-length output string.)]TJ
+-187.042 -12 Td
+0 Tw
+(POSIX.1-2001 does)Tj
+/R12 10 Tf
+83.4102 0 Td
+(not)Tj
+/R8 10 Tf
+15.9602 0 Td
+[(specify an)15.0073(y)]TJ
+/R12 10 Tf
+48.3598 0 Td
+(errno)Tj
+/R8 10 Tf
+24.9 0 Td
+(settings for)Tj
+/R10 10 Tf
+47.2199 0 Td
+(strftime)Tj
+/R8 10 Tf
+33.8699 0 Td
+(\(\).)Tj
+-253.72 -24 Td
+0.874 Tw
+[(Some b)20.0098(uggy v)15.0171(ersions of)]TJ
+/R10 10 Tf
+102.586 0 Td
+(gcc)Tj
+/R8 10 Tf
+13.8801 0 Td
+0.873 Tw
+(\(1\) complain about the use of)Tj
+/R10 10 Tf
+125.218 0 Td
+(%c)Tj
+/R8 10 Tf
+14.4398 0 Td
+(:)Tj
+/R12 10 Tf
+6.15313 0 Td
+(warning: `%c' yields only last 2 digits of)Tj
+-262.277 -12 Td
+1.014 Tw
+(year in some locales)Tj
+6.014 Tc
+/R8 10 Tf
+85.2422 0 Td
+(.O)Tj
+3.514 Tc
+15.734 0 Td
+(fc)Tj
+0 Tc
+11.284 0 Td
+1.015 Tw
+(ourse programmers are encouraged to use)Tj
+/R10 10 Tf
+175.48 0 Td
+(%c)Tj
+3.515 Tc
+/R8 10 Tf
+14.4398 0 Td
+[(,i)351.509(tg)]TJ
+-0.25 Tc
+20.0898 0 Td
+-2.15 Tw
+(iv e)Tj
+3.515 Tc
+11.8199 0 Td
+(st)Tj
+0 Tc
+10.1852 0 Td
+1.015 Tw
+(he preferred date and)Tj
+-344.275 -12 Td
+0.241 Tw
+[(time representation.)-524.111(One meets all kinds of strange obfuscations to circumv)]TJ
+306.66 0 Td
+0.24 Tw
+(ent this)Tj
+/R10 10 Tf
+32.15 0 Td
+(gcc)Tj
+/R8 10 Tf
+13.8801 0 Td
+(\(1\) problem.)Tj
+2.74 Tc
+55.4699 0 Td
+(Ar)Tj
+0 Tc
+13.2898 0 Td
+(el-)Tj
+-421.45 -12 Td
+(ati)Tj
+-0.15 Tc
+9.75 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+0 Tw
+(ly clean one is to add an intermediate function)Tj
+0.960156 -24 Td
+(size_t)Tj
+12 TL
+(my_strftime\(char *s, size_t max, const char *fmt,)'
+30 -12 Td
+(const struct tm *tm\))Tj
+-30 -12 Td
+({)Tj
+10 -12 Td
+(return strftime\(s, max, fmt, tm\);)Tj
+-10 -12 Td
+(})Tj
+-20 -24 Td
+(No)Tj
+-0.1 Tc
+11.9699 0 Td
+(wa)Tj
+0 Tc
+11.5602 0 Td
+(days,)Tj
+/R10 10 Tf
+23.877 0 Td
+(gcc)Tj
+/R8 10 Tf
+13.8801 0 Td
+0.547 Tw
+(\(1\) pro)Tj
+27.8871 0 Td
+0.548 Tw
+(vides the)Tj
+/R12 10 Tf
+39.4262 0 Td
+(\255Wno\255format\255y2k)Tj
+/R8 10 Tf
+82.1781 0 Td
+(option to pre)Tj
+-0.15 Tc
+51.9559 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+[(nt the w)10(arning, so that the abo)]TJ
+-0.15 Tc
+123.858 0 Td
+0.848 Tw
+(ve w)Tj
+0 Tc
+19.4578 0 Td
+(ork-)Tj
+-415.34 -12 Td
+0 Tw
+(around is no longer required.)Tj
+/R10 10.95 Tf
+-36 -16.8 Td
+(EXAMPLE)Tj
+/R10 10 Tf
+36 -12 Td
+[(RFC 2822-compliant date f)25.0073(ormat)]TJ
+/R8 10 Tf
+144.17 0 Td
+(\(with an English locale for %a and %b\))Tj
+-134.17 -16.8 Td
+("%a, %d %b %Y %T %z")Tj
+/R10 10 Tf
+-10 -16.8 Td
+[(RFC 822-compliant date f)25.0073(ormat)]TJ
+/R8 10 Tf
+139.17 0 Td
+(\(with an English locale for %a and %b\))Tj
+-129.17 -16.8 Td
+("%a, %d %b %y %T %z")Tj
+/R10 10 Tf
+-31 -16.8 Td
+[(Example pr)18(ogram)]TJ
+/R8 10 Tf
+21 -12 Td
+(The program belo)Tj
+2.5 Tc
+71.4 0 Td
+(wc)Tj
+0 Tc
+14.1602 0 Td
+[(an be used to e)14.9927(xperiment with)]TJ
+/R10 10 Tf
+122.61 0 Td
+(strftime)Tj
+/R8 10 Tf
+33.8699 0 Td
+(\(\).)Tj
+-242.04 -16.8 Td
+[(Some e)15.0073(xamples of the result string produced by the glibc implementation of)]TJ
+/R10 10 Tf
+306.49 0 Td
+(strftime)Tj
+/R8 10 Tf
+33.8699 0 Td
+[(\(\) are as follo)25.0146(ws:)]TJ
+-320.36 -24 Td
+($)Tj
+/R10 10 Tf
+7.5 0 Td
+(./a.out \b%m\b)Tj
+/R8 10 Tf
+-7.5 -12 Td
+(Result string is "11")Tj
+($)'
+/R10 10 Tf
+7.5 0 Td
+(./a.out \b%5m\b)Tj
+/R8 10 Tf
+-7.5 -12 Td
+(Result string is "00011")Tj
+($)'
+/R10 10 Tf
+7.5 0 Td
+(./a.out \b%_5m\b)Tj
+/R8 10 Tf
+-7.5 -12 Td
+[(Result string is ")-749.984(11")]TJ
+-20 -16.8 Td
+(Here')Tj
+2.5 Tc
+22.2102 0 Td
+(st)Tj
+0 Tc
+9.16992 0 Td
+(he program source:)Tj
+-31.3801 -24 Td
+(#include <time.h>)Tj
+(#include <stdio.h>)'
+T*[(#include <stdlib)39.9841(.h>)]TJ
+24 TL
+(int)'
+12 TL
+T*[(main\(int ar)17.9919(gc, char *ar)18.0151(gv[]\))]TJ
+({)'
+10 -12 Td
+(char outstr[200];)Tj
+(time_t t;)'
+(struct tm *tmp;)'
+2.5 Tc
+24 TL
+(t=t)'
+0 Tc
+16.2 0 Td
+(ime\(NULL\);)Tj
+-16.2 -12 Td
+(tmp = localtime\(&t\);)Tj
+12 TL
+(if \(tmp == NULL\) {)'
+10 -12 Td
+(perror\("localtime"\);)Tj
+-0.15 Tc
+(ex)'
+0 Tc
+9.28984 0 Td
+[(it\(EXIT_F)73.9917(AILURE\);)]TJ
+-65.2898 -38.4 Td
+186.51 Tw
+(GNU 2013-06-28)Tj
+463 0 Td
+(4)Tj
+ET
+Q
+Q
+endstream
+endobj
+28 0 obj
+4706
+endobj
+32 0 obj
+<</Length 33 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+/R7 gs
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 10 Tf
+1 0 0 1 72 744 Tm
+113.45 Tw
+(STRFTIME\(3\) Linux)Tj
+202.34 0 Td
+(Programmer')Tj
+2.5 Tc
+52.7699 0 Td
+(sM)Tj
+0 Tc
+15.2801 0 Td
+(anual STRFTIME\(3\))Tj
+-224.39 -36 Td
+(})Tj
+24 TL
+0 Tw
+(if \(strftime\(outstr)'
+2.5 Tc
+68.7602 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+[(izeof\(outstr\), ar)18.0078(gv[1], tmp\) == 0\) {)]TJ
+-67.65 -12 Td
+(fprintf\(stderr)Tj
+2.5 Tc
+51.25 0 Td
+(,")Tj
+0 Tc
+9.08008 0 Td
+(strftime returned 0"\);)Tj
+-0.15 Tc
+-60.3301 -12 Td
+(ex)Tj
+0 Tc
+9.28984 0 Td
+[(it\(EXIT_F)73.9917(AILURE\);)]TJ
+-19.2898 -12 Td
+(})Tj
+(printf\("Result string is \\"%s\\"\\n", outstr\);)'
+-0.15 Tc
+12 TL
+(ex)'
+0 Tc
+9.28984 0 Td
+(it\(EXIT_SUCCESS\);)Tj
+-19.2898 -12 Td
+(})Tj
+/R10 10.95 Tf
+-36 -16.8 Td
+(SEE ALSO)Tj
+/R10 10 Tf
+36 -12 Td
+(date)Tj
+/R8 10 Tf
+18.3301 0 Td
+(\(1\),)Tj
+/R10 10 Tf
+16.6602 0 Td
+(time)Tj
+/R8 10 Tf
+18.8801 0 Td
+(\(2\),)Tj
+/R10 10 Tf
+16.6602 0 Td
+(ctime)Tj
+/R8 10 Tf
+23.3199 0 Td
+(\(3\),)Tj
+/R10 10 Tf
+16.6602 0 Td
+(setlocale)Tj
+/R8 10 Tf
+36.1 0 Td
+(\(3\),)Tj
+/R10 10 Tf
+16.6602 0 Td
+(sprintf)Tj
+/R8 10 Tf
+28.8898 0 Td
+(\(3\),)Tj
+/R10 10 Tf
+16.6602 0 Td
+[(str)9.98535(ptime)]TJ
+/R8 10 Tf
+36 0 Td
+(\(3\))Tj
+/R10 10.95 Tf
+-280.821 -16.8 Td
+(COLOPHON)Tj
+/R8 10 Tf
+36 -12 Td
+0.06 Tw
+(This page is part of release 3.53 of the Linux)Tj
+/R12 10 Tf
+182.89 0 Td
+(man-pa)Tj
+-0.1 Tc
+30.45 0 Td
+(ge)Tj
+0 Tc
+9.33984 0 Td
+(s)Tj
+/R8 10 Tf
+6.71992 0 Td
+2.56 Tw
+(project. A)Tj
+45.1102 0 Td
+0.06 Tw
+(description of the project, and informa-)Tj
+-274.51 -12 Td
+0 Tw
+[(tion about reporting b)20.0159(ugs, can be found at http://www)65.0073(.k)10(ernel.or)18.0151(g/doc/man\255pages/.)]TJ
+-36 -506.4 Td
+186.51 Tw
+(GNU 2013-06-28)Tj
+463 0 Td
+(5)Tj
+ET
+Q
+Q
+endstream
+endobj
+33 0 obj
+1701
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 14 0 R
+/Font 15 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+16 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 19 0 R
+/Font 20 0 R
+>>
+/Contents 17 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 24 0 R
+/Font 25 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+26 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 29 0 R
+/Font 30 0 R
+>>
+/Contents 27 0 R
+>>
+endobj
+31 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/ExtGState 34 0 R
+/Font 35 0 R
+>>
+/Contents 32 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+16 0 R
+21 0 R
+26 0 R
+31 0 R
+] /Count 5
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+/Metadata 42 0 R
+>>
+endobj
+7 0 obj
+<</Type/ExtGState
+/OPM 1>>endobj
+14 0 obj
+<</R7
+7 0 R>>
+endobj
+15 0 obj
+<</R12
+12 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+19 0 obj
+<</R7
+7 0 R>>
+endobj
+20 0 obj
+<</R12
+12 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+24 0 obj
+<</R7
+7 0 R>>
+endobj
+25 0 obj
+<</R12
+12 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+29 0 obj
+<</R7
+7 0 R>>
+endobj
+30 0 obj
+<</R12
+12 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+34 0 obj
+<</R7
+7 0 R>>
+endobj
+35 0 obj
+<</R12
+12 0 R/R10
+10 0 R/R8
+8 0 R>>
+endobj
+12 0 obj
+<</BaseFont/KOWDSP+Times-Italic/FontDescriptor 13 0 R/Type/Font
+/FirstChar 32/LastChar 173/Widths[
+250 0 0 0 0 833 0 333 0 0 0 675 0 333 250 0
+0 0 500 0 0 0 0 0 0 0 333 0 675 0 675 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 833 0 0 0 0 0 0 0 0
+333 500 0 444 500 444 278 500 500 278 0 444 278 722 500 500
+500 500 389 389 278 500 444 667 444 444 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 500 500 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 675]
+/Encoding 39 0 R/Subtype/Type1>>
+endobj
+39 0 obj
+<</Type/Encoding/BaseEncoding/WinAnsiEncoding/Differences[
+39/quoteright
+96/quoteleft
+140/fi/fl
+173/minus]>>
+endobj
+10 0 obj
+<</BaseFont/ITDVJH+Times-Bold/FontDescriptor 11 0 R/Type/Font
+/FirstChar 8/LastChar 173/Widths[ 278 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+250 0 0 500 0 1000 0 0 333 333 500 570 250 333 250 278
+500 500 500 0 0 500 500 0 500 0 333 333 570 0 570 0
+0 722 667 722 722 667 611 778 778 389 0 0 667 944 722 778
+611 0 722 556 667 722 722 1000 722 722 667 0 0 0 333 500
+0 500 556 444 556 444 333 500 556 278 333 556 278 833 556 500
+556 0 444 389 333 556 0 722 500 500 444 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 570]
+/Encoding 40 0 R/Subtype/Type1>>
+endobj
+40 0 obj
+<</Type/Encoding/BaseEncoding/WinAnsiEncoding/Differences[
+8/quotesingle
+94/circumflex
+173/minus]>>
+endobj
+8 0 obj
+<</BaseFont/QQOBOY+Times-Roman/FontDescriptor 9 0 R/Type/Font
+/FirstChar 8/LastChar 173/Widths[ 180 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+250 0 408 500 500 833 778 333 333 333 500 564 250 333 250 278
+500 500 500 500 500 500 500 500 500 500 278 278 564 564 564 0
+0 722 667 667 722 611 556 722 722 333 389 0 611 889 722 722
+556 0 667 556 611 722 722 944 722 722 611 333 278 333 0 500
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500
+500 500 333 389 278 500 500 722 500 500 444 480 0 480 0 0
+0 0 0 0 0 0 0 0 0 0 1000 0 556 556 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 564]
+/Encoding 41 0 R/Subtype/Type1>>
+endobj
+41 0 obj
+<</Type/Encoding/BaseEncoding/WinAnsiEncoding/Differences[
+8/quotesingle
+39/quoteright
+138/emdash
+140/fi/fl
+173/minus]>>
+endobj
+13 0 obj
+<</Type/FontDescriptor/FontName/KOWDSP+Times-Italic/FontBBox[-147 -209 906 683]/Flags 4
+/Ascent 683
+/CapHeight 683
+/Descent -209
+/ItalicAngle 0
+/StemV 135
+/MissingWidth 500
+/CharSet(/W/a/c/colon/d/e/f/fi/fl/g/greater/h/hyphen/i/k/l/less/m/minus/n/o/p/percent/period/plus/q/quoteleft/quoteright/r/s/space/t/two/u/v/w/x/y)/FontFile3 36 0 R>>
+endobj
+36 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 5709>>stream
+Gar>H$$]D![QYi]4UMlL2n-oJRo@!-#frY_TN>)@#[!tP67H=*M'd)n1io+2hFX05l'ShLgN6+<
+V56EbV-lTl87f(@cmPQdGLl)F]+8f9Y`$ir^%]41n)WhRT7-E>H`cu@le`-1Yo*[s_3gcu.*@gf
+\@F_#=I;8-Z%/FdTV%fAs-AKWT\Q.B&)LiJ=\LO8Z/F(NC+ao/'KeJ_g7BRW%#1K"]"US6/1\pt
+.$%`&P-jD+`J^)\:X=nUCY$F:.=ZUVT9(QPbV,!KNuPB0@>S*N>?q/Rr-CJ/Lt@[5(FmB-P5*7k
+SD9Y!cZWq.F,T$:(((GgiY#Dl_Y#S#^U/CaMAPg?b&)j,/?'mYWC2tR*5AUd9mgDt;Js3JQrt4)
+o1o;b!.l?U(RKqNb9Z1IR64EAbg+>Tb:b7p&rQCm?X0&i;Z(=Vs*hf<6]54QZ(9N5lm.aM>spH1
+6L6&m&?3T/@P<j5,S1oNNPmos-=Sd9Kh*Jt'&/5m6no9HbTYgi3!=l$8$Ij-&gTaT*Q0Kq6nH,k
+-6=CZ`1Im\),JL*Sad@LO87_=!nPi%+a,a_`MCH--hi^04?i7&_@rh[Y+$<!Ps+Him*B>E1Nms.
+g=T5<C[Bk;+3_:i,koEG:MtQckc%h@*_Y7I,Oib&F5c$dk@\e)0B`i>3*0-aS>T=f!5?QS?0q`e
+@@T@`ZWN_JhJd%!_f$$C,<>3>DF^lm-hnMogYF<)RI(_H?QF4A=`4=]?u]A?f#?hXh@9/aI*(8d
+r:5P[:QP2OZI,jWl7<0767O"X@<'$.VV3O/^WC=hpRZ%/IsXV7XjMpgV-uj6*S>gr$#e3q\S)RY
+LmF_L/&tT&RJ<`Xgj*Yodbkr"#5S)?F0>pm1@DEm]VKZT(SkuCnoj2^AH6bcnF6==?!j/67Lb:e
+FWU_HoX)m8M@ef"QjMSU1WSa6gf?<5DW#Qc=1'Q/"rQsZZNZ.4?6EB[0%M,kl8"m*)J1nIlrX##
+%Dc8B8LgHOZF'`HcA,'On);I!dROqYlmmC!-e7m\`t*^Lj`L)7/f&Cd_=Z')+/?/kLR(P80S$9I
+1m`fb?utk\N3/L0p'LHnZ:*R%Ep,39l^FV1/tY?cC7dBujYjqLBB\##N6'fUBOT?\cn;JYSHi[_
+Y%HU3<Os[=C3l&PNih!<*gR&:!$CaX8sG-t,Rh>0n_.qHjP6M:6GqMn[:tPaYD/@1%1c!IDnEMu
+ofMBjGESn&WE:MKA>-AWA9&)60258+4hXQqdsg;/&H.!4!GDFY%'C$\)kQ=8n*C@4.c@^[%FqIn
+CC$#-_5<eF7C]-uX:^ds=ddr)eCbT4]JEApGH]I6*U@fp<D8n6"+5W8WAc4U!)UEt]nT:dnGM"%
+1/'?8<J9L$`[AZ&E?*S=31h]k0=(`Hl9LWD#1S5O>KBEWK]\Sn4YZ?MKsO]JAB4G:VfG;W4eRGo
+%>Xi#](=dW&HpaVVaHPT<No14-<gX-"+sh:`EuZ4C#&!!lh4n+.LKesV,.8n_#dG,^*bC&:DP#M
+ZW[nJHh=5o:Jh<Y7DHfiS_a*ob<;C*I%T5)[Fh#sM]aBileWgqRE97GHJeo9Q^sXWY=G,nUXO*>
+nr4hl!AKYaYe">S\+>Xs"^58:U0=Z'I&!OLc@lqT6[].,ZL4rpPOD31#gE\#*P)R/hMU?hd[:q^
+Ha[T;e:9C1WbSR7BYI6tL1@<ofh#kF=aaZuaZ6V:HWk134IraSYnFS:FPjn6[(DO/q;rqY^EVeG
+E'+$L.YlW3pMI4%)%6&_ZTMfN\I^12r$Fki[52H($B,Q2a/_-#)9GGb2(?.->!meQN+'.^)5:2d
+)"c&$bV6_\>O/</INJPIWeP(B)sbj[Y`gVXRsgD`hM9GV6dRdGIL5Y1dF&Me<25_XX)q'N6+tQZ
+!X<UO1L_]D/M,nLiA6cSmA0Y%^hj3T@!8"*8o(^Uf0[J@=GE/h22$TWs7KnBVa#_%(Lk",#C'OF
+mM^^2[k=ZJ):.b%?fnn?ga57o,oAXi`EO;HlTTA#0'@ANlY`u^mK<B%:fGijlZ-!O/%tFd\7uAr
+"Wrl_dM@rJ>Gh(^!ZF?i;e5qiOAVBsim=\Lp`kj+UXnD/=R?T^<Ig7[3VuhTO8>o)cLMM=Nb[B4
+*+HP2VRK-5#H]mlE9J:&.-&gk&A9VO2g>S)IM0[]60H$$>`Ha424I!#Xhb96PGQD<)M2mf^pb^f
+NQ^__Rm"E$B"M?`cdZ;Ac?KK:V<D4WdY8uL+'h%\$_R?SP.tGW!XXlWELj7R0[fmDUjuC)?AI.C
+LE%lY:]OP`78I`I>9Y\!'a(b7]PI</OWTU38.D.4M%39Z`")`kprtdNSe%5oPL4,"lH2OVK799-
+lHPl[C1ig\;tdnR(c3;KH2)Ut#&go_``d$K3N<)tDJ0H6<<5[;DLVLQ9)j@ZAUR)Xpejq%ga:Y-
+Ga4^BI_XVJp^p>6CtRTuk4$rpa5nMU;@iO<@.5#5Zp)1D"A"59,;0M*]6ii@Ii,"CU>_-+oA+'q
+Y<K@#*<equHe\A"VlcfIi&po0+L@2ZNa(uB\SAr@cr`2bh?n.76]V<a:g;EfV(bPKWn5@g3g1=]
+JD$^$f$rrtH9b)&.VW%DU?a$@#8b3585PZ3SBgHY'\Qb-&XBCS;GFP_U_P`PI7@$6ZLcpt'g3ds
+,Z"$^0"=@Q8/p=JZiM+"3qFr8%9BCX?K$.i`PXMIAoupaL?hP._gQFnNZ;aO+Hm.n?2LAbhY7=T
+=8-+O!$GJb9ff>mC,8b"XhtR+Unk8iXWng#++CD34"a:uBKfV6jD=B/-f=B\\hIF,0ZT`[IheF,
+pa+^Q),<J1j%-"_eJhM=1mn3K%8dts$YN9VhhF?Y%JO)?]\WF3bI\Nf(%]/WB*U2bF]p7me'Vp%
+Bh0,_!@7M!H55g4M\64M/mUX^rU)G;:N^>93Q\6:#F1FFZ(mqM#rnnt28%*!Fu1[65)GU'%_]9O
+:sq)fq'[L9XpR5%qO9QrhY@KS=07FQ0;2j,$%IO8meRqj26NE?H&'^(\f7]F<+dL^'YZd8mdc-$
+m<d6%BE_Rl(;4m7f<&gIO+."X!#<C_gdCf_Dk<QG.!<'sOY7DGGm1b$Pqiu9/'8@N\"cdI_E\Jm
+VVer$m%`UO?aF*g\69f#0KBg9FXEa<j77H-<+V>q&lb!%APa^P/'A=t`5h=PrB!\8._#sQ@6k+0
+.`t'\]*ke*^GZSCHGA!HG<5(kb%>a'QGLsF\$S%P[IiX)VPWBFpZDoP3V!9H`T4==k!`E)n>e7u
+4j_P2\,-'[>B'+dK=Bl#s$7%W(V&5PG$oH^Wl.U:CN?\DR4Hk&\>Mc;Y*@Y&XcrnocrTJ$.i*$=
+m/uFhM>+`>F74MGji)YgQUCu@[A<oN82dobf=TkSkn-lV)Ou7AEpeGKVpB5allf#X)J*u=69!:N
+>SlO;\'sB=Ym7B)&,)@Jku)\:YC1j!OcS4rJq7N"I;l-oHMV-]OIjM[DjK`Cd%r6".;>)E=pW2S
+C$3RHk<?RIrM%j[nE=`8/LI$HlU]/[3^'Vj7^LuZ'=\l!UUpH[4:0`_6#fE?QA!NHq5"-PMb^^,
+GA;3CgWb+?HOMN&\3MoN[Abih.WFc'Fuo"*(+G^Hd#U'=+C&*"B^cOB[kE6`LG`;L:2@c>W2>_T
+[PlA]"?M!G:u--&YN*e6O"0B"bmhLR&ED7L-7jdcY,'-T1?_^fbp/6*<VpMnNP9!3GW\062<g-@
+\\E_Tm-aZV\NRun<T=t`(p"WMG-scQ%rL7(G?TYb:?D`@h8B3IGKpM*oLZ2f?7m^BQ?BUE[WZhZ
+[u76M6lojb0B)iZPU_AJ]a!t;5h;Fr(Mg_HY\F.jJ8m`G&J#aEn#?IEOTr-u^,KnC!`brG),rZ`
+P63qJGDA*.]Yf\f39b09]+ba?=faboX0Cn1-AR_=3"P,P)sic-dnhl_hS-*@T-$dD;KRIUclP2e
+B0+T9+i`G7-<.c@>b`?I\tVlP7Yu\6p!rn$Fl!\ko!l=b2dB$PrL`aLB!pH/Yo>.agP6BRScMsh
+q*B:JXKUqCQNXQ(no1E)3Q?UL\d;`Wc$Z_rLYACW)=4epI$k?5R`S`5j/i_h[:)D?U<nmVSq"8O
+UJN*mCF"M=U9&b^d>Z.Gj#PI[p6A,T[r&pkYY9!Wk1\Y'F>DTc%::-4Bs0I2o]=9f&VhiC@lJ("
+am&3,gt7*iD#B2!j+f>JHq(NK#gH+4>&$)WQA7q*?TWCUoJdVF[=3bblHi\!e4uepk1LHa^_\l,
+gII:u:7`&BIB;'+PKM7)R3;burB8%e>Li)HeljjX!GYQ$[M3S.p_YZRT'pIq7iUa>HMISP<6(MQ
+e<kYurf'&4(A^4c?KC`f-0aQE!F0;c31>/99Wu]ZpD`GjQ&<.a+$ON!27$^/S]:6+7j"V56>SVV
+J(enR`daeE5Ks3H&\.N;Hl.R#OM59YHKJ_+FX)nkUM"%61?I6_dT6fRS2Lt88Puh,CT+/uZO[1R
+s*K),.XV<'=M7_!X6+?mdShh5.n$S9ddFmZA/3ae2Q+OrYh%c;J^.Q[-96L>Ef!:DD\q&+QBR`A
+?^<!A81nOZMHKW*-&?aV,mk5kSA;V'/3$Y:apPHVO;^b<VF(#6(&D0Ai$Cb5TN&'p9(RC&:OITX
+Han,fE!9QYq4_,4#`IflM<f]L'%Z@h=GYZZX3#8!(";;'HRtFo\&E'*g3NMX3E@]D$^35!?luK4
+U(VW<+q':]Z-\+:p><UEMTSPF`K@IOBR<s-:MIFs_SbV>68/q.s0E6%E`_WmJ9O:k7teQ]/YS2t
+V,e0BBH!sSIt<X2Nj6<4K`n::[SIb4N4Vd[3Cn-9HY(nFbbIa92GD-Bj7)U&.%&rm-"1h>6*<L*
+&u:hL$]EVlc+O$Ka1<l'o%Mb[)e=,G78$3MhFlY:!Tg"qSdN?%;96Won6i$`O9npK3Hl/mE>'Ej
+msi@mrbQs`1kL]?_o?c#r#Pcn/!Q85M:s62e(rEWLlfL,V[]'+@GRVB'GfW`\[SJE=o5$E=;m%V
+kfu;8PE+TcK,A8K,$,iC4*>qTWAdG?4Vtd@VT=h)O)>T[(3'SRq<<`)C\OZ';Ftj3Q=O.h[ZQbZ
+T-$*cFUWFO7r\e3R[_RYS!L50"H#HIQ*+.*i)S9lpe.kJAfq0"6?C_;-%11;AGaIneA,bL'GprF
+Ndr^;'eld2+]G/2!t9f?hbYiFkraTIpieW3K`+(4JErE1[6RG1en^)L-GR31i*W*Dl=+>$_r;=4
+[!l57)6<('#->&s)7\:.*j170BRI.*du.2,bq]5KXKU!?\9E[_c[g(VYcR"qYuE>V<U#uQJqf.4
+,?FB3jl/E,s#o0Y"./^J'l*lsK-0Dhkga@u6[WB3YCba?#5oh^F!i$?n-T\,JIpU$_1:^RS2_#a
+E40V<,tL-!`NWkSPsFm%8#82W%B_nr;&$%8/9h<7UK<kFLI#V$8E]0/h'2KC/mTc&(+HZdGcJ#L
+rZVr%=<`!>OU+23il^0:etJ]^_D6;:f5A%MeFE_l"21XX"7)[j%-57BSN"SDOKB;!`F7qr*%[B>
+!/^74p%?2"#2nqu?b<epJ&GX7WslLc^l+oQH$!Z=Em\T?MJZgX(e8NW]DKXg_,*qg89aPOeiWO?
+"3/+#7TmqFXGG!(TW0RV$q?7hFD]p#/BK=PAF>ds$(iSP@@N0WZ18Hs&:t-Rm+*P%c#!(!RRIef
+"e[Y]mJ~>
+endstream
+endobj
+11 0 obj
+<</Type/FontDescriptor/FontName/ITDVJH+Times-Bold/FontBBox[-57 -206 981 704]/Flags 4
+/Ascent 704
+/CapHeight 704
+/Descent -206
+/ItalicAngle 0
+/StemV 147
+/MissingWidth 500
+/CharSet(/A/B/C/D/E/F/G/H/I/L/M/N/O/P/R/S/T/U/V/W/X/Y/Z/a/asterisk/b/c/circumflex/colon/comma/d/e/eight/f/five/g/greater/h/hyphen/i/j/k/l/less/m/minus/n/numbersign/o/one/p/parenleft/parenright/percent/period/plus/quotesingle/r/s/semicolon/six/slash/space/t/two/u/underscore/w/x/y/z/zero)/FontFile3 37 0 R>>
+endobj
+37 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 8480>>stream
+GasJ4H!"!XqY#c5F,kjN`1r1CKK<,<etpp.Zumg4h%c3TT^3ph=98ej!$MYWk@G#%!XTJ^!L-:i
+A95T#<BF7I;ELFEa(h`YD=,j;]I/,qn+s^&g\K*<c!90#8!]A1jIGsihYXkPq`-cJr&B;Kj15'-
+`(O*gHkgX`gu1A=(6>"LNd]#d0+._:`oYMO*cAc'I+.GKmX)2DVSXjITlpe%`oCc,NX^la1hB?[
+FL&C%qg/i)=Ldk.s8D'PeZ2buLSt*"`d=I['bckj4V*$6Q,Y6cj/!((DgQE<d;a.\&`-B)Bo14e
+n$'l(BdEG^rF']o=RYuniaNN6'rg%R)]!\5Z#o6rMt#Jj]40d;;cMV#(%G]=hRaK&]m"_iPX`Zg
+`;f!,JfqM7RrH_U&[3E5E8r;,H`G?4>>ho0__g=6dNWk38+)Q.QMEs<mu?!JpQ'_eDL_S8f+oqJ
+=gI\m2r7fu^$6,H]fl+\@!\qNkCQbO'#Yc!2mJhH"5ub_7D(tR+l4R.'(^p-`-fFon0-X9((gA"
+=,DQ_0+gHc+;PQ?`("2jEJW78/0WjpQ4f[Df82)t<alrONEAql-f-+l&1`R-`(FJTZ&4o:GS63s
+ou%PR.cEf%M!;hdJk(WQn\ctf2F.s/&NV,)O:W(](1JKH:3[=SnIFR-EPqrcp,MedHcLQup5[m]
+n^R>unNZTRnb^DhA3]kt'i06O:Sc/\]JAI47+&s*M(\NSmO-h_Hc127Sb23CX@\I8%o/][\R<SP
+.5=cA9iXqOmBt[6W7U3aAV*G$&uKeIqf(8aBtl>CN1B.#5(1"_qW$htc:FMrL!WJk&d=.LU.WfN
+d2+V%c<N)&2_/j5Sh9GRaab&-564c-\BiHAD/qE-A0f60#_3SNMJWtU8>I4GPV1O&%iIf.(uh@h
+b*&ek1T3#i)pVY`#[n(n\],6c;F%67/%RDFk__,'BdLDfN>=b]o.A2d$0CbAflOsFHJOBtGhn&d
+.#*m&JjC6uL,!A6MB'^:bQ;30)Q#c%[P?E*X'i)_P*P@8TUU[Z$C"Oi<E7J!qb<%[9@KuF]#9"0
+PXbbB/gD\b#O<C0A8.>5S>9R2ojIfRe[pGJIPNXESD?%+VmXp[MF"(2ZEhO[8rJ!'/OlB7WJ8p?
+gU"5LA!PHF_H2FPHXSq=J-Lr-GR=@I>['l`d>pobGX5&)>;-IR"%'?q-,n&,\q"$jMGbh0bG;9B
+:=*Zm^\b+qXRIUE_P4#/!J:ZRV]2B=o7<T+=+kAZ`(@o^CMOF97bcj@iTJST+nTHN^KVlPF=dMg
+ANTeT0r<@b3F!&\_UV0cf?Y#LD0X/(X-1&^?_7?/d\@]f*7X8%ZY=tq$1C`1%30j.ncq%#d;>'1
+@klP/<a$%>l-B:B:M9[>p_%mW]F-l1NfaD=cY)*)j'E0*GUk&QDEu&SO$@Na3?]0Vh.dI+1e4]6
+P7&Y-CdDYP];CSNK_+0gE5!8BA)eFPn<no@UHa/#$Ch-bVpFnQGqXQ*(eJ]eF1L-LX[7rr#PRql
+cbasHj,oJ)Otef(h!I5V#$8=FG&pYZ<0B32lEW\Wct#Tr_iYnl.7>4R>?%%m$%OGQR9pE'ksh_a
+:[BXp44-DAeQLP+Z,aZIkc[<0T)u_2_s2&C`Fhq\[5k8pgnis>$LWPuX\JK=S`RA;1<h9"KFZjQ
+\B2uQ(V[oam>P$KC(g10>QraeG'#$h,b3&j%A(s$i]8%a4bij_V#B<Pa<l2a3nam_M.C5*_4Ufu
+TIig9noGeN4p5P@#VA<";()d,o?fZ;n]@'-mL,3O`^]j`)&hNQKf,Ye<%q!iJXq#lj8'fLcO/kl
+6a6CDE*^HAHF/b8iRu4<GjkX)K$BOqej/UP9t,`o1jk]PFgtR5!,+@koB4I*9%JKIh#*n0pV]W+
+ZV#fd:f1r5eCY_0/<,0$EU6.NckM2k??nk9O&j-6Vp!&s!;D/W9G3c'-op:k4@Z_^]+E?XP3c]q
+T5PZcTMeWH^Qgnb,m/#2VpJ>s=km:FlLdre0S@&7NGY,iMgaH=1&*n,TaLYA&/9WoQiS@&oq"JY
+.j_i"_)V2smb8!aNkF=MPT`>Z8\o3hFZm3?$\CA)X_;14m$8<occY/2'Y!G4o`Zk^C[*igK4BKC
+-#Wm-Yc_S7ncJ>u/F4?Dr/)ADB_H5#PL7"<T]Z8@qghGY]=;=t9(iXm(Ims1AD@s.+t=a,k+Amg
+d+^E8r=YJf5p#6JZlkfTL6%Nh/KuF7&5c+g/_*cu3<E9RN^4kefL^CpI[G[mG@]IArkbqd9pi``
+dN0.VT3JE"&S(/@Sn/2L`e77YTQZUbCVWpgm\**Rq`E#e3>pB,qF%Bh):73aXX>BGV1UKCLBF?/
+>7QQS=U:Pa5Q@"3+8\'bdWJI74dM6H*;I"-P]5,D/La?!J."3XV#FEI/ZZkVGJ_Bm1(BAndIRCJ
+I">XK:"@p8Y,"RsM&V`1M7#EY#L5Z#fu^D^i3b\"ihp\`$2bG=kGD(dg>"eRa9>]m)<LGSjK]Ib
+0AX3\jjq/=T0ahGa1!Na/0,V#'YGl.n>fNn!j-X/eIAC58l-#AKiRq#qK%Bl5X2u+p$5BtqgD43
+2BPpY5ptL9lKi5&0r-^b)q<DPee$Qa<NkY+#s3CfE"a4B9ANkKYa7XOQ/mQ[Wr]k/c_1gqUhn]r
+<o5PHLKmN$!2'Q+V:V@ZS2>o2DEuu1D2S/hG?m2r\p<KS./OnQ*'Mn":dBTdeWtPog(QZsIfb*?
+i8',#2g?5/i?Gd$8a^m\,']SASN)5h;qq-nDVjS?p-kTU=fn!%A>TEj_GJi7J`jeeBWoI.GCCC;
+3I/AIYifJi@SO@i.%LEjl']9=0DKi\AO[+g9s])rcIctUQX_UlU82\gfeYknN?V1ON#4WtM`^O<
+P.Hd&7#TB1],[d"D)1+OI-m_Wc0;Y2.PRF1KTZ(->SAW2G^]4r!,CFj*ReqLP^QMN[6iM6Kp5ud
+p![jo"f\FVq%c+!V9s9T0IW9c)AKNp[J$p>p^Qdm;17,0,:Al?e?Uk8r\Do54*)9l:kZrWFRgOr
+k61TV)%_mq\NU8%jC]jJY$=m57`P!:Bs?DF`N/u@8_q[-d,K5d'Td$A2e*mh_"GVs("o-bSILa5
+?71YX7iRkeWfP9e/$Pi+<Su#7"dQl(<SgYH4-33+S]EH:Wo%R>#WJN$Wp@ZZSGKm%OlD\#*Rs"$
+F))X';lZeY]X$=YXjC^&U<l3CWUSX!co$7c$(%l;D;AfF1T#/n6$O"/?;<%!SktAPJhP@[r5?T^
+B<nfM$4;[]YZg*eg*EngqJtCPjGEZt%^$=d./S<p*M'UK20tbE=B/`1-G#o$eg2(o\_N^b9B&Sf
+pS^?b9Gnb@)M8F/CH2+cV'5`($f^H(NLJ=h+10^IqIm]@keJJk0i"iP!BNEPV>'Q&PFjdQ_?fMp
+C-.L,31,ZqS?eZ"j9%9VT:f86PJ+Q0>i\0=W$q!_MFp05OZ=4kJMo#a&Y#8jeS%m&/+QC<A[*VH
+qJeAD[AJsn>`DWdNI4Zr4W[?c!Q"tBU>2-Hmp1(IX:R26)@%!WP$%ge^tO1AB;hW5_H]r`Eegkj
+?DR[KT[1iAj2,iW!7fB?4V'J5\5n,13Rs/L'R.<L*&:P50r9jn[nqRc3#$g(isZJbd?Ea4!>M_c
+MVJ]`dN`=d^#SGTmC!Ki?Z"PLF[[:bD0oAogSs'jg-n!7rm&noU<<qER06F%7NE9c)_Tm3[MI6%
+3<!LL-ucAuk,U6GVnX[[O7SG1`nl;fE):3:2:;Oj-$p.U[K)"e@NX6J2X'SK-?CS>Lmba!P(Sa]
+U!RIPDFXWB%</6A/-*I:!k"=dB8N`m3**2Z!`OZl=:,6Ke:g1!F@qq/5<U,<2Aq=0g#gFd:f:OJ
+.5!8+#A*O)Ps%U&Qm<.+Q!`f=C2%>m2`037]=rt,fU%;7-`a9$9!NX<A_pf`SD/>BNElm:N%?M/
+1E=cbrP*rjIr<"Z@^BYc9TjE@?;"C?i0!)<5bDk9S@H/le1rk-rlaL?,lZL&::YkZmI"PBkH>h3
+1u@+cZE8)&S*M["(M;/bJUNs_Z1e'qP?LnM<=M-cfj0ubXO]HQBp;Q[n7We&bf9188P.d\[HTZ=
+:f(Q/:;;OY+WWI'-;?W]4KP')jeIn4/RpQec7Zta>QpHM$ITc\SX,BV)^<nI%Hmp-B!Cn&c(bu<
+KBDZm8`t<B2X"G"FJD#d,qBf7c,GnoG2bq!)r,*j(cIb;[.#"T1K<Bc^KPX-N/8s]<*+^s1j^1\
+Wi-k^PrVt)d<7!].,G_m.=0caD_tN>kWlI=p%eKq%bmC[EPVkgaN[?/ldX%U"tVt8Poi6lA6Q-@
+mV#NjCH6$pAhW5FjRmnNh(ZX,?TJGC-m`R4FkTc@l-TV@m+#_EEn%(3;JRf3lFDes_u.RC)su[p
+Z4BKFWM\gQ.U9Vg-$;/E4r%n0d:J3iceED_2dG4ZA*:\-9LN8n=t#10#tIn*db;#hno)s\SBUq0
+3um!"57qH#a%8s1l%A,lH!`+U;uV0UrQ.PBA;0?:;Wr+rpG?Oeoblo%E_VCbj<1S$rhXpH=S;ZE
+>pfH3CGUU==K6aF,`9AAEB\P8p_-^c!f!EQE$5RO'Zh4PmQ-ei6c+#@EJQs2:2E.I@GE_2_[-r,
+A_<0Y1]S&onNOd(p'LUCK-!i3e=[>p_bK"MTJi)!/`7ilhY:hn3V9+"=<"l4<9NK:$Z^9o`("UX
+!G'Stc)T',VmH8X?f0!X#?2k'ifrYsE:>3f2hZS;9LcXu1O4`*mO`=`3!cYU+p2HmGEr^Yq/b<+
+LYt?*l.>oj7g='r'F\H=bH9"hS*3_.et"kpiS4Kr<G:<F]!%XR4&s9mE/,2KA2D7beQFs4dLh(e
+*I;EtZ<3rhkA18XfBhJ`R)2##C4UBfN,;n'&)Vpk5p;aEqpPt)(VuuSF-q#^3[OQ]Y_=K!&[RSr
+b,qkdeB"*nP"&HbDHQj4@Y>F8!9$GrXs_\MmgV@;Eb5$i4niEY(OYQ-aH-(>%a>`,,MuO'ZlX""
+m$.tp%0NN-dk29g+pOO+qTd=g^%u5r<dO/sIR\:sE5"><*orsSZRi%hTV8*k[7MQE83C@@b](7;
+nR>5BiBq>"T6sl#4Y6DW;WW/rjpS#/K97-QrAe2da9LVqBZ:!m:i1$c;_"I?gR&mZWj?_UC@TrD
+\mM>kF'rfXrQRJl&oZ3A\8I&Z^+7.DU]I#8Ws/aD*oWB1B2,GuBT&u/%+:7.\V@Qm^0>gQC:.He
+fP^LsAZaqfkOH;(#9I]T?j-<N+,5o0K;72SmhoL_Z^.%R<OQoqTYK_$S[2T@)4N*I8rq(s=+pNP
+gR(dN#FB[`!12Wc#8>#h(s,W5Y.t%8/E&8+E_^e>!N24MTVBX&[@db_kU-!F9PANi=E'%C@%ai9
+TKf;(PUe2#T:'O7]@R&D@E[ar6a2HuYR1TSa&=uig"GWB"<'m2b]q(8*KE!KB;+"Zefq;/,<MRq
+?HJ2ZLLH2gE'X&%@.;l5!RB.lEFO-(8,=eu!J.#Aa_@ob!AgZ,BZrK#hOW,VmBb-F^I#,N62.gs
+9@3SuDtTte_(!d^P<BuuT%(iAM`[\N$2/5+QUE!6ln;kj63:d]k=)g:>dhHuo'?_tL8en%2Hd31
+<E,6M<g]o*<OT2J:dlI!FMu=dasb$JiEtA&f5eH&>i0Ge!EX4`f"3gpTeX%gmIJ*mY0R%GBW_o:
+Y`?uK-I/?Rhuj7sCG<ECM1j&D/N4QI^o'$TT]"o/Oe=br:*1bi@1[q\Ha3VTnW/iUd!]F1:+;sY
+;!Obq]NZ5EC_aEaGqrN.=B/=(j=$tP!BOW48i%=21c.qJDEtg6<+eL63foA12c?+l06jaCLF_ph
+@$lZoe`?K8c)aiEkWuY5o,3E0*2.FM#*;o$[%RB%629g8bt"q)3P24MmG^-O5JUk"hLM*=NP3>^
+/%)hO*&T)nWR#VPC>d941\05n*cdklHj.e2_lkK8CML6->&a:4Q/L$0QtgXm3Xf>JcRif9r%R22
+o_#RQi%DOif\\jEe,1Y>ncFqYXuEjk%-Lf6YDVZrYb_BR=?<a0Fj+dgaGVk>5qbAJ2m,0nd-fl0
+A!H%%H.ErH$Si(]l(LXu^(;L$*mJ*,"^"3da]dM!;@[H!XkY_)7nW&?:1^l_+'+Cc't03#_g^j[
+>$Ef"4g2EnqdZ^'??!di-\!%(r'']7<pP8(&&X<615G0+"4nV76^V]_2-%$AcaJS>MRlq<XNA)p
+3$R.NP81_YG]Xh#P8D's>]=0nNWaHb<TQ.T)J7>h\PT&RMC^Ja\;B1`;m3m_jR!2jn^jKU42;=;
+PUP?^HiC%qg=`TO\DPU/2280N2C3X_^mYGdJ?D_<Q\i_WVa<ee7p56T<_t4H%Vt/kBaL@=9jB86
+;GqpsG%7q[CS;;66m!T`QH6BIR^pM7QHBfbp^JaQPIX]5\j.)qqP19[KY,k^\8F,0]+oRXrNW6/
+WM-(dj9\J#m:gO-(L6P$$pj)'["X)'NAH%e&*TMA_n-$3nc5qf+m<$EJ%5k"S&Bp*@_@Y_=k.,Z
+:)XeSrW"=4E#ka""#/UAp2XYU5,)ILM6F"u/N"7qAV-_?_2"&oL/7Ja%h20-*9R/\RX0_/]ea:j
+$N_^b-B6jS#*-HK-2_lu)?(Mpru136JZdNLC?7J6)fR]__[VpC2DX%&er]A1Z2Q21^a^7VIu@<5
+"IZ1?70gZHY@<K(`#k&_(uUao`gCF1aN.$ZFF`K\oT?pG$8/EpI-S(e-^l^NV?dF]h#%H8Fr0dj
+K=C?h;*!Y+PGlW%F(o>[99liX#11Z\Pf&Y]L'"F+kruWW=Eb"XZm=Ib'q2hP\S(t3lqU+Bi&NdO
+NE*hD7R\Y?d-&]nNb0F^*fL&?YNlDf<:l6ZT->K;O?+jp*#Y`9;66["agS8+XlmM#kg2.U=]3KO
+4Q(p,r*og>Y)*Y+?>(dYbV&'rP5QPn!sLf1_Imc=2@hOHNU2E%5*h[>d1>-ro]6QnMB44lm0-_Y
+I3Bd2OqTFf,/g2BnMNmgN_32=n%Tk@#d/mqT#$bcDuUgIg*G,3\?aZHS28O"_#H1rJXtC"Qf@FY
+c&J!0[1I%qVQ;k0`io&&irKe?khU.g+*tgRO+5+&1!0/G7)l+blf,n>E;j5D%-JY+;&24/gh?7K
+bKrY*Hsgtu<IL/Y]d)hQGQP%:/le.*9snQ?fT![Em^DMcBh,j?i?U5i13dXK,iVee$%*9?BD-)'
+F\0^YKiSOIkdc3!N1I$1alh<jKO4?N==guR['R71qTMIq/g>Krl]"V[n7W-Zp\OpR7mi=ZR$IV9
+(ViIcq"XC<Ms\>r%VI046c9?Dbs7l(,8RpbDiogi^FSU)UC5Uh]iW4X@#'*t^mTCkC_T"W/16Lo
+RJ\/p/0g3B)1O4UO(<XVs0mWII@l[:BI;UUIjX+6cc46rrkBKO5]R'niM,gK\a/3ddD7]mOKRPN
+fCrW5"5Y">,aAQ=*g`E9mchR&oc3*TCog.3Md>B9"^JAUGA?cVs3dl<Q)Sno@R5RMW[Z[Xb=l)3
+pk%]:ZHA\KL`Ga2qlYd7+Rq[7n>eHg#[3!?B44J0QT`sg`O<Yjd(a(F@),dZdL="Y7oRdqQ08'0
+*uM;-Zq8PMm/.KD7c+Okga$c!a;euS$]iYg.KUmcrm;$-5f]bVO8!c\mPle<*cJDC"+!%%0iBb;
+jQ5RdUr9s9\-mtB<)[$H/N?_%Qu#gK6?n)J*ba9^kOs?#_7@"t]onR\D&8*P2<7u!C-a4,;0h^<
+qWXW*n,b&kh!G_.AQVn^F";<hMbJg67^ET#J:Nl$;>V$D&iHp:*iL)*mA3/j?Zh>bZoK(AKc&u3
+oQW\aY%O>(UC:DFiYN\d/Oq;i8rDZ62V,uT,10r2OhZQ;SnKAK+pl<iJ@DZ*[1'C[En6$1J?MqE
+#E<hdii#P>U^0]&Ci<E%0$YnIQ`'h+M`*`9Q9uDe971USZ&iE4Zt:#e\G^WRYk*Slh[Nn3D.@b3
+'rd>S/!^;]GCUO7eG7+`F[I,E,C]-W>H,<VQ-H:\nQ.N]!UqB8`O.q<IaBe,B`=Zk]+:,ijKY7P
+augXq?:Om:@H`WQgk+BkY'.01o^k<AAdGsM3":81I!"T$T\H0R$a.h`lB9AjC^<55ZZ\&gZN1\O
+c;X(1LFA@07rV]eQ>,W?)m2XSe'VPPlS!7.aq@@X^!bI;NmQ$C7q.?>4&.A&P%A:J'!b/aob;A2
+f@RF]1mM)B/)?n:<5b]1.+6;EC6QRFdS`GP=AFEDg5p)Jp83"JWtY#"XAL?5g%6NbP+d8-IW$-q
+6cGp5'nd=Mq[t_@7:Sr*6VV-]?.*c1D!l#>a:f<m'kXFToI0r5O?pq:-QbM*fQ>V@:haSSX*aH?
+H%Qjn_P::UNa:$RB[a?h]!\6:[6mmiI[MIk9Nr94`t]'Xpn!8nlTTF.IeO8',+$,:,^frp0_-BE
+K[OG-VqTFNg#2rnfeF(b]6A@AGX1^EO%BKE5L63_'*~>
+endstream
+endobj
+9 0 obj
+<</Type/FontDescriptor/FontName/QQOBOY+Times-Roman/FontBBox[-70 -218 1000 727]/Flags 4
+/Ascent 727
+/CapHeight 727
+/Descent -218
+/ItalicAngle 0
+/StemV 150
+/MissingWidth 500
+/CharSet(/A/B/C/D/E/F/G/H/I/J/L/M/N/O/P/R/S/T/U/V/W/X/Y/Z/a/ampersand/asterisk/b/backslash/braceleft/braceright/bracketleft/bracketright/c/colon/comma/d/dollar/e/eight/emdash/equal/f/fi/five/fl/four/g/greater/h/hyphen/i/j/k/l/less/m/minus/n/nine/numbersign/o/one/p/parenleft/parenright/percent/period/plus/q/quotedbl/quoteright/quotesingle/r/s/semicolon/seven/six/slash/space/t/three/two/u/underscore/v/w/x/y/z/zero)/FontFile3 38 0 R>>
+endobj
+38 0 obj
+<</Filter[/ASCII85Decode
+/FlateDecode]
+/Subtype/Type1C/Length 10942>>stream
+Garo$#C'0K[e1B@m_&oQ_2:L`M<#3L,Qn/OJdK+L6ejAufER;H-$Mp][3`<B.Q9r--$QooK#(i`
+Bq^4j.6o4CR3X&GSEh0@s8F7,Gr+?)H/E8f]"W$R[J+!CmDC+fV@Y9oCRTHXCfo\+:N:2aSGd[r
+j31up9OV7=DaSMo.)r#B?lBtXF/YK_It]+WQjH!+$*%;YfIW?<d',qiOX3DM7jPVrh!]OHbsdQI
+rqCo.X^8]pjcJh9B3_m",t<X0\]i*$;Sln]P1["KUbsc/nC96JOb[5Z@q:aY7$l7F8&C;=Dt=9p
+$&`u[*Z5V?Obcq@(2eEHAbjcNb80,F/,)KP*_K1LR>fg1T6Rc%Ru:o]G]HJk_Z)ee&4F=238_ti
+^F^)uXmt-Y[O:K6g6oT(ATqmfoT5R/n6YpQI:43;FUsQ&N:`"uNntl<'71kkmJNWr97l&(R^Obk
+\anPk/)PDNjZ7VYlgN/(o>]M[oXY4l(O!Ie<ktFlJs]2Y5cc;=-esRQM0XaZZ%dLUn0I-0?Glo^
+Roi5J-f-+rLpr0B`$3'bfM)&P>DU7O5I$JU63IkSLj+[B`):%LZ&I=,llt:4FqZB^4iBt0NHgN:
+9<9?2&['&5@QG)kX=%Tk0+f.[Q\h+u+Q5lP&7"3;nI!)WAeD?U(;V@$"Ij?S*!g2/6d-]Ei`1RS
++p]>X'-cE>U5=,WQqFG+V@g($+AP,70T<NfP"^.49$!5Ym+q$/%^R.43&IOdo*ZF&67S2qQ4Bd1
+^+f56Ql#U+h#64C;cBRMR^QUmD;'J6O."i^A''\p)&"Yp?b6.*hO3tIRN:QOVK6,-<cGfu-1-ud
+Gmend=\ECuR!!'8/$fImIl@0?rcGl9^QMsLs';j#i%A\`,+T(2XuL?BmW0Fkrd7K9SAnVN?e)eM
++P\2X(6saQ>Z+kO0#q4g]f,I>T@^qeCS+ffp\<OaYKN@#)<45<(&IV[Y?>#g4r3"k!c;)Y?'NZ?
+jen:*aFnjMR]fHoa:Ut:^P*"c2;0Me9LVFu0RSERc"-jK$AfoI-j:_ZT&Gl+948,aTn6i<83n2j
+Oc;/LaTc@skq)/\a)L?SFsSr2='SRf<t8nJWPW"qngNFq;>OnP$5d3KHj^Z(TSnOFe;7\C(%$Mm
+WK5^Y6=CRI;p#")(EG5/r^H)Z0LA,Eokj3/9gLN)4Ze=X-saR%/5kN!-CA&dp_:@^\+-qP-s]H:
+af3d@,bWN*ikc94$2L82p,tte"LS;=24(]5g%+nRFB2">c)t+F*JkmHXl,scB`IYT1:)A7nC!R;
+b+hd6!pY<hgsA1mVo"/cmuU2SIs!#5#_4I#)k!0!1q@?_![fRa:U-WFA.3b$-9dq1G@,c3Xn]+3
+#PJY38@t9;h,9.Uj?/'_ceaH,Ci32eNg"7E;NEUa1ggt[iD+qu.[=d-c&In'c`)]X<_[d.=.Ak"
+3!"bEI50!O9p1CiQ(u?fZMGK.)q.W!md>:N%a2o>-K/_3"n)[MSCsaS\"?H43pbu3p88ljS.mP:
+Pd(VCrlWYI&aX_WnC8@Jc,(We)[!'4!R'*j">:PLFD5U9EZ;(T95+0b%1AO7*h'KY&J?;NDrsDW
+kkP*@TFfCtk<&<n81!C]^9@mVMDtibCclaF^+Vo#*_lM;gnMPFIef;VSd<M!gWG+,T!?>Lm)]f3
+ajJnD%$1b%RHektH6&jOd6a4nWRP"#EWN*sQ+#cjJhg/o7pAg%PWFq:;Z;>UK<p\!+)Rmj$E\Jc
+('aSdKj((OX8r!/kX31?0]ga?)J`,C@]UPYId(A$l=5kgN"7Q^VJoF(I7fqh'r1q#JYLf3d]Xo-
+X9Pg^HbHoU%9in\'X4BEjXJN6]>"jQ&O6j$EVRs0[&eT&em5P`5i;jZX<Ba`,;EO,aJRq!Dr;#m
+NUrnoL\laAd:TXp2iU[%YuU@0)3!+S0f(FChKoZpT?cS2Q85Z79(NIa'[Rj)D4kPdJcZ06)L"?h
+SM,bd'_bum[4tHW%^+/t):]U)Y8mU"I.;"9!8i;[Du8NGYMb*4_4h1!5(A&SKZ[LOJ8];c[@HP$
+^,rV$d>72)ED)s;=,V#%"$mIh=V$G$"h4'`?J:XnjMZ^ZV'hp5)9H]+rkU<be5<2Y"/h84*@\6o
+e^QGu1L7n:M^Klq:&KX=?nP=LE%>QVC]CE_?_9%uABj9!r<c[iYXP\JOGW9t$G.`XKAYB9T=]EC
+q[;lqpbMQ:pXpQG&ZZ;QMVhN+Ep#um8%R,j>gD,lBC3@_nrj!M=48?h#TrL'?O78Ed#3Z[]cZGW
+kFl2_keh.?P`mMaPZ?*%''!YHXFCT+*m`suhupBH(Xs.'H3?HXjs&l:jrqc\bJ,&ZgN[0uKQ+8B
+aV7s!>U+9f0i?dB)'r[@B"l_jS'bk2OI2lmAgC$Ee1i'M8BOi4dEO+A_)72Bl+9_D[mobT`"&sf
+%edfg*k^\YT?ZLF1#Kij4>H)ULlb$s3hRdp56rjh));S?b!?aO!F.s>$Hsup.pWAp8YkcNQ9q?G
+ai,-K36W[&J[?..2[Q06M<h-A;72@#+LC%mS-^.Vc')%LogU7[2VIBMP`!^FqQ3YmS!jAM@^]NS
+A_hj[2D@lg;aG,("eZf,dt1#eJ-(0\h&\Fc6(OFt;'7fMo/'.<g'1>2'piNIbCu5(EkN(3p#[`.
+H\s[91bNLC^Z]G_1Z'Q?>idRQb[=0J$bZ*Rl\o3a@2]Y0J5WS5.G!G(hlqlBA.O+6?\JF:hk=t`
+J?-[r&5q.uU"1#0:#Io=j5:m+-_O(/nNQ@JJ[STrAX6Fu[>q.;_pojRk.V:C_!AWa3/=7PF)o]O
+\X5;ZHD&O7'[b^9P2t]@GiuK+^0A8(%R172NC@ue<[E>76#a3`2_rBT.i"p<Ut;TkdqNKpOYi:;
+k$rMCDPb.5;ho_"8oJLfWcij\iRgXJ'AGb8&g?7%EM]B11^X"^D8YO@,+$p7Bh@!ur8,J/K-]LJ
+"+/f6rm!kW13,(\,.f&:S6h]g6>6!4'tmDK"g(r.8\"4ngK-`e_P*+89fKjJ0I#lnD\6&C)YVR$
+A-NJ*,a3PR9UPsh+K[n@3+rdO3J`e+`:UJ<KtQ*GnXR5TqY'Bqi"YYp^mUaASMUbP^kE-U=:m[u
+[VA=#Bl/l"R#1OrJq!hp0PtfJcA+5ZQ<U!ulI,@i3c17.83g>oc$c>6l#iCh+?M6S+G]+94H7XJ
+X'.hBN:bV\[L6*s.1($31(YF*1gL^0?AeX@B6(;SiQ)Ss[]k41#1#GB__?mkQoW"Mo(!"i9XV!#
+l@H*C"1CncFd6"@cCWWg$am6AA]063&&E>N^gEX@h#HXgaG7&oadAukH+uscEkM&^DT?On@M2K-
+1<CY5q61-RO-W`"Fua\*]0Zo'BV_MU3)cg+8<RK4Z%,"Nh(^&3<l%:>^61O>D,Pm,)AQ+b:\`f2
+m]C;?&e5Cl>Ucg[@EqG[=8=;/^tq2>E<cjZ;L!n[SZt)Qe>omIC\$bB1_[AT)=AN/nSo]^pS=%"
+nm$3TX@b"Lf#hI]1%n/6+PX3H=s+"&*,V!b+faJ8!DE*_C_J59,#rOE/>18/=$cN?(pq3Pi&&s(
+cdrus$8RKM`>QXf(`84oDYORObAY*lChP9%pO]]+q(E`B<ZG<oF-6drPa?ktN2,U#;P35/BUe7C
+_pgtp9"\&/d\%7g44>\>1%-A88OE;a`uoBd2Ol5%([pr\Dr<kq</7VM#NS.D:Xhq$T`k?EQm<aX
+!#Pm4[bPiWJAVdr:u,7h)XDj)e0$?//O]^<L!Z&aQ;\"1"JDWdUn\K.[8TBAjcjFoIA&InNaEB&
+U+?L;TYss[Lp]dorsEI67go"/5[XR\V3QJ]"8p6D*[iGBi`G&;]5,`>N\UHXa)dlhKqHTO*b4nL
+j2mSO9Eh)QFJ^2n`5OO$frV,JmL$5/"+'JaJ%$\=C0c7I[C.cu.+]Ta.EsFF#.ge9[VqrjDSL-4
+KpM(jB7tpaV^`oW'[?;n)[a;9e6b"X8]Wb1.&p&,GOE9:GP9rnkT*@i0q%8Tl9qI.4U'1Eif6<%
++`=Ub/i\:#SmYr;hDMWIlRWl`-=];UA]t^3"o@dSK@;AG/X:0u!]+#_TNZBYoKW`4lK!Vc9YFW,
+8l]'jiW30e0ERHcd#s1#3ija+>!Spa2=Og,O,li=3qeY9(R6RK^c0K%=C#Gg2OKJ)d3JG7=3.47
+T<AKGC_Lqo;*">@YXb(,KluuA9`5nL/fnB?bKLJs82:6HK")4a)HE;/#Rl7O.npNh9iP"F:SL%-
+r+BsUHl]r.iS+P54Mq%qKg$![a1Fe_Sm7%_+EkPleHZT82>jFa^!+gKa^)c2"?5r5@EKjL4Q;1+
+bSAJdaj$jF:(\.4JQjJMUEWrmSc>ZYgnK;_Oh6kBUe\_MFpF)f*]'.%c&(i4iJa8$1-I3>=.cT.
+]nMme"cN&N/E<OU1E-Pi0gLMY<+AsoVF1ncPfk`$0ZVoF.`:X[=cqblO&a1I99haQddsk8;M2VY
+Nf,/?2)2*_@Gq!=F)]tR&R<2cD/:^UX"P%:MsE:=BkB4b?o)l_;I7/In3lVYQL=Pc;SSa8ogtKI
+F0nV?S6R8@QIPt$A$)TqgpZ7Dr-_M]%uL49`B1k=)U3T8"L=*]<OR&WS*G"-0@2NSR/SI=Y_JN[
+lqlSL52o<3@9$7,f)DX`Ru=MN4m0=Z7cRd$]*;([INfl11&2gM0-rj-1ofrFq\B@t.Aa1nI%T,q
+L@RCp1X.JD@,]%DNet]4!%j..$]B9@3qHm9>!IG(8hNr_,L_(G<!Z&tbIkqOUS"K$oHL3%/A5OO
+?c;)#80Z6qS(O6*TB+Hu:s$@`@l6E'WK5a%#;$H=)!+^pZJ6F]%I!9i9WQBm=RQ@Q&_]Bg5oNad
+<t%\$h-I$D,XP/'YVo)K@Ji<($(ce3U0$cbJ5abd=H@Z^p0bUV!'6ZSX-'5*B]B*[lMWGb$$&N'
+hEO.9k[S6HNA]N%R%k\+GDGNZc=hGr*<e']F^'g%1/hVBSQ=9=W[HPcAPT]a9>eSP)LY1On/*SZ
+D30p5^m*4_85JTK\A!FrfGocaAG0HQlrh(0j4YX+`F@\YY.T8o+`VjZ-O=FH4"opI[HCehi?^8>
+WjXp]/[d1.joFlQJ[2N$^dF9e?o<]2p.@l(GOGSY#))1`I%+4:YbV(.\-2*9`YGkO8%Y/gf>[$j
+-=At^g$kWoXutd!k$WBN[('u;)%Y,^gD<BZL3)8Xk<Kh#oOHYimu&C!S#a+9@Ak3$_6C!kqM]pi
+@Xt<WGLcE:"6g-_KVYE"Lk@H)&-NJD8$j<SNqsV(%H*ZALOnK-n)-b(=[521Gmi>6W/^HX:?,o4
+=1s:;Ia$6o;e+7q<=:>;/$r<,Y-V*ZFTj^QYh)AX'JG=Sc3Va%6a)OL'O<*&ArV+pI3:G:Z*\5f
+_*&]CLGPml(9b.WT!\ChT:WkU]75lm#N65t0rHM1&Ng2/ap./b[WPjWf>)pB8()d0BSC:XY)4]l
+>D:0AUJ1P<+-<2PTR5N%CC:i"q;fOL.1T&V6PFRU*'!C=G<\Kl.eE4pKTds,*klEDZQ!:ODip#j
+qZs&^BX4n2.#-(6>u.<Vi@EH?>f)hl8W'aX/_RLBWEW<R[4%/:-BmaOUZ,7P+;L\OW;BN&*frd@
+UU8@bi:$(sC`F9,p9[l.JKAbjE*uTFiYD'5ne4V]-*Xh%2O0Nh)KH49--)BW%(\`s\[AEmB'odL
+6$$Y/ZAh>b#q'&kmUQ2$TYG5CKmRVqJiN4F1_8+SMutFr7IV8Q"^C//CSO##;HOr:&Hn-@??$QC
++,!u!?MJpF_YFW+c==?pk@tn4Si8@Y;Ul0=P7?L*7*(u%41$IJrU]uGrFPg<E0H"We8M$nhKKK)
+r#eN9cVp58Om7T.Y;CgKcL6I4"^"sm_30`gd6of4!;,Ls)>O1J1Z_K8Xha[,mM%@ifJE<h)-#9F
+pgAK#KbmdO=r,_@%`)WRF^n'5HW+.DAH3\TK<"A7k-0<d7XGo?8a\;^FYBL`"1CC;l!!aLH^hG$
+2ClY9%D-^Hl<HMH8!c2S-->hN#[j7pCulskE9:9D@_\/SE2bN>5!m"4a6l^mqPTcDX`4+ma+r!t
+_^=e1\Ac04n;]FtJbc,dhj@IP"SIs'MLkn6[$pCU]%!1J>t#WBp:!>FbP8pgSg5aV/?V^Q2:pA:
+gQLj]nAKNSfp-Ab:k,:kn^^X;r-:2E%c`7)0nmhDdV.^o;.F_sTt0QfUIRtOSO5ZH4=Vs-7MZ=@
+J2K]#d)#[(f]]#`YYnIu$:pt:q?:_BmWKAkn.R.2/LZ3L96/i>Gnh[41S3=+/3<\S78I8[T/3:W
+GkB1WhH(<hQ>#\gkR]^@T,m.+Hu)%dhC39#2T8b/j08hB+2rA]4%ugVlcI\,"8=T;]Z^HOUbJ(G
+$r^t>SiP\u<sAeMV/i*QQRK']4$f(1f.&S@5QS4rH&\n#=dk(&:*rbsmRoSCVd-_BkDHc6qi5Ui
+.o<I+1OgKS5m+QQL2hf(O\LE$1`BH--lp3#[SU\F45#cQ'I5uHX:@sulUa6Ec^D:2lHsoQ4]r:u
+FVa0@ki_X)C1_mO#Kh$E&*F:T9"1.d!^m\N'KD2F]u<03Wm"FWhVik;j.-887R7j_5s\P#G(+U#
+[\-#mTEgm,HFdE7PU^(2R1(^(Z%S]8MkLZr\`q\QbJVRN!ct%a+&c3s)20K\hV@ZQCn`]5PtEo[
+(!YYmY#JGNQoZk;,>A`=@GbTl%PcuZf!!EX5DRl"A1Di^=[hGMAQV/2;X0si1)VX9&_<6g]!/PD
+8\gpbNF4:+YEp5q[HY9iq^$G5kDkVjF%;R]HM#uZUT5*_oZ:jX*jY3VhWP^*&!RQV#LCS\p%QLC
+$c\j,/C1B<_lD?iV@4/5`)C'Y;WX4$;:([Z[mG3T3(l'bicl!T_mJ1[Jk>&CT5J5"n$VUmKhBIn
+g!pu`#&-,T3Yj<7@.Vbipf5h7N&k>^!/mi#^5#^[B<pu7=esP<N_)7@*9L!)o?AOS@)gnBQ'\,Y
+`b+"XF7\ZFlfhpCB)c:DR(5=h6&C#6[';G>5_P$^Ypm>+EGPqnasUOn%XMjA8V-f&14u9oDQp,S
+cpP2QR#%uAo?q;7mB)^cVEFGa<T#VAMl;rXp?H'OT<FQjMGQ894>S`TFSI&bR>T=Obu[nt?3*/V
+_&&/;>jpVjn$-4J4!3._*s;\Ndaa>k8*TSmV3)[7Kj_nB>G'sFLT;F#Cjo,j@N6X973A]JURC=]
+52sIuF,JC]Esi-820oWY#PE4NBC%T[V:>=rZLj/7mAp%8W"[EcVWk+e-9(m<9nlRMplZUGFXkik
+lWt"o:NY6_>/I@l.jihdbiBFN.^MDV4Dl#g00NTQc_o2P0!qq40ipX)5IY]OO@V:DSML?`kcJR6
+3l7`,Zah6OU"=P@gQ,VA([7+q]a#bpP9P_9RcleH=0Wo%Y?8jTaYs3]k?Lodc\N>Yh1*r"8C+]s
+l#'7[j3Nd[4)Xj9g6hVZ2pjJq*7Q>ae$V5R:0c):3#=(q^b?54L@48H$MZ."%bNQKNMW:E>6[Q2
+jp,_C13,6TC:um$Y09QER6XuL.&+8'jl3f07-?fHPUJ^.)koKYoe*qCK\t'Am\AjH2(+/o.l&C#
+6>hb7@SEtH2Lr[B,5ZQ";m`o?]X34nfA1(`T\6s\(d<BLKdT!Zg+27sU49>=@[*l0+heNa>[d<B
+>]qbOj13"].hkHC@qEKE5Oi1ria^sd&t3#D)k(!k)e16She&HjfmiTg:1X6!rs^^L_\hj\n4o]o
+T9L;8*?//Sha?GuG(+JnH%Srhd0L8d0LPs6!^Ni1oYPUOmbh$#A)J%<XQo'j450jO!2n:"F=DSH
+bnap3o,]!k*]+:Z"hUj@)>lQY![E^kp/;r%deH0,f"H:\n/&I'\%Oi5`GTSE;W'?Fj$q3TX/-DU
+2L0\R[cM*Y>u'e0NRu4miadok^lq7BZ(fC(G,ASAWD3TNBnR5JX7D?HAs5+:YN>c*Lo3tVn2hhd
+ZJgo$p[)5.;,S,tjb8EaeV:(jb`F]YMJ/-#)MlO,8kW6]/$hV1?.`tjf&ifoJJ7aqcM0a-K18tI
+^qp$]`JE?CKDS?u>o*A'.@Upe=*^g?URnLXK0XrB8@TFQrSj='qr"1+VtV:GmX65Rn53V9U`s!V
+[3h*pp\1i!Rt,s8hK.5YTI$Y)MpQY._,3!`eA(L/a*>fH?cK],X,R9%BnY*Qb*$^>\hR2'%pUKC
+2^ZR_QdH`:>$b]YF*2Q3\_"P]M"18=]'amh:91H+Hpg>\a18R+EOE;;^3F;IjOQg;o@69"Gl(@j
+mFg9aE&%9LG6-4Te>HYKme+L0Y4CA]8Wmhe5:VVoQ5f2.RR3DT0pqmdK1Cq"a$n&G)ooa:E%:7"
+>\e)VZm+-hF._5MhU$\jl'"9nhXLu>7u%I^-&VKY&'S2Sr]A0SY5nFaZ!b%[7<h.N-oP,-fTGrV
+6AGq4ACam(iN\1(+(2'Z@UL,C%E9W[7+WeK3.#$<>!m:ZIK7t^,LOdIGt:Fl*W4bXU+3dCo8d!m
+r$+,T`I,m^^18O-Qi]Y$(]8B-,"7uhK!Q"X+r8Vd@4<#R#Vldo9A95aWdZ+eNh5)8(=J-7D-WDW
+2q5hSU[+)c;?.`8<%!>>:V?GsG13FSU>]T>kJ;Rc><;+p13gmH%_Yt#M4T]H(hRo<!t2kS1S3VG
+H&0sr82pDi@_FiI!HJ5lRbf(WlNob=GSs9j00fCF$K3M)5=&7fMD!+Ie-$RR#=uXANAN\LH?i:^
+DS]R=jiG/Qn*^2k^2p<mAi5K].U,P-mA!#LIUe+t\T=+Vm)LY>6'CYL5ukq_NG@KV+Fp^Bnt5]3
+F-VCjj)ZSfZ&R)63M*jtm4K+1oY-BG,TL>ChN+Qr#J^fFdk)@P+P-EOQgV<#rUu85qZS0E-cbRm
+HL&rgaFVe]>l-t2I/k<VNhGWDd^"/23sY&gJJZ#si5+4gI)eGNY]aF@\8^L0Du!N10K;R`*UCI\
+@k`/>VtcotQnU<8J?3PqdG)k\R)=NNbSHeDYO[/,7F3TaPu]7Y8nCS.ju9?,$.6Ums2Q"i"K3>O
+*,M^BYLs_TH-jBPeoG9]fDComb5aTPE:l<^"iNc,Qd81IBZBH6+`V[uZN%<$&6ae?0'M\I)I@sS
+4HQ"sY"9EW*`[mrH:,J23;%[\`L97nQ*m<u):4ut>D^pgT%BY(=m0rCm^BEgBNWSb5['ipkI7d9
+OY-&Fa+K=>#<>=?[S@m^fFM<\L/Z/-jMX?kp[;W,MW'MVm4a7sSa^q%6*'s773WoIi2,/2F!>Dh
+1GQd^+<0H/2@If=K)[bW,NS>q4?\#b=$3lS@Pd>;C`[+cOgYhmW\XECU`8Em';n@>7nQYiK+JSr
+):<Z8=^8#;FdPXheD`T_j,(Ou$8d[RG]Z4B31F7%nMta$U:$_r\_Ul^#:Dc,7[MhtcnDYul'Nl>
+WQ3_&TiLR/B\*lglabLL0FZ6MFPJ_#S`g=82]aghYSZX55IsTuf42GZ_Hb0*quj=U=F;?Ba5VHP
+A+8K-Mf1?dhs@:FC%n7Z)t?/3[tf7Mj%B=FP/m$kXL]0Ld8AR$,9#iOoN'"*pL-D+eb_&7EAfc6
+anRVrdYQq8?9g<uSaa=@XLkdE;fqk0q^:;FI3Yh;\'P]2lY-_;p.X*N(+>&(*%/d,&>%8$F5$>%
+pSb$icW8j/kYV%#mg-J]pTT#u3"1rYM,p)"nYA'L<>=JP8/F)tEOVM4]K1;]g=\(s4l,f;g]=:B
+MTk@#?$1<H(]o\O^,koP5=th\P5G*>T:'\*EGC%+-u$V&NMuRr&f\CdX>cSC$FuZSB:=0.>+LR:
+IVs-PNNY7>.PdJLE49*#ilZ&gnnqA>Y0`*C*tJ9RK]JY/'Xit#d0$kFce9?D^:s+C/j!>E@qKdX
+N<_0'Gpk"n4IKp3JliR.ftZ]5YFEq;JtLn5CT+PHf$kR!5s'M<lf?cb4*I\6.uA/t-k&atD4g8t
+YY+EY<R6/BEj=TW4X!n7qoVJ-R.H*kr'8FW76*U/E&-hu06!RAkgIh3L@3VKNPk\jIVZpE@X>nj
+S/6N@gB3J`-X&TdLHEBO]codD#7J).m@/A;&_ZDsI[b]B@6C[>gY>#@n6tY@kN>5hi6FnXq"are
+!t57$Fq$K<@kk+0/D`eO/gcWI:(GUb?t[C4r07G0oWnM5D#9h/n)*QYOH7Qm:F*HaU;Z#Sk0B!h
+:!7%(TU^'4K8T\FTbpkl21\!%+eOe@Za*>6=)\5QJkZ9NnOJ5?Y)$16l"[`aDuT-`rd`#LdHHH[
+rgG@s:<C2fl^I_/-h*Vqe#(<sb:R#/a6X+c&prP5_RkO)VZ(rm%!]q_6/-X.:UDs%&)[5ro-XNF
+!:Z8K5J6m[d#%PO")[<[rl8nN&[m\l43KR5"lONgX(7jT/N/!7LL"O>+/66KTq9r`bEM+eki5X)
+!hCl8%Q&9BV;+sID5eu02J*k]W_Qh1*Y]$I+hKYG7b/8"BS`Wc=(><A1=nE6b(C.t,K8%FnWat\
+r"5F;0P'Ar2O8t"\kZ+jU6)FoM8FquK]H[O/rSUXJbih[H#'[]YS*2L2//>TW<u(o\klFt+tSX%
+M?+>n7>98_/#0[Rld[;+cBTm-;A61T'Bu6/?&R:..bF2$-)BdXdLTs2eKBE<2Q:FA98b?$_WLQd
+U(TgrWM-8sp-5YGhsRi0.(6Q7af)SH:=8hDWmtd!'7SVb_Z+l^L1:mC$1i8s2&=EN`eO;nQ\WMk
+TGU8'5m\646XhIs76\3Oo@pZRkhk=nj(%ib[dmL(R?bE(kWT=HBN/;]'/)(=?A0jBT)%<B:T<f@
+Z@,->b!(!Gn'1e%FHOQK5,=m?!k"[Rs"quK40*nL%FbR%AKQ(bb6CNl<7"fJAK'oP3<j<8U8j9]
+8<!6O]Gbikm=:gGr<A=-s):j%+jEm_)L=J*,Lss3=J<3hCjGQme<Z83e"0N7RnaOp+#re`n,~>
+endstream
+endobj
+42 0 obj
+<</Type/Metadata
+/Subtype/XML/Length 1355>>stream
+<?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?adobe-xap-filters esc="CRLF"?>
+<x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP toolkit 2.9.1-13, framework 1.6'>
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
+<rdf:Description rdf:about='uuid:28b0b583-0790-11f1-0000-60545a742b2f' xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='GPL Ghostscript 9.07'/>
+<rdf:Description rdf:about='uuid:28b0b583-0790-11f1-0000-60545a742b2f' xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2016-02-09T13:25:15-08:00</xmp:ModifyDate>
+<xmp:CreateDate>2016-02-09T13:25:15-08:00</xmp:CreateDate>
+<xmp:CreatorTool>groff version 1.22.2</xmp:CreatorTool></rdf:Description>
+<rdf:Description rdf:about='uuid:28b0b583-0790-11f1-0000-60545a742b2f' xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:28b0b583-0790-11f1-0000-60545a742b2f'/>
+<rdf:Description rdf:about='uuid:28b0b583-0790-11f1-0000-60545a742b2f' xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>man.3.strftime.ps</rdf:li></rdf:Alt></dc:title></rdf:Description>
+</rdf:RDF>
+</x:xmpmeta>
+                                                                        
+                                                                        
+<?xpacket end='w'?>
+endstream
+endobj
+2 0 obj
+<</Producer(GPL Ghostscript 9.07)
+/CreationDate(D:20160209132515-08'00')
+/ModDate(D:20160209132515-08'00')
+/Creator(groff version 1.22.2)
+/Title(man.3.strftime.ps)>>endobj
+xref
+0 43
+0000000000 65535 f 
+0000034155 00000 n 
+0000065184 00000 n 
+0000034068 00000 n 
+0000033305 00000 n 
+0000000009 00000 n 
+0000007464 00000 n 
+0000034220 00000 n 
+0000036045 00000 n 
+0000052084 00000 n 
+0000035305 00000 n 
+0000043009 00000 n 
+0000034671 00000 n 
+0000036842 00000 n 
+0000034261 00000 n 
+0000034291 00000 n 
+0000033456 00000 n 
+0000007484 00000 n 
+0000017183 00000 n 
+0000034343 00000 n 
+0000034373 00000 n 
+0000033609 00000 n 
+0000017204 00000 n 
+0000026731 00000 n 
+0000034425 00000 n 
+0000034455 00000 n 
+0000033762 00000 n 
+0000026752 00000 n 
+0000031510 00000 n 
+0000034507 00000 n 
+0000034537 00000 n 
+0000033915 00000 n 
+0000031531 00000 n 
+0000033284 00000 n 
+0000034589 00000 n 
+0000034619 00000 n 
+0000037198 00000 n 
+0000043502 00000 n 
+0000052707 00000 n 
+0000035180 00000 n 
+0000035929 00000 n 
+0000036705 00000 n 
+0000063752 00000 n 
+trailer
+<< /Size 43 /Root 1 0 R /Info 2 0 R
+/ID [<9F56A8719D605FC236886EC7DBF98A02><9F56A8719D605FC236886EC7DBF98A02>]
+>>
+startxref
+65364
+%%EOF

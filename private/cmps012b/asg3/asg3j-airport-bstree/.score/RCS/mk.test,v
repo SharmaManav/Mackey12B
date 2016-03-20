@@ -1,0 +1,57 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2013.02.01.00.54.35;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.02.01.00.53.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@#!/bin/sh
+# $Id: mk.test,v 1.1 2013-01-31 16:53:16-08 - - $
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+export PATH
+RUN=runprog
+PROG=./airport
+
+$RUN -odebug-arg0 -0/dev/null $PROG
+$RUN -odebug-errs -0/dev/null $PROG nosuch.db other/errors
+$RUN -odebug-full -0/dev/null $PROG -d airports-full.db
+$RUN -odebug-part -0/dev/null $PROG -d airports-part.db
+$RUN -otest0-full -0test0.in  $PROG airports-full.db
+$RUN -otest0-part -0test0.in  $PROG airports-part.db
+$RUN -otest1-full -0test1.in  $PROG airports-full.db
+$RUN -otest1-part -0test1.in  $PROG airports-part.db
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.test,v 1.2 2012-02-07 15:45:42-08 - - $
+d5 1
+a5 1
+RUN=runprogram.perl
+@

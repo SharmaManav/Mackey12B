@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting scanfbug.c
+scanfbug.c:
+     $Id: scanfbug.c,v 1.9 2013-09-25 14:54:29-07 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 scanfbug.c
+	-o scanfbug -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f scanfbug.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished scanfbug.c

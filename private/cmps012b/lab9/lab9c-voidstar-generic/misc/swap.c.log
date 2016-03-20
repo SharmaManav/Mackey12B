@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting swap.c
+swap.c:
+     $Id: swap.c,v 1.9 2014-02-21 15:43:41-08 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 swap.c
+	-o swap -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f swap.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished swap.c

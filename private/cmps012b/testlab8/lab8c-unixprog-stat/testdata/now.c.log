@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting now.c
+now.c:
+     $Id: now.c,v 1.5 2014-03-05 19:17:01-08 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 now.c
+	-o now -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f now.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished now.c

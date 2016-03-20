@@ -1,3 +1,16 @@
+cid airport.java
+cid: % ci -m- -u airport.java
+RCS/airport.java,v  <--  airport.java
+new revision: 1.2; previous revision: 1.1
+cid: [airport.java]
+cid: % rcs -q -U airport.java
+cid: % ls -goaFd airport.java RCS/airport.java,v | cut -c1-80
+-rw-r--r--. 1 2296 Mar 19 21:35 airport.java
+-r--r--r--. 1 2835 Mar 19 21:35 RCS/airport.java,v
+cid: % ident -q airport.java
+airport.java:
+     $Id: airport.java,v 1.2 2016-03-19 21:35:23-07 - - $
+javac airport.java
 echo Main-class: airport >Manifest
 jar cvfm airport Manifest airport.class treemap.class misc.class treemap\$tree.class
 added manifest

@@ -1,0 +1,122 @@
+head	1.3;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.3
+date	2014.02.08.01.12.16;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.05.01.01.22.51;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2012.02.10.02.54.08;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@-
+@
+text
+@// $Id: sortlist.java,v 1.2 2013-04-30 18:22:51-07 - - $
+
+import java.util.Scanner;
+import static java.lang.System.*;
+
+class sortlist {
+
+   static class list_t {
+      node_t head;
+   }
+   static class node_t {
+      String item;
+      node_t link;
+   }
+
+   static void insertascending (list_t list, String newitem) {
+      node_t prev = null;
+      node_t curr = list.head;
+
+      // Find the insertion position.
+      while (curr != null) {
+         if (curr.item.compareTo (newitem) > 0) break;
+         prev = curr;
+         curr = curr.link;
+      }
+
+      // Do the insertion.
+      node_t temp = new node_t();
+      temp.item = newitem;
+      temp.link = curr;
+      if (prev == null) list.head = temp;
+                   else prev.link = temp;
+   }
+
+   public static void main (String[] args) {
+      Scanner stdin = new Scanner (System.in);
+      list_t list = new list_t();
+
+      while (stdin.hasNextLine()) {
+         String line = stdin.nextLine();
+         insertascending (list, line);
+      }
+
+      for (node_t curr = list.head; curr != null; curr = curr.link) {
+         out.printf ("%s%n", curr.item);
+      }
+   }
+
+}
+
+
+//TEST// (echo "{{Note the ordering of special characters.}}" \
+//TEST// ;echo "testing the sort" \
+//TEST// ;echo "is the output sorted" \
+//TEST// ;echo "Output should be in lexicographic order." \
+//TEST// ;echo "from this program, is sorted" \
+//TEST// ;echo "a last line is given" \
+//TEST// ;echo "BUT A CAPITAL LINE COMES FIRST" \
+//TEST// ;echo "//Slashes//" \
+//TEST// ) | runprog -x sortlist.lis -0- ./sortlist
+//TEST// mkpspdf sortlist.ps sortlist.j* sortlist.lis*
+
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: sortlist.java,v 1.1 2012-02-09 18:54:08-08 - - $
+d51 1
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: sortlist.java,v 1.2 2011-02-03 17:43:39-08 - - $
+a50 1
+/*
+a60 1
+*/
+@

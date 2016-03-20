@@ -1,0 +1,4 @@
+#!/bin/sh
+# $Id: mkscripts,v 1.2 2015-01-13 17:24:35-08 - - $
+cid $0 pmatch.perl
+mkpspdf scripts.ps pmatch.perl */mk

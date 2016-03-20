@@ -1,0 +1,140 @@
+head	1.6;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.6
+date	2016.03.02.23.07.54;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2014.03.06.03.17.01;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2014.03.06.03.15.54;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2014.03.06.03.13.18;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2014.03.06.03.12.58;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.03.06.03.12.32;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@-
+@
+text
+@// $Id: now.c,v 1.5 2014-03-05 19:17:01-08 - - $
+
+// Command works like date(1).
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main (void) {
+   time_t now = time (NULL);
+   printf ("now = %ld\n", now);
+   struct tm tm_now;
+   localtime_r (&now, &tm_now);
+   char buffer[64];
+   strftime (buffer, sizeof buffer, "%a %b %e %T %Z %Y", &tm_now);
+   printf ("%s\n", buffer);
+   return EXIT_SUCCESS;
+}
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: now.c,v 1.4 2014-03-05 19:15:54-08 - - $
+d11 1
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: now.c,v 1.3 2014-03-05 19:13:18-08 - - $
+d13 1
+a13 1
+   char buffer[32];
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: now.c,v 1.2 2014-03-05 19:12:58-08 - - $
+d11 2
+a12 1
+   struct tm *tm_now = localtime (&now);
+d14 1
+a14 1
+   strftime (buffer, sizeof buffer, "%a %b %e %T %Z %Y", tm_now);
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: now.c,v 1.1 2014-03-05 19:12:32-08 - - $
+d13 1
+a13 1
+   strftime (buffer, sizeof buffer, "%a %b %e %T %Z %Y", &tm_now);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id$
+d11 1
+a11 1
+   struct tm *tm = localtime (&now);
+d13 1
+a13 1
+   strftime (buffer, sizeof buffer, "%a %b %e %T %Z %Y", tim);
+@

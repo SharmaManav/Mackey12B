@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting double.c
+double.c:
+     $Id: double.c,v 1.31 2016-01-13 22:04:46-08 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 double.c
+	-o double -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f double.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished double.c

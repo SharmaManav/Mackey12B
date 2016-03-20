@@ -1,9 +1,14 @@
-head	1.1;
+head	1.2;
 access;
 symbols;
 locks;
 comment	@# @;
 
+
+1.2
+date	2016.03.20.04.35.23;	author -;	state -;
+branches;
+next	1.1;
 
 1.1
 date	2016.02.15.05.40.55;	author -;	state -;
@@ -15,12 +20,12 @@ desc
 @@
 
 
-1.1
+1.2
 log
 @-
 @
 text
-@// $Id: airport.java,v 1.2 2013-01-31 17:00:19-08 - - $
+@// $Id: airport.java,v 1.1 2016-02-14 21:40:55-08 - - $
 
 import java.io.*;
 import java.util.Scanner;
@@ -41,7 +46,7 @@ class airport {
                misc.warn (database_name, linenr, "invalid line");
                continue;
             }
-            tree.put (keyvalue[0], keyvalue[1]);
+            tree.put (keyvalue[0].toUpperCase(), keyvalue[1]);
          }
          database.close();
       }catch (IOException error) {
@@ -51,9 +56,34 @@ class airport {
    } 
 
    public static void main (String[] args) {
-      treemap tree = load_database (args[0]);
+        boolean argchk = false; 
+        if (args.length == 0 || args.length > 2) {
+            err.printf("Usage: airport [-d] database");
+            exit(1);
+        }
+        for (int i = 0; i<args.length; i++) {
+            if (args[i].equals("-d")) {
+                argchk = true;
+            } else if (args[i].substring(0, 1).equals("-")) {
+                err.printf("Usage: airport [-d] database");
+                exit(1);
+            }
+        }
+      treemap tree = load_database ( argchk ? args[1] : args[0]);
+      if (argchk) {
+         tree.debug_tree();
+         exit(0);
+      }
+      
       Scanner stdin = new Scanner (in);
-      while (stdin.hasNextLine()) {
+      while (stdin.hasNextLine()){
+        String line = stdin.nextLine().toUpperCase().trim();
+        if (line.matches("^\\s*(#.*)?$")) continue;
+        String[] parts = line.split(" ");
+        if (parts.length != 1) {
+            misc.warn("Invalid line");
+            continue;
+        }
          String airport = stdin.nextLine().toUpperCase().trim();
          String airport_name = tree.get (airport);
          if (airport_name == null) {
@@ -61,10 +91,36 @@ class airport {
          }else {
             out.printf ("%s = %s%n", airport, airport_name);
          }
-      }
-      tree.debug_tree ();
+      } 
       exit (misc.exit_status);
-   }
+  }
 
 }
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: airport.java,v 1.2 2013-01-31 17:00:19-08 - - $
+d22 1
+a22 1
+            tree.put (keyvalue[0], keyvalue[1]);
+d32 19
+a50 1
+      treemap tree = load_database (args[0]);
+d52 8
+a59 1
+      while (stdin.hasNextLine()) {
+d67 1
+a67 2
+      }
+      tree.debug_tree ();
+d69 1
+a69 1
+   }
 @

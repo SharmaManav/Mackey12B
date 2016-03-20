@@ -1,0 +1,23 @@
+==18686== Memcheck, a memory error detector
+==18686== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==18686== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==18686== Command: swap
+==18686== 
+swap
+d1 = 3, d2 = 6
+swapm (0xffefff538, 0xffefff530, 8)
+swapm: temp=0x9c9a090
+d1 = 6, d2 = 3
+s1 = "Hello, World.", s2 = "This is a test of swapa."
+swapa (0xffefff520, 0xffefff500, 13)
+swapa: temp=0xffefff480
+s1 = "This is a tes", s2 = "Hello, World.t of swapa."
+==18686== 
+==18686== HEAP SUMMARY:
+==18686==     in use at exit: 0 bytes in 0 blocks
+==18686==   total heap usage: 2 allocs, 2 frees, 24 bytes allocated
+==18686== 
+==18686== All heap blocks were freed -- no leaks are possible
+==18686== 
+==18686== For counts of detected and suppressed errors, rerun with: -v
+==18686== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)

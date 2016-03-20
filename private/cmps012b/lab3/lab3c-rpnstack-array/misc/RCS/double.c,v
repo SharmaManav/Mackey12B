@@ -1,0 +1,652 @@
+head	1.31;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.31
+date	2016.01.14.06.04.46;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2016.01.14.06.04.26;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2016.01.14.06.01.08;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2016.01.14.06.00.36;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2016.01.14.05.58.34;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2016.01.14.05.57.44;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2016.01.14.05.53.54;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2013.09.25.21.25.32;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2013.09.25.21.24.49;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2013.09.25.21.22.56;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2013.04.10.03.45.09;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2013.04.10.03.44.19;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2013.04.10.03.44.00;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2013.04.10.03.42.27;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2013.04.10.03.41.26;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2013.04.10.03.41.01;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2013.04.10.03.40.46;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2013.04.10.03.37.45;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2013.01.23.02.29.00;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2013.01.23.02.28.09;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2013.01.23.02.20.17;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2013.01.23.02.20.09;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2013.01.23.02.19.31;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2013.01.23.02.19.22;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2013.01.23.02.18.44;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2013.01.23.02.18.25;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2013.01.23.02.17.50;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.01.23.02.17.31;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.01.23.02.14.59;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.01.23.02.14.01;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.01.23.02.13.44;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.31
+log
+@-
+@
+text
+@// $Id: double.c,v 1.30 2016-01-13 22:04:26-08 - - $
+
+//
+// NAME
+//    double - print out information about double numbers
+//
+
+#include <libgen.h>
+#include <locale.h>
+#include <stdio.h>
+#include <values.h>
+
+int main (int argc, char **argv) {
+   (void) argc; // avoid: warning: unused parameter 'argc'
+   char *locale = setlocale (LC_NUMERIC, "en_US");
+   if (locale == NULL) {
+      fprintf (stderr, "%s: %s: %s\n", basename (argv[0]),
+               "setlocale (LC_NUMERIC, \"en_US\")", "failed\n");
+   }else {
+      printf ("Locale set to %s\n", locale);
+   }
+   printf ("DBL_DIG = %d\n", DBL_DIG);
+   printf ("DBL_EPSILON = %.15g\n", DBL_EPSILON);
+   printf ("DBL_MANT_DIG = %d\n", DBL_MANT_DIG);
+   printf ("DBL_MAX_10_EXP = %d\n", DBL_MAX_10_EXP);
+   printf ("DBL_MAX = %.15g\n", DBL_MAX);
+
+   printf ("diameter of the universe = %g meters\n", 8.8e26);
+
+   double dollars = 1.00;
+   while (dollars + 0.01 > dollars) dollars *= 2;
+   printf ("dollars = $%'22.2f = $%g\n", dollars, dollars);
+
+   double us_debt = 18900819907288.77;
+   printf ("US debt = $%'22.2f = $%g\n", us_debt, us_debt);
+   printf ("          http://www.brillig.com/debt_clock/\n");
+   printf ("          14 Jan 2016 at 05:53:18 AM GMT)\n");
+   return 0;
+}
+
+//TEST// ./double >double.lis 2>&1
+//TEST// mkpspdf double.ps double.c* double.lis*
+
+@
+
+
+1.30
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.29 2016-01-13 22:01:08-08 - - $
+d32 1
+a32 1
+   printf ("dollars = $%'22.2f = $%'g\n", dollars, dollars);
+d35 1
+a35 1
+   printf ("US debt = $%'22.2f = $%'g\n", us_debt, us_debt);
+@
+
+
+1.29
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.28 2016-01-13 22:00:36-08 - - $
+d32 1
+a32 1
+   printf ("dollars = $%'22.2f = $%g\n", dollars, dollars);
+d35 1
+a35 1
+   printf ("US debt = $%'22.2f = $%g\n", us_debt, us_debt);
+@
+
+
+1.28
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.27 2016-01-13 21:58:34-08 - - $
+d28 2
+a32 2
+
+   printf ("diameter of the universe = %g meters\n", 8.8e26);
+@
+
+
+1.27
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.26 2016-01-13 21:57:44-08 - - $
+d27 1
+d31 3
+a37 1
+   printf ("diameter of the universe = %g meters\n", 8.8e26);
+@
+
+
+1.26
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.25 2016-01-13 21:53:54-08 - - $
+d32 2
+a33 2
+   printf ("          (http://www.brillig.com/debt_clock/ "
+                      "14 Jan 2016 at 05:53:18 AM GMT)\n");
+@
+
+
+1.25
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.24 2013-09-25 14:25:32-07 - - $
+d30 4
+a33 1
+   printf ("US debt = $%'22.2f (Feb. 2013)\n", 16_687_289_180_215.00);
+@
+
+
+1.24
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.23 2013-09-25 14:24:49-07 - - $
+d30 1
+a30 1
+   printf ("US debt = $%'22.2f (Feb. 2013)\n", 16687289180215.00);
+@
+
+
+1.23
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.22 2013-09-25 14:22:56-07 - - $
+d29 1
+a29 1
+   printf ("dollars = $%'22.2f = %g\n", dollars, dollars);
+@
+
+
+1.22
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.21 2013-04-09 20:45:09-07 - - $
+d29 1
+a29 1
+   printf ("dollars = $%'22.2f\n", dollars);
+@
+
+
+1.21
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.20 2013-04-09 20:44:19-07 - - $
+d35 1
+a35 1
+//TEST// runprog -x double.lis ./double
+d37 1
+@
+
+
+1.20
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.19 2013-04-09 20:44:00-07 - - $
+d30 1
+a30 1
+   printf ("US debt = $%'22.2f\n", 16687289180215.00);
+@
+
+
+1.19
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.18 2013-04-09 20:42:27-07 - - $
+d29 2
+a30 2
+   printf ("dollars = $%'20.2f\n", dollars);
+   printf ("US debt = $%'20.2f\n", 16687289180215.00);
+@
+
+
+1.18
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.17 2013-04-09 20:41:26-07 - - $
+d30 1
+a30 2
+   printf ("dollars = $140,737,488,355,328.00\n");
+   printf ("US debt =  $16,448,632,401,870.75 \n");
+@
+
+
+1.17
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.16 2013-04-09 20:41:01-07 - - $
+d8 1
+a8 1
+#include <libgen.h
+d14 1
+@
+
+
+1.16
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.15 2013-04-09 20:40:46-07 - - $
+d17 1
+a17 1
+               "setlocale (LC_NUMERIC, \"en_US\"): failed\n");
+@
+
+
+1.15
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.14 2013-04-09 20:37:45-07 - - $
+d8 1
+@
+
+
+1.14
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.13 2013-01-22 18:29:00-08 - - $
+d8 1
+d12 8
+a19 1
+int main (void) {
+a26 1
+   setlocale (LC_NUMERIC, "en_US");
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.12 2013-01-22 18:28:09-08 - - $
+d19 2
+a20 1
+   printf ("dollars = $%20.2f\n", dollars);
+@
+
+
+1.12
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.11 2013-01-22 18:20:17-08 - - $
+d21 1
+a21 1
+   printf ("debt    =  $16,448,632,401,870.75 \n");
+@
+
+
+1.11
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.10 2013-01-22 18:20:09-08 - - $
+d20 3
+a22 1
+   printf ("           T  B  M  t\n");
+d25 3
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.9 2013-01-22 18:19:31-08 - - $
+d20 1
+a20 1
+   printf ("           T  B  M  t\n";
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.8 2013-01-22 18:19:22-08 - - $
+d20 1
+@
+
+
+1.8
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.7 2013-01-22 18:18:44-08 - - $
+d19 1
+a19 1
+   printf ("dollars = $%20.2f", dollars);
+@
+
+
+1.7
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.6 2013-01-22 18:18:25-08 - - $
+d19 1
+a19 1
+   printf ("dollars = $%.20g", dollars);
+@
+
+
+1.6
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.5 2013-01-22 18:17:50-08 - - $
+d19 1
+a19 1
+   printf ("dollars = $%.18g", dollars);
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.4 2013-01-22 18:17:31-08 - - $
+d19 1
+a19 1
+   printf ("dollars = $%18.2f", dollars);
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.3 2013-01-22 18:14:59-08 - - $
+d19 1
+a19 1
+   printf ("dollars = $%,18.2f", dollars);
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.2 2013-01-22 18:14:01-08 - - $
+d17 3
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: double.c,v 1.1 2013-01-22 18:13:44-08 - - $
+d12 5
+a16 5
+   printf ("%d\n", DBL_DIG);
+   printf ("%g\n", DBL_EPSILON);
+   printf ("%d\n", DBL_MANT_DIG);
+   printf ("%d\n", DBL_MAX_10_EXP);
+   printf ("%g\n", DBL_MAX);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id$
+a13 1
+   printf ("%d\n", DBL_MANT_BITS);
+a15 1
+   printf ("%d\n", DBL_MAX_2_EXP);
+@

@@ -1,0 +1,43 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2015.01.14.01.24.35;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.01.29.01.53.39;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@#!/bin/sh
+# $Id: mkscripts,v 1.1 2014-01-28 17:53:39-08 - - $
+cid $0 pmatch.perl
+mkpspdf scripts.ps pmatch.perl */mk
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 2
+a3 1
+# $Id$
+@

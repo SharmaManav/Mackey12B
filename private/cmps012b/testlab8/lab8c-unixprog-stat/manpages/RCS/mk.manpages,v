@@ -1,0 +1,179 @@
+head	1.8;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.8
+date	2013.05.18.01.02.20;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2012.02.29.01.32.53;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2012.02.29.00.55.27;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2012.02.29.00.55.18;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2012.02.29.00.55.10;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2012.02.29.00.54.32;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2012.02.29.00.53.38;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2012.02.29.00.52.49;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.8
+log
+@-
+@
+text
+@#!/bin/sh -x
+# $Id: mk.manpages,v 1.7 2012-02-28 17:32:53-08 - - $
+# Make man(1) pages for this lab.
+cid + $0
+for man in 1-stat 2-lstat 2-readlink 2-time \
+   3-localtime 3-strftime
+do
+   section=`echo $man | sed 's/-.*//'`
+   manpage=`echo $man | sed 's/.*-//'`
+   mkman man.$section.$manpage -s $section $manpage
+done
+@
+
+
+1.7
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.manpages,v 1.6 2012-02-28 16:55:27-08 - - $
+d5 2
+a6 2
+for man in 1-ls 1-man 1-stat 2-lstat 2-readlink 2-time \
+   3-localtime 3-strerror 3-strftime
+@
+
+
+1.6
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.manpages,v 1.5 2012-02-28 16:55:18-08 - - $
+d5 2
+a6 11
+for man in \
+   1-ls \
+   1-man \
+   1-stat \
+   2-lstat \
+   2-readlink \
+   2-time \
+   3-localtime \
+   3-strerror \
+   3-strftime \
+;
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 2
+a2 2
+#!/bin/sh
+# $Id: mk.manpages,v 1.4 2012-02-28 16:55:10-08 - - $
+@
+
+
+1.4
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.manpages,v 1.3 2012-02-28 16:54:32-08 - - $
+d19 1
+a19 2
+echo $section $manpage
+#   mkman man.$section.$manpage -s $section $manpage
+@
+
+
+1.3
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.manpages,v 1.2 2012-02-28 16:53:38-08 - - $
+d17 2
+a18 2
+   section=`echo $man | sed 's/-.*//`
+   manpage=`echo $man | sed 's/.*-//`
+@
+
+
+1.2
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.manpages,v 1.1 2012-02-28 16:52:49-08 - - $
+d19 2
+a20 1
+   mkman man.$section.$manpage -s $section $manpage
+@
+
+
+1.1
+log
+@-
+@
+text
+@d2 1
+a2 1
+# $Id: mk.manpages,v 1.1 2011-05-24 20:13:02-07 - - $
+d17 2
+a18 2
+   section=`echo $man | sed 's/-.*//'
+   manpage=`echo $man | sed 's/.*-//'
+@

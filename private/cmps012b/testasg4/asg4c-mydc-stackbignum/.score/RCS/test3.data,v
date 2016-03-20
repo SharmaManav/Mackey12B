@@ -1,0 +1,43 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2015.02.04.01.43.53;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.02.16.03.29.55;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@_4444444444444444444444444444444f333333333+fc
+_4444444444444444444444444444444f333333333-fc
+
+
+q
+$Id$
+@
+
+
+1.1
+log
+@-
+@
+text
+@d3 4
+@

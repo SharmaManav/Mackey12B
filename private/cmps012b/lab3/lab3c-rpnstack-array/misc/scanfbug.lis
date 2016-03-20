@@ -1,0 +1,19 @@
++ ./scanfbug
++ echo 34 92.6 123foob + - 38 - + +3 -33 infinity +infinity -infinity nan - 43 end
+number = 34
+number = 92.6
+number = 123
+bad input "foob"
+bad input "-"
+number = 38
+bad input "+"
+number = 3
+number = -33
+number = inf
+number = inf
+number = -inf
+number = nan
+bad input "43"
+bad input "end"
++ echo status = 1
+status = 1

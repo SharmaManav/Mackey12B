@@ -1,0 +1,98 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.2
+date	2015.02.27.02.24.46;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2014.05.16.03.57.59;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@// $Id: stringproc.c,v 1.1 2014-05-15 20:57:59-07 - - $
+
+//
+// Example of using genericlib to process strings.
+// Array of strings with two processing functions.
+//
+
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+#include "genericlib.h"
+
+static char *strings[] = {"hello", "world", "foo", "bar", "baz", "qux"};
+
+void strdupthem (void *string) {
+   TRACE ("%p->\"%s\"", string, *(char**)string);
+   char **chars = (char**) string; 
+   *chars = strdup (*chars);
+}
+
+void capitalize (void *string) {
+   TRACE ("%p->\"%s\"", string, *(char**)string);
+   for (char *chars = *(char**) string; *chars != '\0'; ++chars) {
+      *chars = toupper (*chars);
+   }
+}
+
+void printstr (void *string) {
+   TRACE ("%p->\"%s\"", string, *(char**)string);
+}
+
+void freestr (void *string) {
+   TRACE ("%p->\"%s\"", string, *(char**)string);
+   char *str = *(char**) string; 
+   free (str);
+   str = NULL; 
+}
+
+int main (void) {
+
+   size_t stringdim = sizeof strings / sizeof *strings;
+   process (strings, stringdim, sizeof *strings, printstr);
+   (void) printf ("\n");
+   process (strings, stringdim, sizeof *strings, strdupthem);
+   (void) printf ("\n");
+   process (strings, stringdim, sizeof *strings, capitalize);
+   (void) printf ("\n");
+   process (strings, stringdim, sizeof *strings, printstr);
+   (void) printf ("\n");
+   process (strings, stringdim, sizeof *strings, freestr);
+   (void) printf ("\n");
+
+   return 0;
+}
+
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: procstrings.c,v 1.1 2014-05-15 20:35:11-07 - - $
+d14 1
+a14 1
+char *strings[] = {"hello", "world", "foo", "bar", "baz", "qux"};
+@

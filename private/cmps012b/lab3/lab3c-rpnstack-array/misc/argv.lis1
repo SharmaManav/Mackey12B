@@ -1,0 +1,6 @@
+argv[0]=(./argv)
+argv[1]=(hello)
+argv[2]=(world)
+argv[3]=(foo)
+argv[4]=(bar)
+argv[5]=(baz)

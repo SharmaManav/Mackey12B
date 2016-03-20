@@ -1,0 +1,50 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.2
+date	2013.09.25.20.18.00;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.09.25.20.13.21;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@<A HREF=http://docs.oracle.com/javase/tutorial/java/data/numberformat.html>
+<BR><B>Java Tutorial: The printf and format methods</B>
+<BR>http://docs.oracle.com/javase/tutorial/java/data/numberformat.html
+</A>
+<P>
+<A HREF=http://en.wikipedia.org/wiki/Printf_format_string>
+<BR><B>printf format string</B>
+<BR>From Wikipedia, the free encyclopedia
+<BR><TT>http://en.wikipedia.org/wiki/Printf_format_string</TT>
+</A>
+<P>
+$Id$
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 5
+d11 2
+@

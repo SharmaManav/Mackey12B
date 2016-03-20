@@ -1,0 +1,6 @@
+showlink: futuretimes.c: Invalid argument
+showlink: mktimestamp.c: Invalid argument
+showlink: now.c: Invalid argument
+showlink: showlink.c: Invalid argument
+showlink: strftime.c: Invalid argument
+this-is-a-symlink -> "mstat.perl"

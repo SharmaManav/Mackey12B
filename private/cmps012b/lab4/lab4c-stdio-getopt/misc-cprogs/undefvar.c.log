@@ -1,0 +1,14 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting undefvar.c
+undefvar.c:
+     $Id: undefvar.c,v 1.8 2013-04-23 18:38:50-07 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 undefvar.c
+	-o undefvar -lglut -lGLU -lGL -lX11 -lrt -lm
+undefvar.c: In function 'main':
+undefvar.c:16:7: warning: 'var' is used uninitialized in this function [-Wuninitialized]
+    if (var > 0) it = 3;
+       ^
+undefvar.c:17:4: warning: 'p' is used uninitialized in this function [-Wuninitialized]
+    printf ("var=%d, it=%d, p=%p\n", var, it, p);
+    ^
+rm -f undefvar.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished undefvar.c

@@ -1,0 +1,48 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2013.02.01.00.53.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@# $Id: test1.in,v 1.1 2010-01-28 20:57:53-08 - - $
+#
+# Longer set of test data.
+#
+lax
+SJC
+SFO
+MIA
+NYC
+san
+SAT
+IAD
+ZZ
+dfW
+JFK
+NOP
+Denver
+Can your program handle junk like this line and just print an error?
+Remember that input consists of only ONE airport code per line.
+Also, do your stderr output and stdout output properly intermix
+when running in redirected mode?
+BOS
+Atl
+BIS
+Fai
+@

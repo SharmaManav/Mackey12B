@@ -1,0 +1,1978 @@
+head	1.55;
+access;
+symbols;
+locks;
+comment	@.\" @;
+
+
+1.55
+date	2016.01.27.03.22.28;	author -;	state -;
+branches;
+next	1.54;
+
+1.54
+date	2015.02.10.00.08.01;	author -;	state -;
+branches;
+next	1.53;
+
+1.53
+date	2015.01.28.01.15.20;	author -;	state -;
+branches;
+next	1.52;
+
+1.52
+date	2015.01.28.01.13.04;	author -;	state -;
+branches;
+next	1.51;
+
+1.51
+date	2014.05.02.22.51.01;	author -;	state -;
+branches;
+next	1.50;
+
+1.50
+date	2014.04.24.04.27.47;	author -;	state -;
+branches;
+next	1.49;
+
+1.49
+date	2014.02.19.01.16.19;	author -;	state -;
+branches;
+next	1.48;
+
+1.48
+date	2014.02.19.01.15.42;	author -;	state -;
+branches;
+next	1.47;
+
+1.47
+date	2014.02.19.01.15.08;	author -;	state -;
+branches;
+next	1.46;
+
+1.46
+date	2014.02.04.03.08.00;	author -;	state -;
+branches;
+next	1.45;
+
+1.45
+date	2014.02.04.03.07.06;	author -;	state -;
+branches;
+next	1.44;
+
+1.44
+date	2014.01.30.23.22.39;	author -;	state -;
+branches;
+next	1.43;
+
+1.43
+date	2014.01.30.23.21.43;	author -;	state -;
+branches;
+next	1.42;
+
+1.42
+date	2014.01.30.23.21.13;	author -;	state -;
+branches;
+next	1.41;
+
+1.41
+date	2014.01.30.23.16.40;	author -;	state -;
+branches;
+next	1.40;
+
+1.40
+date	2014.01.30.23.16.17;	author -;	state -;
+branches;
+next	1.39;
+
+1.39
+date	2014.01.17.01.15.26;	author -;	state -;
+branches;
+next	1.38;
+
+1.38
+date	2013.10.16.00.31.18;	author -;	state -;
+branches;
+next	1.37;
+
+1.37
+date	2013.10.15.21.19.00;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2013.10.15.21.17.26;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2013.10.15.21.12.48;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2013.10.15.21.09.31;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2013.04.24.03.15.44;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2013.02.12.01.17.57;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2013.02.09.03.22.15;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2013.02.09.03.21.59;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2013.02.09.01.58.09;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2013.02.09.01.56.50;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2013.02.07.23.10.28;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2013.02.07.23.09.12;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2013.02.07.23.08.47;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2013.02.07.22.57.50;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2013.02.07.22.53.29;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2013.02.07.22.51.33;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2013.02.07.22.51.01;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2013.02.07.22.49.11;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2013.02.07.22.48.09;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2013.02.07.22.46.22;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2013.02.07.22.44.18;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2013.02.07.22.26.14;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2013.02.07.22.26.04;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2013.02.07.22.25.50;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2013.02.07.22.22.42;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2013.02.07.22.21.06;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2013.02.07.22.19.51;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2013.02.07.22.14.05;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2013.02.07.22.13.24;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2013.02.07.22.07.51;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2013.02.07.22.05.13;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2013.02.07.22.01.33;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2013.02.07.21.58.20;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.02.07.21.57.11;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.02.07.21.55.05;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.02.07.21.24.45;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.02.07.21.24.04;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.55
+log
+@-
+@
+text
+@.so Tmac.mm-etc
+.if t .Newcentury-fonts
+.INITR* \n[.F]
+.SIZE 12 14
+.TITLE CMPS-012M Winter\~2016 Lab\~5 "Debugging and memory leak"
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.54 2015-02-09 16:08:01-08 - - $"
+.PWD
+.URL
+.GETST* MK_SHELL Figure_MK_SHELL
+.GETST* UNINIT_C Figure_UNINIT_C
+.GETST* MALLOC_C Figure_MALLOC_C
+.GETST* LIST1_C Figure_LIST1_C
+.nr submit-count 0 1
+.de submit
+.   P 
+.   nr submit-count \\n+[submit-count]
+.   nop Submit\(::
+.   V= \\$1 
+.   P
+..   
+.de submit-script
+.   submit part\\n[part-count].typescript
+..
+.nr part-count 00 1
+.af part-count 01
+.de DS-part
+.   P
+.   DS
+.   fi
+.   BR "Part (\\n+[part-count])."
+.   P
+..
+.EQ
+delim $$
+.EN
+This lab will introduce you to
+.V= gdb ,
+the Gnu debugger associated with
+.V= gcc ,
+and
+.V= valgrind ,
+which can be used to track uninitialized variables,
+memory leak, and dangling pointers.
+Uninitialized variables are variables which are declared but whose
+value is used before being assigned to.
+Memory leak occurs when memory is not freed when no longer needed\(;;
+C does not have a garbage collector.
+A dangling pointer points at storage that has been freed and should no
+longer be accessed.
+.P
+Before beginning this lab,
+study some of the tutorials in
+.V= Tutorials/gdb-tutorials .
+There are links in this directory to
+.V= gdb-tutorial-handout.pdf
+and
+.V= gdb-tutorial-ohio.html ,
+which are fairly short, but also a link to
+.V= gdb-tutorial-rms ,
+which is much longer and more detailed.
+.P
+.ft CB
+http://www2.ucsc.edu/courses/cmps012b-wm/:/Labs-cmps012m/
+.br
+lab5c-gdb-valgrind/gdb-tutorials/gdb-tutorial-ohio.html
+.br
+.ft P
+.H 1 "Use of \f[CB]script\f[P]"
+In this lab, you will follow some detailed steps.
+For each step, submit the files listed.
+After you have submitted the necessary files, 
+verify that they are all in the submit directory by using
+.V= ls .
+As in a previous lab, the command
+.VCODE* 1 "grep Submit: *.tt"
+will summarize the files you need to submit.
+Most of the commands will be interactive,
+so make use of the
+.V= script
+command to capture command line output.
+A terminal session can be captured with
+.VICODE* 1 "script " "filename"
+where
+.IR filename
+is the file into which you want your session captured.
+Be sure not to use anything other than line mode commands in
+this file, and examine it after to verify this.
+Specifically, never use an editor inside a terminal running
+.V= script.
+.P
+.H 1 "Detailed steps"
+Following are the items for this lab.
+Capture the output in the file specified at the end of each part.
+.DS-part
+A couple of uninitialized variables.
+For convenience, a script
+.V= mk
+(Figure \*[Figure_MK_SHELL])
+has been provided to avoid the need for a
+.V= Makefile
+in this lab.
+It contains compilation instructions.
+Start with the program
+.V= uninit.c .
+(Figure \*[Figure_UNINIT_C]).
+Use the following commands.
+.submit-script
+.TS
+allbox tab(|); lw(170p)fCB lw(268p).
+mk uninit.c|T{
+.fi
+Run the script to compile.
+T}
+valgrind uninit|T{
+.fi
+Check for uninitialized variables.
+T}
+echo \[Do]?|T{
+.fi
+What is the exit status\(??
+.V= bash
+will capture the crash.
+T}
+pstatus 139|T{
+.fi
+Print the meaning of the crash.
+T}
+exit|T{
+.fi
+Get out of
+.V= script .
+T}
+.TE
+.DE
+.DS-part
+Now look into your program with
+.V= gdb ,
+capturing your session into
+.V= part02.script
+.submit-script
+.TS
+allbox tab(|); lw(170p)fCB lw(268p).
+gdb uninit|T{
+.fi
+Start
+.V= gdb .
+T}
+run|T{
+.fi
+Run the program.
+T}
+where|T{
+.fi
+Ask where in the program it crashed.
+T}
+list|T{
+.fi
+Look at a few lines around where it crashed.
+T}
+print foo|T{
+.fi
+Print the values of some variables.
+T}
+print pointer|T{
+.fi
+T}
+print *pointer|T{
+.fi
+T}
+print argv[0]|T{
+.fi
+T}
+quit|T{
+.fi
+Quit
+.V= gdb .
+Answer yes to the subprocess question.
+T}
+.TE
+.DE
+.DS-part
+Now step through the program a line at a time.
+.submit-script
+.TS
+allbox tab(|); lw(170p)fCB lw(268p).
+gdb uninit|T{
+.fi
+T}
+break main|T{
+.fi
+Set a breakpoint at the beginning of the main function.
+T}
+run|T{
+Note that it stops at the breakpoint.
+.fi
+T}
+print foo|T{
+.fi
+Note that the value is some number,
+but there is no way to figure out why it has this value.
+T}
+next|T{
+.fi
+Step one statement,
+stepping over, not into, functions.
+The command
+.V= step
+would step into the function instead of over it.
+T}
+print pointer|T{
+.fi
+T}
+next|T{
+.fi
+Step one more statement.
+Note that it crashes at this point.
+T}
+quit
+.TE
+.DE
+.DS-part
+Now let look at
+.V= malloc 
+(similar to Java's
+.V= new )
+and 
+.V= free ,
+which releases storage.
+C does not have a garbage collector.
+Start with the program
+.V= malloc.c
+(Figure \*[Figure_MALLOC_C]).
+.submit-script
+.br
+.P
+.TS
+allbox tab(|); lw(170p)fCB lw(268p).
+valgrind malloc|T{
+.fi
+Note that there are a couple of
+.V= malloc 's
+but only one
+.V= free 
+later.
+So one block was leaked.
+T}
+gdb malloc|T{
+.fi
+T}
+break main|T{
+.fi
+Set a breakpoint in the main function.
+T}
+run|T{
+.fi
+T}
+print ptr|T{
+.fi
+T}
+print *ptr|T{
+.fi
+Bad memory access because
+.V= ptr 
+is not initialized.
+T}
+next|T{
+.fi
+T}
+print ptr|T{
+.fi
+Now
+.V= ptr
+has a value obtained from the heap.
+T}
+print *ptr|T{
+.fi
+But the value it points it is uninitialized.
+If it is 0, that is just a coincidence.
+T}
+next|T{
+.fi
+T}
+next|T{
+.fi
+T}
+next|T{
+.fi
+T}
+print ptr|T{
+.fi
+T}
+print *ptr|T{
+.fi
+Now it points at initialized storage.
+T}
+next|T{
+.fi
+The storage is freed by the call to
+.V= free .
+T}
+next|T{
+.fi
+T}
+next|T{
+.fi
+T}
+next|T{
+.fi
+The reference to
+.V= __libc_start_main
+is the startup function called by the operating system
+to set up the environment and call main.
+T}
+quit
+.TE
+.DE
+.DS-part
+Examine
+.V= list1.c
+(Figure \*[Figure_LIST1_C]).
+Compile it with
+.V= "mk list1.c"
+and look at the errors and warnings you see.
+Capture the output from this compilation and submit it.
+Read the man page
+.V= malloc (3)
+to see what header file was not included.
+.submit-script
+.DE
+.DS-part
+Copy
+.V= list1.c
+to
+.V= list2.c
+and fix the missing header file.
+Capture the output.
+.submit-script
+.submit list2.c
+.TS
+allbox tab(|); lw(170p)fCB lw(268p).
+mk list2.c|T{
+T}
+valgrind list2 foo bar|T{
+.fi
+Note the complaints from
+.V= valgrind .
+It complains about memory leak,
+but also about invalid access to memory.
+T}
+gdb list2
+break $n$|T{
+Set a breakpoint at line $n$,
+where $n$ is the line number of the
+.V= return
+statement.
+T}
+run foo bar|T{
+.fi
+Note how arguments are given to a program,
+on the
+.V= run
+not on the invocation of
+.V= gdb .
+T}
+where
+list|T{
+.fi
+List the lines around the point of the crash.
+T}
+list list2.c:23|T{
+We can select the particular set of lines to list.
+T}
+print head|T{
+.fi
+Not in the current stack frame.
+Note that we have called several library functions,
+as shown by 
+.V= where .
+T}
+bt|T{
+.fi
+A backtrace is another way of looking at the stack.
+T}
+print head|T{
+.fi
+Now we are in the correct frame.
+T}
+print *head
+print *(head->word)|T{
+.fi
+We can use more complicated C expressions.
+T}
+print head->link->link->link
+print *(head->link->link->link)
+.TE
+.DE
+.DS-part
+Run
+.V= list2
+again, showing values in
+.V= argv .
+.submit-script
+.TS
+allbox tab(|); lw(170p)fCB lw(268p).
+gdb list2
+break main
+run foo bar|T{
+.fi
+Run the program with two command line arguments, namely
+.V= foo
+and
+.V= bar .
+T}
+print argc
+print argv
+print argv[0]|T{
+.fi
+.V= argv[0]
+is always the name of the program being run.
+T}
+print argv[1]
+print argv[2]
+print argv[3]|T{
+.fi
+.V= argv[argc]
+is always the null pointer, represented as
+.V= 0x0
+in C.
+T}
+print argv[4]|T{
+.fi
+After 
+.V= argv
+is the default environment which you can display using the
+.V= env
+or
+.V= printenv
+command.
+T}
+print argv[5]
+print argv[6]
+.TE
+.DE
+.DS-part
+Copy
+.V= list2.c
+to
+.V= list3.c
+and use
+.V= valgrind
+and
+.V= gdb
+as appropriate so that you can track down and fix all of the memory
+faults.
+Ignore memory leak for now.
+The backslash in the command below is just for typographical
+reasons, to get the command within the box's width.
+You may type the entire command on one line.
+.submit-script
+.submit list3.c
+.TS
+allbox tab(|); lw(170p)fCB lw(268p).
+T{
+.na
+valgrind --leak-check=full \[rs]
+list3 foo bar baz qux
+T}|T{
+.fi
+Run 
+.V= valgrind
+with the option 
+.V= --leak-check=full
+to verify that your program in fact has no problems except leaks.
+T}
+.TE
+.DE
+.DS-part
+Copy
+.V= list3.c
+to
+.V= list4.c .
+Eliminate memory leak by using
+.V= free
+to release all allocated storage.
+.submit-script
+.submit list4.c
+.TS
+allbox tab(|); lw(170p)fCB lw(268p).
+T{
+.na
+valgrind --leak-check=full \[rs]
+list4 foo bar baz qux
+T}|T{
+.fi
+Verify that your program now works with no memory faults
+and no memory leak.
+T}
+echo \[Do]?|T{
+.fi
+Make sure the exit status is
+.V= EXIT_SUCCESS .
+T}
+.TE
+.DE
+.DS-part
+Write a program called
+.V= environ.c
+which will declare the external variable
+.VCODE* 1 "extern char **environ;"
+and write a loop iterating over that array,
+printing each element per line.
+The stopping condition is meeting a null pointer,
+as there is no variable indicating how large the array is.
+.submit-script
+.submit environ.c
+.TS
+allbox tab(|); lw(170p)fCB lw(268p).
+\&./environ|T{
+.fi
+Print out all your environment variables.
+T}
+.TE
+.DE
+.H 1 "What to submit"
+Submit the \n[submit-count] files mentioned above.
+If you are doing pair programming,
+submit the required files as well.
+.H 1 "Debugging with \f[CB]ddd\f[P]"
+An alternative to
+.V= gdb
+is
+.V= ddd ,
+which is a GUI wrapper around 
+.V= gdb .
+It is not part of this lab and there is nothing to submit from using
+.V= ddd ,
+but you might want to explore it.
+For example\(::
+.ALX 1 ()
+.LI
+Start with\(::
+.V= "ddd uninit &" .
+The ampersand
+.=V ( & )
+at the end of the line causes the program to be run in the background.
+If you are using a terminal without X11 forwarding this will not work.
+.LI
+In the 
+.V= gdb
+window, type\(::
+.V= "break main" .
+Note that a stop sign appears in the code.
+.LI
+Then type\(::
+.V= run .
+An arrow shows the breakpoint.
+.LI
+Click on 
+.E= Step
+several times.
+.LI
+You may also use print statements in the 
+.V= gdb
+window to examine variables.
+.LE
+.H 1 "Debugging with \f[CB]gdbtui\f[P]"
+There is also a program
+.V= gdbtui
+which is the text user interface to 
+.V= gdb ,
+which works in a terminal window in full screen mode.
+You might like to try that as well.
+.DS
+\&
+.B1
+.SP
+.ft CR
+.nf
+.eo
+.pso cat -nv code/mk | expand
+.ec
+.fi
+.ft R
+.SP
+.B2
+.FG "\f[CB]code/mk\f[R]" "" 0 MK_SHELL
+.DE
+.DS
+\&
+.B1
+.SP
+.ft CR
+.nf
+.eo
+.pso cat -nv code/uninit.c | expand
+.ec
+.fi
+.ft R
+.SP
+.B2
+.FG "\f[CB]code/uninit.c\f[R]" "" 0 UNINIT_C
+.DE
+.DS
+\&
+.B1
+.SP
+.ft CR
+.nf
+.eo
+.pso cat -nv code/malloc.c | expand
+.ec
+.fi
+.ft R
+.SP
+.B2
+.FG "\f[CB]code/malloc.c\f[R]" "" 0 MALLOC_C
+.DE
+.DS
+\&
+.B1
+.SP
+.ft CR
+.nf
+.eo
+.pso cat -nv code/list1.c | expand
+.ec
+.fi
+.ft R
+.SP
+.B2
+.FG "\f[CB]code/list1.c\f[R]" "" 0 LIST1_C
+.DE
+.FINISH
+@
+
+
+1.54
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Spring\~2014 Lab\~5 "Debugging and memory leak"
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.53 2015-01-27 17:15:20-08 - - $"
+@
+
+
+1.53
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.52 2015-01-27 17:13:04-08 - - $"
+d368 1
+a368 1
+Does not list the lines around the point of the crash.
+@
+
+
+1.52
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.51 2014-05-02 15:51:01-07 - - $"
+d580 1
+a580 1
+.pso cat -nv code/mk | expand | sed 's/^/   /'
+d595 1
+a595 1
+.pso cat -nv code/uninit.c | expand | sed 's/^/   /'
+d610 1
+a610 1
+.pso cat -nv code/malloc.c | expand | sed 's/^/   /'
+d619 1
+a619 1
+.SP
+d625 1
+a625 1
+.pso cat -nv code/list1.c | expand | sed 's/^/   /'
+@
+
+
+1.51
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.50 2014-04-23 21:27:47-07 - - $"
+d574 1
+a574 1
+.SP
+d589 1
+a589 1
+.SP
+d604 1
+a604 1
+.SP
+@
+
+
+1.50
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.49 2014-02-18 17:16:19-08 - - $"
+a383 6
+up
+up
+up|T{
+.fi
+We unwind the stack three levels here.
+T}
+@
+
+
+1.49
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Winter\~2014 Lab\~5 "Debugging and memory leak"
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.48 2014-02-18 17:15:42-08 - - $"
+@
+
+
+1.48
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.47 2014-02-18 17:15:08-08 - - $"
+d351 3
+a353 3
+break $nn$|T{
+Set a breakpoint at line $nn$,
+where $nn$ is the line number of the
+@
+
+
+1.47
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.46 2014-02-03 19:08:00-08 - - $"
+d33 3
+@
+
+
+1.46
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.45 2014-02-03 19:07:06-08 - - $"
+d348 6
+@
+
+
+1.45
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.44 2014-01-30 15:22:39-08 - - $"
+d106 1
+a106 1
+allbox tab(|); lw(170p)fCB lw(272p).
+d139 1
+a139 1
+allbox tab(|); lw(170p)fCB lw(272p).
+d182 1
+a182 1
+allbox tab(|); lw(170p)fCB lw(272p).
+d234 1
+a234 1
+allbox tab(|); lw(170p)fCB lw(272p).
+d337 1
+a337 1
+allbox tab(|); lw(170p)fCB lw(272p).
+d401 1
+a401 1
+allbox tab(|); lw(170p)fCB lw(272p).
+d459 1
+a459 1
+allbox tab(|); lw(170p)fCB lw(272p).
+d485 1
+a485 1
+allbox tab(|); lw(170p)fCB lw(272p).
+d514 1
+a514 1
+allbox tab(|); lw(170p)fCB lw(272p).
+@
+
+
+1.44
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.43 2014-01-30 15:21:43-08 - - $"
+d106 1
+a106 1
+allbox tab(|); lw(160p)fCB lw(282p).
+d139 1
+a139 1
+allbox tab(|); lw(160p)fCB lw(282p).
+d182 1
+a182 1
+allbox tab(|); lw(160p)fCB lw(282p).
+d234 1
+a234 1
+allbox tab(|); lw(160p)fCB lw(282p).
+d337 1
+a337 1
+allbox tab(|); lw(160p)fCB lw(282p).
+d401 1
+a401 1
+allbox tab(|); lw(160p)fCB lw(282p).
+d459 1
+a459 1
+allbox tab(|); lw(160p)fCB lw(282p).
+d485 1
+a485 1
+allbox tab(|); lw(160p)fCB lw(282p).
+d514 1
+a514 1
+allbox tab(|); lw(160p)fCB lw(282p).
+@
+
+
+1.43
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.42 2014-01-30 15:21:13-08 - - $"
+d61 1
+@
+
+
+1.42
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.41 2014-01-30 15:16:40-08 - - $"
+d60 2
+a61 1
+http://www2.ucsc.edu/courses/cmps012b-wm/:/Labs-cmps012m/lab5c-gdb-valgrind/gdb-tutorials/gdb-tutorial-ohio.html
+@
+
+
+1.41
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.40 2014-01-30 15:16:17-08 - - $"
+d59 4
+a62 1
+.V= http://www2.ucsc.edu/courses/cmps012b-wm/:/Labs-cmps012m/lab5c-gdb-valgrind/gdb-tutorials/gdb-tutorial-ohio.html
+@
+
+
+1.40
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.39 2014-01-16 17:15:26-08 - - $"
+a58 1
+URL\(::
+@
+
+
+1.39
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.38 2013-10-15 17:31:18-07 - - $"
+d58 3
+@
+
+
+1.38
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Fall\~2013 Lab\~5 "Debugging and memory leak"
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.37 2013-10-15 14:19:00-07 - - $"
+@
+
+
+1.37
+log
+@-
+@
+text
+@d4 1
+a4 1
+.S 12 14
+d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.36 2013-10-15 14:17:26-07 - - $"
+@
+
+
+1.36
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.35 2013-10-15 14:12:48-07 - - $"
+a515 2
+Verify the submit by looking in 
+.V= /afs/cats.ucsc.edu/class/cmps012b-wm.w13/lab5 .
+@
+
+
+1.35
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.34 2013-10-15 14:09:31-07 - - $"
+a80 28
+For this lab, make sure
+.V= /afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+is in your 
+.V= \[Do]PATH ,
+and that the environment variable
+.V= \[Do]SHELL
+is 
+.V= /bin/bash .
+If you use
+.V= tcsh ,
+this can be accomplished for the current session with
+.VCODE* 1 "setenv SHELL /bin/bash"
+.P
+If your login shell is
+.V= tcsh
+but you typically use 
+.V= bash
+by typing that command in at the command line,
+then 
+.V= bash
+is a subshell.
+Inside
+.V= bash ,
+you can set your shell using
+.VCODE* 1 "export SHELL=/bin/bash"
+You might want to add this line to your 
+.V= \[ti]/.bashrc
+file.
+@
+
+
+1.34
+log
+@-
+@
+text
+@d3 2
+d6 1
+a6 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.33 2013-04-23 20:15:44-07 - - $"
+a8 1
+.INITR* \n[.F]
+@
+
+
+1.33
+log
+@-
+@
+text
+@d3 2
+a4 2
+.TITLE CMPS-012M Spring\~2013 Lab\~5 "Debugging and memory leak"
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.32 2013-02-11 17:17:57-08 - - $"
+@
+
+
+1.32
+log
+@-
+@
+text
+@d3 2
+a4 2
+.TITLE CMPS-012M Winter\~2013 Lab\~5 "Debugging and memory leak"
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.31 2013-02-08 19:22:15-08 - - $"
+@
+
+
+1.31
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.30 2013-02-08 19:21:59-08 - - $"
+d93 15
+@
+
+
+1.30
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.29 2013-02-08 17:58:09-08 - - $"
+d224 1
+a224 1
+Now let use look at
+@
+
+
+1.29
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.28 2013-02-08 17:56:50-08 - - $"
+d225 3
+a227 3
+.V= malloc ,
+similar to Java's
+.V= new ,
+d229 1
+a229 1
+.V= delete ,
+@
+
+
+1.28
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.27 2013-02-07 15:10:28-08 - - $"
+d206 5
+a210 1
+Step one instruction.
+d217 1
+a217 1
+Step one more instruction.
+@
+
+
+1.27
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.26 2013-02-07 15:09:12-08 - - $"
+d204 1
+a204 1
+step|T{
+d211 1
+a211 1
+step|T{
+d264 1
+a264 1
+step|T{
+d278 1
+a278 1
+step|T{
+d281 1
+a281 1
+step|T{
+d284 1
+a284 1
+step|T{
+d294 1
+a294 1
+step|T{
+d299 1
+a299 1
+step|T{
+d302 1
+a302 1
+step|T{
+d305 1
+a305 1
+step|T{
+@
+
+
+1.26
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.25 2013-02-07 15:08:47-08 - - $"
+d454 3
+@
+
+
+1.25
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.24 2013-02-07 14:57:50-08 - - $"
+d29 1
+a29 1
+.   BR "Part \\n+[part-count]"
+@
+
+
+1.24
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.23 2013-02-07 14:53:29-08 - - $"
+d563 7
+@
+
+
+1.23
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.22 2013-02-07 14:51:33-08 - - $"
+d223 1
+a223 1
+.V= new\(;;
+d232 1
+d563 1
+a564 1
+.DS
+d579 1
+d594 1
+d609 1
+@
+
+
+1.22
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.21 2013-02-07 14:51:01-08 - - $"
+a135 13
+.SP
+.B1
+.SP
+.ft CR
+.nf
+.eo
+.pso cat -nv code/mk | expand | sed 's/^/   /'
+.ec
+.fi
+.ft R
+.SP
+.B2
+.FG "\f[CB]code/mk\f[R]" "" 0 MK_SHELL
+d564 12
+@
+
+
+1.21
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.20 2013-02-07 14:49:11-08 - - $"
+d136 1
+a136 1
+.P
+@
+
+
+1.20
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.19 2013-02-07 14:48:09-08 - - $"
+d136 13
+a576 12
+.B1
+.SP
+.ft CR
+.nf
+.eo
+.pso cat -nv code/mk | expand | sed 's/^/   /'
+.ec
+.fi
+.ft R
+.SP
+.B2
+.FG "\f[CB]code/mk\f[R]" "" 0 MK_SHELL
+@
+
+
+1.19
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.18 2013-02-07 14:46:22-08 - - $"
+d111 1
+a111 1
+allbox tab(|); lw(160p)fCB lw(263p).
+d144 1
+a144 1
+allbox tab(|); lw(160p)fCB lw(263p).
+d187 1
+a187 1
+allbox tab(|); lw(160p)fCB lw(263p).
+d234 1
+a234 1
+allbox tab(|); lw(160p)fCB lw(263p).
+d337 1
+a337 1
+allbox tab(|); lw(160p)fCB lw(263p).
+d401 1
+a401 1
+allbox tab(|); lw(160p)fCB lw(263p).
+d456 1
+a456 1
+allbox tab(|); lw(160p)fCB lw(263p).
+d482 1
+a482 1
+allbox tab(|); lw(160p)fCB lw(263p).
+d511 1
+a511 1
+allbox tab(|); lw(160p)fCB lw(263p).
+@
+
+
+1.18
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.17 2013-02-07 14:44:18-08 - - $"
+d458 1
+d484 1
+@
+
+
+1.17
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.16 2013-02-07 14:26:14-08 - - $"
+d111 1
+a111 1
+allbox tab(|); lw(180p)fCB lw(263).
+d144 1
+a144 1
+allbox tab(|); lw(180p)fCB lw(263).
+d187 1
+a187 1
+allbox tab(|); lw(180p)fCB lw(163).
+d234 1
+a234 1
+allbox tab(|); lw(180p)fCB lw(263).
+d337 1
+a337 1
+allbox tab(|); lw(180p)fCB lw(263).
+d401 1
+a401 1
+allbox tab(|); lw(180p)fCB lw(263).
+d456 1
+a456 1
+allbox tab(|); lw(180p)fCB lw(263).
+d481 1
+a481 1
+allbox tab(|); lw(180p)fCB lw(263).
+d509 1
+a509 1
+allbox tab(|); lw(180p)fCB lw(263).
+@
+
+
+1.16
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.15 2013-02-07 14:26:04-08 - - $"
+d103 1
+a103 1
+in this lab only.
+d187 1
+a187 1
+allbox tab(|); lw(180p)fCB lw(263).
+@
+
+
+1.15
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.14 2013-02-07 14:25:50-08 - - $"
+d6 1
+@
+
+
+1.14
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.13 2013-02-07 14:22:42-08 - - $"
+a14 1
+.   tm \\n[submit-count]
+@
+
+
+1.13
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.12 2013-02-07 14:21:06-08 - - $"
+d111 1
+a111 1
+allbox tab(|); lw(168p)fCB lw(251p).
+d144 1
+a144 1
+allbox tab(|); lw(168p)fCB lw(251p).
+d187 1
+a187 1
+allbox tab(|); lw(168p)fCB lw(251p).
+d234 1
+a234 1
+allbox tab(|); lw(168p)fCB lw(251p).
+d337 1
+a337 1
+allbox tab(|); lw(168p)fCB lw(251p).
+d401 1
+a401 1
+allbox tab(|); lw(168p)fCB lw(251p).
+d456 1
+a456 1
+allbox tab(|); lw(168p)fCB lw(251p).
+d481 1
+a481 1
+allbox tab(|); lw(168p)fCB lw(251p).
+d509 1
+a509 1
+allbox tab(|); lw(168p)fCB lw(251p).
+d519 1
+a519 1
+.V= /afs/cats.ucsc.edu/class/cmps012b-wm.w11/lab5 .
+@
+
+
+1.12
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.11 2013-02-07 14:19:51-08 - - $"
+d14 2
+a15 1
+.\"   if \\n+[submit-count] .nop
+d232 1
+@
+
+
+1.11
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.10 2013-02-07 14:14:05-08 - - $"
+d14 1
+a14 1
+.   if \\n+[submit-count] .nop
+@
+
+
+1.10
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.9 2013-02-07 14:13:24-08 - - $"
+a12 1
+.   nr \\n+[submit-count]
+d14 1
+@
+
+
+1.9
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.8 2013-02-07 14:07:51-08 - - $"
+d13 1
+a13 1
+.   if \\n+[submit-count] .nop
+@
+
+
+1.8
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.7 2013-02-07 14:05:13-08 - - $"
+d13 1
+a13 1
+.   nop \\n+[submit-count]
+d20 1
+a20 1
+.   submit part\\n[part-count].script
+@
+
+
+1.7
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.6 2013-02-07 14:01:33-08 - - $"
+d11 1
+d13 1
+d17 1
+a17 1
+.   br
+d515 1
+a515 1
+Submit the \n[part-count] files mentioned above.
+@
+
+
+1.6
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.5 2013-02-07 13:58:20-08 - - $"
+d11 2
+a12 2
+.de submit-script
+.   P
+d14 1
+a14 1
+.   V= part\\n[part-count].script
+d16 3
+d27 1
+@
+
+
+1.5
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.4 2013-02-07 13:57:11-08 - - $"
+d21 3
+a23 1
+.   BR Part\\n+[part-count]
+a24 6
+.DS-part
+.submit-script
+.DS-part
+.submit-script
+.DS-part
+.submit-script
+d89 1
+a89 2
+.ALX 01 ()
+.LI
+a102 1
+.DS
+d130 1
+a130 1
+.LI
+a135 1
+.DS
+d176 1
+a176 1
+.LI
+a178 1
+.DS
+d212 1
+a212 1
+.LI
+a224 1
+.DS
+d306 1
+a306 1
+.LI
+d318 2
+a319 1
+.LI
+a327 1
+.DS
+d386 1
+a386 2
+.ne 6
+.LI
+a391 1
+.DS
+d433 1
+a433 1
+.LI
+a446 1
+.DS
+d462 1
+a462 1
+.LI
+a471 1
+.DS
+d489 1
+a489 1
+.LI
+a499 1
+.DS
+a507 1
+.LE
+@
+
+
+1.4
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.3 2013-02-07 13:55:05-08 - - $"
+d18 1
+@
+
+
+1.3
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.2 2013-02-07 13:24:45-08 - - $"
+d17 1
+a17 1
+.nr part-count 00 0 1
+d523 1
+a523 1
+Submit the \n[submit-count] files mentioned above.
+@
+
+
+1.2
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.1 2013-02-07 13:24:04-08 - - $"
+a11 4
+.   submit part\\n[li*cnt!\\n[li*lvl]].script
+..
+.nr submit-count 0
+.de submit
+d14 1
+a14 1
+.   V= \\$1
+a15 1
+.   nr submit-count \\n[submit-count]+1
+d17 11
+@
+
+
+1.1
+log
+@-
+@
+text
+@d4 1
+a4 1
+.RCS "$Id: lab5c-gdb-valgrind.mm,v 1.77 2013-02-07 13:23:26-08 - - $"
+d47 1
+a47 1
+.H 1 "Detailed steps"
+d83 1
+@

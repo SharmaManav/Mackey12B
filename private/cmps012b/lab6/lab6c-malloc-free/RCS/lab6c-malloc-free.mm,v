@@ -1,0 +1,730 @@
+head	1.23;
+access;
+symbols;
+locks;
+comment	@.\" @;
+
+
+1.23
+date	2016.01.29.00.01.09;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2015.01.31.00.44.33;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2014.05.03.02.15.43;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2014.01.22.02.49.56;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2013.10.16.20.28.54;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2013.10.16.20.20.42;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2013.10.16.20.16.10;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2013.05.01.01.36.20;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2013.02.08.03.06.13;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2012.11.09.02.35.33;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2012.10.31.00.11.00;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2012.02.10.03.14.37;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2012.02.10.02.32.20;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2012.02.10.02.23.57;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2012.02.10.02.21.47;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2011.10.27.02.13.14;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2011.04.27.01.39.28;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2011.02.04.01.51.14;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2011.02.04.01.50.07;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2011.02.04.01.49.50;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2011.02.04.01.48.32;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2011.02.02.04.58.33;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2010.10.27.01.36.31;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.23
+log
+@-
+@
+text
+@.so Tmac.mm-etc
+.if t .Newcentury-fonts
+.INITR* \n[.F]
+.SIZE 12 14
+.TITLE CMPS-012M Winter\~2016 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.22 2015-01-30 16:44:33-08 - - $"
+.PWD
+.URL
+.H 1 "Overview"
+This lab introduces you to
+.V= malloc (3),
+.V= free (3),
+and
+.V= strdup (3),
+linked lists in C,
+dangling pointers, and memory leak.
+There are two programs in this assignment,
+each of which will read in data,
+insert the data into a linked list in sorted order,
+and print out the data.
+One program will use
+.V= double
+and the other will use character strings represented as
+.V= char* .
+See the
+.V= code/
+subdirectory.
+Also, read the man page\(::
+.V= "man -s 3 malloc" .
+.H 1 "Program \f[CB]nsort\f[B] specification"
+As usual, the program is presented in the form of a Unix
+.V= man
+page specification.
+.SH=BVL
+.MANPAGE=LI "NAME"
+nsort \- sort numbers read from stdin
+.MANPAGE=LI "SYNOPSIS"
+\f[CB]nsort\f[R]
+\|[\f[CB]\-d\f[R]]
+.MANPAGE=LI "DESCRIPTION"
+Reads in numbers from
+.V= stdin ,
+and stops at end of file.
+Error messages are printed for any word that is not recognized by
+.V= scanf (3)
+as a number.
+The numbers are printed sorted in ascending order, one per line, to
+.V= stdout
+using the
+.V= printf (3)
+format
+.V= \[Dq]%24.15g\[rs]n\[Dq] .
+.MANPAGE=LI "OPTIONS"
+Options are scanned by
+.V= getopt (3).
+.VL \n[Pi]
+.LI "\f[CB]\-d\f[R]"
+Output is printed in debug format with pointers in
+.V= \[Dq][%p]\[Dq]
+format.
+.LE
+.MANPAGE=LI "EXIT STATUS"
+.VL \n[Pi]
+.LI 0
+No errors were detected.
+.LI 1
+Syntactically incorrect input numbers were detected.
+.LE
+.LE
+.H 1 "Program \f[CB]lsort\f[B] specification"
+As usual, the program is presented in the form of a Unix
+.V= man
+page specification.
+.SH=BVL
+.MANPAGE=LI "NAME"
+lsort \- sort lines read from stdin
+.MANPAGE=LI "SYNOPSIS"
+\f[CB]lsort\f[R]
+\|[\f[CB]\-d\f[R]]
+.MANPAGE=LI "DESCRIPTION"
+Reads in lines from
+.V= stdin ,
+stopping at end of file.
+The lines are printed sorted in ascending order to
+.V= stdout .
+The output should be the same as that from
+.V= sort (1).
+.MANPAGE=LI "OPTIONS"
+Options are scanned by
+.V= getopt (3).
+.VL \n[Pi]
+.LI "\f[CB]\-d\f[R]"
+Output is printed in debug format with pointers in
+.V= \[Dq][%p]\[Dq]
+format.
+.LE
+.MANPAGE=LI "EXIT STATUS"
+.VL \n[Pi]
+.LI 0
+No errors were detected.
+.LI 1
+An unterminated line or a line longer than 80 characters
+was detected.
+.LE
+.LE
+.H 1 "Preparation"
+Before you begin,
+study the code provided.
+.ALX 1 ()
+.LI
+The file
+.V= code/Makefile
+is complete, but no source code has been provided for the two C
+programs.
+.LI
+Read the 
+.V= man (1)
+pages for
+.V= malloc (3),
+.V= free (3),
+and
+.V= strdup (3).
+.LI
+Study the code in the
+.V= misc
+subdirectory.
+None of the code in this directory should be directly copied
+into your programs,
+but parts of it will be adapted for use.
+.LI
+Study the sample code
+.V= sortlist.java ,
+which shows you the exact algorithm you are to use for your program.
+It is exactly equivalent to
+.V= lsort
+when you run without options.
+It is similar to
+.V= nsort .
+Adapt its algorithm line by line.
+.LE
+.H 1 "Program \f[CB]nsort\f[B] implementation"
+This program deals only with lists of numbers.
+.ALX 1 ()
+.LI
+Study the file
+.V= scanf.c
+to see how to use
+.V= scanf (3)
+to read numbers from
+.V= stdin .
+.LI
+Study the file
+.V= numlist.c
+to see how to declare a linked list of nodes containing numbers
+and how to use
+.V= malloc (3)
+to allocate space and how to use
+.V= free (3)
+to free up the nodes when done.
+C does not have a garbage collector.
+.LI
+Print out the numbers either in ordinary format or in debug format.
+.LI
+Instead of inserting the new node onto the front of the list,
+put in the list in the proper position.
+See the program
+.V= sortlist.java
+for the insertion algorithm.
+.LI
+Use the command
+.V= "valgrind --leak-check=full"
+to check for memory leak.
+.LE
+.H 1 "Program \f[CB]lsort\f[B] implementation"
+This program deals with lists of strings, so that
+each node uses two heap objects.
+.ALX 1 ()
+.LI
+To begin work,
+.V= "cp nsort.c lsort.c" .
+Change the declaration of the item field from
+.V= double
+to
+.V= char\~* .
+.LI
+Look at
+.V= strlist.c
+to see how strings are handled.
+Create a character buffer of dimension 82
+.=V ( "char buffer[82];" )
+and read in lines.
+Insert each line into the list.
+Print an error message for any line that is not terminated by
+a newline character
+.=V ( "'\[rs]n'" ).
+The buffer holds up to 80 characters read in from each line,
+plus the newline character plus the null plug
+.=V ( "'\[rs]0'" ).
+.LI
+When comparing strings in the insertion routine, use
+.V= strcmp (3).
+This works very much like
+.V= compareTo
+in Java.
+.LI
+Use the command
+.V= "valgrind --leak-check=full"
+to check for memory leak.
+.LE
+.H 1 "What to submit"
+Submit the files
+.V= nsort.c ,
+.V= lsort.c ,
+and
+.V= Makefile .
+Your
+.V= Makefile
+should build the executables
+.V= nsort
+and
+.V= lsort
+from the target
+.V= all .
+If you are doing pair programming, see
+.V= /afs/cats.ucsc.edu/courses/cmps012b-wm/Syllabus/pair-programming/
+and follow those instructions as well.
+.FINISH
+@
+
+
+1.22
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Winter\~2015 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.21 2014-05-02 19:15:43-07 - - $"
+@
+
+
+1.21
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Spring\~2014 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.20 2014-01-21 18:49:56-08 - - $"
+@
+
+
+1.20
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Winter\~2014 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.19 2013-10-16 13:28:54-07 - - $"
+@
+
+
+1.19
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Spring\~2013 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.18 2013-10-16 13:20:42-07 - - $"
+@
+
+
+1.18
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab6c-malloc-free.mm,v 1.17 2013-10-16 13:16:10-07 - - $"
+d102 1
+a102 1
+An unterminated line or a line longer than 72 characters
+d189 2
+a190 2
+Create a character buffer of dimension 72
+.=V ( "char buffer[72];" )
+d196 3
+@
+
+
+1.17
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab6c-malloc-free.mm,v 1.16 2013-04-30 18:36:20-07 - - $"
+d184 1
+a184 3
+.V= cstring
+and add the C declaration\(::
+.V= "typedef char *cstring;"
+@
+
+
+1.16
+log
+@-
+@
+text
+@d4 1
+d6 1
+a6 1
+.RCS "$Id: lab6c-malloc-free.mm,v 1.15 2013-02-07 19:06:13-08 - - $"
+d8 1
+@
+
+
+1.15
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Winter\~2013 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.14 2012-11-08 18:35:33-08 - - $"
+@
+
+
+1.14
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Fall\~2012 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.13 2012-10-30 17:11:00-07 - - $"
+@
+
+
+1.13
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab6c-malloc-free.mm,v 1.12 2012-02-09 19:14:37-08 - - $"
+a206 22
+.H 1 "Running \f[CB]lint\f[P](1)"
+Make sure that neither
+.V= checksource
+nor
+.V= lint (1)
+complains about any of your code.
+However, it is acceptable if
+.V= lint
+does generate the following messages for standard library functions,
+such as
+.V= printf ,
+.V= fprintf ,
+.V= sprintf ,
+or
+.V= fclose\(::
+.TVCODE* 1 "function returns value which is always ignored"
+.TVCODE* 1 "function returns value which is sometimes ignored"
+If it complains about functions like
+.V= malloc ,
+then you are doing something wrong.
+You must still fix your program if it complains about your own
+functions.
+@
+
+
+1.12
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Winter\~2012 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.11 2012-02-09 18:32:20-08 - - $"
+@
+
+
+1.11
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab6c-malloc-free.mm,v 1.10 2012-02-09 18:23:57-08 - - $"
+d225 1
+a225 1
+.V+ malloc ,
+@
+
+
+1.10
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab6c-malloc-free.mm,v 1.9 2012-02-09 18:21:47-08 - - $"
+d215 7
+a221 1
+does generate the following messages for standard library functions\(::
+d224 3
+@
+
+
+1.9
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab6c-malloc-free.mm,v 1.8 2011-10-26 19:13:14-07 - - $"
+a233 7
+Properly run
+.V= lint (1)
+to check for coding style.
+Make sure
+.V= lint
+does not complain about any of your code.
+.P
+@
+
+
+1.8
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Fall\~2011 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.7 2011-04-26 18:39:28-07 - - $"
+@
+
+
+1.7
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Spring\~2011 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.6 2011-02-03 17:51:14-08 - - $"
+@
+
+
+1.6
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Winter\~2011 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.5 2011-02-03 17:50:07-08 - - $"
+@
+
+
+1.5
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab6c-malloc-free.mm,v 1.4 2011-02-03 17:49:50-08 - - $"
+a127 3
+The
+.V= Makefile
+in that directory is not useful for you.
+d169 1
+a169 1
+.V= "bcheck \-leaks nsort"
+d204 1
+a204 1
+.V= "bcheck \-leaks lsort"
+@
+
+
+1.4
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab6c-malloc-free.mm,v 1.3 2011-02-03 17:48:32-08 - - $"
+d123 1
+a123 1
+.V= examples
+@
+
+
+1.3
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab6c-malloc-free.mm,v 1.2 2011-02-01 20:58:33-08 - - $"
+d109 4
+a112 7
+Copy the files from the subdirectory
+.V= lab6
+into your personal lab6 directory.
+The 
+.V= Makefile
+is complete, but the two C programs are very bare starter code.
+These are the two files you will work on.
+@
+
+
+1.2
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Fall\~2010 Lab\~6 "malloc(3) and free(3)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.1 2010-10-26 18:36:31-07 - - $"
+@
+
+
+1.1
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Fall\~2010 Lab\~6 "malloc(3c) and free(3c)"
+.RCS "$Id: lab6c-malloc-free.mm,v 1.2 2010-04-30 17:38:36-07 - - $"
+d9 2
+a10 2
+.V= malloc (3c),
+.V= free (3c),
+d12 1
+a12 1
+.V= strdup (3c),
+d27 1
+a27 1
+.V= "man -s 3c malloc" .
+d43 1
+a43 1
+.V= scanf (3c)
+d48 1
+a48 1
+.V= printf (3c)
+d53 1
+a53 1
+.V= getopt (3c).
+d88 1
+a88 1
+.V= getopt (3c).
+d120 2
+a121 2
+.V= malloc (3c),
+.V= free (3c),
+d123 1
+a123 1
+.V= strdup (3c).
+d152 1
+a152 1
+.V= scanf (3c)
+d160 1
+a160 1
+.V= malloc (3c)
+d162 1
+a162 1
+.V= free (3c)
+d204 1
+a204 1
+.V= strcmp (3c).
+@

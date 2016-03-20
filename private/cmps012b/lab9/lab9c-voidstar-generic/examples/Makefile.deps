@@ -1,0 +1,5 @@
+genericlib.o: genericlib.h
+genericlib.o: genericlib.c genericlib.h
+numberproc.o: numberproc.c genericlib.h
+stringproc.o: stringproc.c genericlib.h
+testswap.o: testswap.c genericlib.h

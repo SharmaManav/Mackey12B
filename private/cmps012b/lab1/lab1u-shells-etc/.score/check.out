@@ -1,0 +1,6 @@
+checksource: hello.java: No such file or directory
+checksource: mkhello: No such file or directory
+checksource: testhello: No such file or directory
+checksource: .bashrc: No such file or directory
+checksource: submits: No such file or directory
+checksource: TOTAL COMPLAINTS: 5

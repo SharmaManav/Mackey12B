@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting strtod.c
+strtod.c:
+     $Id: strtod.c,v 1.7 2014-04-15 18:14:50-07 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 strtod.c
+	-o strtod -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f strtod.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished strtod.c

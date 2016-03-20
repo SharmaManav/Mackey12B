@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting wordct.c
+wordct.c:
+     $Id: wordct.c,v 1.2 2014-04-22 19:38:08-07 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 wordct.c
+	-o wordct -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f wordct.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished wordct.c

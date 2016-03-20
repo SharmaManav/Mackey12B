@@ -1,0 +1,1316 @@
+head	1.39;
+access;
+symbols;
+locks;
+comment	@.\" @;
+
+
+1.39
+date	2016.02.09.21.29.26;	author -;	state -;
+branches;
+next	1.38;
+
+1.38
+date	2015.02.27.02.21.49;	author -;	state -;
+branches;
+next	1.37;
+
+1.37
+date	2015.02.27.02.20.03;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2015.02.27.02.16.38;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2014.05.15.01.25.26;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2014.05.15.01.24.56;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2014.05.15.01.24.10;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2014.05.15.01.23.08;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2014.02.21.23.52.54;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2014.02.21.23.51.24;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2014.02.21.23.49.51;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2014.02.21.23.48.39;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2014.02.21.23.45.09;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2013.10.18.18.49.45;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2013.05.18.02.36.16;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2013.05.18.01.23.08;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2013.05.18.01.21.34;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2013.02.22.21.37.57;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2012.11.17.01.22.56;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2012.11.17.01.22.15;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2012.11.17.01.21.36;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2012.11.17.01.20.32;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2012.11.17.01.15.05;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2012.11.17.01.14.09;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2012.11.17.01.12.06;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2012.11.17.01.11.09;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2012.11.17.01.10.33;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2012.11.17.01.08.56;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2012.11.17.01.08.12;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2012.11.17.01.07.30;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2012.11.16.23.18.55;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2012.11.16.23.18.35;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2012.11.16.23.17.22;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2012.11.16.23.15.51;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2012.11.16.23.05.18;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2012.11.16.23.04.55;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2012.11.16.23.02.27;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2012.11.16.23.00.06;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2012.03.09.02.57.51;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.39
+log
+@-
+@
+text
+@.so Tmac.mm-etc
+.if t .Newcentury-fonts
+.INITR* \n[.F]
+.SIZE 12 14
+.TITLE CMPS-012M Spring\~2016 Lab\~9 \
+"Generic code using \f[CB]void*\f[P]"
+.RCS \
+"$Id: lab9c-voidstar-generic.mm,v 1.38 2015-02-26 18:21:49-08 - - $"
+.PWD
+.URL
+.GETST* insertion_sort Figure_insertion_sort
+.H 1 "Overview"
+In this lab, you will impement a generic sorting routing using the
+.V= void*
+parameter declaration.
+This is similar to the C library function
+.V= qsort (3).
+You will also review your knowledge of
+.V= Makefile s
+and header files.
+Begin by studying the example programs in 
+.V= wk09a-cqsort/ .
+Also study
+.V= misc/voidstar.c .
+.H 1 "Programs to write"
+Write the following programs and files,
+each as described here\(::
+.de FILENAME
+.   V=LI "\\$1"
+.   P
+..
+.BVL \n[VCODENWIDTH]u
+.FILENAME Makefile
+Write a
+.V= Makefile
+with the following targets,
+and in each case,
+provide the appropriate actions.
+.nr LINESORTWID \w'\f[CB]linesort:\0\0\fR'
+.nr INDENTHERE \n[LINESORTWID]u+\n[VCODENWIDTH]u
+.VL \n[INDENTHERE]u \n[VCODENWIDTH]u
+.V=LI all:
+should build the two binaries
+.V= numsort
+and
+.V= linesort .
+.V=LI numsort:
+depends on
+.V= numsort.o
+and
+.V= inssort.o .
+.V=LI linesort:
+depends on
+.V= linesort.o
+and
+.V= inssort.o .
+.V=LI %.o:
+depends on
+.V= %.c .
+All C compilations should be done with the command
+.VTCODE* 1 "gcc -g -O0 -Wall -Wextra -std=gnu11"
+Note specifically the use of the
+.V= -c
+and
+.V= -o
+options from previous
+.V= Makefile s.
+.V=LI ci:
+depends on all source files and runs both
+.V= ci
+and
+.V= checksource .
+.V=LI submit:
+depends on source files and submits them.
+.LE
+.FILENAME numsort.c
+This utility reads in
+.V= double
+numbers from
+.V= stdin ,
+sorts them, then prints them.
+.ALX i ()
+.LI
+Write a program which will create an array
+.VTCODE* 1  "double array[0x1000];"
+and use
+.V= scanf (1)
+to read numbers into this array.
+.LI
+It stops reading when the first of the following happens\(::
+end of file,
+any invalid input not recognized by
+.V= scanf ,
+or the array is full.
+.LI
+The numbers are then passed to the function
+.V= inssort ,
+along with a suitable comparison function.
+The numbers are sorted in increasing order.
+.LI
+The numbers are then printed one per line using the format
+.V= \[Dq]%20.15g\[rs]n\[Dq] .
+.LE
+.FILENAME linesort.c
+This utility reads in lines from
+.V= stdin
+into an array, sorts them, then prints them.
+.ALX i ()
+.LI
+Allocate an array
+.VTCODE* 1 "char *array[0x1000];"
+of pointers to character strings,
+read in each character string from
+.V= stdin
+using
+.V= fgets (3)
+and
+.V= strdup (3)
+each line into the array.
+Plug the newline at the end of each line with a
+.V= '\[rs]0' ,
+but don't error out if there is no newline.
+Use
+.VTCODE* 1  "char buffer[0x1000];"
+as an input buffer.
+The program stops at end of file,
+or when the array is full.
+.LI
+It then calls
+.V= inssort
+to sort the strings using a suitable comparison function.
+The lines are sorted into increasing lexicographic order.
+.LI
+The lines are then printed, one per line of output.
+.LE
+.FILENAME inssort.h
+This file is the header file to be included by both
+.V= numsort.c
+and
+.V= linesort.c
+and it is important that both of these programs call the same
+function.
+Do not write a separate
+.V= double
+sorter
+and a separate
+.V= char*
+sorter.
+Using proper style, provide file guards and necessary
+.V= #include s
+to prototype the following function\(::
+.DS
+.VCODE* 1 "void inssort (void* base, size_t nelem, size_t size,"
+.VCODE* 1 "              int (*compar) (const void*, const void*));"
+.DE
+The parameters are as follows\(::
+.ALX i ()
+.LI
+.V= base
+is the base address of the array,
+.LI
+.V= nelem
+is the number of elements (length) of the array,
+.LI
+.V= size
+is the number of bytes used by a single array element,
+and
+.LI
+.V= compar
+is a comparison function which produces the usual results,
+i.e.,
+a negative number if the first argument is less than the second,
+zero if equal,
+and a positive number of greater.
+.LE
+.FILENAME inssort.c
+Before beginning your program,
+you may wish to use the library function
+.V= qsort (3)
+to debug your main programs,
+but be sure to delete all references to
+.V= qsort
+before submitting your program.
+.ALX i ()
+.LI
+Your program should be a direct line-for-line translation of
+the Java function
+.V= insertion_sort \(::
+.DS
+.ft CB
+   static <elem_t extends Comparable <? super elem_t>>
+   void insertion_sort (elem_t[] array, int nelem) {
+      for (int sorted = 1; sorted < nelem; ++sorted) {
+         int slot = sorted;
+         elem_t copy = array[slot];
+         for (; slot > 0; --slot) {
+            int cmp = copy.compareTo (array[slot - 1]);
+            if (cmp > 0) break;
+            array[slot] = array[slot - 1];
+         }
+         array[slot] = copy;
+      }
+   }
+.DE
+.LI
+Inside the function,
+you must use byte offsets from the base of the array in order
+to compute data movements.
+.LI
+Cast addresses from
+.V= void*
+to
+.V= char*
+in order to do address arithmetic.
+An array element
+.V= i
+is at location
+.V= "base + i * size" .
+.LI
+Pass the address of each pair of elements to the comparison function.
+The comparison function accepts addresses of elements,
+not elements themselves.
+.LI
+Use the function
+.V= memcpy (3)
+to copy parts of the array from one location in memory to another.
+.LI
+To allocate space for the temporary
+.V= element
+variable, use
+.V= malloc (3).
+Don't forget to
+.V= free (3)
+this temporary before returning from the function.
+.LE
+.LE
+.H 1 "Eliminate all warnings and submit"
+Eliminate all warnings that
+.V= gcc
+with the 
+.V= -Wall
+and
+.V= -Wextra
+options may produce,
+ensure
+.V= checksource
+does not complain,
+and eliminate all messages from
+.V= valgrind\~--leak-check=full .
+.P
+Submit
+.V= README ,
+.V= Makefile ,
+.V= numsort.c ,
+.V= linesort.c ,
+.V= inssort.h ,
+.V= inssort.c .
+Also, if you are doing pair programming,
+submit the required pair programming files.
+.FINISH
+@
+
+
+1.38
+log
+@-
+@
+text
+@d5 1
+a5 1
+.TITLE CMPS-012M Spring\~2014 Lab\~9 \
+d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.37 2015-02-26 18:20:03-08 - - $"
+@
+
+
+1.37
+log
+@-
+@
+text
+@d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.36 2015-02-26 18:16:38-08 - - $"
+d124 1
+a124 1
+.VTCODE* 1  "char buffer[0x1000]"
+@
+
+
+1.36
+log
+@-
+@
+text
+@d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.1 2014-05-19 16:04:05-07 - - $"
+d85 1
+a85 1
+.V= "double array[0x1000]"
+d87 1
+a87 1
+.V= scanf
+d110 3
+a112 1
+Allocate an array of 0x1000 pointers to character strings,
+d115 2
+d118 1
+a118 1
+.V= strdup
+d124 1
+a124 1
+.V= "char buffer[0x1000]"
+@
+
+
+1.35
+log
+@-
+@
+text
+@d5 1
+a5 1
+.TITLE CMPS-012M Spring\~2014 Lab\~8 \
+d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.34 2014-05-14 18:24:56-07 - - $"
+@
+
+
+1.34
+log
+@-
+@
+text
+@d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.33 2014-05-14 18:24:10-07 - - $"
+d110 1
+a110 1
+Allocate an array of 1000 pointers to character strings,
+d120 1
+a120 1
+.V= "char buffer[1000]"
+@
+
+
+1.33
+log
+@-
+@
+text
+@d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.32 2014-05-14 18:23:08-07 - - $"
+d85 1
+a85 1
+.V= "double array[1000]"
+@
+
+
+1.32
+log
+@-
+@
+text
+@d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.31 2014-02-21 15:52:54-08 - - $"
+d61 1
+a61 1
+.VTCODE* 1 "gcc -g -O0 -Wall -Wextra -std=gnu99"
+@
+
+
+1.31
+log
+@-
+@
+text
+@d5 1
+a5 1
+.TITLE CMPS-012M Winter\~2014 Lab\~9 \
+d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.30 2014-02-21 15:51:24-08 - - $"
+@
+
+
+1.30
+log
+@-
+@
+text
+@d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.29 2014-02-21 15:49:51-08 - - $"
+d236 5
+a240 1
+with the above options may produce,
+@
+
+
+1.29
+log
+@-
+@
+text
+@d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.28 2014-02-21 15:48:39-08 - - $"
+d184 17
+a200 2
+.V= insertion_sort ,
+as shown in Figure \*[Figure_insertion_sort].
+a251 30
+.DS
+.SP
+.B1
+.in +\n[Pi]
+.SP
+.ft CR
+.nf
+.eo
+   // Insertion sort.
+   static <elem_t extends Comparable <? super elem_t>>
+   void insertion_sort (elem_t[] array, int nelem) {
+      for (int sorted = 1; sorted < nelem; ++sorted) {
+         int slot = sorted;
+         elem_t copy = array[slot];
+         for (; slot > 0; --slot) {
+            int cmp = copy.compareTo (array[slot - 1]);
+            if (cmp > 0) break;
+            array[slot] = array[slot - 1];
+         }
+         array[slot] = copy;
+      }
+   }
+.ec
+.fi
+.ft R
+.br
+.SP
+.B2
+.FG "Java function \f[CB]insertion_sort\f[P]" "" 0 insertion_sort
+.DE
+@
+
+
+1.28
+log
+@-
+@
+text
+@d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.27 2014-02-21 15:45:09-08 - - $"
+a24 30
+.DF
+.SP
+.B1
+.in +\n[Pi]
+.SP
+.ft CR
+.nf
+.eo
+   // Insertion sort.
+   static <elem_t extends Comparable <? super elem_t>>
+   void insertion_sort (elem_t[] array, int nelem) {
+      for (int sorted = 1; sorted < nelem; ++sorted) {
+         int slot = sorted;
+         elem_t copy = array[slot];
+         for (; slot > 0; --slot) {
+            int cmp = copy.compareTo (array[slot - 1]);
+            if (cmp > 0) break;
+            array[slot] = array[slot - 1];
+         }
+         array[slot] = copy;
+      }
+   }
+.ec
+.fi
+.ft R
+.br
+.SP
+.B2
+.FG "Java function \f[CB]insertion_sort\f[P]" "" 0 insertion_sort
+.DE
+d237 30
+@
+
+
+1.27
+log
+@-
+@
+text
+@d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.26 2013-10-18 11:49:45-07 - - $"
+d25 30
+d179 2
+a180 2
+.VCODE* 1 "void inssort (void *base, size_t nelem, size_t size,"
+.VCODE* 1 "              int (*compar) (const void *, const void *));"
+a247 30
+.DF
+.SP
+.B1
+.in +\n[Pi]
+.SP
+.ft CR
+.nf
+.eo
+   // Insertion sort.
+   static <elem_t extends Comparable <? super elem_t>>
+   void insertion_sort (elem_t[] array, int nelem) {
+      for (int sorted = 1; sorted < nelem; ++sorted) {
+         int slot = sorted;
+         elem_t copy = array[slot];
+         for (; slot > 0; --slot) {
+            int cmp = copy.compareTo (array[slot - 1]);
+            if (cmp > 0) break;
+            array[slot] = array[slot - 1];
+         }
+         array[slot] = copy;
+      }
+   }
+.ec
+.fi
+.ft R
+.br
+.SP
+.B2
+.FG "Java function \f[CB]insertion_sort\f[P]" "" 0 insertion_sort
+.DE
+@
+
+
+1.26
+log
+@-
+@
+text
+@d5 1
+a5 1
+.TITLE CMPS-012M Fall\~2013 Lab\~9 \
+d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.25 2013-05-17 19:36:16-07 - - $"
+@
+
+
+1.25
+log
+@-
+@
+text
+@d4 2
+a5 1
+.TITLE CMPS-012M Spring\~2013 Lab\~9 \
+d8 1
+a8 1
+"$Id: lab9c-voidstar-generic.mm,v 1.24 2013-05-17 18:23:08-07 - - $"
+@
+
+
+1.24
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.23 2013-05-17 18:21:34-07 - - $"
+d20 2
+a21 5
+Begin by studying the example programs
+.V= cqsort-int.c
+and
+.V= cqsort-string.c
+.=V ( Examples/wk08-lec22-cqsort/ ).
+@
+
+
+1.23
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.22 2013-02-22 13:37:57-08 - - $"
+d84 2
+a85 2
+.ALX 1 ()
+.GKLI
+d91 1
+a91 1
+.GKLI
+d97 1
+a97 1
+.GKLI
+d102 1
+a102 1
+.GKLI
+d110 2
+a111 2
+.ALX 1 ()
+.GKLI
+d126 1
+a126 1
+.GKLI
+d131 1
+a131 1
+.GKLI
+d155 2
+a156 2
+.ALX 1 ()
+.GKLI
+d159 1
+a159 1
+.GKLI
+d162 1
+a162 1
+.GKLI
+d166 1
+a166 1
+.GKLI
+d182 2
+a183 2
+.ALX 1 ()
+.GKLI
+d188 1
+a188 1
+.GKLI
+d192 1
+a192 1
+.GKLI
+d202 1
+a202 1
+.GKLI
+d206 1
+a206 1
+.GKLI
+d210 1
+a210 1
+.GKLI
+@
+
+
+1.22
+log
+@-
+@
+text
+@d4 1
+a4 1
+.TITLE CMPS-012M Winter\~2013 Lab\~9 \
+d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.21 2012-11-16 17:22:56-08 - - $"
+@
+
+
+1.21
+log
+@-
+@
+text
+@d4 1
+a4 1
+.TITLE CMPS-012M Fall\~2012 Lab\~9 \
+d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.20 2012-11-16 17:22:15-08 - - $"
+@
+
+
+1.20
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.19 2012-11-16 17:21:36-08 - - $"
+d250 1
+a250 1
+.H 1 "Eliminate all warnings"
+d259 1
+a259 1
+.H 1 "What to submit"
+@
+
+
+1.19
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.18 2012-11-16 17:20:32-08 - - $"
+d221 1
+@
+
+
+1.18
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.17 2012-11-16 17:15:05-08 - - $"
+a133 29
+.DF
+.B1
+.in +\n[Pi]
+.SP
+.ft CR
+.nf
+.eo
+   // Insertion sort.
+   static <elem_t extends Comparable <? super elem_t>>
+   void insertion_sort (elem_t[] array, int nelem) {
+      for (int sorted = 1; sorted < nelem; ++sorted) {
+         int slot = sorted;
+         elem_t copy = array[slot];
+         for (; slot > 0; --slot) {
+            int cmp = copy.compareTo (array[slot - 1]);
+            if (cmp > 0) break;
+            array[slot] = array[slot - 1];
+         }
+         array[slot] = copy;
+      }
+   }
+.ec
+.fi
+.ft R
+.br
+.SP
+.B2
+.FG "Java function \f[CB]insertion_sort\f[P]" "" 0 insertion_sort
+.DE
+d220 29
+@
+
+
+1.17
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.16 2012-11-16 17:14:09-08 - - $"
+d34 1
+a34 1
+.SH=BVL
+@
+
+
+1.16
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.15 2012-11-16 17:12:06-08 - - $"
+d9 1
+@
+
+
+1.15
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.14 2012-11-16 17:11:09-08 - - $"
+d249 1
+a249 3
+In this lab, eliminiate
+.E= *all*
+warnings from both
+d251 6
+a256 10
+and
+.V= lint .
+For
+.V= lint ,
+the following should not produce any output at all\(::
+.VTCODE* 1 "lint -Xa -fd -m -u -x -errchk=%all numsort.c inssort.c"
+.VTCODE* 1 "lint -Xa -fd -m -u -x -errchk=%all linesort.c inssort.c"
+Also, use the following options when running
+.V= gcc \(::
+.VTCODE* 1 "gcc -g -O0 -Wall -Wextra -std=gnu99"
+@
+
+
+1.14
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.13 2012-11-16 17:10:33-08 - - $"
+d22 1
+a22 1
+.V= cqsort-string.c 
+d42 1
+a42 1
+.VL \n[INDENTHERE]u \n[VCODENWIDTH]u 
+d45 1
+a45 1
+.V= numsort 
+d97 1
+a97 1
+The numbers are then passed to the function 
+d114 1
+a114 1
+and 
+d169 1
+a169 1
+Do not write a separate 
+d184 2
+a185 1
+.GKLI base
+d187 2
+a188 1
+.GKLI nelem
+d190 2
+a191 1
+.GKLI size 
+d194 2
+a195 1
+.GKLI compar
+d239 1
+a239 1
+To allocate space for the temporary 
+d255 1
+a255 1
+For 
+@
+
+
+1.13
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.12 2012-11-16 17:08:56-08 - - $"
+d197 1
+@
+
+
+1.12
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.11 2012-11-16 17:08:12-08 - - $"
+d183 2
+a184 1
+.V= base
+d186 1
+a186 1
+.V= nelem
+d188 1
+a188 1
+.V= size 
+d191 1
+a191 1
+.V= compar
+@
+
+
+1.11
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.10 2012-11-16 17:07:30-08 - - $"
+d83 1
+a83 1
+.ALX i ()
+d109 1
+a109 1
+.ALX i ()
+d204 1
+a204 1
+.ALX i ()
+@
+
+
+1.10
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.9 2012-11-16 15:18:55-08 - - $"
+d84 1
+a84 1
+.LI
+d90 1
+a90 1
+.LI
+d96 1
+a96 1
+.LI
+d101 1
+a101 1
+.LI
+d110 1
+a110 1
+.LI
+d125 1
+a125 1
+.LI
+d130 1
+a130 1
+.LI
+d205 1
+a205 1
+.LI
+d210 1
+a210 1
+.LI
+d214 1
+a214 1
+.LI
+d224 1
+a224 1
+.LI
+d228 1
+a228 1
+.LI
+d232 1
+a232 1
+.LI
+@
+
+
+1.9
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.8 2012-11-16 15:18:35-08 - - $"
+d42 1
+a42 1
+.VL \n[INDENTHERE]u \n[VCODENWIDTH]u 1
+@
+
+
+1.8
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.7 2012-11-16 15:17:22-08 - - $"
+d40 1
+a40 1
+.nr LINESORTWID \w'\f[CB]linesort\0\0\fR'
+@
+
+
+1.7
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.6 2012-11-16 15:15:51-08 - - $"
+d43 1
+a43 1
+.V=LI all
+d48 1
+a48 1
+.V=LI numsort
+d53 1
+a53 1
+.V=LI linesort
+d58 1
+a58 1
+.V=LI %.o
+a60 8
+.V=LI ci
+depends on all source files and runs both
+.V= ci
+and
+.V= checksource .
+.V=LI submit
+depends on source files and submits them.
+.LE
+d69 8
+@
+
+
+1.6
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.5 2012-11-16 15:05:18-08 - - $"
+d40 3
+a42 2
+.nr LISTINDENT \w'\f[CB]linesort\0\0\0\fR'
+.VL \n[LISTINDENT]u \n[VCODENWIDTH]u 1
+@
+
+
+1.5
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.4 2012-11-16 15:04:55-08 - - $"
+d40 2
+a41 2
+.nr FILE_Pi \n[Pi]*3
+.VL \n[FILE_Pi] \n[VCODENWIDTH]u 1
+@
+
+
+1.4
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.3 2012-11-16 15:02:27-08 - - $"
+d41 1
+a41 1
+.VL \n[FILE_Pi] \n[VCODENWIDTH] 1
+@
+
+
+1.3
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.2 2012-11-16 15:00:06-08 - - $"
+d41 1
+a41 1
+.VL \n[FILE_Pi] \n[Pi] 1
+@
+
+
+1.2
+log
+@-
+@
+text
+@d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.1 2012-03-08 18:57:51-08 - - $"
+a66 2
+.V=LI lint
+runs lint on the source code.
+d68 8
+@
+
+
+1.1
+log
+@-
+@
+text
+@d4 1
+a4 1
+.TITLE CMPS-012M Fall\~2011 Lab\~8 \
+d7 1
+a7 1
+"$Id: lab9c-voidstar-generic.mm,v 1.1 2012-03-08 18:54:50-08 - - $"
+@

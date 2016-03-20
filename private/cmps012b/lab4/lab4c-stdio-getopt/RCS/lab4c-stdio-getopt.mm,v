@@ -1,0 +1,486 @@
+head	1.16;
+access;
+symbols;
+locks;
+comment	@.\" @;
+
+
+1.16
+date	2016.01.13.01.30.40;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2015.01.14.01.27.12;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2014.01.10.02.08.07;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2013.10.16.00.30.59;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2013.10.15.21.12.14;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2013.10.11.02.49.47;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2013.04.24.01.13.48;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2013.04.24.01.09.43;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2013.04.24.01.08.57;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2013.04.24.01.08.01;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2013.04.24.01.07.48;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2013.04.24.00.57.33;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.01.30.01.33.20;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.01.30.01.33.02;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.01.29.22.57.55;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.01.29.21.44.36;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.16
+log
+@-
+@
+text
+@.so Tmac.mm-etc
+.if t .Newcentury-fonts 11
+.INITR* \n[.F]
+.SIZE 12
+.TITLE CMPS-012M Winter\~2016 Lab\~4 "stdio, getopt"
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.15 2015-01-13 17:27:12-08 - - $"
+.PWD
+.URL
+.tm .\\" @@ps=\n[@@ps]
+.tm .\\" @@vs=\n[@@vs]
+This lab will introduce you to the use of files in ANSI C,
+and scanning options from the command line.
+Use the command
+.V= man (1)
+to read about various commands and functions that are mentioned
+in this document.
+For each function,
+the synopsis shows you what header needs to be included,
+and also displays the prototypes for relevant library functions.
+.H 1 "Program Specification"
+The program specification is given in the format of a Unix
+.V= man (1)
+page.
+.MANPAGE=BVL
+.MANPAGE=LI "NAME"
+cmatch \[em] print matching lines from files
+.MANPAGE=LI "SYNOPSIS"
+.V= cmatch
+.=V \|[ -iln ]
+.I \|string
+.RI \|[ filename \|.\|.\|.]
+.MANPAGE=LI "DESCRIPTION"
+.V= cmatch
+searches the named input files for lines containing the string.
+By default the matching lines are printed.
+If more than one file is specified,
+lines of output are preceded by the filename.
+.MANPAGE=LI "OPTIONS"
+Options are scanned using
+.V= getopt (3)
+and are subject to its restrictions and conventions.
+.MANOPT=VL
+.MANOPT=LI -i
+Ignore case distinctions between the string and the contents of files.
+.MANOPT=LI -l
+Suppress normal output.
+Print only the names of files for which a match is found.
+.MANOPT=LI -n
+Prefix each line of output with the line number starting from 1
+within each file.
+.LE
+.MANPAGE=LI "OPERANDS"
+The first operand is required and is the string to be used to
+search the files.
+The rest of the operands are filenames to be processed in sequence.
+If no filenames are specified, stdin is read.
+If a file is specified as a single minus
+.=V ( - )
+stdin is read at that point.
+.MANPAGE=LI "EXIT STATUS"
+.VL \n[Pi]
+.LI 0
+No errors were detected.
+.LI 1
+Errors were detected and messages printed to stderr,
+either for invalid options or inaccessible files.
+.LE
+.MANPAGE=LI "SEE ALSO"
+.V= grep (1)
+.H 1 "Implementation Sequence"
+Following are suggestions as to implementation sequence,
+which may be followed more or less,
+but are not absolutely required if you find a better way.
+.ALX a ()
+.LI
+Study the behavior of
+.V= pmatch.perl ,
+which is an implementation of your lab in Perl.
+.LI
+Create a build script called
+.V= mk
+as you did with the previous project.
+This script uses
+.VTCODE* 1 "gcc -g -O0 -Wall -Wextra -std=gnu99"
+to compile
+.V= cmatch.c
+into the executable binary
+.V= cmatch .
+Note that an executable binary generally does not have a suffix.
+.LI
+Whenever you see a reference to a function in C,
+read the man page for it.
+For example,
+the function
+.V= strstr (3)
+can be discovered with the command
+.VTCODE* 1 "man -s 3 strstr"
+Note that in this case,
+the synopsis shows you what the arguments and results to the
+function is,
+and that you need to include the header
+.V= <string.h> .
+.LI
+The example
+.V= catbychar.c
+shows how to read a file one character at a time.
+.LI
+The example
+.V= catbyline.c
+shows how to read a file one line at a time,
+assuming the maximum line length is known.
+.LI
+A file is opened with
+.V= fopen (3)
+and closed with
+.V= fclose (3),
+unless it is
+.V= stdin ,
+which is already opened when the program begins.
+.LI
+Error messages are printed to
+.V= stderr ,
+and
+.V= fflush (3)
+should be called before and after printing a message
+in order to ensure that the buffers are cleared.
+.LI
+The example
+.V= getoptex.c
+shows how to use
+.V= getopt (3)
+to scan options given to a program and record each as a
+boolean flag in a struct.
+Invalid options are handled.
+.LI
+For
+.V= getopt (3),
+the variable
+.V= opterr
+allows us to print messages our own way,
+.V= optopt
+is the option character actually found,
+and
+.V= optind
+is the index into
+.V= argv
+which is the first operand.
+.LI
+Open a file called
+.V= cmatch.c ,
+which is mostly a copy of
+.V= catbyline.c ,
+and add the function from
+.V= getoptex.c
+to ensure that options are scanned.
+.LI
+For each line read,
+instead of just printing it,
+check it against the pattern string.
+Use either
+.V= strstr (3)
+or
+.V= strcasestr (3)
+as required by the options.
+.LI
+Add in code to print filenames and line numbers as per 
+the options,
+and make sure the exit status is correct.
+.LE
+.H 1 "What to Submit"
+Submit the file
+.V= cmatch.c
+as per the specifications,
+and the build script
+.V= mk .
+Also submit
+.V= PARTNER
+if you do pair programming.
+.FINISH
+@
+
+
+1.15
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Winter\~2015 Lab\~4 "stdio, getopt"
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.14 2014-01-09 18:08:07-08 - - $"
+@
+
+
+1.14
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Winter\~2014 Lab\~4 "stdio, getopt"
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.13 2013-10-15 17:30:59-07 - - $"
+@
+
+
+1.13
+log
+@-
+@
+text
+@d4 3
+a6 3
+.SIZE 12 14
+.TITLE CMPS-012M Fall\~2013 Lab\~4 "stdio, getopt"
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.12 2013-10-15 14:12:14-07 - - $"
+@
+
+
+1.12
+log
+@-
+@
+text
+@d4 1
+a4 1
+.S 12 14
+d6 1
+a6 1
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.11 2013-10-10 19:49:47-07 - - $"
+@
+
+
+1.11
+log
+@-
+@
+text
+@d4 1
+d6 1
+a6 1
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.10 2013-04-23 18:13:48-07 - - $"
+@
+
+
+1.10
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Spring\~2013 Lab\~4 "stdio, getopt"
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.9 2013-04-23 18:09:43-07 - - $"
+d75 4
+a147 4
+Study the behavior of
+.V= pmatch.perl ,
+which is an implementation of your lab in Perl.
+.LI
+@
+
+
+1.9
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.8 2013-04-23 18:08:57-07 - - $"
+d60 7
+a66 4
+An exit status of 0 is returned if no errors were found,
+regardless of whether a match has occurred.
+Errors in scanning options or operands or in opening files
+cause an exit status of 1 to be returned.
+@
+
+
+1.8
+log
+@-
+@
+text
+@a2 2
+.tm @@ps=\n[@@ps]
+.tm @@vs=\n[@@vs]
+d5 1
+a5 1
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.7 2013-04-23 18:08:01-07 - - $"
+d8 2
+@
+
+
+1.7
+log
+@-
+@
+text
+@d3 2
+d7 1
+a7 1
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.6 2013-04-23 18:07:48-07 - - $"
+@
+
+
+1.6
+log
+@-
+@
+text
+@d2 1
+a2 1
+.if t .Newcentury-fonts 12
+d5 1
+a5 1
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.5 2013-04-23 17:57:33-07 - - $"
+@
+
+
+1.5
+log
+@-
+@
+text
+@d2 1
+a2 1
+.if t .Newcentury-fonts
+d5 1
+a5 1
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.4 2013-01-29 17:33:20-08 - - $"
+@
+
+
+1.4
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Winter\~2013 Lab\~4 "stdio, getopt"
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.3 2013-01-29 17:33:02-08 - - $"
+@
+
+
+1.3
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.2 2013-01-29 14:57:55-08 - - $"
+d74 1
+a74 1
+.V= "gcc -g -O0 -Wall -Wextra -std=gnu99"
+@
+
+
+1.2
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.1 2013-01-29 13:44:36-08 - - $"
+d70 11
+@
+
+
+1.1
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab4c-stdio-getopt.mm,v 1.6 2012-10-23 17:41:32-07 - - $"
+d60 3
+a62 3
+If any files could not be opened,
+an exit status of 1 is returned.
+.MANPAGE=LI "SEE ALS"
+d64 88
+d153 10
+@

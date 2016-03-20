@@ -1,0 +1,7 @@
+argv[0]=(./argv)
+argv[1]=(argv.c)
+argv[2]=(cecho.c)
+argv[3]=(double.c)
+argv[4]=(scanfbug.c)
+argv[5]=(segfault.c)
+argv[6]=(strtod.c)

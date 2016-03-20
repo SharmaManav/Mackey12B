@@ -1,0 +1,913 @@
+head	1.44;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.44
+date	2014.02.20.23.28.20;	author -;	state -;
+branches;
+next	1.43;
+
+1.43
+date	2014.02.20.23.25.19;	author -;	state -;
+branches;
+next	1.42;
+
+1.42
+date	2014.02.20.23.21.54;	author -;	state -;
+branches;
+next	1.41;
+
+1.41
+date	2013.05.18.00.42.18;	author -;	state -;
+branches;
+next	1.40;
+
+1.40
+date	2013.05.18.00.41.57;	author -;	state -;
+branches;
+next	1.39;
+
+1.39
+date	2013.05.18.00.41.21;	author -;	state -;
+branches;
+next	1.38;
+
+1.38
+date	2013.05.18.00.40.30;	author -;	state -;
+branches;
+next	1.37;
+
+1.37
+date	2013.05.18.00.38.18;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2013.05.18.00.36.46;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2013.05.18.00.35.26;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2013.05.18.00.34.48;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2013.05.18.00.34.34;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2013.05.18.00.34.05;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2013.05.18.00.33.32;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2013.05.18.00.33.09;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2013.05.18.00.30.17;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2013.05.18.00.30.04;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2013.05.18.00.29.27;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2013.05.18.00.28.40;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2013.05.18.00.27.31;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2013.05.18.00.27.17;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2013.05.18.00.26.55;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2013.05.18.00.26.37;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2013.05.18.00.25.32;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2013.05.18.00.25.03;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2013.05.18.00.24.24;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2013.05.18.00.24.14;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2013.05.18.00.23.57;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2013.02.27.03.04.24;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2013.02.27.03.04.14;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2013.02.27.03.03.37;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2013.02.27.03.02.32;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2013.02.27.03.01.57;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2013.02.27.03.01.05;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2013.02.27.03.00.31;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2013.02.27.02.59.39;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2013.02.27.02.58.15;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2013.02.27.02.55.59;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2013.02.27.02.55.26;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2013.02.27.02.54.17;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.02.27.02.53.45;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.02.27.00.28.05;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.02.27.00.24.50;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.02.27.00.23.50;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.44
+log
+@-
+@
+text
+@// $Id: futuretimes.c,v 1.43 2014-02-20 15:25:19-08 - - $
+
+#include <limits.h>
+#include <locale.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define SEC_PER_DAY (24 * 60 * 60)
+#define SEC_PER_YEAR (SEC_PER_DAY * 365 + SEC_PER_DAY / 4)
+const time_t localtime_segfault = (time_t) INT_MAX * SEC_PER_YEAR;
+
+int main (void) {
+   setlocale (LC_NUMERIC, "en_US");
+   for (time_t when = 1; when > 0; when = when * 4 + 3) {
+      if (when > localtime_segfault) break;
+      char *timeformat = "%b %d %a %H:%M:%S %Z";
+      char buffer[256];
+      struct tm *tm = localtime (&when);
+      strftime (buffer, sizeof buffer, timeformat, tm);
+      printf ("%'25ld = %'15d %s\n", when, tm->tm_year + 1900, buffer);
+   }
+   printf ("%'25ld = %'15d = INT_MAX * SEC_PER_YEAR\n",
+           localtime_segfault, INT_MAX);
+   printf ("%'25ld = %'15ld = LONG_MAX\n", LONG_MAX,
+           LONG_MAX / SEC_PER_YEAR);
+   return EXIT_SUCCESS;
+}
+
+//TEST// ./futuretimes >futuretimes.lis
+//TEST// mkpspdf futuretimes.ps futuretimes.c* futuretimes.lis
+
+@
+
+
+1.43
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.42 2014-02-20 15:21:54-08 - - $
+d15 1
+a15 1
+   for (time_t when = 1; when > 0; when = when * 2 + 1) {
+@
+
+
+1.42
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.41 2013-05-17 17:42:18-07 - - $
+d23 1
+a23 1
+   printf ("%'25ld = %'15d = INT_MAX\n",
+@
+
+
+1.41
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.40 2013-05-17 17:41:57-07 - - $
+a14 1
+   printf ("sizeof (time_t) = %ld\n", sizeof (time_t));
+d23 1
+a23 1
+   printf ("%'25ld = %'15d = INT_MAX (localtime_segfault)\n",
+@
+
+
+1.40
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.39 2013-05-17 17:41:21-07 - - $
+d22 1
+a22 1
+      printf ("%'25ld = %'13d %s\n", when, tm->tm_year + 1900, buffer);
+d24 1
+a24 1
+   printf ("%'25ld = %'13d = INT_MAX (localtime_segfault)\n",
+d26 1
+a26 1
+   printf ("%'25ld = %'13ld = LONG_MAX\n", LONG_MAX,
+@
+
+
+1.39
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.38 2013-05-17 17:40:30-07 - - $
+d26 1
+a26 1
+   printf ("%'25ld = %'13d = LONG_MAX\n", LONG_MAX,
+@
+
+
+1.38
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.37 2013-05-17 17:38:18-07 - - $
+d26 1
+a26 2
+   printf ("%'25ld = localtime_segfault\n", localtime_segfault);
+   printf ("%'25ld = LONG_MAX = year %'ld\n", LONG_MAX,
+@
+
+
+1.37
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.36 2013-05-17 17:36:46-07 - - $
+d11 1
+a11 1
+const time_t localtime_segfault = (time_t)INT_MAX * SEC_PER_YEAR;
+d24 2
+a25 2
+   printf ("%'25ld = %'13d = INT_MAX\n",
+           (long) INT_MAX * SEC_PER_YEAR,  INT_MAX);
+@
+
+
+1.36
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.35 2013-05-17 17:35:26-07 - - $
+d27 2
+a28 1
+   printf ("%'25ld = LONG_MAX\n", LONG_MAX);
+@
+
+
+1.35
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.34 2013-05-17 17:34:48-07 - - $
+d31 3
+@
+
+
+1.34
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.33 2013-05-17 17:34:34-07 - - $
+d15 1
+a15 1
+   printf ("sizeof (time_t)    = %'25ld\n", sizeof (time_t));
+@
+
+
+1.33
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.32 2013-05-17 17:34:05-07 - - $
+d25 1
+a25 1
+           INT_MAX * SEC_PER_YEAR,  INT_MAX);
+@
+
+
+1.32
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.31 2013-05-17 17:33:32-07 - - $
+d24 2
+a25 1
+   printf ("%'25ld = %'13d = INT_MAX\n", "", INT_MAX);
+@
+
+
+1.31
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.30 2013-05-17 17:33:09-07 - - $
+d9 2
+a10 2
+#define long SEC_PER_DAY = 24 * 60 * 60;
+#define long SEC_PER_YEAR = SEC_PER_DAY * 365 + SEC_PER_DAY / 4;
+@
+
+
+1.30
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.29 2013-05-17 17:30:17-07 - - $
+d9 3
+a11 3
+const long sec_per_day = 24 * 60 * 60;
+const long sec_per_year = sec_per_day * 365 + sec_per_day / 4;
+const time_t localtime_segfault = (time_t)INT_MAX * sec_per_year;
+@
+
+
+1.29
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.28 2013-05-17 17:30:04-07 - - $
+d9 3
+a11 1
+const time_t localtime_segfault = (time_t)INT_MAX * 365 * 24 * 60 * 60;
+d24 1
+a24 1
+   printf ("%25s = %'13d = INT_MAX\n", "", INT_MAX);
+@
+
+
+1.28
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.27 2013-05-17 17:29:27-07 - - $
+d22 1
+a22 1
+   printf ("%25s = %'25d = INT_MAX\n", "", INT_MAX);
+@
+
+
+1.27
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.26 2013-05-17 17:28:40-07 - - $
+d22 1
+a22 1
+   printf ("INT_MAX            = %'25d\n", INT_MAX);
+@
+
+
+1.26
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.25 2013-05-17 17:27:31-07 - - $
+a13 1
+   printf ("INT_MAX            = %'25d\n", INT_MAX);
+d20 1
+a20 1
+      printf ("%'24ld = %'13d %s\n", when, tm->tm_year + 1900, buffer);
+d22 3
+a24 2
+   printf ("%'24ld = localtime_segfault\n", localtime_segfault);
+   printf ("%'24ld = LONG_MAX\n", LONG_MAX);
+@
+
+
+1.25
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.24 2013-05-17 17:27:17-07 - - $
+a14 2
+   printf ("LONG_MAX           = %'25ld\n", LONG_MAX);
+   printf ("localtime_segfault = %'25ld\n", localtime_segfault);
+d23 2
+@
+
+
+1.24
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.23 2013-05-17 17:26:55-07 - - $
+d13 4
+a16 4
+   printf ("sizeof (time_t)    = %'24ld\n", sizeof (time_t));
+   printf ("INT_MAX            = %'24d\n", INT_MAX);
+   printf ("LONG_MAX           = %'24ld\n", LONG_MAX);
+   printf ("localtime_segfault = %'24ld\n", localtime_segfault);
+@
+
+
+1.23
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.22 2013-05-17 17:26:37-07 - - $
+d13 4
+a16 4
+   printf ("sizeof (time_t)    = %'20ld\n", sizeof (time_t));
+   printf ("INT_MAX            = %'20d\n", INT_MAX);
+   printf ("LONG_MAX           = %'20ld\n", LONG_MAX);
+   printf ("localtime_segfault = %'20ld\n", localtime_segfault);
+@
+
+
+1.22
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.21 2013-05-17 17:25:32-07 - - $
+d13 4
+a16 4
+   printf ("sizeof (time_t)    = %20ld\n", sizeof (time_t));
+   printf ("INT_MAX            = %20d\n", INT_MAX);
+   printf ("LONG_MAX           = %20ld\n", LONG_MAX);
+   printf ("localtime_segfault = %20ld\n", localtime_segfault);
+@
+
+
+1.21
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.20 2013-05-17 17:25:03-07 - - $
+d23 1
+a23 1
+      printf ("%18ld = %'13d %s\n", when, tm->tm_year + 1900, buffer);
+@
+
+
+1.20
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.19 2013-05-17 17:24:24-07 - - $
+d23 1
+a23 1
+      printf ("%18ld = %'12d %s\n", when, tm->tm_year + 1900, buffer);
+@
+
+
+1.19
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.18 2013-05-17 17:24:14-07 - - $
+d23 1
+a23 1
+      printf ("%18ld = %'12d %s\n", when, tm->tm_year, buffer);
+@
+
+
+1.18
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.17 2013-05-17 17:23:57-07 - - $
+d23 1
+a23 1
+      printf ("%18ld = %'12d %s\n", when, tm->year, buffer);
+@
+
+
+1.17
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.16 2013-02-26 19:04:24-08 - - $
+d4 1
+@
+
+
+1.16
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.15 2013-02-26 19:04:14-08 - - $
+d11 1
+d18 1
+a18 1
+      char *timeformat = "%11Y %b %d %a %H:%M:%S %Z";
+d22 1
+a22 1
+      printf ("%18ld = %s\n", when, buffer);
+@
+
+
+1.15
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.14 2013-02-26 19:03:37-08 - - $
+d17 1
+a17 1
+      char *timeformat = "%11Y %b %d (%a) %H:%M:%S %Z";
+@
+
+
+1.14
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.13 2013-02-26 19:02:32-08 - - $
+d17 1
+a17 1
+      char *timeformat = "%11Y %a %d %b %H:%M:%S %Z";
+@
+
+
+1.13
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.12 2013-02-26 19:01:57-08 - - $
+d8 1
+a8 1
+const time_t gmtime_segfault = (time_t)INT_MAX * 365 * 24 * 60 * 60;
+d11 4
+a14 4
+   printf ("sizeof (time_t) = %20ld\n", sizeof (time_t));
+   printf ("INT_MAX         = %20d\n", INT_MAX);
+   printf ("LONG_MAX        = %20ld\n", LONG_MAX);
+   printf ("gmtime_segfault = %20ld\n", gmtime_segfault);
+d16 1
+a16 1
+      if (when > gmtime_segfault) break;
+d19 1
+a19 1
+      struct tm *tm = gmtime (&when);
+@
+
+
+1.12
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.11 2013-02-26 19:01:05-08 - - $
+d11 4
+a14 4
+   printf ("sizeof (time_t) = %18ld\n", sizeof (time_t));
+   printf ("INT_MAX         = %18d\n", INT_MAX);
+   printf ("LONG_MAX        = %18ld\n", LONG_MAX);
+   printf ("gmtime_segfault = %18ld\n", gmtime_segfault);
+@
+
+
+1.11
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.10 2013-02-26 19:00:31-08 - - $
+d11 4
+a14 4
+   printf ("sizeof (time_t) = %ld\n", sizeof (time_t));
+   printf ("INT_MAX = %d\n", INT_MAX);
+   printf ("LONG_MAX = %ld\n", LONG_MAX);
+   printf ("gmtime_segfault = %ld\n", gmtime_segfault);
+@
+
+
+1.10
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.9 2013-02-26 18:59:39-08 - - $
+d16 1
+a16 1
+      if (when < gmtime_segfault) break;
+@
+
+
+1.9
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.5 2013-02-26 18:54:17-08 - - $
+d8 1
+a8 1
+const long gmtime_segfault = INT_MAX * 365 * 24 * 60 * 60;
+@
+
+
+1.8
+log
+@-
+@
+text
+@d8 2
+d14 1
+d16 1
+@
+
+
+1.7
+log
+@-
+@
+text
+@a14 1
+      printf ("[");
+a15 1
+      printf ("]");
+@
+
+
+1.6
+log
+@-
+@
+text
+@d15 1
+a15 1
+      printf ("%d.", tm->tm_year);
+@
+
+
+1.5
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.4 2013-02-26 18:53:45-08 - - $
+d15 1
+d17 1
+a17 2
+      printf ("%d.", tm->tm_year);
+      fflush (stdout);
+@
+
+
+1.4
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.3 2013-02-26 16:28:05-08 - - $
+d17 1
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.2 2013-02-26 16:24:50-08 - - $
+d16 1
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: futuretimes.c,v 1.1 2013-02-26 16:23:50-08 - - $
+d10 2
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: manytimes.c,v 1.1 2013-02-26 15:04:01-08 - - $
+d11 1
+a11 1
+      char *timeformat = "%a %d %b %H:%M:%S %Z %10Y";
+@

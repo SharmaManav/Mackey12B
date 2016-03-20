@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting segfault.c
+segfault.c:
+     $Id: segfault.c,v 1.24 2014-04-15 18:40:30-07 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 segfault.c
+	-o segfault -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f segfault.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished segfault.c

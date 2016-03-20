@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting futuretimes.c
+futuretimes.c:
+     $Id: futuretimes.c,v 1.44 2014-02-20 15:28:20-08 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 futuretimes.c
+	-o futuretimes -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f futuretimes.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished futuretimes.c

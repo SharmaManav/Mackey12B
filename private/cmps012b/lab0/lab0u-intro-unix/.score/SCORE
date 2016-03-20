@@ -1,0 +1,31 @@
+$Id: SCORE,v 1.1 2014-12-22 19:02:30-08 - - $
+
+Lab0 specifies 10 files to submit.  Verify that the student
+has submitted files that satisfy the requirements of each of
+those sections.
+
+Assign 3 points for each satisfactory file and 0 for an
+unsatisfactory file or no file submitted.
+
+(01) 01_private-lab0
+
+(02) 02_date
+
+(03) 03_acl
+
+(04) 04_which_shell
+
+(05) 05_getent
+
+(06) .bashrc
+
+(07) .bash_profile
+
+(08) 08_verifying
+
+(09) goodbye.java
+
+(10) mk.goodbye
+
+TOTALSCORE=
+min 1, max 30

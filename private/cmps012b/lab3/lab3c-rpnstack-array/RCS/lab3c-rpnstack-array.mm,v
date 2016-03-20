@@ -1,0 +1,1347 @@
+head	1.54;
+access;
+symbols;
+locks;
+comment	@.\" @;
+
+
+1.54
+date	2016.01.12.05.47.45;	author -;	state -;
+branches;
+next	1.53;
+
+1.53
+date	2015.01.21.02.01.37;	author -;	state -;
+branches;
+next	1.52;
+
+1.52
+date	2015.01.14.01.13.23;	author -;	state -;
+branches;
+next	1.51;
+
+1.51
+date	2015.01.14.01.12.28;	author -;	state -;
+branches;
+next	1.50;
+
+1.50
+date	2014.04.09.00.29.54;	author -;	state -;
+branches;
+next	1.49;
+
+1.49
+date	2014.04.09.00.29.27;	author -;	state -;
+branches;
+next	1.48;
+
+1.48
+date	2014.04.09.00.29.01;	author -;	state -;
+branches;
+next	1.47;
+
+1.47
+date	2014.04.09.00.28.04;	author -;	state -;
+branches;
+next	1.46;
+
+1.46
+date	2014.04.09.00.27.42;	author -;	state -;
+branches;
+next	1.45;
+
+1.45
+date	2014.04.09.00.27.23;	author -;	state -;
+branches;
+next	1.44;
+
+1.44
+date	2014.04.09.00.24.28;	author -;	state -;
+branches;
+next	1.43;
+
+1.43
+date	2014.04.09.00.21.17;	author -;	state -;
+branches;
+next	1.42;
+
+1.42
+date	2014.04.09.00.19.51;	author -;	state -;
+branches;
+next	1.41;
+
+1.41
+date	2014.04.09.00.15.39;	author -;	state -;
+branches;
+next	1.40;
+
+1.40
+date	2014.04.09.00.14.54;	author -;	state -;
+branches;
+next	1.39;
+
+1.39
+date	2014.04.09.00.13.36;	author -;	state -;
+branches;
+next	1.38;
+
+1.38
+date	2014.04.09.00.12.43;	author -;	state -;
+branches;
+next	1.37;
+
+1.37
+date	2014.04.09.00.10.45;	author -;	state -;
+branches;
+next	1.36;
+
+1.36
+date	2014.04.08.22.00.26;	author -;	state -;
+branches;
+next	1.35;
+
+1.35
+date	2014.04.08.21.59.39;	author -;	state -;
+branches;
+next	1.34;
+
+1.34
+date	2014.04.08.21.54.35;	author -;	state -;
+branches;
+next	1.33;
+
+1.33
+date	2014.04.08.21.46.17;	author -;	state -;
+branches;
+next	1.32;
+
+1.32
+date	2014.04.08.21.45.26;	author -;	state -;
+branches;
+next	1.31;
+
+1.31
+date	2014.04.08.21.45.01;	author -;	state -;
+branches;
+next	1.30;
+
+1.30
+date	2014.04.08.21.44.49;	author -;	state -;
+branches;
+next	1.29;
+
+1.29
+date	2014.04.08.21.43.22;	author -;	state -;
+branches;
+next	1.28;
+
+1.28
+date	2014.04.08.21.43.03;	author -;	state -;
+branches;
+next	1.27;
+
+1.27
+date	2014.04.08.21.42.42;	author -;	state -;
+branches;
+next	1.26;
+
+1.26
+date	2014.04.08.21.38.57;	author -;	state -;
+branches;
+next	1.25;
+
+1.25
+date	2014.04.08.21.38.06;	author -;	state -;
+branches;
+next	1.24;
+
+1.24
+date	2014.04.08.21.36.11;	author -;	state -;
+branches;
+next	1.23;
+
+1.23
+date	2014.04.08.21.35.48;	author -;	state -;
+branches;
+next	1.22;
+
+1.22
+date	2014.04.08.21.34.26;	author -;	state -;
+branches;
+next	1.21;
+
+1.21
+date	2014.04.08.21.33.36;	author -;	state -;
+branches;
+next	1.20;
+
+1.20
+date	2014.04.04.02.13.40;	author -;	state -;
+branches;
+next	1.19;
+
+1.19
+date	2014.04.04.02.10.02;	author -;	state -;
+branches;
+next	1.18;
+
+1.18
+date	2014.01.16.00.01.54;	author -;	state -;
+branches;
+next	1.17;
+
+1.17
+date	2014.01.15.23.15.15;	author -;	state -;
+branches;
+next	1.16;
+
+1.16
+date	2014.01.15.23.14.59;	author -;	state -;
+branches;
+next	1.15;
+
+1.15
+date	2014.01.15.23.14.43;	author -;	state -;
+branches;
+next	1.14;
+
+1.14
+date	2014.01.15.23.12.54;	author -;	state -;
+branches;
+next	1.13;
+
+1.13
+date	2014.01.15.23.09.20;	author -;	state -;
+branches;
+next	1.12;
+
+1.12
+date	2014.01.09.23.59.47;	author -;	state -;
+branches;
+next	1.11;
+
+1.11
+date	2014.01.09.23.59.03;	author -;	state -;
+branches;
+next	1.10;
+
+1.10
+date	2014.01.09.23.57.36;	author -;	state -;
+branches;
+next	1.9;
+
+1.9
+date	2014.01.09.22.39.37;	author -;	state -;
+branches;
+next	1.8;
+
+1.8
+date	2014.01.09.22.38.46;	author -;	state -;
+branches;
+next	1.7;
+
+1.7
+date	2013.10.16.00.30.36;	author -;	state -;
+branches;
+next	1.6;
+
+1.6
+date	2013.10.12.02.06.11;	author -;	state -;
+branches;
+next	1.5;
+
+1.5
+date	2013.09.25.22.00.14;	author -;	state -;
+branches;
+next	1.4;
+
+1.4
+date	2013.09.25.21.59.44;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2013.04.12.01.37.51;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2013.04.12.01.36.59;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2013.04.12.01.36.28;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.54
+log
+@-
+@
+text
+@.so Tmac.mm-etc
+.if t .Newcentury-fonts
+.INITR* \n[.F]
+.SIZE 12 14
+.TITLE CMPS-012M Winter\~2016 Lab\~3 "RPN, Stacks, ANSI C"
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.53 2015-01-20 18:01:37-08 - - $"
+.PWD
+.URL
+.if dPSPIC \{
+.sp -1v
+.DS
+.PSPIC hp-15c-image.eps 6.5i
+.DE
+.\}
+In this lab,
+you will be introduced to ANSI C11 and make use of a stack data
+structure implemented as an array.
+Input will be read using
+.V= scanf (1)
+and output printed with
+.V= printf (1).
+The program will implement a Reverse Polish notation calculator.
+.H 1 "Reverse Polish notation"
+Reverse Polish notation\*F (RPN)
+.FS
+.V= http://en.wikipedia.org/wiki/Reverse_Polish_notation
+.FE
+was invented by the Polish logician
+Jan \[/L]ukasiewicz\*F
+.FS
+.V= http://en.wikipedia.org/wiki/Jan_%C5%81ukasiewicz
+\[em]
+The notation 
+.V= %C5%81 ,
+is a two-byte UTF-8 representation of the Unicode character
+.V= U+0141 ,
+Latin capital letter L with stroke (\[/L]).
+.FE
+and places all operators after their operands,
+which makes it much easier to parse than infix notation,
+and does not need parentheses to override operator precedence.
+For example, the infix expression
+.VTCODE* 1 "3 * 4 + 5 * 6"
+is represented as
+.VTCODE* 1 "3 4 * 5 6 * +"
+in RPN.
+.H 1 "HP-15C RPN Scientific Calculator"
+A Free HP-15C RPN Scientific Calculator Simulator
+is available in the directory
+.V= HP15C-Calculator/ .\*F
+.FS
+.V= http:Labs-cmps012m/lab3c-rpnstack-array/HP15C-Calculator/
+.FE
+The Java Swing and Javascript versions have
+been downloaded.
+Other versions are available at the original site.\*F
+.FS
+.V= http://hp15c.com/
+.FE
+To run the locally stored Java version\(::
+.VTCODE* 1 "cd Labs-cmps012m/lab3c-rpnstack-array/HP15C-Calculator/"
+.VTCODE* 1 "HP15C.jar &"
+If you prefer to use the web version,
+starting with the URL for this lab,
+click on
+.V= http:HP15C-Calculator ,
+then click on the image of the calculator,
+which will then bring up a Javascript web emulator.
+.H 1 "Program input"
+Input to the program will consist of double precision IEEE-754\*F
+.FS
+.V= http://en.wikipedia.org/wiki/IEEE_floating_point
+.FE
+floating point numbers and calculator operators.
+You have been provided with a reference implementation
+.V= jrpn.java
+which you are to translate into
+.V= crpn.c ,
+for which a skeleton outline has been provided.
+.ALX i ()
+.LI
+Any word on input that looks like a number to the function
+.V= strtod (3)
+is pushed onto a stack.
+.LI
+If an input word consists of one of the operators
+.V= '+' ,
+.V= '-' ,
+.V= '*' ,
+or
+.V= '/' ,
+two numbers will be popped off the stack,
+the right operand being popped first and the left operand next,
+then the result is pushed back onto the stack.
+.LI
+The operator
+.V= ';'
+cause all numbers on the stack to be printed,
+from bottom to top using the format
+.V= \[Dq]%.15g\[rs]n\[Dq] .
+.LI
+The operator
+.V= '@@'
+clears the stack.
+.LI
+Any input word beginning with the character
+.V= '#'
+causes the rest of the line to be ignored as a comment.
+.LI
+Anything else on input is an error.
+.LE
+.H 1 "Outline of the functions"
+The following functions are to be implemented.
+See the Java version for detailed implementation requirements.
+.ALX i ()
+.LI
+.V= "void bad_operator (char *oper)"
+.br
+takes an invalid operator and prints an error message.
+.LI
+.V= "void push (struct stack *stack, double number)"
+.br
+pushes the number onto the stack if there is space but prints
+an error message if not.
+.LI
+.V= "void do_binop (struct stack *stack, char operator)"
+.br
+accepts a binary operator,
+pops the right operand then the left operand,
+computes the answer then pushes the result on the stack.
+An error message is printed if there are not at least two numbers
+on the stack.
+.LI
+.V= "void do_print (struct stack *stack)"
+.br
+prints the stack bottom to top, one number per line,
+or indicates that the stack is empty.
+.LI
+.V= "void do_clear (struct stack *stack)"
+.br
+causes the stack to be emptied.
+.LI
+.V= "void do_operator (struct stack *stack, char *operator)"
+.br
+accepts any operator and dispatches the appropriate function
+to perform the operation.
+.LI
+.V= "int main (int argc, char **argv)"
+.br
+loops reading input and calls other functions to perform appropriate
+operations.
+.LE
+.H 1 "The \f[CB]code/\f[P] and \f[CB]misc/\f[P] subdirectories"
+The
+.V= code/
+subdirectory contains two programs\(::
+.V= jrpn.java
+contains the implementation of your lab in Java.
+.V= crpn.c
+contains a partial implementation of your lab in C.
+The 
+.V= main
+function is complete,
+and you have to fill in the bodies of the rest of the functions
+to that they do exactly the same thing as the Java version.
+The exact format of the numbers printed will be slighly different
+because of the way the languages format numbers differently.
+.P
+The
+.V= misc/
+subdirectory contains various sample programs illustration some
+facets of ANSI C11.
+.H 1 "Compiling your code"
+Do not type
+.V= gcc
+in at the terminal directly,
+since it is properly used with multiple options,
+which would normally be put in a 
+.V= Makefile .
+This time, you will write a simple shell script called
+.V= mk
+to perform the compilation.
+The script should contain the following lines\(::
+.DS
+.VTCODE* 1 "#!/bin/sh"
+.VTCODE* 1 "# \[Do]Id\[Do]"
+.VTCODE* 1 "gcc -g -O0 -Wall -Wextra -std=gnu11 crpn.c -o crpn"
+.DE
+Add your name after the RCS Id comment line in another comment.
+Use
+.V= chmod\~+x
+to make it executable.
+When you have created the file,
+check it into an RCS subdirectory using
+.V= cid .
+Also do this with your program
+.V= crpn.c .
+Note\(::
+The hash-bang line (starting with
+.V= #! )
+may not have any spaces.
+.H 1 "What to submit"
+Submit the script
+.V= mk
+and the program
+.V= crpn.c ,
+and if you are doing pair programming, also the
+.V= PARTNER
+file.
+.FINISH
+@
+
+
+1.53
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Winter\~2015 Lab\~3 "RPN, Stacks, ANSI C"
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.52 2015-01-13 17:13:23-08 - - $"
+@
+
+
+1.52
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.51 2015-01-13 17:12:28-08 - - $"
+d16 1
+a16 1
+you will be introduced to ANSI C99 and make use of a stack data
+d172 1
+a172 1
+facets of ANSI C99.
+@
+
+
+1.51
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.50 2014-04-08 17:29:54-07 - - $"
+d187 1
+a187 1
+.VTCODE* 1 "gcc -g -O0 -Wall -Wextra -std=gnu99 crpn.c -o crpn"
+@
+
+
+1.50
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Spring\~2014 Lab\~3 "RPN, Stacks, ANSI C"
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.49 2014-04-08 17:29:27-07 - - $"
+@
+
+
+1.49
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.48 2014-04-08 17:29:01-07 - - $"
+d36 1
+a36 1
+U+0141,
+@
+
+
+1.48
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.47 2014-04-08 17:28:04-07 - - $"
+d37 1
+a37 1
+Latin capital letter L with stroke.
+@
+
+
+1.47
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.46 2014-04-08 17:27:42-07 - - $"
+d36 1
+a36 1
+U+0141 used in the Polish
+@
+
+
+1.46
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.45 2014-04-08 17:27:23-07 - - $"
+d32 1
+a32 1
+.br
+@
+
+
+1.45
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.44 2014-04-08 17:24:28-07 - - $"
+d33 1
+a33 1
+Note the notation 
+d35 1
+a35 1
+which is a two-byte UTF-8 representation of the Unicode character
+@
+
+
+1.44
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.43 2014-04-08 17:21:17-07 - - $"
+d35 2
+a36 1
+which is a two-byte Unicode representation of the Polish
+@
+
+
+1.43
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.42 2014-04-08 17:19:51-07 - - $"
+d32 5
+@
+
+
+1.42
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.41 2014-04-08 17:15:39-07 - - $"
+d44 1
+a44 1
+.V= HP15C-Calculator/\*F.
+d50 1
+a50 1
+Other versions are available at the original site\*F.
+@
+
+
+1.41
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.40 2014-04-08 17:14:54-07 - - $"
+d24 4
+a27 1
+Reverse Polish notation [1] (RPN)
+d29 4
+a32 1
+Jan \[/L]ukasiewicz [2]
+d44 4
+a47 2
+.V= HP15C-Calculator/
+[3].
+d50 4
+a53 1
+Other versions are available at the original site [4].
+d64 4
+a67 1
+Input to the program will consist of double precision IEEE-754
+a203 12
+.H 1 "References"
+[1]
+.V= http://en.wikipedia.org/wiki/Reverse_Polish_notation
+.br
+[2]
+.V= http://en.wikipedia.org/wiki/Jan_%C5%81ukasiewicz
+.br
+[3]
+.V= http:Labs-cmps012m/lab3c-rpnstack-array/HP15C-Calculator/
+.br
+[4]
+.V= http://hp15c.com/
+@
+
+
+1.40
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.39 2014-04-08 17:13:36-07 - - $"
+d23 12
+a51 12
+.H 1 "Reverse Polish notation"
+Reverse Polish notation [1] (RPN)
+was invented by the Polish logician
+Jan \[/L]ukasiewicz [2]
+and places all operators after their operands,
+which makes it much easier to parse than infix notation,
+and does not need parentheses to override operator precedence.
+For example, the infix expression
+.VTCODE* 1 "3 * 4 + 5 * 6"
+is represented as
+.VTCODE* 1 "3 4 * 5 6 * +"
+in RPN.
+@
+
+
+1.39
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.38 2014-04-08 17:12:43-07 - - $"
+a39 12
+.P
+[1]
+.V= http://en.wikipedia.org/wiki/Reverse_Polish_notation
+.br
+[2]
+.V= http://en.wikipedia.org/wiki/Jan_%C5%81ukasiewicz
+.br
+[3]
+.V= http:Labs-cmps012m/lab3c-rpnstack-array/HP15C-Calculator/
+.br
+[4]
+.V= http://hp15c.com/
+d190 12
+@
+
+
+1.38
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.37 2014-04-08 17:10:45-07 - - $"
+d9 6
+a22 6
+.if dPSPIC \{
+.sp -1v
+.DS
+.PSPIC hp-15c-image.eps 6.5i
+.DE
+.\}
+d113 1
+a113 1
+.V= "void push (stack_t *stack, double number)"
+d118 1
+a118 1
+.V= "void do_binop (stack_t *stack, char operator)"
+d126 1
+a126 1
+.V= "void do_print (stack_t *stack)"
+d131 1
+a131 1
+.V= "void do_clear (stack_t *stack)"
+d135 1
+a135 1
+.V= "void do_operator (stack_t *stack, char *operator)"
+@
+
+
+1.37
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.36 2014-04-08 15:00:26-07 - - $"
+a16 1
+.H 1 "HP-15C RPN Scientific Calculator"
+d18 1
+a18 1
+.sp -2v
+d23 1
+@
+
+
+1.36
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.35 2014-04-08 14:59:39-07 - - $"
+d21 1
+a21 1
+.PSPIC hp-15c-image.eps 6i
+@
+
+
+1.35
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.34 2014-04-08 14:54:35-07 - - $"
+d21 1
+a21 1
+.PSPIC hp-15c-image.eps 5i
+@
+
+
+1.34
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.33 2014-04-08 14:46:17-07 - - $"
+a16 12
+.H 1 "Reverse Polish notation"
+Reverse Polish notation [1] (RPN)
+was invented by the Polish logician
+Jan \[/L]ukasiewicz [2]
+and places all operators after their operands,
+which makes it much easier to parse than infix notation,
+and does not need parentheses to override operator precedence.
+For example, the infix expression
+.VTCODE* 1 "3 * 4 + 5 * 6"
+is represented as
+.VTCODE* 1 "3 4 * 5 6 * +"
+in RPN.
+d52 12
+@
+
+
+1.33
+log
+@-
+@
+text
+@d4 1
+a4 1
+.SIZE 12
+d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.32 2014-04-08 14:45:26-07 - - $"
+@
+
+
+1.32
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.31 2014-04-08 14:45:01-07 - - $"
+d30 6
+a45 6
+.if dPSPIC \{
+.sp -2v
+.DS
+.PSPIC hp-15c-image.eps 5i
+.DE
+.\}
+@
+
+
+1.31
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.30 2014-04-08 14:44:49-07 - - $"
+d43 1
+a43 1
+.PSPIC hp-15c-image.eps 4i
+@
+
+
+1.30
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.29 2014-04-08 14:43:22-07 - - $"
+d41 1
+a41 1
+.sp -3v
+@
+
+
+1.29
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.28 2014-04-08 14:43:03-07 - - $"
+d29 2
+a30 9
+.P
+.if dPSPIC \{
+.sp -3v
+.DS
+.PSPIC hp-15c-image.eps 4i
+.DE
+.\}
+.P
+A Free 15C RPN Scientific Calculator Simulator
+d40 6
+@
+
+
+1.28
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.27 2014-04-08 14:42:42-07 - - $"
+d31 1
+@
+
+
+1.27
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.26 2014-04-08 14:38:57-07 - - $"
+d32 1
+a32 1
+.PSPIC hp-15c-image.eps 3i
+@
+
+
+1.26
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.25 2014-04-08 14:38:06-07 - - $"
+d32 1
+a32 1
+.PSPIC hp-15c-image.eps 6.5i
+@
+
+
+1.25
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.24 2014-04-08 14:36:11-07 - - $"
+d32 1
+a32 1
+.PSPIC hp-15c-image.eps 3i
+@
+
+
+1.24
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.23 2014-04-08 14:35:48-07 - - $"
+d32 1
+a32 1
+.PSPIC 15-small.ps 3i
+@
+
+
+1.23
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.22 2014-04-08 14:34:26-07 - - $"
+d32 1
+a32 1
+.PSPIC 15-small.ps 6.5i
+@
+
+
+1.22
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.21 2014-04-08 14:33:36-07 - - $"
+d32 1
+a32 1
+.PSPIC hp-15c-image.eps 6.5i
+@
+
+
+1.21
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.20 2014-04-03 19:13:40-07 - - $"
+d32 1
+a32 1
+.PSPIC hp-15c-image.eps
+@
+
+
+1.20
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.19 2014-04-03 19:10:02-07 - - $"
+d30 6
+@
+
+
+1.19
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.18 2014-01-15 16:01:54-08 - - $"
+d29 1
+d36 1
+a36 2
+The W*nd*w$ and Mac-OS-X versions
+are available at the original site [4].
+d40 6
+@
+
+
+1.18
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Winter\~2014 Lab\~3 "RPN, Stacks, ANSI C"
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.17 2014-01-15 15:15:15-08 - - $"
+@
+
+
+1.17
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.16 2014-01-15 15:14:59-08 - - $"
+d31 2
+a32 1
+.V= HP15C-Calculator/ [3].
+@
+
+
+1.16
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.15 2014-01-15 15:14:43-08 - - $"
+d38 1
+a38 1
+.VTOCDE* 1 "HP15C.jar &"
+@
+
+
+1.15
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.14 2014-01-15 15:12:54-08 - - $"
+d37 2
+a38 2
+.VTCODE* 1 "cd Labs-cmps012m/lab3c-rpnstack-array/HP15C-Calculator/
+.VTOCDE* 1 "HP15C.jar &
+@
+
+
+1.14
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.13 2014-01-15 15:09:20-08 - - $"
+d36 3
+d47 1
+a47 1
+.V= http://www2.ucsc.edu/courses/cmps012b-wm/:/Labs-cmps012m/lab3c-rpnstack-array/HP15C-Calculator/
+@
+
+
+1.13
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.12 2014-01-09 15:59:47-08 - - $"
+a28 1
+.H 1 "HP 15C RPN Scientific Calculator Simulator"
+d31 1
+a31 1
+.V= HP15C-Calculator/ .
+d35 1
+a35 1
+are available at the original site. [3]
+d44 3
+@
+
+
+1.12
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.11 2014-01-09 15:59:03-08 - - $"
+d29 1
+a29 1
+.P
+@
+
+
+1.11
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.10 2014-01-09 15:57:36-08 - - $"
+d54 1
+a54 1
+.ALX a ()
+d89 1
+a89 1
+.ALX a ()
+@
+
+
+1.10
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.9 2014-01-09 14:39:37-08 - - $"
+d35 2
+a36 2
+If you want the W*nd*w$ or Mac-OS-X versions,
+you may get them from the original site.
+d44 2
+@
+
+
+1.9
+log
+@-
+@
+text
+@d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.8 2014-01-09 14:38:46-08 - - $"
+d30 8
+d43 1
+@
+
+
+1.8
+log
+@-
+@
+text
+@d5 2
+a6 2
+.TITLE CMPS-012M Fall\~2013 Lab\~3 "RPN, Stacks, and ANSI C"
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.7 2013-10-15 17:30:36-07 - - $"
+@
+
+
+1.7
+log
+@-
+@
+text
+@d4 1
+a4 1
+.SIZE 12 14
+d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.6 2013-10-11 19:06:11-07 - - $"
+@
+
+
+1.6
+log
+@-
+@
+text
+@d4 1
+a4 1
+.S 12 14
+d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.5 2013-09-25 15:00:14-07 - - $"
+@
+
+
+1.5
+log
+@-
+@
+text
+@d4 1
+d6 1
+a6 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.4 2013-09-25 14:59:44-07 - - $"
+@
+
+
+1.4
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.3 2013-04-11 18:37:51-07 - - $"
+d24 1
+a24 1
+.V= "3 * 4 + 5 * 6"
+d26 1
+a26 1
+.V= "3 4 * 5 6 * +"
+@
+
+
+1.3
+log
+@-
+@
+text
+@d4 2
+a5 2
+.TITLE CMPS-012M Spring\~2013 Lab\~3 "RPN, Stacks, and ANSI C"
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.2 2013-04-11 18:36:59-07 - - $"
+@
+
+
+1.2
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab3c-rpnstack-array.mm,v 1.1 2013-04-11 18:36:28-07 - - $"
+d44 3
+a46 3
+Any word on input that looks like a number when scanned using
+.V= \[Dq]%lg\[Dq]
+format will be pushed onto a stack.
+@
+
+
+1.1
+log
+@-
+@
+text
+@d5 1
+a5 1
+.RCS "$Id: lab3c-scanf-arrays.mm,v 1.20 2013-04-11 16:43:16-07 - - $"
+d66 1
+a66 1
+causes the stack to be emptied.
+@

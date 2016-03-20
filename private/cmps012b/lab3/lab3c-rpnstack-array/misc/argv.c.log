@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting argv.c
+argv.c:
+     $Id: argv.c,v 1.6 2013-09-25 14:08:47-07 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 argv.c
+	-o argv -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f argv.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished argv.c

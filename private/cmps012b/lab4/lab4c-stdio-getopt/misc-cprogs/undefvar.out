@@ -1,0 +1,94 @@
+==10688== Memcheck, a memory error detector
+==10688== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==10688== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==10688== Command: undefvar
+==10688== 
+==10688== Conditional jump or move depends on uninitialised value(s)
+==10688==    at 0x400822: main (undefvar.c:16)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+==10688== Conditional jump or move depends on uninitialised value(s)
+==10688==    at 0x5E26E12: vfprintf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E30C98: printf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x400845: main (undefvar.c:17)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+==10688== Use of uninitialised value of size 8
+==10688==    at 0x5E262AB: _itoa_word (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E27325: vfprintf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E30C98: printf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x400845: main (undefvar.c:17)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+==10688== Conditional jump or move depends on uninitialised value(s)
+==10688==    at 0x5E262B5: _itoa_word (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E27325: vfprintf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E30C98: printf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x400845: main (undefvar.c:17)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+==10688== Conditional jump or move depends on uninitialised value(s)
+==10688==    at 0x5E27374: vfprintf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E30C98: printf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x400845: main (undefvar.c:17)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+==10688== Conditional jump or move depends on uninitialised value(s)
+==10688==    at 0x5E26EDD: vfprintf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E30C98: printf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x400845: main (undefvar.c:17)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+==10688== Conditional jump or move depends on uninitialised value(s)
+==10688==    at 0x5E26F60: vfprintf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E30C98: printf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x400845: main (undefvar.c:17)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+==10688== Conditional jump or move depends on uninitialised value(s)
+==10688==    at 0x5E29726: vfprintf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E30C98: printf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x400845: main (undefvar.c:17)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+==10688== Use of uninitialised value of size 8
+==10688==    at 0x5E26251: _itoa_word (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E27325: vfprintf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E30C98: printf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x400845: main (undefvar.c:17)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+==10688== Conditional jump or move depends on uninitialised value(s)
+==10688==    at 0x5E26258: _itoa_word (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E27325: vfprintf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x5E30C98: printf (in /usr/lib64/libc-2.17.so)
+==10688==    by 0x400845: main (undefvar.c:17)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+==10688== Use of uninitialised value of size 8
+==10688==    at 0x40084A: main (undefvar.c:18)
+==10688==  Uninitialised value was created by a stack allocation
+==10688==    at 0x4007E6: main (undefvar.c:10)
+==10688== 
+argc=1, argv=0xffefff618, *argv=0xffefffa4f(undefvar)
+var=0, it=0, p=0xffefff610
+==10688== 
+==10688== HEAP SUMMARY:
+==10688==     in use at exit: 0 bytes in 0 blocks
+==10688==   total heap usage: 1 allocs, 1 frees, 16 bytes allocated
+==10688== 
+==10688== All heap blocks were freed -- no leaks are possible
+==10688== 
+==10688== For counts of detected and suppressed errors, rerun with: -v
+==10688== ERROR SUMMARY: 36 errors from 11 contexts (suppressed: 1 from 1)
+EXIT STATUS = 0

@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting voidstar.c
+voidstar.c:
+     $Id: voidstar.c,v 1.42 2013-10-18 12:06:30-07 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 voidstar.c
+	-o voidstar -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f voidstar.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished voidstar.c

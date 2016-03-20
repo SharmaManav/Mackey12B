@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting strlist.c
+strlist.c:
+     $Id: strlist.c,v 1.12 2016-01-28 16:02:07-08 - - $
+gcc -g -O0 -Wall -Wextra -rdynamic -std=gnu11 strlist.c
+	-o strlist -lglut -lGLU -lGL -lX11 -lrt -lm
+rm -f strlist.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished strlist.c

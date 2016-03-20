@@ -1,0 +1,30 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2013.02.01.00.53.16;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@# $Id: test0.in,v 1.1 2010-01-28 20:57:53-08 - - $
+#
+# very short set of test data
+#
+LAX
+SJC
+SFO
+@
