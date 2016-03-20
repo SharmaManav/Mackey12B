@@ -1,2 +1,8 @@
 // Manav Sharma
 // CMPS-012B • Assignment 1 • Formatting, files, args
+/*1.  Overview
+In this assignment, you will learn how to access files, and make use
+of command line arguments by writing a utility similar to the program
+fmt(1).  Read the man page for fmt by typing the command:
+   man -s 1 fmt
+*/
