@@ -1,0 +1,31 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2016.01.15.07.54.43;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@#!/bin/bash
+# $Id$
+# Manav Sharma msharma7
+
+hello 1>test1.out 2>test1.err ; echo $?>test1.status
+hello world 1>test2.out 2>test2.err ; echo $?>test2.status
+
+
+@

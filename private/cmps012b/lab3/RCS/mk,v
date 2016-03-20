@@ -1,0 +1,27 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2016.01.27.10.40.04;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@#!/bin/sh
+# $Id$
+# Manav Sharma
+gcc-g -O0 -Wall -Wextra -std=gnull crpn.c -o crpn
+@

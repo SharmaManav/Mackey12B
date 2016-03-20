@@ -1,0 +1,19 @@
+checksource jxref.java
+cid + jxref.java
+javac jxref.java
+echo Main-class: jxref >Manifest
+jar cvfm jxref Manifest jxref.class listmap.class intqueue.class misc.class intqueue\$*.class listmap\$*.class
+added manifest
+adding: jxref.class(in = 2731) (out= 1585)(deflated 41%)
+adding: listmap.class(in = 1375) (out= 782)(deflated 43%)
+adding: intqueue.class(in = 1172) (out= 664)(deflated 43%)
+adding: misc.class(in = 1889) (out= 1089)(deflated 42%)
+adding: intqueue$1.class(in = 172) (out= 144)(deflated 16%)
+adding: intqueue$iterator.class(in = 1230) (out= 697)(deflated 43%)
+adding: intqueue$node.class(in = 468) (out= 302)(deflated 35%)
+adding: listmap$1.class(in = 169) (out= 143)(deflated 15%)
+adding: listmap$iterator.class(in = 1279) (out= 712)(deflated 44%)
+adding: listmap$node.class(in = 1213) (out= 608)(deflated 49%)
+rm -vf Manifest
+removed ‘Manifest’
+chmod +x jxref

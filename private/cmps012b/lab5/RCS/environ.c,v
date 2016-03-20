@@ -1,0 +1,38 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.1
+date	2016.02.11.05.46.08;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@//$Id$
+//Manav Sharma msharma7
+
+#include <stdio.h>
+#include <assert.h>
+#include <stdlib.h>
+
+extern char **environ;
+
+void main() {
+    for (int i = 0; environ[i] != NULL; i++){
+        printf("%s\n", environ[i]);
+       }
+      return 0;
+  }
+@

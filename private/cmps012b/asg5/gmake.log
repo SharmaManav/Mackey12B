@@ -1,0 +1,5 @@
+gcc -g -O0 -Wall -Wextra -std=gnu11 -c debug.c
+gcc -g -O0 -Wall -Wextra -std=gnu11 -c hashset.c
+gcc -g -O0 -Wall -Wextra -std=gnu11 -c strhash.c
+gcc -g -O0 -Wall -Wextra -std=gnu11 -c spellchk.c
+gcc -g -O0 -Wall -Wextra -std=gnu11 -o spellchk debug.o hashset.o strhash.o spellchk.o scanner.o

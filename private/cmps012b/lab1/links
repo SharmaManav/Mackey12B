@@ -1,0 +1,10 @@
+lrwxr-xr-x. 1 msharma7 152860 39 Jan 14 23:58 /afs/cats.ucsc.edu/users/j/msharma7/12b -> /afs/cats.ucsc.edu/courses/cmps012b-wm/
+  File: ‘/afs/cats.ucsc.edu/users/j/msharma7/12b’ -> ‘/afs/cats.ucsc.edu/courses/cmps012b-wm/’
+  Size: 39        	Blocks: 2          IO Block: 4096   symbolic link
+Device: 26h/38d	Inode: 1418461638  Links: 1
+Access: (0755/lrwxr-xr-x)  Uid: (201939/msharma7)   Gid: (152860/ UNKNOWN)
+Context: system_u:object_r:nfs_t:s0
+Access: 2016-01-14 23:58:19.000000000 -0800
+Modify: 2016-01-14 23:58:19.000000001 -0800
+Change: 2016-01-14 23:58:19.000000000 -0800
+ Birth: -

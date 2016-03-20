@@ -1,0 +1,36 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2016.01.15.08.07.52;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@// $Id$
+// Manav Sharma msharma7
+
+     Submit:  hello.java
+     Submit:  mkhello
+     Submit:  testhello
+     Submit:  ~/.bashrc
+     Submit:  ~/.bashrc
+     Submit:  links
+        bash-27$ grep Submit: *.tt
+     This will list all of the lines with the string ``Submit:''.  Cut
+     Submit:  submits
+
+@

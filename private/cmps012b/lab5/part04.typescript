@@ -1,0 +1,3058 @@
+Script started on Wed 10 Feb 2016 08:54:37 PM PST
+bash-4.2$ valgrind malloc
+==25759== Memcheck, a memory error detector
+==25759== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==25759== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==25759== Command: malloc
+==25759== 
+0x54f8090-> {6, (nil)}
+==25759== 
+==25759== HEAP SUMMARY:
+==25759==     in use at exit: 16 bytes in 1 blocks
+==25759==   total heap usage: 2 allocs, 1 frees, 32 bytes allocated
+==25759== 
+==25759== LEAK SUMMARY:
+==25759==    definitely lost: 16 bytes in 1 blocks
+==25759==    indirectly lost: 0 bytes in 0 blocks
+==25759==      possibly lost: 0 bytes in 0 blocks
+==25759==    still reachable: 0 bytes in 0 blocks
+==25759==         suppressed: 0 bytes in 0 blocks
+==25759== Rerun with --leak-check=full to see details of leaked memory
+==25759== 
+==25759== For counts of detected and suppressed errors, rerun with: -v
+==25759== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+bash-4.2$ gdb malloc
+GNU gdb (GDB) Red Hat Enterprise Linux 7.8.2-38.el7
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from malloc...done.
+(gdb) break main
+Breakpoint 1 at 0x400685: file malloc.c, line 13.
+(gdb) run
+Starting program: /afs/cats.ucsc.edu/users/j/msharma7/private/cmps012b/lab5/malloc 
+Missing separate debuginfos, use: debuginfo-install glibc-2.17-106.el7_2.1.x86_64
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffdb28) at malloc.c:13
+13	   node *ptr = malloc (sizeof (struct node));
+(gdb) print ptr
+$1 = (node *) 0x0
+(gdb) print *ptr
+Cannot access memory at address 0x0
+(gdb) next
+14	   ptr = malloc (sizeof (node));
+(gdb) print ptr
+$2 = (node *) 0x602010
+(gdb) print *ptr
+$3 = {value = 0, link = 0x0}
+(gdb) next
+15	   ptr->value = 6;
+(gdb) next
+16	   ptr->link = NULL;
+(gdb) next
+17	   printf ("%p-> {%d, %p}\n", ptr, ptr->value, ptr->link);
+(gdb) print ptr
+$4 = (node *) 0x602030
+(gdb) print *ptr
+$5 = {value = 6, link = 0x0}
+(gdb) next
+0x602030-> {6, (nil)}
+18	   free (ptr);
+(gdb) next
+19	   return EXIT_SUCCESS;
+(gdb) next
+20	}
+(gdb) next
+0x00007ffff7739b15 in __libc_start_main () from /lib64/libc.so.6
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 25807] will be killed.
+
+Quit anyway? (y or n) y
+bash-4.2$ ls
+list1	     malloc	   mk		      part03.typescript  uninit
+list1.c      malloc.c	   part01.typescript  part04.typescript  uninit.c
+list1.c.log  malloc.c.log  part02.typescript  RCS		 uninit.c.log
+bash-4.2$ submit12b lab5 type04.typescript
+
+submit: ERROR: nonexistent or unreadable File(s) specified (type04.typescript).
+Please specify valid files to submit.
+
+Usage: submit Class.Qtr Assignment Filename...
+Usage: submit -m
+'submit -m' will display the documentation
+bash-4.2$ submit12b lab5 type04.typescript[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksubbmi[K[K[Kmit12b typ[K[K[Kpart04.typescript [C part04.typescript l part04.typescript a part04.typescript b part04.typescript 5 part04.typescript [C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Submitting the files you specified...
+copying part04\.typescript
+
+1 File submitted: 
+  part04.typescript (revision 1)
+
+bash-4.2$ ls
+list1	     malloc	   mk		      part03.typescript  uninit
+list1.c      malloc.c	   part01.typescript  part04.typescript  uninit.c
+list1.c.log  malloc.c.log  part02.typescript  RCS		 uninit.c.log
+bash-4.2$ mk list1.c
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ ls
+list1	     malloc	   mk		      part03.typescript  uninit
+list1.c      malloc.c	   part01.typescript  part04.typescript  uninit.c
+list1.c.log  malloc.c.log  part02.typescript  RCS		 uninit.c.log
+bash-4.2$ script part05.typescript
+Script started, file is part05.typescript
+bash-4.2$ mk list1.c
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ tee list1.c.log
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ tee malloc.c.log
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ exit
+exit
+Script done, file is part05.typescript
+bash-4.2$ ls
+list1	     malloc.c		part02.typescript  RCS
+list1.c      malloc.c.log	part03.typescript  uninit
+list1.c.log  mk			part04.typescript  uninit.c
+malloc	     part01.typescript	part05.typescript  uninit.c.log
+bash-4.2$ cat part05.typescript
+Script started on Wed 10 Feb 2016 08:57:50 PM PST
+bash-4.2$ mk list1.c
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ tee list1.c.log
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ tee malloc.c.log
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ exit
+exit
+
+Script done on Wed 10 Feb 2016 08:58:10 PM PST
+bash-4.2$ ls
+list1	     malloc.c		part02.typescript  RCS
+list1.c      malloc.c.log	part03.typescript  uninit
+list1.c.log  mk			part04.typescript  uninit.c
+malloc	     part01.typescript	part05.typescript  uninit.c.log
+bash-4.2$ submit12b lab5 part05.typescript 
+Submitting the files you specified...
+copying part05\.typescript
+
+1 File submitted: 
+  part05.typescript (revision 1)
+
+bash-4.2$ cat list1.c >list2.c
+bash-4.2$ ls
+list1	     malloc	   part01.typescript  part05.typescript  uninit.c.log
+list1.c      malloc.c	   part02.typescript  RCS
+list1.c.log  malloc.c.log  part03.typescript  uninit
+list2.c      mk		   part04.typescript  uninit.c
+bash-4.2$ vi list2.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list2.c" 26L, 615C[1;1H[4m      1 [m// $Id: list1.c,v 1.1 2016-02-10 20:54:23-08 - - $
+[4m      2 
+      3 [m#include <assert.h>
+[4m      4 [m#include <stdio.h>
+[4m      5 
+      6 [mtypedef struct node node;
+[4m      7 [mstruct node {
+[4m      8 [m   char *word;
+[4m      9 [m   node *link;
+[4m     10 [m};
+[4m     11 
+     12 [mint main (int argc, char **argv) {
+[4m     13 [m   node *head;
+[4m     14 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     15 [m      node *node = malloc (sizeof (struct node));
+[4m     16 [m      assert (node != NULL);
+[4m     17 [m      node->word = argv[argi];
+[4m     18 [m      node->link = head;
+[4m     19 [m      head = node;
+[4m     20 [m   }
+[4m     21 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {
+[4m     22 [m      printf ("%p->node {word=%p->[%s], link=%p}\n",
+[4m     23 [m[14Ccurr, curr->word, curr->word, curr->link);[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H[2;9H[3;9H[4;9H[5;9H[4;9H#include <stdio.h>[6;9H[K[7;9Htypedef struct node node;[8;9Hstruct node {[8;22H[K[9;12Hchar *word[10;9H   node *link;[11;9H};[12;9H[K[13;9Hint main (int argc, char **argv) {[14;12Hnode *head;[14;23H[K[15;12Hfor (int argi = 0; argi < 5; ++argi) {[15;51H[K[16;15Hnode *node = malloc (sizeof (struct node));[17;15Hassert (node != NULL);[17;37H[K[18;21Hword = argv[argi];[19;15Hnode->link = head;[20;12H   head = node;[21;12H}[21;13H[K[22;12Hfor (node *curr = head; curr->link != NULL; curr = curr->link) {[23;15Hprintf ("%p->node {word=%p->[%s], link=%p}\n",[23;61H[K[5;9H#include <stdlib.h>i[5;28H[K[5;28H[6;9H[7;28H[8;22H[9;23H[10;23H[11;9H[K[12;9H};[13;9H[K[14;9Hint main (int argc, char **argv) {[15;12Hnode *head;[15;23H[K[16;12Hfor (int argi = 0; argi < 5; ++argi) {[16;51H[K[17;15Hnode *node = malloc (sizeof (struct node));[18;15Hassert (node != NULL);[18;37H[K[19;21Hword = argv[argi];[20;15Hnode->link = head;[21;12H   head = node;[22;12H}[22;13H[K[23;12Hfor (node *curr = head; curr->link != NULL; curr = curr->link) {[11;9H    node *j[11;18H[K[11;18Hhead;[24;1H[K[11;22H[24;1H:wq"list2.c" 28L, 650C written[?1l>
+bash-4.2$ ls
+list1	     malloc	   part01.typescript  part05.typescript  uninit.c.log
+list1.c      malloc.c	   part02.typescript  RCS
+list1.c.log  malloc.c.log  part03.typescript  uninit
+list2.c      mk		   part04.typescript  uninit.c
+bash-4.2$ script part06.typescript
+Script started, file is part06.typescript
+bash-4.2$ mk list2.c
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
++ tee list2.c.log
+list2.c: In function ‘main’:
+list2.c:14:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ valgrind list2 foo bar
+==1670== Memcheck, a memory error detector
+==1670== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==1670== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==1670== Command: list2 foo bar
+==1670== 
+0x54f81c0->node {word=0xffefffdb5->[MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man], link=0x54f8160}
+0x54f8160->node {word=(nil)->[(null)], link=0x54f8100}
+0x54f8100->node {word=0xffefffdb1->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffdad->[foo], link=0x54f8040}
+==1670== Conditional jump or move depends on uninitialised value(s)
+==1670==    at 0x400748: main (list2.c:23)
+==1670== 
+==1670== 
+==1670== HEAP SUMMARY:
+==1670==     in use at exit: 120 bytes in 5 blocks
+==1670==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==1670== 
+==1670== LEAK SUMMARY:
+==1670==    definitely lost: 24 bytes in 1 blocks
+==1670==    indirectly lost: 96 bytes in 4 blocks
+==1670==      possibly lost: 0 bytes in 0 blocks
+==1670==    still reachable: 0 bytes in 0 blocks
+==1670==         suppressed: 0 bytes in 0 blocks
+==1670== Rerun with --leak-check=full to see details of leaked memory
+==1670== 
+==1670== For counts of detected and suppressed errors, rerun with: -v
+==1670== Use --track-origins=yes to see where uninitialised values come from
+==1670== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ gdb list2
+GNU gdb (GDB) Red Hat Enterprise Linux 7.8.2-38.el7
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from list2...done.
+(gdb) break n
+Function "n" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) run f^H^H^H^H^H^H^H^H^H^H^H                           ^[[D    ^[[A^[[A^[^C^C
+Please answer y or [n].
+Make breakpoint pending on future shared library load? (y or [n]) n
+(gdb) Quit
+(gdb) quit
+bash-4.2$ ls
+list1	     list2.c	  malloc.c.log	     part03.typescript	RCS
+list1.c      list2.c.log  mk		     part04.typescript	uninit
+list1.c.log  malloc	  part01.typescript  part05.typescript	uninit.c
+list2	     malloc.c	  part02.typescript  part06.typescript	uninit.c.log
+bash-4.2$ rm part06.typescript 
+bash-4.2$ vi par[K[K[Klist2.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list2.c" 28L, 650C[1;1H[4m      1 [m// $Id: list2.c,v 1.1 2016-02-10 21:04:04-08 - - $
+[4m      2 
+      3 [m#include <assert.h>
+[4m      4 [m#include <stdio.h>
+[4m      5 [m#include <stdlib.h>
+[4m      6 
+      7 [mtypedef struct node node;
+[4m      8 [mstruct node {
+[4m      9 [m   char *word;
+[4m     10 [m   node *link;
+[4m     11 [m   node *head;
+[4m     12 [m};
+[4m     13 
+     14 [mint main (int argc, char **argv) {
+[4m     15 [m   node *head;
+[4m     16 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     17 [m      node *node = malloc (sizeof (struct node));
+[4m     18 [m      assert (node != NULL);
+[4m     19 [m      node->word = argv[argi];
+[4m     20 [m      node->link = head;
+[4m     21 [m      head = node;
+[4m     22 [m   }
+[4m     23 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H[2;9H[3;9H[4;9H[5;9H[6;9H[7;9H[8;9H[9;9H[10;9H[11;9H[12;9H[13;9H[14;9H[15;9H[16;9H[17;9H[18;9H[19;9H[20;9H[21;9H[22;9H[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     24 [m      printf ("%p->node {word=%p->[%s], link=%p}\n",[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     25 [m[14Ccurr, curr->word, curr->word, curr->link);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     26 [m   }[1;23r[23;1H
+[1;24r[23;1H[4m     27 [m   return 9;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     28 [m}[22;9H[21;9H[20;9H[19;9H[18;9H[17;9H[16;9H[15;9H[14;9H[13;9H[12;9H[11;9H[10;9H[9;9H[8;9H[7;9H[6;9H[5;9H[4;9H[3;9H[2;9H[1;9H[1;23r[1;1HM[1;24r[1;1H[4m      5 [m#include <stdlib.h>[1;9H[1;23r[1;1HM[1;24r[1;1H[4m      4 [m#include <stdio.h>[1;9H[1;23r[1;1HM[1;24r[1;1H[4m      3 [m#include <assert.h>[1;9H[1;23r[1;1HM[1;24r[1;1H[4m      2 [1;23r[m[1;1HM[1;24r[1;1H[4m      1 [m// $Id: list2.c,v 1.1 2016-02-10 21:04:04-08 - - $[1;9H[2;9H[3;9H[4;9H[5;9H[6;9H[7;9H[8;9H[9;9H[10;9H[11;9H[12;9H[13;9H[14;9H[15;9H[16;9H[17;9H[18;9H[19;9H[20;9H[21;9H[22;9H[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     24 [m      printf ("%p->node {word=%p->[%s], link=%p}\n",[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     25 [m[14Ccurr, curr->word, curr->word, curr->link);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     26 [m   }[1;23r[23;1H
+[1;24r[23;1H[4m     27 [m   return 9;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     28 [m}[22;9H[23;9H[22;9H   return 9;   re[24;1H[K[22;13H
+
+:wq"list2.c" 28L, 650C written[?1l>
+bash-4.2$ script part06.typescript
+Script started, file is part06.typescript
+bash-4.2$ mk list2.c
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ tee list2.c.log
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
+list2.c: In function ‘main’:
+list2.c:14:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ valgrind list2 foo bar
+==4701== Memcheck, a memory error detector
+==4701== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==4701== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==4701== Command: list2 foo bar
+==4701== 
+0x54f81c0->node {word=0xffefffd5d->[MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man], link=0x54f8160}
+0x54f8160->node {word=(nil)->[(null)], link=0x54f8100}
+0x54f8100->node {word=0xffefffd59->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffd55->[foo], link=0x54f8040}
+==4701== Conditional jump or move depends on uninitialised value(s)
+==4701==    at 0x400748: main (list2.c:23)
+==4701== 
+==4701== 
+==4701== HEAP SUMMARY:
+==4701==     in use at exit: 120 bytes in 5 blocks
+==4701==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==4701== 
+==4701== LEAK SUMMARY:
+==4701==    definitely lost: 24 bytes in 1 blocks
+==4701==    indirectly lost: 96 bytes in 4 blocks
+==4701==      possibly lost: 0 bytes in 0 blocks
+==4701==    still reachable: 0 bytes in 0 blocks
+==4701==         suppressed: 0 bytes in 0 blocks
+==4701== Rerun with --leak-check=full to see details of leaked memory
+==4701== 
+==4701== For counts of detected and suppressed errors, rerun with: -v
+==4701== Use --track-origins=yes to see where uninitialised values come from
+==4701== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ gdb list2
+GNU gdb (GDB) Red Hat Enterprise Linux 7.8.2-38.el7
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from list2...done.
+(gdb) break 27
+Breakpoint 1 at 0x40074a: file list2.c, line 27.
+(gdb) run foo bar
+Starting program: /afs/cats.ucsc.edu/users/j/msharma7/private/cmps012b/lab5/list2 foo bar
+Missing separate debuginfos, use: debuginfo-install glibc-2.17-106.el7_2.1.x86_64
+0x602090->node {word=0x7fffffffddcb->[MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man], link=0x602070}
+0x602070->node {word=(nil)->[(null)], link=0x602050}
+0x602050->node {word=0x7fffffffddc7->[bar], link=0x602030}
+0x602030->node {word=0x7fffffffddc3->[foo], link=0x602010}
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffda68) at list2.c:27
+27	   return 9;
+(gdb) where
+#0  main (argc=3, argv=0x7fffffffda68) at list2.c:27
+(gdb) list
+22	   }
+23	   for (node *curr = head; curr->link != NULL; curr = curr->link) {
+24	      printf ("%p->node {word=%p->[%s], link=%p}\n",
+25	              curr, curr->word, curr->word, curr->link);
+26	   }
+27	   return 9;
+28	}
+(gdb) list list2.c:23
+18	      assert (node != NULL);
+19	      node->word = argv[argi];
+20	      node->link = head;
+21	      head = node;
+22	   }
+23	   for (node *curr = head; curr->link != NULL; curr = curr->link) {
+24	      printf ("%p->node {word=%p->[%s], link=%p}\n",
+25	              curr, curr->word, curr->word, curr->link);
+26	   }
+27	   return 9;
+(gdb) print head
+$1 = (node *) 0x602090
+(gdb) bt
+#0  main (argc=3, argv=0x7fffffffda68) at list2.c:27
+(gdb) print head
+$2 = (node *) 0x602090
+(gdb) prnt[K[Kint *head
+$3 = {
+  word = 0x7fffffffddcb "MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man", link = 0x602070, 
+  head = 0x0}
+(gdb) print*([K[K *(hed[Kad->word)
+$4 = 77 'M'
+(gdb) print hed[Kad->link->link->link
+$5 = (node *) 0x602030
+(gdb) print*(head-.[K>link-.[K>link->link)
+$6 = {word = 0x7fffffffddc3 "foo", link = 0x602010, head = 0x0}
+(gdb) exit
+Undefined command: "exit".  Try "help".
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 4756] will be killed.
+
+Quit anyway? (y or n) y
+bash-4.2$ ls
+list1	     list2.c	  malloc.c.log	     part03.typescript	RCS
+list1.c      list2.c.log  mk		     part04.typescript	uninit
+list1.c.log  malloc	  part01.typescript  part05.typescript	uninit.c
+list2	     malloc.c	  part02.typescript  part06.typescript	uninit.c.log
+bash-4.2$ vi part06.typescript 
+[?1h=[1;24r[m[m[0m[H[J[24;1H"part06.typescript" [noeol] 96L, 4096C[1;1H[4m      1 [mScript started on Wed 10 Feb 2016 09:07:29 PM PST
+[4m      2 [mbash-4.2$ mk list2.c[1m^M[0m
+[4m      3 [mCSOURCE=list1.c EXECBIN=list1[1m^M[0m
+[4m      4 [m+ cid + list1.c[1m^M[0m
+[4m      5 [m+ checksource list1.c[1m^M[0m
+[4m      6 [m+ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm[1m^M[0m
+[4m      7 [m+ tee list1.c.log[1m^M[0m
+[4m      8 [mlist1.c: In function ‘main’:[1m^M[0m
+[4m      9 [mlist1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimpll[10;1H[4m        [micit-function-declaration][1m^M[0m
+[4m     10 [m[7Cnode *node = malloc (sizeof (struct node));[1m^M[0m
+[4m     11 [m[7C^[1m^M[0m
+[4m     12 [mlist1.c:15:20: warning: incompatible implicit declaration of built-in fuu[14;1H[4m        [mnction ‘malloc’[1m^M[0m
+[4m     13 [m[7Cnode *node = malloc (sizeof (struct node));[1m^M[0m
+[4m     14 [m[20C^[1m^M[0m
+[4m     15 [mlist1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter][1m^M[0m
+[4m     16 [m int main (int argc, char **argv) {[1m^M[0m
+[4m     17 [m[15C^[1m^M[0m
+[4m     18 [m+ set +x[1m^M[0m
+[4m     19 [m============================================================[1m^M[0m
+[4m     20 [mCSOURCE=list2.c EXECBIN=list2[1m^M[0m
+[4m     21 [m+ cid + list2.c[1m^M[1;9H[2;9H[3;9H[4;9H[5;9H[6;9H[7;9H[8;9H[9;9H[11;9H[12;9H[13;9H[15;9H[16;9H[17;9H[18;9H[19;9H[20;9H[21;9H[22;9H[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     22 [m+ checksource list2.c[1m^M[0m[24;1H[K[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     23 [m+ tee list2.c.log[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     24 [m+ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     25 [mlist2.c: In function ‘main’:[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     26 [mlist2.c:14:15: warning: unused parameter ‘argc’ [-Wunused-parameter][1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     27 [m int main (int argc, char **argv) {[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     28 [m[15C^[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     29 [m+ set +x[1m^M[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     30 [m============================================================[1m^M[0m
+[4m     31 [mCSOURCE=malloc.c EXECBIN=malloc[1m^M[22;9H[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     32 [m+ cid + malloc.c[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     33 [m+ checksource malloc.c[1m^M[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     34 [m+ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm[1m^M[0m
+[4m     35 [m+ tee malloc.c.log[1m^M[22;9H[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     36 [mmalloc.c: In function ‘main’:[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     37 [mmalloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter][1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     38 [m int main (int argc, char **argv) {[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     39 [m[15C^[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     40 [mmalloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter][1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     41 [m int main (int argc, char **argv) {[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     42 [m[28C^[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     43 [m+ set +x[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     44 [m============================================================[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     45 [mCSOURCE=uninit.c EXECBIN=uninit[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     46 [m+ cid + uninit.c[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     47 [m+ checksource uninit.c[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     48 [m+ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     49 [m+ tee uninit.c.log[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     50 [muninit.c: In function ‘main’:[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     51 [muninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter][1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     52 [m int main (int argc, char **argv) {[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     53 [m[15C^[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     54 [muninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter][1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     55 [m int main (int argc, char **argv) {[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     56 [m[28C^[1m^M[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     57 [muninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function  [23;1H[4m        [m[-Wuninitialized][1m^M[22;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     58 [m    printf ("pointer=%p\n", pointer);[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     59 [m    ^[1m^M[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     60 [muninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-WW[23;1H[4m        [muninitialized][1m^M[22;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     61 [m    printf ("foo=%d\n", foo);[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     62 [m    ^[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     63 [m+ set +x[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     64 [m============================================================[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     65 [mbash-4.2$ valgrind list2 foo bar[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     66 [m==4701== Memcheck, a memory error detector[1m^M[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     67 [m==4701== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al..[23;1H[4m        [m[1m^M[22;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     68 [m==4701== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright ii[23;1H[4m        [mnfo[1m^M[22;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     69 [m==4701== Command: list2 foo bar[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     70 [m==4701== [1m^M[23;9H[1;23r[0m[23;1H
+
+
+[1;24r[21;1H[4m     71 [m0x54f81c0->node {word=0xffefffd5d->[MANPATH=/opt/rh/devtoolset-3/root/uss[22;1H[4m        [mr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/shaa[23;1H[4m        [mre/man], link=0x54f8160}[1m^M[21;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     72 [m0x54f8160->node {word=(nil)->[(null)], link=0x54f8100}[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     73 [m0x54f8100->node {word=0xffefffd59->[bar], link=0x54f80a0}[1m^M[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     74 [m0x54f80a0->node {word=0xffefffd55->[foo], link=0x54f8040}[1m^M[0m
+[4m     75 [m==4701== Conditional jump or move depends on uninitialised value(s)[1m^M[22;9H[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     76 [m==4701==    at 0x400748: main (list2.c:23)[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     77 [m==4701== [1m^M[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     78 [m==4701== [1m^M[0m
+[4m     79 [m==4701== HEAP SUMMARY:[1m^M[22;9H[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     80 [m==4701==     in use at exit: 120 bytes in 5 blocks[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     81 [m==4701==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     82 [m==4701== [1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     83 [m==4701== LEAK SUMMARY:[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     84 [m==4701==    definitely lost: 24 bytes in 1 blocks[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     85 [m==4701==    indirectly lost: 96 bytes in 4 blocks[1m^M[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     86 [m==4701==      possibly lost: 0 bytes in 0 blocks[1m^M[0m
+[4m     87 [m==4701==    still reachable: 0 bytes in 0 blocks[1m^M[22;9H[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     88 [m==4701==[9Csuppressed: 0 bytes in 0 blocks[1m^M[0m
+[4m     89 [m==4701== Rerun with --leak-check=full to see details of leaked memory[1m^M[22;9H[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     90 [m==4701== [1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     91 [m==4701== For counts of detected and suppressed errors, rerun with: -v[1m^M[23;9H[1;23r[0m[23;1H
+
+
+[1;24r[21;1H[4m     92 [m==4701== Use --track-origins=yes to see where uninitialised values come  [22;1H[4m        [mfrom[1m^M[0m
+[4m     93 [m==4701== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)[1m^[0m[23;2H[K[23;1H[1m@[21;9H[1;23r[0m[23;1H
+[1;24r[22;1H[4m     93 [m==4701== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)[1m^^[0m[23;1H[4m        [m[1mM[22;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     94 [mbash-4.2$ gdb list2[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     95 [mGNU gdb (GDB) Red Hat Enterprise Linux 7.8.2-38.el7[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     96 [mCopyright (C) 2[23;9H[22;9H[21;9Hb[22;10H[23;10H[22;10H[21;10H[19;10H[17;10H[16;10H[15;10H[14;10H[13;10H[12;10H[11;10H[10;10H[9;10H[8;10H[7;10H[6;10H[5;10H[4;10H[3;10H[2;10H[1;10H[1;23r[1;1HM[1;24r[1;1H[4m     75 [m==4701== Conditional jump or move depends on uninitialised value(s)[1m^M[1;10H[1;23r[0m[1;1HM[1;24r[1;1H[4m     74 [m0x54f80a0->node {word=0xffefffd55->[foo], link=0x54f8040}[1m^M[1;10H[1;23r[0m[1;1HM[1;24r[1;1H[4m     73 [m0x54f8100->node {word=0xffefffd59->[bar], link=0x54f80a0}[1m^M[1;10H[1;23r[0m[1;1HM[1;24r[1;1H[4m     72 [m0x54f8160->node {word=(nil)->[(null)], link=0x54f8100}[1m^M[0m[23;2H[K[23;1H[1m@[1;10H[1;23r[0m[1;1HMMM[1;24r[1;1H[4m     71 [m0x54f81c0->node {word=0xffefffd5d->[MANPATH=/opt/rh/devtoolset-3/root/uss[2;1H[4m        [mr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/shaa[3;1H[4m        [mre/man], link=0x54f8160}[1m^M[1;10H[1;23r[0m[1;1HM[1;24r[1;1H[4m     70 [m==4701== [1m^M[1;10H[1;23r[0m[1;1HM[1;24r[1;1H[4m     69 [m==4701== Command: list2 foo bar[1m^M[1;10H[1;23r[0m[1;1HMM[1;24r[1;1H[4m     68 [m==4701== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright ii[2;1H[4m        [mnfo[1m^M[1;10H[1;23r[0m[1;1HMM[1;24r[1;1H[4m     67 [m==4701== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al..[2;1H[4m        [m[1m^M[1;10H[1;23r[0m[1;1HM[1;24r[1;1H[4m     66 [m==4701== Memcheck, a memory error detector[1m^M[1;10H[1;23r[0m[1;1HM[1;24r[1;1H[4m     65 [mbash-4.2$ valgrind list2 foo bar[1m^M[1;10H[1;23r[0m[1;1HM[1;24r[1;1H[4m     64 [m============================================================[1m^M[1;10H[1;23r[0m[1;1HM[1;24r[1;1H[4m     63 [m+ set +x[1m^M[1;10H[1;23r[0m[1;1HM[1;24r[1;1H[4m     62 [m    ^[1m^M[1;23r[0m[1;1HM[1;24r[1;1H[4m     61 [m    printf ("foo=%d\n", foo);[1m^M[1;10H[1;23r[0m[1;1HMM[1;24r[1;1H[4m     60 [muninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-WW[2;1H[4m        [muninitialized][1m^M[1;10H[24;1H[0m:wq"part06.typescript"
+[7mWARNING: The file has been changed since reading it!!![m
+[7mDo you really want to write to it (y/n)?[ml
+[7mDo you really want to write to it (y/n)?[ms
+[7mDo you really want to write to it (y/n)?[m
+[7mDo you really want to write to it (y/n)?[m
+[7mDo you really want to write to it (y/n)?[my"part06.typescript" 96L, 4097C written[24;39H[K[24;1H[?1l>
+bash-4.2$ ls
+list1	     list2.c	  malloc.c.log	     part03.typescript	RCS
+list1.c      list2.c.log  mk		     part04.typescript	uninit
+list1.c.log  malloc	  part01.typescript  part05.typescript	uninit.c
+list2	     malloc.c	  part02.typescript  part06.typescript	uninit.c.log
+bash-4.2$ submit12b lab5 part06.typescript 
+Submitting the files you specified...
+copying part06\.typescript
+
+1 File submitted: 
+  part06.typescript (revision 1)
+
+bash-4.2$ ls
+list1	     list2.c	  malloc.c.log	     part03.typescript	RCS
+list1.c      list2.c.log  mk		     part04.typescript	uninit
+list1.c.log  malloc	  part01.typescript  part05.typescript	uninit.c
+list2	     malloc.c	  part02.typescript  part06.typescript	uninit.c.log
+bash-4.2$ list2
+0x2253090->node {word=0x7fff24255ebd->[HOSTNAME=unix2.lt.ucsc.edu], link=0x2253070}
+0x2253070->node {word=0x7fff24255ea8->[XDG_SESSION_ID=19061], link=0x2253050}
+0x2253050->node {word=0x7fff24255e35->[MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man], link=0x2253030}
+0x2253030->node {word=(nil)->[(null)], link=0x2253010}
+bash-4.2$ script part07.typescript
+Script started, file is part07.typescript
+bash-4.2$ gdb list2
+GNU gdb (GDB) Red Hat Enterprise Linux 7.8.2-38.el7
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from list2...done.
+(gdb) break main
+Breakpoint 1 at 0x400685: file list2.c, line 16.
+(gdb) run foo bar
+Starting program: /afs/cats.ucsc.edu/users/j/msharma7/private/cmps012b/lab5/list2 foo bar
+Missing separate debuginfos, use: debuginfo-install glibc-2.17-106.el7_2.1.x86_64
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffda08) at list2.c:16
+16	   for (int argi = 0; argi < 5; ++argi) {
+(gdb) print argc
+$1 = 3
+(gdb) print argv
+$2 = (char **) 0x7fffffffda08
+(gdb) print argv[0]
+$3 = 0x7fffffffdd2d "/afs/cats.ucsc.edu/users/j/msharma7/private/cmps012b/lab5/list2"
+(gdb) print argv9[K01-[K[K[K[10[K]
+$4 = 0x7fffffffdd6d "foo"
+(gdb) print argv[2]
+$5 = 0x7fffffffdd71 "bar"
+(gdb) print argv[3]
+$6 = 0x0
+(gdb) print argv[4]
+$7 = 0x7fffffffdd75 "MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man"
+(gdb) print argv[5]
+$8 = 0x7fffffffdde8 "XDG_SESSION_ID=19061"
+(gdb) print argv[6]
+$9 = 0x7fffffffddfd "HOSTNAME=unix2.lt.ucsc.edu"
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 7155] will be killed.
+
+Quit anyway? (y or n) y
+bash-4.2$ ls
+list1	     list2.c.log   part01.typescript  part06.typescript  uninit.c.log
+list1.c      malloc	   part02.typescript  part07.typescript
+list1.c.log  malloc.c	   part03.typescript  RCS
+list2	     malloc.c.log  part04.typescript  uninit
+list2.c      mk		   part05.typescript  uninit.c
+bash-4.2$ submit 12b[K[K[K[K12b lab5 part07.typescript 
+Submitting the files you specified...
+copying part07\.typescript
+
+1 File submitted: 
+  part07.typescript (revision 1)
+
+bash-4.2$ cat list2.c > list3.c
+bash-4.2$ ls
+list1	     list2.c.log   mk		      part05.typescript  uninit.c
+list1.c      list3.c	   part01.typescript  part06.typescript  uninit.c.log
+list1.c.log  malloc	   part02.typescript  part07.typescript
+list2	     malloc.c	   part03.typescript  RCS
+list2.c      malloc.c.log  part04.typescript  uninit
+bash-4.2$ valgrind --leal[Kk-check=full \[Klist3 foo bar baz quix[K[Kx
+valgrind: list3: command not found
+bash-4.2$ valgrind --leak-check=full list3 foo bar baz qux[C[C[C list3 foo bar baz qux\ list3 foo bar baz qux
+valgrind:  list3: command not found
+bash-4.2$ mk list3.c
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
++ tee list2.c.log
+list2.c: In function ‘main’:
+list2.c:14:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list3.c EXECBIN=list3
++ cid + list3.c
++ checksource list3.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list3.c -o list3 -lm
++ tee list3.c.log
+list3.c: In function ‘main’:
+list3.c:14:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ ls
+list1	     list2.c.log  malloc.c	     part03.typescript	RCS
+list1.c      list3	  malloc.c.log	     part04.typescript	uninit
+list1.c.log  list3.c	  mk		     part05.typescript	uninit.c
+list2	     list3.c.log  part01.typescript  part06.typescript	uninit.c.log
+list2.c      malloc	  part02.typescript  part07.typescript
+bash-4.2$ lsmk list3.cvalgrind --leak-check=full \ list3 foo bar baz quxlist3 foo bar baz qux[K[C[C[C[C[C[C[C[C[C[Cls[Kvalgrind --leak-check=full list3 foo bar baz qux
+==10162== Memcheck, a memory error detector
+==10162== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==10162== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==10162== Command: list3 foo bar baz qux
+==10162== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==10162== Conditional jump or move depends on uninitialised value(s)
+==10162==    at 0x400748: main (list3.c:23)
+==10162== 
+==10162== 
+==10162== HEAP SUMMARY:
+==10162==     in use at exit: 120 bytes in 5 blocks
+==10162==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==10162== 
+==10162== 120 (24 direct, 96 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==10162==    at 0x4C29BBD: malloc (in /opt/rh/devtoolset-3/root/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10162==    by 0x400697: main (list3.c:17)
+==10162== 
+==10162== LEAK SUMMARY:
+==10162==    definitely lost: 24 bytes in 1 blocks
+==10162==    indirectly lost: 96 bytes in 4 blocks
+==10162==      possibly lost: 0 bytes in 0 blocks
+==10162==    still reachable: 0 bytes in 0 blocks
+==10162==         suppressed: 0 bytes in 0 blocks
+==10162== 
+==10162== For counts of detected and suppressed errors, rerun with: -v
+==10162== Use --track-origins=yes to see where uninitialised values come from
+==10162== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 1 from 1)
+bash-4.2$ valgrind --leal-check[K[K[K[K[K[K[Kk-check=no list3 foo bar baz quix
+==11438== Memcheck, a memory error detector
+==11438== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==11438== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==11438== Command: list3 foo bar baz quix
+==11438== 
+0x54f81c0->node {word=0xffefffd01->[quix], link=0x54f8160}
+0x54f8160->node {word=0xffefffcfd->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcf9->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf5->[foo], link=0x54f8040}
+==11438== Conditional jump or move depends on uninitialised value(s)
+==11438==    at 0x400748: main (list3.c:23)
+==11438== 
+==11438== 
+==11438== HEAP SUMMARY:
+==11438==     in use at exit: 120 bytes in 5 blocks
+==11438==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==11438== 
+==11438== For a detailed leak analysis, rerun with: --leak-check=full
+==11438== 
+==11438== For counts of detected and suppressed errors, rerun with: -v
+==11438== Use --track-origins=yes to see where uninitialised values come from
+==11438== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ 1valgrind --leak-check=no list3 foo bar baz quix[K[Kx
+==11448== Memcheck, a memory error detector
+==11448== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==11448== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==11448== Command: list3 foo bar baz qux
+==11448== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==11448== Conditional jump or move depends on uninitialised value(s)
+==11448==    at 0x400748: main (list3.c:23)
+==11448== 
+==11448== 
+==11448== HEAP SUMMARY:
+==11448==     in use at exit: 120 bytes in 5 blocks
+==11448==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==11448== 
+==11448== For a detailed leak analysis, rerun with: --leak-check=full
+==11448== 
+==11448== For counts of detected and suppressed errors, rerun with: -v
+==11448== Use --track-origins=yes to see where uninitialised values come from
+==11448== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ valgrind --leak-check=no list3 foo bar baz quxixfull list3 foo bar baz qux
+==11939== Memcheck, a memory error detector
+==11939== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==11939== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==11939== Command: list3 foo bar baz qux
+==11939== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==11939== Conditional jump or move depends on uninitialised value(s)
+==11939==    at 0x400748: main (list3.c:23)
+==11939== 
+==11939== 
+==11939== HEAP SUMMARY:
+==11939==     in use at exit: 120 bytes in 5 blocks
+==11939==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==11939== 
+==11939== 120 (24 direct, 96 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==11939==    at 0x4C29BBD: malloc (in /opt/rh/devtoolset-3/root/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11939==    by 0x400697: main (list3.c:17)
+==11939== 
+==11939== LEAK SUMMARY:
+==11939==    definitely lost: 24 bytes in 1 blocks
+==11939==    indirectly lost: 96 bytes in 4 blocks
+==11939==      possibly lost: 0 bytes in 0 blocks
+==11939==    still reachable: 0 bytes in 0 blocks
+==11939==         suppressed: 0 bytes in 0 blocks
+==11939== 
+==11939== For counts of detected and suppressed errors, rerun with: -v
+==11939== Use --track-origins=yes to see where uninitialised values come from
+==11939== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 1 from 1)
+bash-4.2$ valgrind --leak-check=full list3 foo bar baz quxno list3 foo bar baz qux[K
+==12080== Memcheck, a memory error detector
+==12080== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==12080== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==12080== Command: list3 foo bar baz qux
+==12080== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==12080== Conditional jump or move depends on uninitialised value(s)
+==12080==    at 0x400748: main (list3.c:23)
+==12080== 
+==12080== 
+==12080== HEAP SUMMARY:
+==12080==     in use at exit: 120 bytes in 5 blocks
+==12080==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==12080== 
+==12080== For a detailed leak analysis, rerun with: --leak-check=full
+==12080== 
+==12080== For counts of detected and suppressed errors, rerun with: -v
+==12080== Use --track-origins=yes to see where uninitialised values come from
+==12080== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ valgrind --leak-check=no list3 foo bar baz qux[C[C=no list3 foo bar baz qux[K=no list3 foo bar baz qux[K=no list3 foo bar baz qux[K=no list3 foo bar baz qux[K=no list3 foo bar baz qux[K=no list3 foo bar baz qux[K=no list3 foo bar baz qux[K=no list3 foo bar baz qux[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C=no list3 foo bar baz qux[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C=no list3 foo bar baz qux[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct=no list3 foo bar baz qux[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr=no list3 foo bar baz qux[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca=no list3 foo bar baz quxc=no list3 foo bar baz quxk=no list3 foo bar baz qux[C[C-=no list3 foo bar baz quxo=no list3 foo bar baz quxr=no list3 foo bar baz quxi=no list3 foo bar baz quxg=no list3 foo bar baz quxi=no list3 foo bar baz quxn=no list3 foo bar baz quxs=no list3 foo bar baz qux[C[Co list3 foo bar baz qux[K[C list3 foo bar baz qux[Ky list3 foo bar baz quxe list3 foo bar baz quxs list3 foo bar baz qux
+==12366== Memcheck, a memory error detector
+==12366== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==12366== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==12366== Command: list3 foo bar baz qux
+==12366== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==12366== Conditional jump or move depends on uninitialised value(s)
+==12366==    at 0x400748: main (list3.c:23)
+==12366==  Uninitialised value was created by a stack allocation
+==12366==    at 0x400676: main (list3.c:14)
+==12366== 
+==12366== 
+==12366== HEAP SUMMARY:
+==12366==     in use at exit: 120 bytes in 5 blocks
+==12366==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==12366== 
+==12366== LEAK SUMMARY:
+==12366==    definitely lost: 24 bytes in 1 blocks
+==12366==    indirectly lost: 96 bytes in 4 blocks
+==12366==      possibly lost: 0 bytes in 0 blocks
+==12366==    still reachable: 0 bytes in 0 blocks
+==12366==         suppressed: 0 bytes in 0 blocks
+==12366== Rerun with --leak-check=full to see details of leaked memory
+==12366== 
+==12366== For counts of detected and suppressed errors, rerun with: -v
+==12366== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ ls
+list1	     list2.c.log  malloc.c	     part03.typescript	RCS
+list1.c      list3	  malloc.c.log	     part04.typescript	uninit
+list1.c.log  list3.c	  mk		     part05.typescript	uninit.c
+list2	     list3.c.log  part01.typescript  part06.typescript	uninit.c.log
+list2.c      malloc	  part02.typescript  part07.typescript
+bash-4.2$ vi list3.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list3.c" 28L, 650C[1;1H[4m      1 [m// $Id: list3.c,v 1.1 2016-02-10 21:15:03-08 - - $
+[4m      2 
+      3 [m#include <assert.h>
+[4m      4 [m#include <stdio.h>
+[4m      5 [m#include <stdlib.h>
+[4m      6 
+      7 [mtypedef struct node node;
+[4m      8 [mstruct node {
+[4m      9 [m   char *word;
+[4m     10 [m   node *link;
+[4m     11 [m   node *head;
+[4m     12 [m};
+[4m     13 
+     14 [mint main (int argc, char **argv) {
+[4m     15 [m   node *head;
+[4m     16 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     17 [m      node *node = malloc (sizeof (struct node));
+[4m     18 [m      assert (node != NULL);
+[4m     19 [m      node->word = argv[argi];
+[4m     20 [m      node->link = head;
+[4m     21 [m      head = node;
+[4m     22 [m   }
+[4m     23 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H[2;9H[3;9H[4;9H[5;9H[6;9H[7;9H[8;9H[9;9H [8;10H[9;10H [10;11H[11;11H [12;11H[13;9H[14;12H [15;13Hode *head ;=; ;N;U;L;L;[24;1H[K[15;28H[24;1H:wq"list3.c" 28L, 657C written[?1l>
+bash-4.2$ ls
+list1	     list2.c.log  malloc.c	     part03.typescript	RCS
+list1.c      list3	  malloc.c.log	     part04.typescript	uninit
+list1.c.log  list3.c	  mk		     part05.typescript	uninit.c
+list2	     list3.c.log  part01.typescript  part06.typescript	uninit.c.log
+list2.c      malloc	  part02.typescript  part07.typescript
+bash-4.2$ submit12b lab5 list2.c
+Submitting the files you specified...
+copying list2\.c
+
+1 File submitted: 
+  list2.c (revision 1)
+
+bash-4.2$ mk list3.c
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
++ tee list2.c.log
+list2.c: In function ‘main’:
+list2.c:14:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list3.c EXECBIN=list3
++ cid + list3.c
++ checksource list3.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list3.c -o list3 -lm
++ tee list3.c.log
+list3.c: In function ‘main’:
+list3.c:14:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ ls
+list1	     list2.c.log  malloc.c	     part03.typescript	RCS
+list1.c      list3	  malloc.c.log	     part04.typescript	uninit
+list1.c.log  list3.c	  mk		     part05.typescript	uninit.c
+list2	     list3.c.log  part01.typescript  part06.typescript	uninit.c.log
+list2.c      malloc	  part02.typescript  part07.typescript
+bash-4.2$ lsmk list3.csubmit12b lab5 list2.c[C[C[C[C[C[C[C[C[C[Cls[Kvi list3.cls[Kvalgrind --track-origins=yes list3 foo bar baz qux[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cleak-check=no list3 foo bar baz qux[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctrack-origins=yes list3 foo bar baz qux[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cleak-check=no list3 foo bar baz qux[Kfull list3 foo bar baz quxno list3 foo bar baz qux[K
+==14536== Memcheck, a memory error detector
+==14536== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==14536== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==14536== Command: list3 foo bar baz qux
+==14536== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==14536== 
+==14536== HEAP SUMMARY:
+==14536==     in use at exit: 120 bytes in 5 blocks
+==14536==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==14536== 
+==14536== For a detailed leak analysis, rerun with: --leak-check=full
+==14536== 
+==14536== For counts of detected and suppressed errors, rerun with: -v
+==14536== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+bash-4.2$ vi list3.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list3.c" 28L, 657C[1;1H[4m      1 [m// $Id: list3.c,v 1.2 2016-02-10 21:19:23-08 - - $
+[4m      2 
+      3 [m#include <assert.h>
+[4m      4 [m#include <stdio.h>
+[4m      5 [m#include <stdlib.h>
+[4m      6 
+      7 [mtypedef struct node node;
+[4m      8 [mstruct node {
+[4m      9 [m   char *word;
+[4m     10 [m   node *link;
+[4m     11 [m   node *head;
+[4m     12 [m};
+[4m     13 
+     14 [mint main (int argc, char **argv) {
+[4m     15 [m   node *head = NULL;
+[4m     16 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     17 [m      node *node = malloc (sizeof (struct node));
+[4m     18 [m      assert (node != NULL);
+[4m     19 [m      node->word = argv[argi];
+[4m     20 [m      node->link = head;
+[4m     21 [m      head = node;
+[4m     22 [m   }
+[4m     23 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H// $Id: list3.c,v 1.2 2016-02-10 21:19:23-08 - - $[3;9H[K[4;19Hassert.h>[5;22Hio.h>[5;27H[K[6;9H#include <stdlib.h>[7;9H[K[8;9Htypedef struct node node;[9;9Hstruct node {[9;22H[K[10;12Hchar *word[11;18Hlink[12;9H   node *head;[13;9H};[14;9H[K[15;9Hint main (int argc, char **argv) {[16;12Hnode *head = NULL[16;31H[K[17;12Hfor (int argi = 0; argi < 5; ++argi) {[17;51H[K[18;15Hnode *node = malloc (sizeof (struct node));[19;15Hassert (node != NULL);[19;37H[K[20;21Hword = argv[argi];[21;15Hnode->link = head;[22;12H   head = node;[23;12H}[23;13H[K[2;9Hi[2;9H[K[2;9H// [1;12H[24;1H[K[1;11H[24;1H:wq[24;3H[K[24;3H[24;2H[K[24;2H [1;11H[24;1H[1m-- INSERT --[1;11H[2;11H[0m Manav Sharma msharma7[24;1H[K[2;32H[24;1H:wq"list3.c" 29L, 683C written[?1l>
+bash-4.2$ ls
+list1	     list2.c.log  malloc.c	     part03.typescript	RCS
+list1.c      list3	  malloc.c.log	     part04.typescript	uninit
+list1.c.log  list3.c	  mk		     part05.typescript	uninit.c
+list2	     list3.c.log  part01.typescript  part06.typescript	uninit.c.log
+list2.c      malloc	  part02.typescript  part07.typescript
+bash-4.2$ lsvi list3.calgrind --leak-check=no list3 foo bar baz qux[C[C[C[C[C[C[C[C[C[Cls[Kvalgrind --leak-check=no list3 foo bar baz qux[C[C[C[C[C[C[C[C[C[Cls[Kmk list3.csubmit12b lab5 list2.c[C[C[C[C[C[C[C[C[C[Cls[Kvi list3.cls[Kvalgrind --track-origins=yes list3 foo bar baz qux[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cleak-check=no list3 foo bar baz qux[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctrack-origins=yes list3 foo bar baz qux[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cleak-check=no list3 foo bar baz qux[Kfull list3 foo bar baz quxno list3 foo bar baz qux[Kfull list3 foo bar baz qux
+==15984== Memcheck, a memory error detector
+==15984== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==15984== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==15984== Command: list3 foo bar baz qux
+==15984== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==15984== 
+==15984== HEAP SUMMARY:
+==15984==     in use at exit: 120 bytes in 5 blocks
+==15984==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==15984== 
+==15984== 120 (24 direct, 96 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==15984==    at 0x4C29BBD: malloc (in /opt/rh/devtoolset-3/root/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15984==    by 0x40069F: main (list3.c:17)
+==15984== 
+==15984== LEAK SUMMARY:
+==15984==    definitely lost: 24 bytes in 1 blocks
+==15984==    indirectly lost: 96 bytes in 4 blocks
+==15984==      possibly lost: 0 bytes in 0 blocks
+==15984==    still reachable: 0 bytes in 0 blocks
+==15984==         suppressed: 0 bytes in 0 blocks
+==15984== 
+==15984== For counts of detected and suppressed errors, rerun with: -v
+==15984== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ vi list3.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list3.c" 29L, 683C[1;1H[4m      1 [m// $Id: list3.c,v 1.2 2016-02-10 21:19:23-08 - - $
+[4m      2 [m// Manav Sharma msharma7
+[4m      3 
+      4 [m#include <assert.h>
+[4m      5 [m#include <stdio.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mtypedef struct node node;
+[4m      9 [mstruct node {
+[4m     10 [m   char *word;
+[4m     11 [m   node *link;
+[4m     12 [m   node *head;
+[4m     13 [m};
+[4m     14 
+     15 [mint main (int argc, char **argv) {
+[4m     16 [m   node *head = NULL;
+[4m     17 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     18 [m      node *node = malloc (sizeof (struct node));
+[4m     19 [m      assert (node != NULL);
+[4m     20 [m      node->word = argv[argi];
+[4m     21 [m      node->link = head;
+[4m     22 [m      head = node;
+[4m     23 [m   }[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H[2;9H[3;9H[4;9H[5;9H[6;9H[7;9H[24;1H[K[7;9H[24;1H:wq"list3.c" 29L, 683C written[?1l>
+bash-4.2$ ls
+list1	     list2.c.log  malloc.c	     part03.typescript	RCS
+list1.c      list3	  malloc.c.log	     part04.typescript	uninit
+list1.c.log  list3.c	  mk		     part05.typescript	uninit.c
+list2	     list3.c.log  part01.typescript  part06.typescript	uninit.c.log
+list2.c      malloc	  part02.typescript  part07.typescript
+bash-4.2$ vi list2.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list2.c" 28L, 650C[1;1H[4m      1 [m// $Id: list2.c,v 1.1 2016-02-10 21:04:04-08 - - $
+[4m      2 
+      3 [m#include <assert.h>
+[4m      4 [m#include <stdio.h>
+[4m      5 [m#include <stdlib.h>
+[4m      6 
+      7 [mtypedef struct node node;
+[4m      8 [mstruct node {
+[4m      9 [m   char *word;
+[4m     10 [m   node *link;
+[4m     11 [m   node *head;
+[4m     12 [m};
+[4m     13 
+     14 [mint main (int argc, char **argv) {
+[4m     15 [m   node *head;
+[4m     16 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     17 [m      node *node = malloc (sizeof (struct node));
+[4m     18 [m      assert (node != NULL);
+[4m     19 [m      node->word = argv[argi];
+[4m     20 [m      node->link = head;
+[4m     21 [m      head = node;
+[4m     22 [m   }
+[4m     23 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H// $Id: list2.c,v 1.1 2016-02-10 21:04:04-08 - - $[3;9H[K[4;19Hassert.h>[5;22Hio.h>[5;27H[K[6;9H#include <stdlib.h>[7;9H[K[8;9Htypedef struct node node;[9;9Hstruct node {[9;22H[K[10;12Hchar *word[11;18Hlink[12;9H   node *head;[13;9H};[14;9H[K[15;9Hint main (int argc, char **argv) {[16;12Hnode *head;[16;23H[K[17;12Hfor (int argi = 0; argi < 5; ++argi) {[17;51H[K[18;15Hnode *node = malloc (sizeof (struct node));[19;15Hassert (node != NULL);[19;37H[K[20;21Hword = argv[argi];[21;15Hnode->link = head;[22;12H   head = node;[23;12H}[23;13H[K[2;9H// Manav Sharma mst[2;27H[K[2;27Hharma7[24;1H[K[2;32H[24;1H:wq"list2.c" 29L, 675C written[?1l>
+bash-4.2$ submit12b lab5 un[K[Klist2.c list3.c
+Submitting the files you specified...
+copying list2\.c
+copying list3\.c
+
+2 Files submitted: 
+  list2.c (revision 2)
+  list3.c (revision 1)
+
+bash-4.2$ scrip[Kpt part09[K8.typescript
+Script started, file is part08.typescript
+bash-4.2$ valgrind --leak-check=full list3 foo bar baz qux
+==16633== Memcheck, a memory error detector
+==16633== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==16633== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==16633== Command: list3 foo bar baz qux
+==16633== 
+0x54f81c0->node {word=0xffefffcad->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffca9->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffca5->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffca1->[foo], link=0x54f8040}
+==16633== 
+==16633== HEAP SUMMARY:
+==16633==     in use at exit: 120 bytes in 5 blocks
+==16633==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==16633== 
+==16633== 120 (24 direct, 96 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==16633==    at 0x4C29BBD: malloc (in /opt/rh/devtoolset-3/root/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==16633==    by 0x40069F: main (list3.c:17)
+==16633== 
+==16633== LEAK SUMMARY:
+==16633==    definitely lost: 24 bytes in 1 blocks
+==16633==    indirectly lost: 96 bytes in 4 blocks
+==16633==      possibly lost: 0 bytes in 0 blocks
+==16633==    still reachable: 0 bytes in 0 blocks
+==16633==         suppressed: 0 bytes in 0 blocks
+==16633== 
+==16633== For counts of detected and suppressed errors, rerun with: -v
+==16633== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ quit
+bash: quit: command not found
+bash-4.2$ exit
+exit
+Script done, file is part08.typescript
+bash-4.2$ ls
+list1	     list3.c		part02.typescript  RCS
+list1.c      list3.c.log	part03.typescript  uninit
+list1.c.log  malloc		part04.typescript  uninit.c
+list2	     malloc.c		part05.typescript  uninit.c.log
+list2.c      malloc.c.log	part06.typescript
+list2.c.log  mk			part07.typescript
+list3	     part01.typescript	part08.typescript
+bash-4.2$ vi part09[K8.typescript 
+[?1h=[1;24r[m[m[0m[H[J[24;1H"part08.typescript" 35L, 1603C[1;1H[4m      1 [mScript started on Wed 10 Feb 2016 09:23:36 PM PST
+[4m      2 [mbash-4.2$ valgrind --leak-check=full list3 foo bar baz qux[1m^M[0m
+[4m      3 [m==16633== Memcheck, a memory error detector[1m^M[0m
+[4m      4 [m==16633== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et all[5;1H[4m        [m.[1m^M[0m
+[4m      5 [m==16633== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright  [7;1H[4m        [minfo[1m^M[0m
+[4m      6 [m==16633== Command: list3 foo bar baz qux[1m^M[0m
+[4m      7 [m==16633== [1m^M[0m
+[4m      8 [m0x54f81c0->node {word=0xffefffcad->[qux], link=0x54f8160}[1m^M[0m
+[4m      9 [m0x54f8160->node {word=0xffefffca9->[baz], link=0x54f8100}[1m^M[0m
+[4m     10 [m0x54f8100->node {word=0xffefffca5->[bar], link=0x54f80a0}[1m^M[0m
+[4m     11 [m0x54f80a0->node {word=0xffefffca1->[foo], link=0x54f8040}[1m^M[0m
+[4m     12 [m==16633== [1m^M[0m
+[4m     13 [m==16633== HEAP SUMMARY:[1m^M[0m
+[4m     14 [m==16633==     in use at exit: 120 bytes in 5 blocks[1m^M[0m
+[4m     15 [m==16633==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated[1m^M[0m
+[4m     16 [m==16633== [1m^M[0m
+[4m     17 [m==16633== 120 (24 direct, 96 indirect) bytes in 1 blocks are definitely  [20;1H[4m        [mlost in loss record 2 of 2[1m^M[0m
+[4m     18 [m==16633==    at 0x4C29BBD: malloc (in /opt/rh/devtoolset-3/root/usr/lib66[22;1H[4m        [m4/valgrind/vgpreload_memcheck-amd64-linux.so)[1m^M[0m
+[4m     19 [m==16633==    by 0x40069F: main (list3.c:17)[1m^M[1;9H[2;9H[3;9H[4;9H[6;9H[8;9H[9;9H[10;9H[11;9H[12;9H[13;9H[14;9H[15;9H[16;9H[17;9H[18;9H[19;9H[21;9H[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     20 [m==16633== [1m^M[0m[24;1H[K[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     21 [m==16633== LEAK SUMMARY:[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     22 [m==16633==    definitely lost: 24 bytes in 1 blocks[1m^M[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     23 [m==16633==    indirectly lost: 96 bytes in 4 blocks[1m^M[0m
+[4m     24 [m==16633==      possibly lost: 0 bytes in 0 blocks[1m^M[22;9H[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     25 [m==16633==    still reachable: 0 bytes in 0 blocks[1m^M[0m
+[4m     26 [m==16633==[9Csuppressed: 0 bytes in 0 blocks[1m^M[22;9H[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     27 [m==16633== [1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     28 [m==16633== For counts of detected and suppressed errors, rerun with: -v[1m^M[23;9H[1;23r[0m[23;1H
+
+[1;24r[22;1H[4m     29 [m==16633== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1))[23;1H[4m        [m[1m^M[22;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     30 [mbash-4.2$ quit[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     31 [mbash: quit: command not found[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     32 [mbash-4.2$ exit[1m^M[23;9H[1;23r[0m[23;1H
+[1;24r[23;1H[4m     33 [mexit[1m^M[1;23r[0m[23;1H
+[1;24r[23;1H[4m     34 [1;23r[m[23;1H
+[1;24r[23;1H[4m     35 [mScript done on Wed 10 Feb 2016 09:23:52 PM PST[23;9H
+[1m-- INSERT --[23;9H[22;9H[21;9H[20;9H[0mba[19;11Hsh: quit: command not found[2C[19;38H[K[19;38H[19;37H[K[19;37H[19;36H[K[19;36H[19;35H[K[19;35H[19;34H[K[19;34H[19;33H[K[19;33H[19;31H[K[19;31H[19;30H[K[19;30H[19;29H[K[19;29H[19;27H[K[19;27H[19;26H[K[19;26H[19;25H[K[19;25H[19;24H[K[19;24H[19;23H[K[19;23H[19;22H[K[19;22H[19;21H[K[19;21H[19;19H[K[19;19H[19;18H[K[19;18H[19;17H[K[19;17H[19;16H[K[19;16H[19;15H[K[19;15H[19;13H[K[19;13H[19;12H[K[19;12H[19;11H[K[19;11H[19;10H[K[19;10H[19;9H[K[19;9Hbash-4.2$ exit[1m^M[0m[20;9Hexit[1m^M[0m[20;15H[K[21;9H[K[22;9HScript done on Wed 10 Feb 2016 09:23:52 PM PST[23;2H[K[23;1H[1m~[18;25H[0m[18;23H[K[18;23H[18;22H[K[18;22H[18;21H[K[18;21H[18;20H[K[18;20H[18;19H[K[18;19H[18;17H[K[18;17H[18;16H[K[18;16H[18;15H[K[18;15H[18;14H[K[18;14H[18;13H[K[18;13H[18;12H[K[18;12H[18;11H[K[18;11H[18;10H[K[18;10H[18;9H[K[18;9Hbash-4.2$ exit[1m^M[0m[19;9Hexit[1m^M[0m[19;15H[K[20;9H[K[21;9HScript done on Wed 10 Feb 2016 09:23:52 PM PST[22;2H[K[22;1H[1m~[17;11H[0m[24;1H[K[17;10H[24;1H:wq"part08.typescript" 33L, 1556C written[?1l>
+bash-4.2$ ls
+list1	     list3.c		part02.typescript  RCS
+list1.c      list3.c.log	part03.typescript  uninit
+list1.c.log  malloc		part04.typescript  uninit.c
+list2	     malloc.c		part05.typescript  uninit.c.log
+list2.c      malloc.c.log	part06.typescript
+list2.c.log  mk			part07.typescript
+list3	     part01.typescript	part08.typescript
+bash-4.2$ submit12b lab5 part069[K[K8.typescript 
+Submitting the files you specified...
+copying part08\.typescript
+
+1 File submitted: 
+  part08.typescript (revision 1)
+
+bash-4.2$ cat list3.c > list4.c
+bash-4.2$ vi list4.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list4.c" 29L, 683C[1;1H[4m      1 [m// $Id: list3.c,v 1.2 2016-02-10 21:19:23-08 - - $
+[4m      2 [m// Manav Sharma msharma7
+[4m      3 
+      4 [m#include <assert.h>
+[4m      5 [m#include <stdio.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mtypedef struct node node;
+[4m      9 [mstruct node {
+[4m     10 [m   char *word;
+[4m     11 [m   node *link;
+[4m     12 [m   node *head;
+[4m     13 [m};
+[4m     14 
+     15 [mint main (int argc, char **argv) {
+[4m     16 [m   node *head = NULL;
+[4m     17 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     18 [m      node *node = malloc (sizeof (struct node));
+[4m     19 [m      assert (node != NULL);
+[4m     20 [m      node->word = argv[argi];
+[4m     21 [m      node->link = head;
+[4m     22 [m      head = node;
+[4m     23 [m   }[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H/[24;1H[K[1;9H[24;1H:wq"list4.c" 29L, 683C written[?1l>
+bash-4.2$ mk list4.c
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
++ tee list2.c.log
+list2.c: In function ‘main’:
+list2.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list3.c EXECBIN=list3
++ cid + list3.c
++ checksource list3.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list3.c -o list3 -lm
++ tee list3.c.log
+list3.c: In function ‘main’:
+list3.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list4.c EXECBIN=list4
++ cid + list4.c
++ checksource list4.c
++ tee list4.c.log
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list4.c -o list4 -lm
+list4.c: In function ‘main’:
+list4.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ ls
+list1	     list3	  malloc	     part03.typescript	RCS
+list1.c      list3.c	  malloc.c	     part04.typescript	uninit
+list1.c.log  list3.c.log  malloc.c.log	     part05.typescript	uninit.c
+list2	     list4	  mk		     part06.typescript	uninit.c.log
+list2.c      list4.c	  part01.typescript  part07.typescript
+list2.c.log  list4.c.log  part02.typescript  part08.typescript
+bash-4.2$ lsmk list4.cvi list4.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list4.c" 29L, 683C[1;1H[4m      1 [m// $Id: list4.c,v 1.1 2016-02-10 21:25:40-08 - - $
+[4m      2 [m// Manav Sharma msharma7
+[4m      3 
+      4 [m#include <assert.h>
+[4m      5 [m#include <stdio.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mtypedef struct node node;
+[4m      9 [mstruct node {
+[4m     10 [m   char *word;
+[4m     11 [m   node *link;
+[4m     12 [m   node *head;
+[4m     13 [m};
+[4m     14 
+     15 [mint main (int argc, char **argv) {
+[4m     16 [m   node *head = NULL;
+[4m     17 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     18 [m      node *node = malloc (sizeof (struct node));
+[4m     19 [m      assert (node != NULL);
+[4m     20 [m      node->word = argv[argi];
+[4m     21 [m      node->link = head;
+[4m     22 [m      head = node;
+[4m     23 [m   }[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H[2;9H[3;9H[4;9H[5;9H[6;9H[7;9H[8;9H[9;9H[10;9H[11;9H[12;9H[13;9H[14;9H[15;9H[16;9H[17;9H[18;9H[19;9H[20;9H[21;9H[22;9H[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     24 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     25 [m      printf ("%p->node {word=%p->[%s], link=%p}\n",[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     26 [m[14Ccurr, curr->word, curr->word, curr->link);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     27 [m   }[1;23r[23;1H
+[1;24r[23;1H[4m     28 [m   return 9;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     29 [m}[1;23r[23;1H
+[1;24r[22;9H[K[23;1H[4m     30 [m}[22;9H[21;9H[22;9H}[23;2H[K[23;1H[1m~[21;21H[20;13H[19;21H[18;21H[17;21H[16;13H[15;21H[14;21H[13;21H[12;21H[11;21H[10;21H[9;21H[8;21H[7;9H[6;11H[5;21H[4;21H[3;21H[2;21H[1;21H[1;23r[0m[1;1HM[1;24r[1;1H[4m      7 [1;23r[m[1;1HM[1;24r[1;1H[4m      6 [m#include <stdlib.h>[1;21H[1;23r[1;1HM[1;24r[1;1H[4m      5 [m#include <stdio.h>[1;23r[1;1HM[1;24r[1;1H[4m      4 [m#include <assert.h>[1;21H[1;23r[1;1HM[1;24r[1;1H[4m      3 [1;23r[m[1;1HM[1;24r[1;1H[4m      2 [m// Manav Sharma msharma7[1;21H[1;23r[1;1HM[1;24r[1;1H[4m      1 [m// $Id: list4.c,v 1.1 2016-02-10 21:25:40-08 - - $[1;21H[2;21H[3;9H[4;21H[5;21H[6;21H[7;9H[8;21H[9;21H[10;21H[11;21H[12;21H[13;11H[14;9H[15;21Ht[14;9H[13;11H[12;22H;[13;9H[K[14;9H};[15;9H[K[16;9Hint main (int argc, char **argv) {[17;12Hnode *head = NULL[17;31H[K[18;12Hfor (int argi = 0; argi < 5; ++argi) {[18;51H[K[19;15Hnode *node = malloc (sizeof (struct node));[20;15Hassert (node != NULL);[20;37H[K[21;21Hword = argv[argi];[22;15Hnode->link = head;[23;12H   head = node;[13;9H    node *free;[14;11H[15;9H[16;23H[17;23H[18;23H[19;23H[20;23H[21;23H[22;23H[23;23H[1;23r[23;1H
+[1;24r[23;1H[4m     24 [m   }[1;23r[23;1H
+[1;24r[23;1H[4m     25 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {[23;23H[1;23r[23;1H
+[1;24r[23;1H[4m     26 [m      printf ("%p->node {word=%p->[%s], link=%p}\n",[23;23H[1;23r[23;1H
+[1;24r[23;1H[4m     27 [m[14Ccurr, curr->word, curr->word, curr->link);[23;23H[1;23r[23;1H
+[1;24r[23;1H[4m     28 [m   }[1;23r[23;1H
+[1;24r[23;1H[4m     29 [m   return 9;[1;23r[23;1H
+[1;24r[23;1H[4m     30 [m}[22;21H[21;13H[20;23H[19;23H[18;23H[17;13H[16;23H[15;23H[14;23H[13;23H[12;23H[11;23H[10;23H[9;23H[8;9H[7;11H[6;23H[6;22H[K[6;22H[6;21H[K[6;21H[6;20H[K[6;20H[6;19H[K[6;19H[6;18H[K[6;18H[6;17H[K[6;17H[6;15H[K[6;15H[6;14H[K[6;14H[6;13H[K[6;13H[6;12H[K[6;12H};[7;9H[K[8;9Hint main (int argc, char **argv) {[9;9H   node *head = NULL;[9;30H[K[10;12Hfor (int argi = 0; argi < 5; ++argi) {[11;12H   node *node = malloc (sizeof (struct node));[12;15Hassert (node != NULL);[12;37H[K[13;15Hnode->word = argv[argi];[14;21Hlink = head;[14;33H[K[15;15Hhead = node;[15;28H[K[16;12H}[16;15H[K[17;12Hfor (node *curr = head; curr->link != NULL; curr = curr->link) {[18;12H   printf ("%p->node {word=%p->[%s], link=%p}\n",[18;61H[K[19;15H        curr, curr->word, curr->word, curr->link);[20;12H}[20;23H[K[21;12Hreturn 9;[22;9H}[22;12H[K[23;2H[K[23;1H[1m~[5;23H[6;11H[7;9H[8;23H[9;23H[10;23H[11;23H[12;23H[13;23H[14;23H[15;23H[16;13H[17;23H[18;23H[19;23H[20;13H[21;21H[0m[21;20H[K[21;20H[21;19H[K[21;19H[21;17H[K[21;17H[21;16H[K[21;16H[21;15H[K[21;15H[21;14H[K[21;14H[21;13H[K[21;13H[21;12H[K[21;12Hnode-ref[21;19H[K[21;19H[21;18H[K[21;18H[21;17H[K[21;17H[21;16H[K[21;16H_ref node - [21;26H[K[21;26H= head;[22;9H[K[23;1H[4m     30 [m}[22;9H    while (node!=n[22;25H[K[22;25HNULL){[23;9H[K[23;9H     node_ref temp =- [23;29H[K[23;29H nodel[23;34H[K[23;34H;[1;23r[23;1H
+[1;24r[23;1H[4m     31 [m     node=node->link;[1;23r[23;1H
+[1;24r[23;1H[4m     32 [m     free(temp([23;23H[K[23;23H);[1;23r[23;1H
+[1;24r[23;1H[4m     33 [m    }[1;23r[23;1H
+[1;24r[23;1H[4m     34 [m        return EXIT_SUCCESS;[1;23r[23;1H
+[1;24r[23;1H[4m     35 [m}[22;10H[21;10H[20;10H[19;10H[18;10H[17;10H[16;10H[15;10H[14;10H[13;10H[12;10H[11;10H[10;10H[9;10H[8;10H[7;10H[6;10H[5;10H[4;10H[3;10H[2;9H[1;10H[1;23r[1;1HM[1;24r[1;1H[4m     12 [m   node *head;[1;10H[1;23r[1;1HM[1;24r[1;1H[4m     11 [m   node *link;[1;10H[1;23r[1;1HM[1;24r[1;1H[4m     10 [m   char *word;[1;10H[1;23r[1;1HM[1;24r[1;1H[4m      9 [mstruct node {[1;10H[1;23r[1;1HM[1;24r[1;1H[4m      8 [mtypedef struct node node;[1;10H[1;23r[1;1HM[1;24r[1;1H[4m      7 [1;23r[m[1;1HM[1;24r[1;1H[4m      6 [m#include <stdlib.h>[1;10H[1;23r[1;1HM[1;24r[1;1H[4m      5 [m#include <stdio.h>[1;10H[1;23r[1;1HM[1;24r[1;1H[4m      4 [m#include <assert.h>[1;10H[1;23r[1;1HM[1;24r[1;1H[4m      3 [1;23r[m[1;1HM[1;24r[1;1H[4m      2 [m// Manav Sharma msharma7[1;10H[1;23r[1;1HM[1;24r[1;1H[4m      1 [m// $Id: list4.c,v 1.1 2016-02-10 21:25:40-08 - - $[1;10H[24;1H[K[1;9H[24;1H:wq"list4.c" 36L, 821C written[?1l>
+bash-4.2$ ls
+list1	     list3	  malloc	     part03.typescript	RCS
+list1.c      list3.c	  malloc.c	     part04.typescript	uninit
+list1.c.log  list3.c.log  malloc.c.log	     part05.typescript	uninit.c
+list2	     list4	  mk		     part06.typescript	uninit.c.log
+list2.c      list4.c	  part01.typescript  part07.typescript
+list2.c.log  list4.c.log  part02.typescript  part08.typescript
+bash-4.2$ mk list4.c
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ tee list2.c.log
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
+list2.c: In function ‘main’:
+list2.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list3.c EXECBIN=list3
++ cid + list3.c
++ checksource list3.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list3.c -o list3 -lm
++ tee list3.c.log
+list3.c: In function ‘main’:
+list3.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list4.c EXECBIN=list4
++ cid + list4.c
++ checksource list4.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list4.c -o list4 -lm
++ tee list4.c.log
+list4.c: In function ‘main’:
+list4.c:28:4: error: unknown type name ‘node_ref’
+    node_ref node = head;
+    ^
+list4.c:28:20: warning: initialization makes integer from pointer without a cast
+    node_ref node = head;
+                    ^
+list4.c:29:15: warning: comparison between pointer and integer
+    while (node!=NULL){
+               ^
+list4.c:30:6: error: unknown type name ‘node_ref’
+      node_ref temp = node;
+      ^
+list4.c:31:15: error: invalid type argument of ‘->’ (have ‘int’)
+      node=node->link;
+               ^
+list4.c:32:11: warning: passing argument 1 of ‘free’ makes pointer from integer without a cast
+      free(temp);
+           ^
+In file included from list4.c:6:0:
+/usr/include/stdlib.h:482:13: note: expected ‘void *’ but argument is of type ‘int’
+ extern void free (void *__ptr) __THROW;
+             ^
+list4.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+list4.c: At top level:
+list4.c:36:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ list4.c
+bash: ./list4.c: Permission denied
+bash-4.2$ list4
+0x20f4090->node {word=0x7fffc1450e67->[HOSTNAME=unix2.lt.ucsc.edu], link=0x20f4070}
+0x20f4070->node {word=0x7fffc1450e52->[XDG_SESSION_ID=19061], link=0x20f4050}
+0x20f4050->node {word=0x7fffc1450ddf->[MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man], link=0x20f4030}
+0x20f4030->node {word=(nil)->[(null)], link=0x20f4010}
+bash-4.2$ list4.cmk list4.cls[Kvi list4.cls[Kmk list4.cvi list4.ccat list3.c > list4.c[C[C[C[C[C[C[C[C[C[Csubmit12b lab5 part08.typescript [C[C[C[C[C[C[C[C[C[Cls[Kvi part08.typescript [C[C[C[C[C[C[C[C[C[Cls[Kscript part08.typescript[C[C[C[C[C[C[C[C[C[C[Cubmit12b lab5 list2.c list3.c[C[C[C[C[C[C[C[C[C[Cvi list2.c[Kls[Kvi list3.calgrind --leak-check=full list3 foo bar baz qux[C[C[C[C[C[C[C[C[C[Cls[Kvalgrind --leak-check=full list3 foo bar baz qux foo bar baz qux[K4 foo bar baz qux
+==24674== Memcheck, a memory error detector
+==24674== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==24674== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==24674== Command: list4 foo bar baz qux
+==24674== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==24674== 
+==24674== HEAP SUMMARY:
+==24674==     in use at exit: 120 bytes in 5 blocks
+==24674==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==24674== 
+==24674== 120 (24 direct, 96 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==24674==    at 0x4C29BBD: malloc (in /opt/rh/devtoolset-3/root/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24674==    by 0x40069F: main (list4.c:18)
+==24674== 
+==24674== LEAK SUMMARY:
+==24674==    definitely lost: 24 bytes in 1 blocks
+==24674==    indirectly lost: 96 bytes in 4 blocks
+==24674==      possibly lost: 0 bytes in 0 blocks
+==24674==    still reachable: 0 bytes in 0 blocks
+==24674==         suppressed: 0 bytes in 0 blocks
+==24674== 
+==24674== For counts of detected and suppressed errors, rerun with: -v
+==24674== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ valgrind --leak-check [K=full list4 foo bar baz qux
+==25126== Memcheck, a memory error detector
+==25126== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==25126== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==25126== Command: list4 foo bar baz qux
+==25126== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==25126== 
+==25126== HEAP SUMMARY:
+==25126==     in use at exit: 120 bytes in 5 blocks
+==25126==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==25126== 
+==25126== 120 (24 direct, 96 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==25126==    at 0x4C29BBD: malloc (in /opt/rh/devtoolset-3/root/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==25126==    by 0x40069F: main (list4.c:18)
+==25126== 
+==25126== LEAK SUMMARY:
+==25126==    definitely lost: 24 bytes in 1 blocks
+==25126==    indirectly lost: 96 bytes in 4 blocks
+==25126==      possibly lost: 0 bytes in 0 blocks
+==25126==    still reachable: 0 bytes in 0 blocks
+==25126==         suppressed: 0 bytes in 0 blocks
+==25126== 
+==25126== For counts of detected and suppressed errors, rerun with: -v
+==25126== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ echo $?
+9
+bash-4.2$ mk list4
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
++ tee list2.c.log
+list2.c: In function ‘main’:
+list2.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list3.c EXECBIN=list3
++ cid + list3.c
++ checksource list3.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list3.c -o list3 -lm
++ tee list3.c.log
+list3.c: In function ‘main’:
+list3.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list4.c EXECBIN=list4
++ cid + list4.c
++ checksource list4.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list4.c -o list4 -lm
++ tee list4.c.log
+list4.c: In function ‘main’:
+list4.c:28:4: error: unknown type name ‘node_ref’
+    node_ref node = head;
+    ^
+list4.c:28:20: warning: initialization makes integer from pointer without a cast
+    node_ref node = head;
+                    ^
+list4.c:29:15: warning: comparison between pointer and integer
+    while (node!=NULL){
+               ^
+list4.c:30:6: error: unknown type name ‘node_ref’
+      node_ref temp = node;
+      ^
+list4.c:31:15: error: invalid type argument of ‘->’ (have ‘int’)
+      node=node->link;
+               ^
+list4.c:32:11: warning: passing argument 1 of ‘free’ makes pointer from integer without a cast
+      free(temp);
+           ^
+In file included from list4.c:6:0:
+/usr/include/stdlib.h:482:13: note: expected ‘void *’ but argument is of type ‘int’
+ extern void free (void *__ptr) __THROW;
+             ^
+list4.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+list4.c: At top level:
+list4.c:36:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ vi list4.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list4.c" 36L, 821C[1;1H[4m      1 [m// $Id: list4.c,v 1.2 2016-02-10 21:30:42-08 - - $
+[4m      2 [m// Manav Sharma msharma7
+[4m      3 
+      4 [m#include <assert.h>
+[4m      5 [m#include <stdio.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mtypedef struct node node;
+[4m      9 [mstruct node {
+[4m     10 [m   char *word;
+[4m     11 [m   node *link;
+[4m     12 [m   node *head;
+[4m     13 [m};
+[4m     14 
+     15 [mint main (int argc, char **argv) {
+[4m     16 [m   node *head = NULL;
+[4m     17 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     18 [m      node *node = malloc (sizeof (struct node));
+[4m     19 [m      assert (node != NULL);
+[4m     20 [m      node->word = argv[argi];
+[4m     21 [m      node->link = head;
+[4m     22 [m      head = node;
+[4m     23 [m   }[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H[2;9H[3;9H[4;9H[5;9H[6;9H[7;9H[8;9H[9;9H[10;9H[11;9H[12;9H[13;9H[14;9H[15;9H[16;9H[17;9H[18;9H[19;9H[20;9H[21;9H[22;9H[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     24 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     25 [m      printf ("%p->node {word=%p->[%s], link=%p}\n",[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     26 [m[14Ccurr, curr->word, curr->word, curr->link);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     27 [m   }[1;23r[23;1H
+[1;24r[23;1H[4m     28 [m   node_ref node = head;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     29 [m   while (node!=NULL){[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     30 [m     node_ref temp = node;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     31 [m     node=node->link;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     32 [m     free(temp);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     33 [m    }[1;23r[23;1H
+[1;24r[23;1H[4m     34 [m[8Creturn EXIT_SUCCESS;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     35 [m}[1;23r[23;1H
+[1;24r[23;1H[4m     36 [m}[22;9H[21;9H[20;9H[19;9H[18;9H[17;9H[16;9H[15;9H[14;9H[13;9H[12;9H[11;9H[10;9H[9;9H[8;9H[7;9H[24;1H[K[7;9H[24;1H:wq"list4.c" 36L, 821C written[?1l>
+bash-4.2$ mk
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
++ tee list2.c.log
+list2.c: In function ‘main’:
+list2.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list3.c EXECBIN=list3
++ cid + list3.c
++ checksource list3.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list3.c -o list3 -lm
++ tee list3.c.log
+list3.c: In function ‘main’:
+list3.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list4.c EXECBIN=list4
++ cid + list4.c
++ checksource list4.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list4.c -o list4 -lm
++ tee list4.c.log
+list4.c: In function ‘main’:
+list4.c:28:4: error: unknown type name ‘node_ref’
+    node_ref node = head;
+    ^
+list4.c:28:20: warning: initialization makes integer from pointer without a cast
+    node_ref node = head;
+                    ^
+list4.c:29:15: warning: comparison between pointer and integer
+    while (node!=NULL){
+               ^
+list4.c:30:6: error: unknown type name ‘node_ref’
+      node_ref temp = node;
+      ^
+list4.c:31:15: error: invalid type argument of ‘->’ (have ‘int’)
+      node=node->link;
+               ^
+list4.c:32:11: warning: passing argument 1 of ‘free’ makes pointer from integer without a cast
+      free(temp);
+           ^
+In file included from list4.c:6:0:
+/usr/include/stdlib.h:482:13: note: expected ‘void *’ but argument is of type ‘int’
+ extern void free (void *__ptr) __THROW;
+             ^
+list4.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+list4.c: At top level:
+list4.c:36:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ tee uninit.c.log
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ lsi[K[Kist4
+0x1971090->node {word=0x7ffcf6dc1e67->[HOSTNAME=unix2.lt.ucsc.edu], link=0x1971070}
+0x1971070->node {word=0x7ffcf6dc1e52->[XDG_SESSION_ID=19061], link=0x1971050}
+0x1971050->node {word=0x7ffcf6dc1ddf->[MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man], link=0x1971030}
+0x1971030->node {word=(nil)->[(null)], link=0x1971010}
+bash-4.2$ vi list4.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list4.c" 36L, 821C[1;1H[4m      1 [m// $Id: list4.c,v 1.2 2016-02-10 21:30:42-08 - - $
+[4m      2 [m// Manav Sharma msharma7
+[4m      3 
+      4 [m#include <assert.h>
+[4m      5 [m#include <stdio.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mtypedef struct node node;
+[4m      9 [mstruct node {
+[4m     10 [m   char *word;
+[4m     11 [m   node *link;
+[4m     12 [m   node *head;
+[4m     13 [m};
+[4m     14 
+     15 [mint main (int argc, char **argv) {
+[4m     16 [m   node *head = NULL;
+[4m     17 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     18 [m      node *node = malloc (sizeof (struct node));
+[4m     19 [m      assert (node != NULL);
+[4m     20 [m      node->word = argv[argi];
+[4m     21 [m      node->link = head;
+[4m     22 [m      head = node;
+[4m     23 [m   }[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H[2;9H[3;9H[4;9H[5;9H[6;9H[7;9H[8;9H[9;9H[10;9H[11;9H[12;9H[13;9H[14;9H[15;9H[16;9H[17;9H[18;9H[19;9H[20;9H[21;9H[22;9H[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     24 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     25 [m      printf ("%p->node {word=%p->[%s], link=%p}\n",[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     26 [m[14Ccurr, curr->word, curr->word, curr->link);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     27 [m   }[1;23r[23;1H
+[1;24r[23;1H[4m     28 [m   node_ref node = head;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     29 [m   while (node!=NULL){[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     30 [m     node_ref temp = node;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     31 [m     node=node->link;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     32 [m     free(temp);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     33 [m    }[1;23r[23;1H
+[1;24r[23;1H[4m     34 [m[8Creturn EXIT_SUCCESS;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     35 [m}[1;23r[23;1H
+[1;24r[23;1H[4m     36 [m}[22;9H[21;9H[20;9H[19;9H[18;9H[17;9H[16;9H[17;9H[18;9H[19;9H[20;9H[21;9H[22;9H[23;9H}[23;9H[K[23;9H[24;1H[K[23;9H
+:wq"list4.c" 36L, 820C written[?1l>
+bash-4.2$ mk
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
++ tee list2.c.log
+list2.c: In function ‘main’:
+list2.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list3.c EXECBIN=list3
++ cid + list3.c
++ checksource list3.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list3.c -o list3 -lm
++ tee list3.c.log
+list3.c: In function ‘main’:
+list3.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list4.c EXECBIN=list4
++ cid + list4.c
++ checksource list4.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list4.c -o list4 -lm
++ tee list4.c.log
+list4.c: In function ‘main’:
+list4.c:28:4: error: unknown type name ‘node_ref’
+    node_ref node = head;
+    ^
+list4.c:28:20: warning: initialization makes integer from pointer without a cast
+    node_ref node = head;
+                    ^
+list4.c:29:15: warning: comparison between pointer and integer
+    while (node!=NULL){
+               ^
+list4.c:30:6: error: unknown type name ‘node_ref’
+      node_ref temp = node;
+      ^
+list4.c:31:15: error: invalid type argument of ‘->’ (have ‘int’)
+      node=node->link;
+               ^
+list4.c:32:11: warning: passing argument 1 of ‘free’ makes pointer from integer without a cast
+      free(temp);
+           ^
+In file included from list4.c:6:0:
+/usr/include/stdlib.h:482:13: note: expected ‘void *’ but argument is of type ‘int’
+ extern void free (void *__ptr) __THROW;
+             ^
+list4.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ list4
+0x175f090->node {word=0x7fff4f43ae67->[HOSTNAME=unix2.lt.ucsc.edu], link=0x175f070}
+0x175f070->node {word=0x7fff4f43ae52->[XDG_SESSION_ID=19061], link=0x175f050}
+0x175f050->node {word=0x7fff4f43addf->[MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man], link=0x175f030}
+0x175f030->node {word=(nil)->[(null)], link=0x175f010}
+bash-4.2$ list4mk[Kvi list4.clist4[Kmk[Kvi list4.cmk list4[Kecho $?[Kvalgrind --leak-check=full list4 foo bar baz qux
+==26470== Memcheck, a memory error detector
+==26470== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==26470== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==26470== Command: list4 foo bar baz qux
+==26470== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==26470== 
+==26470== HEAP SUMMARY:
+==26470==     in use at exit: 120 bytes in 5 blocks
+==26470==   total heap usage: 5 allocs, 0 frees, 120 bytes allocated
+==26470== 
+==26470== 120 (24 direct, 96 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==26470==    at 0x4C29BBD: malloc (in /opt/rh/devtoolset-3/root/usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==26470==    by 0x40069F: main (list4.c:18)
+==26470== 
+==26470== LEAK SUMMARY:
+==26470==    definitely lost: 24 bytes in 1 blocks
+==26470==    indirectly lost: 96 bytes in 4 blocks
+==26470==      possibly lost: 0 bytes in 0 blocks
+==26470==    still reachable: 0 bytes in 0 blocks
+==26470==         suppressed: 0 bytes in 0 blocks
+==26470== 
+==26470== For counts of detected and suppressed errors, rerun with: -v
+==26470== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 1 from 1)
+bash-4.2$ echo $?
+9
+bash-4.2$ vi list4.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list4.c" 36L, 820C[1;1H[4m      1 [m// $Id: list4.c,v 1.3 2016-02-10 21:33:34-08 - - $
+[4m      2 [m// Manav Sharma msharma7
+[4m      3 
+      4 [m#include <assert.h>
+[4m      5 [m#include <stdio.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mtypedef struct node node;
+[4m      9 [mstruct node {
+[4m     10 [m   char *word;
+[4m     11 [m   node *link;
+[4m     12 [m   node *head;
+[4m     13 [m};
+[4m     14 
+     15 [mint main (int argc, char **argv) {
+[4m     16 [m   node *head = NULL;
+[4m     17 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     18 [m      node *node = malloc (sizeof (struct node));
+[4m     19 [m      assert (node != NULL);
+[4m     20 [m      node->word = argv[argi];
+[4m     21 [m      node->link = head;
+[4m     22 [m      head = node;
+[4m     23 [m   }[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H[2;9H[3;9H[4;9H[5;9H[6;9H[7;9H[8;9H[9;9H[10;9H[11;9H[12;9H[13;9H[14;9H[15;9H[16;9H[17;9H[18;9H[19;9H[20;9H[21;9H[22;9H[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     24 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     25 [m      printf ("%p->node {word=%p->[%s], link=%p}\n",[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     26 [m[14Ccurr, curr->word, curr->word, curr->link);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     27 [m   }[1;23r[23;1H
+[1;24r[23;1H[4m     28 [m   node_ref node = head;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     29 [m   while (node!=NULL){[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     30 [m     node_ref temp = node;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     31 [m     node=node->link;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     32 [m     free(temp);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     33 [m    }[1;23r[23;1H
+[1;24r[23;1H[4m     34 [m[8Creturn EXIT_SUCCESS;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     35 [m}[1;23r[23;1H
+[1;24r[23;1H[4m     36 [22;9H[21;9H[20;9H[19;9H[18;9H[m [17;10H[16;10H[15;10H  node_ref node = head;[15;32H[K[15;32H[15;31H[K[15;31H[15;30H[K[15;30H[15;29H[K[15;29H[15;28H[K[15;28H[15;26H[K[15;26H[15;24H[K[15;24H[15;23H[K[15;23H[15;22H[K[15;22H[15;21H[K[15;21H[15;19H[K[15;19H[15;18H[K[15;18H[15;17H[K[15;17H[15;16H[K[15;16H[15;15H[K[15;15H[15;14H[K[15;14H[15;13H[K[15;13H[15;12H[K[15;12H   while (node!=NULL){[16;12H  node_ref temp = node;[17;18H=node->link;[17;30H[K[18;14Hfree(temp);[18;25H[K[19;13H}[19;14H[K[20;13H    return EXIT_SUCCESS;[21;9H}[21;17H[K[22;9H[K[23;2H[K[23;1H[1m~[14;13H[15;13H[0mhile (node!=N!=NULL){[15;30H[K[15;22H!=NULL){[15;29H[K[15;21H!=NULL){[15;28H[K[15;20H!=NULL){[15;27H[K[15;19Hh!=NULL){[15;20He!=NULL){[15;21Ha!=NULL){[15;22Hd!=NULL){[15;23H[16;23Htemp = node;[16;34H[K[16;34H[16;33H[K[16;33H[16;32H[K[16;32H[16;31H[K[16;31H[16;30H[K[16;30H[16;28H[K[16;28H[16;26H[K[16;26H[16;25H[K[16;25H[16;24H[K[16;24H[16;23H[K[16;23H[16;21H[K[16;21H[16;20H[K[16;20H[16;19H[K[16;19H[16;18H[K[16;18H *p;d[16;22H[K[16;22H[16;21H[K[16;21H[16;20H[K[16;20Hold = head;[17;30Hnode->link;[17;29H[K[17;18Hnode->link;[17;28H[K[17;17Hnode->link;[17;27H[K[17;16Hnode->link;[17;26H[K[17;15Hhnode->link;[17;16Henode->link;[17;17Hanode->link;[17;18Hnode->link;[17;28H[K[17;17Hnode->link;[17;27H[K[17;16Hnode->link;[17;26H[K[17;15Hode->link;[17;25H[K[17;14Hhnode->link;[17;15Henode->link;[17;16Hanode->link;[17;17Hdnode->link;[17;18H=node->link;[17;19Hnode->link;[17;29H[K[17;22H->link;[17;28H[K[17;21H->link;[17;27H[K[17;20H->link;[17;26H[K[17;19Hh->link;[17;20He->link;[17;21Ha->link;[17;22Hd->link;[17;23H[18;23H);[18;24H[K[18;22H);[18;23H[K[18;21H);[18;22H[K[18;20H);[18;21H[K[18;19Ho);l);d);[24;1H[K[18;21H[24;1H:wq"list4.c" 35L, 790C written[?1l>
+bash-4.2$ mk
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
++ tee list2.c.log
+list2.c: In function ‘main’:
+list2.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list3.c EXECBIN=list3
++ cid + list3.c
++ checksource list3.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list3.c -o list3 -lm
++ tee list3.c.log
+list3.c: In function ‘main’:
+list3.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list4.c EXECBIN=list4
++ cid + list4.c
++ checksource list4.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list4.c -o list4 -lm
++ tee list4.c.log
+list4.c: In function ‘main’:
+list4.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ list4
+0x76a090->node {word=0x7ffdf230ce67->[HOSTNAME=unix2.lt.ucsc.edu], link=0x76a070}
+0x76a070->node {word=0x7ffdf230ce52->[XDG_SESSION_ID=19061], link=0x76a050}
+0x76a050->node {word=0x7ffdf230cddf->[MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man], link=0x76a030}
+0x76a030->node {word=(nil)->[(null)], link=0x76a010}
+bash-4.2$ ls
+list1	     list3	  malloc	     part03.typescript	RCS
+list1.c      list3.c	  malloc.c	     part04.typescript	uninit
+list1.c.log  list3.c.log  malloc.c.log	     part05.typescript	uninit.c
+list2	     list4	  mk		     part06.typescript	uninit.c.log
+list2.c      list4.c	  part01.typescript  part07.typescript
+list2.c.log  list4.c.log  part02.typescript  part08.typescript
+bash-4.2$ lsist4mk[Kvi list4.cecho $?[Kvalgrind --leak-check=full list4 foo bar baz qux[C[C[C[C[C[C[C[C[C[Clist4[Kvalgrind --leak-check=full list4 foo bar baz qux
+==28403== Memcheck, a memory error detector
+==28403== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==28403== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==28403== Command: list4 foo bar baz qux
+==28403== 
+0x54f81c0->node {word=0xffefffd05->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffd01->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffcfd->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffcf9->[foo], link=0x54f8040}
+==28403== 
+==28403== HEAP SUMMARY:
+==28403==     in use at exit: 0 bytes in 0 blocks
+==28403==   total heap usage: 5 allocs, 5 frees, 120 bytes allocated
+==28403== 
+==28403== All heap blocks were freed -- no leaks are possible
+==28403== 
+==28403== For counts of detected and suppressed errors, rerun with: -v
+==28403== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+bash-4.2$ echo $?
+0
+bash-4.2$ viecho $?valgrind --leak-check=full list4 foo bar baz qux[C[C[C[C[C[C[C[C[C[Cls[Kist4mk[Kvi list4.cecho $?[Kvi list4.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list4.c" 35L, 790C[1;1H[4m      1 [m// $Id: list4.c,v 1.4 2016-02-10 21:35:24-08 - - $
+[4m      2 [m// Manav Sharma msharma7
+[4m      3 
+      4 [m#include <assert.h>
+[4m      5 [m#include <stdio.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mtypedef struct node node;
+[4m      9 [mstruct node {
+[4m     10 [m   char *word;
+[4m     11 [m   node *link;
+[4m     12 [m   node *head;
+[4m     13 [m};
+[4m     14 
+     15 [mint main (int argc, char **argv) {
+[4m     16 [m   node *head = NULL;
+[4m     17 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     18 [m      node *node = malloc (sizeof (struct node));
+[4m     19 [m      assert (node != NULL);
+[4m     20 [m      node->word = argv[argi];
+[4m     21 [m      node->link = head;
+[4m     22 [m      head = node;
+[4m     23 [m   }[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H[2;9H[3;9H[4;9H[5;9H[6;9H[7;9H[8;9H[9;9H[10;9H[11;9H[12;9H[13;9H[14;9H[15;9H[16;9H[17;9H[18;9H[19;9H[20;9H[21;9H[22;9H[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     24 [m   for (node *curr = head; curr->link != NULL; curr = curr->link) {[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     25 [m      printf ("%p->node {word=%p->[%s], link=%p}\n",[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     26 [m[14Ccurr, curr->word, curr->word, curr->link);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     27 [m   }[1;23r[23;1H
+[1;24r[23;1H[4m     28 [m   while (head!=NULL){[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     29 [m     node *old = head;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     30 [m     head=head->link;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     31 [m     free(old);[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     32 [m    }[1;23r[23;1H
+[1;24r[23;1H[4m     33 [m[8Creturn EXIT_SUCCESS;[23;9H[1;23r[23;1H
+[1;24r[23;1H[4m     34 [m}[1;23r[23;1H
+[1;24r[23;1H[4m     35 [22;9H[21;9H[20;9H[19;9H[18;9H[17;9H[m     node *old  = head;[17;30H[K[17;22H = head;[17;29H[K[17;21H = head;[17;28H[K[17;20Hs = head;[17;21Hw = head;[17;22Ha = head;[17;23Hg = head;[17;24H[18;24H[19;24H);[19;23H[K[19;21H);[19;22H[K[19;20H);[19;21H[K[19;19Hs);w);a);g);[18;23H[17;23H[16;23H[17;23Hg = head;[17;31H[K[17;23H = head;[17;30H[K[17;22H = head;[17;29H[K[17;21H = head;[17;28H[K[17;20Ho = head;[17;21Hl = head;[17;22Hd = head;[17;23H[18;23H[19;23H);[19;24H[K[19;22H);[19;23H[K[19;21H);[19;22H[K[19;20H);[19;21H[K[19;19Ho);l);d);[24;1H[K[19;21H[24;1H:wq"list4.c" 35L, 790C written[?1l>
+bash-4.2$ submit12b lab5 list4.c
+Submitting the files you specified...
+copying list4\.c
+
+1 File submitted: 
+  list4.c (revision 1)
+
+bash-4.2$ script part09.typescript
+Script started, file is part09.typescript
+bash-4.2$ valgrind --leak-check [K=full list4 foo bar baz qux
+==31985== Memcheck, a memory error detector
+==31985== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==31985== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==31985== Command: list4 foo bar baz qux
+==31985== 
+0x54f81c0->node {word=0xffefffcad->[qux], link=0x54f8160}
+0x54f8160->node {word=0xffefffca9->[baz], link=0x54f8100}
+0x54f8100->node {word=0xffefffca5->[bar], link=0x54f80a0}
+0x54f80a0->node {word=0xffefffca1->[foo], link=0x54f8040}
+==31985== 
+==31985== HEAP SUMMARY:
+==31985==     in use at exit: 0 bytes in 0 blocks
+==31985==   total heap usage: 5 allocs, 5 frees, 120 bytes allocated
+==31985== 
+==31985== All heap blocks were freed -- no leaks are possible
+==31985== 
+==31985== For counts of detected and suppressed errors, rerun with: -v
+==31985== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 1 from 1)
+bash-4.2$ echo $?
+0
+bash-4.2$ exit
+exit
+Script done, file is part09.typescript
+bash-4.2$ ls
+list1	     list3.c.log   part01.typescript  part09.typescript
+list1.c      list4	   part02.typescript  RCS
+list1.c.log  list4.c	   part03.typescript  uninit
+list2	     list4.c.log   part04.typescript  uninit.c
+list2.c      malloc	   part05.typescript  uninit.c.log
+list2.c.log  malloc.c	   part06.typescript
+list3	     malloc.c.log  part07.typescript
+list3.c      mk		   part08.typescript
+bash-4.2$ submit12b lab5 pat[Krt09.typescript 
+Submitting the files you specified...
+copying part09\.typescript
+
+1 File submitted: 
+  part09.typescript (revision 1)
+
+bash-4.2$ ls[Ks
+list1	     list3.c.log   part01.typescript  part09.typescript
+list1.c      list4	   part02.typescript  RCS
+list1.c.log  list4.c	   part03.typescript  uninit
+list2	     list4.c.log   part04.typescript  uninit.c
+list2.c      malloc	   part05.typescript  uninit.c.log
+list2.c.log  malloc.c	   part06.typescript
+list3	     malloc.c.log  part07.typescript
+list3.c      mk		   part08.typescript
+bash-4.2$ vi environ.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"environ.c" [New File][1;1H[4m      1 [m
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[1;9H[24;1H-- INSERT --[0m[24;13H[K[1;9H// 4I[1;13H[K[1;13H[1;12H[K[1;12H[1;10H[K[1;10H[1;9H[K[1;9H[24;1H[K[1;9H[24;1H:wq"environ.c" [New] 1L, 1C written[?1l>
+bash-4.2$ ls
+environ.c    list3.c	   mk		      part08.typescript
+list1	     list3.c.log   part01.typescript  part09.typescript
+list1.c      list4	   part02.typescript  RCS
+list1.c.log  list4.c	   part03.typescript  uninit
+list2	     list4.c.log   part04.typescript  uninit.c
+list2.c      malloc	   part05.typescript  uninit.c.log
+list2.c.log  malloc.c	   part06.typescript
+list3	     malloc.c.log  part07.typescript
+bash-4.2$ vi list4.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list4.c" 35L, 790C[1;1H[4m      1 [m// $Id: list4.c,v 1.4 2016-02-10 21:35:24-08 - - $
+[4m      2 [m// Manav Sharma msharma7
+[4m      3 
+      4 [m#include <assert.h>
+[4m      5 [m#include <stdio.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mtypedef struct node node;
+[4m      9 [mstruct node {
+[4m     10 [m   char *word;
+[4m     11 [m   node *link;
+[4m     12 [m   node *head;
+[4m     13 [m};
+[4m     14 
+     15 [mint main (int argc, char **argv) {
+[4m     16 [m   node *head = NULL;
+[4m     17 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     18 [m      node *node = malloc (sizeof (struct node));
+[4m     19 [m      assert (node != NULL);
+[4m     20 [m      node->word = argv[argi];
+[4m     21 [m      node->link = head;
+[4m     22 [m      head = node;
+[4m     23 [m   }[1;9H[24;1H[K[24;1H:wq"list4.c" 35L, 790C written[?1l>
+bash-4.2$ vi environ.c 
+[?1h=[1;24r[m[m[0m[H[J[24;1H"environ.c" 1L, 1C[1;1H[4m      1 [m
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[1;9H[24;1H-- INSERT --[0m[24;13H[K[1;9H$I[1;10H[K[1;10HId$[1;12H[K[1;12H[1;11H[K[1;11H[1;10H[K[1;10H[1;9H[K[1;9H/$Id$
+[4m      2 [m/[2;9H[K[2;9H[1;9H//$Id$[2;9H//Manav Sharma msharma7
+[4m      3 
+      4 [m#inclue [4;15H[K[4;15H[4;14H[K[4;14Hde[4;15H[K[4;15H[4;14H[K[4;14Hude <stdio.h>
+[4m      5 [m#include <assert.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mextern char **environ;
+[4m      9 
+     10 [mvoid mainP{ [10;19H[K[10;19H[10;18H[K[10;18H() {
+[4m     11 [m    for int[11;19H[K[11;19H[11;18H[K[11;18H[11;17H[K[11;17H (int i = 0l[11;27H[K[11;27H; environ[i]!=[11;40H[K[11;40H[11;39H[K[11;39H  !=[11;42H[K[11;42H[11;41H[K[11;41H!= NULL; i++){
+[4m     12 [m        printf("$[12;25H[K[12;25H%[12;25H[K[12;25H$%[12;26H[K[12;26H[12;25H[K[12;25H%s/[12;27H[K[12;27H\n", environ[i]);
+[4m     13 [m        }
+[4m     14 [m      return EXIT_SUCESS;
+[4m     15 [m    }[14;12H[13;12H1     }    }[13;18H[K[13;13H    }[13;17H[K[13;12H[14;12H   return EXIT_SUCCESS;ESS;[14;34H[K[14;33H;[14;33H[K[14;32H;[14;32H[K[14;31H;[14;31H[K[14;30H;[14;30H[K[14;29H;[14;29H[K[14;28H;[14;28H[K[14;27H;[14;27H[K[14;26H;[14;26H[K[14;25H;[14;25H[K[14;24H;[14;24H[K[14;23H;[14;23H[K[14;22H0;[15;12H:[15;12H[K[15;12H[24;1H[K[15;11H[24;1H:wq"environ.c" 15L, 241C written[?1l>
+bash-4.2$ ls
+environ.c    list3.c	   mk		      part08.typescript
+list1	     list3.c.log   part01.typescript  part09.typescript
+list1.c      list4	   part02.typescript  RCS
+list1.c.log  list4.c	   part03.typescript  uninit
+list2	     list4.c.log   part04.typescript  uninit.c
+list2.c      malloc	   part05.typescript  uninit.c.log
+list2.c.log  malloc.c	   part06.typescript
+list3	     malloc.c.log  part07.typescript
+bash-4.2$ mk environ.c
+CSOURCE=environ.c EXECBIN=environ
++ cid + environ.c
++ checksource environ.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 environ.c -o environ -lm
++ tee environ.c.log
+environ.c:10:6: warning: return type of ‘main’ is not ‘int’ [-Wmain]
+ void main() {
+      ^
+environ.c: In function ‘main’:
+environ.c:14:7: warning: ‘return’ with a value, in function returning void
+       return 0;
+       ^
++ set +x
+============================================================
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
++ tee list1.c.log
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list2.c EXECBIN=list2
++ cid + list2.c
++ checksource list2.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
++ tee list2.c.log
+list2.c: In function ‘main’:
+list2.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list3.c EXECBIN=list3
++ cid + list3.c
++ checksource list3.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list3.c -o list3 -lm
++ tee list3.c.log
+list3.c: In function ‘main’:
+list3.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=list4.c EXECBIN=list4
++ cid + list4.c
++ checksource list4.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list4.c -o list4 -lm
++ tee list4.c.log
+list4.c: In function ‘main’:
+list4.c:15:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
++ tee malloc.c.log
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ ls
+environ        list2.c	    list4.c.log        part03.typescript  RCS
+environ.c      list2.c.log  malloc	       part04.typescript  uninit
+environ.c.log  list3	    malloc.c	       part05.typescript  uninit.c
+list1	       list3.c	    malloc.c.log       part06.typescript  uninit.c.log
+list1.c        list3.c.log  mk		       part07.typescript
+list1.c.log    list4	    part01.typescript  part08.typescript
+list2	       list4.c	    part02.typescript  part09.typescript
+bash-4.2$ environ
+MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man
+XDG_SESSION_ID=19061
+HOSTNAME=unix2.lt.ucsc.edu
+GNUPLOT_DEFAULT_GDFONT=LiberationSans-Regular
+SELINUX_ROLE_REQUESTED=
+TERM=vt100
+SHELL=/bin/bash
+HISTSIZE=1000
+SSH_CLIENT=169.233.27.241 51682 22
+PERL5LIB=/afs/cats.ucsc.edu/users/j/msharma7/perl5/lib/perl5:/opt/rh/devtoolset-3/root//usr/lib64/perl5/vendor_perl:/opt/rh/devtoolset-3/root/usr/lib/perl5:/opt/rh/devtoolset-3/root//usr/share/perl5/vendor_perl
+IDL_DIR=/usr/local/envi/idl82
+cmps012b=/afs/cats.ucsc.edu/courses/cmps012b-wm
+SELINUX_USE_CURRENT_RANGE=
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+PERL_MB_OPT=--install_base /afs/cats.ucsc.edu/users/j/msharma7/perl5
+X_SCLS=rh-java-common 
+JAVACONFDIRS=/opt/rh/devtoolset-3/root/etc/java:/opt/rh/rh-java-common/root/etc/java
+SSH_TTY=/dev/pts/84
+QT_GRAPHICSSYSTEM_CHECKED=1
+PCP_DIR=/opt/rh/devtoolset-3/root
+USER=msharma7
+LD_LIBRARY_PATH=/opt/rh/devtoolset-3/root/usr/lib64:/opt/rh/devtoolset-3/root/usr/lib
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+GDFONTPATH=/usr/share/fonts/liberation
+XDG_CONFIG_DIRS=/opt/rh/devtoolset-3/root/etc/xdg:/opt/rh/rh-java-common/root/etc/xdg:/etc/xdg
+MAIL=/var/spool/mail/msharma7
+PATH=/usr/lib64/qt-3.3/bin:/afs/cats.ucsc.edu/users/j/msharma7/perl5/bin:/opt/rh/devtoolset-3/root/usr/bin:/opt/rh/rh-java-common/root/usr/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/var/cfengine/bin:/usr/local/texlive/2012/bin/x86_64-linux:/usr/local/python3/bin:/usr/local/codebench/bin:/afs/cats.ucsc.edu/users/j/msharma7/bin:.:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+PWD=/afs/cats.ucsc.edu/users/j/msharma7/private/cmps012b/lab5
+LANG=en_US.UTF-8
+KDEDIRS=/usr
+EXELIS_DIR=/usr/local/envi
+SELINUX_LEVEL_REQUESTED=
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+HISTCONTROL=ignoredups
+KRB5CCNAME=KEYRING:persistent:201939
+SHLVL=7
+HOME=/afs/cats.ucsc.edu/users/j/msharma7
+PERL_LOCAL_LIB_ROOT=:/afs/cats.ucsc.edu/users/j/msharma7/perl5
+PYTHONPATH=/opt/rh/devtoolset-3/root/usr/lib64/python2.7/site-packages:/opt/rh/devtoolset-3/root/usr/lib/python2.7/site-packages:/opt/rh/rh-java-common/root/usr/lib/python2.7/site-packages
+LOGNAME=msharma7
+QTLIB=/usr/lib64/qt-3.3/lib
+CVS_RSH=ssh
+XDG_DATA_DIRS=/opt/rh/devtoolset-3/root/usr/share::/usr/local/share:/usr/share
+SSH_CONNECTION=169.233.27.241 51682 128.114.104.56 22
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+INFOPATH=/opt/rh/devtoolset-3/root/usr/share/info:/usr/local/texlive/2012/texmf/doc/info
+XDG_RUNTIME_DIR=/run/user/201939
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+PERL_MM_OPT=INSTALL_BASE=/afs/cats.ucsc.edu/users/j/msharma7/perl5
+_=./environ
+bash-4.2$ ls
+environ        list2.c	    list4.c.log        part03.typescript  RCS
+environ.c      list2.c.log  malloc	       part04.typescript  uninit
+environ.c.log  list3	    malloc.c	       part05.typescript  uninit.c
+list1	       list3.c	    malloc.c.log       part06.typescript  uninit.c.log
+list1.c        list3.c.log  mk		       part07.typescript
+list1.c.log    list4	    part01.typescript  part08.typescript
+list2	       list4.c	    part02.typescript  part09.typescript
+bash-4.2$ ./environ
+MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man
+XDG_SESSION_ID=19061
+HOSTNAME=unix2.lt.ucsc.edu
+GNUPLOT_DEFAULT_GDFONT=LiberationSans-Regular
+SELINUX_ROLE_REQUESTED=
+TERM=vt100
+SHELL=/bin/bash
+HISTSIZE=1000
+SSH_CLIENT=169.233.27.241 51682 22
+PERL5LIB=/afs/cats.ucsc.edu/users/j/msharma7/perl5/lib/perl5:/opt/rh/devtoolset-3/root//usr/lib64/perl5/vendor_perl:/opt/rh/devtoolset-3/root/usr/lib/perl5:/opt/rh/devtoolset-3/root//usr/share/perl5/vendor_perl
+IDL_DIR=/usr/local/envi/idl82
+cmps012b=/afs/cats.ucsc.edu/courses/cmps012b-wm
+SELINUX_USE_CURRENT_RANGE=
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+PERL_MB_OPT=--install_base /afs/cats.ucsc.edu/users/j/msharma7/perl5
+X_SCLS=rh-java-common 
+JAVACONFDIRS=/opt/rh/devtoolset-3/root/etc/java:/opt/rh/rh-java-common/root/etc/java
+SSH_TTY=/dev/pts/84
+QT_GRAPHICSSYSTEM_CHECKED=1
+PCP_DIR=/opt/rh/devtoolset-3/root
+USER=msharma7
+LD_LIBRARY_PATH=/opt/rh/devtoolset-3/root/usr/lib64:/opt/rh/devtoolset-3/root/usr/lib
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+GDFONTPATH=/usr/share/fonts/liberation
+XDG_CONFIG_DIRS=/opt/rh/devtoolset-3/root/etc/xdg:/opt/rh/rh-java-common/root/etc/xdg:/etc/xdg
+MAIL=/var/spool/mail/msharma7
+PATH=/usr/lib64/qt-3.3/bin:/afs/cats.ucsc.edu/users/j/msharma7/perl5/bin:/opt/rh/devtoolset-3/root/usr/bin:/opt/rh/rh-java-common/root/usr/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/var/cfengine/bin:/usr/local/texlive/2012/bin/x86_64-linux:/usr/local/python3/bin:/usr/local/codebench/bin:/afs/cats.ucsc.edu/users/j/msharma7/bin:.:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+PWD=/afs/cats.ucsc.edu/users/j/msharma7/private/cmps012b/lab5
+LANG=en_US.UTF-8
+KDEDIRS=/usr
+EXELIS_DIR=/usr/local/envi
+SELINUX_LEVEL_REQUESTED=
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+HISTCONTROL=ignoredups
+KRB5CCNAME=KEYRING:persistent:201939
+SHLVL=7
+HOME=/afs/cats.ucsc.edu/users/j/msharma7
+PERL_LOCAL_LIB_ROOT=:/afs/cats.ucsc.edu/users/j/msharma7/perl5
+PYTHONPATH=/opt/rh/devtoolset-3/root/usr/lib64/python2.7/site-packages:/opt/rh/devtoolset-3/root/usr/lib/python2.7/site-packages:/opt/rh/rh-java-common/root/usr/lib/python2.7/site-packages
+LOGNAME=msharma7
+QTLIB=/usr/lib64/qt-3.3/lib
+CVS_RSH=ssh
+XDG_DATA_DIRS=/opt/rh/devtoolset-3/root/usr/share::/usr/local/share:/usr/share
+SSH_CONNECTION=169.233.27.241 51682 128.114.104.56 22
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+INFOPATH=/opt/rh/devtoolset-3/root/usr/share/info:/usr/local/texlive/2012/texmf/doc/info
+XDG_RUNTIME_DIR=/run/user/201939
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+PERL_MM_OPT=INSTALL_BASE=/afs/cats.ucsc.edu/users/j/msharma7/perl5
+_=./environ
+bash-4.2$ scipr [K[K[K[Kript part10.typescript
+Script started, file is part10.typescript
+bash-4.2$ ./environ
+MANPATH=/opt/rh/devtoolset-3/root/usr/share/man:/opt/rh/rh-java-common/root/usr/share/man::/var/cfengine/share/man
+XDG_SESSION_ID=19061
+HOSTNAME=unix2.lt.ucsc.edu
+SELINUX_ROLE_REQUESTED=
+GNUPLOT_DEFAULT_GDFONT=LiberationSans-Regular
+SHELL=/bin/bash
+TERM=vt100
+HISTSIZE=1000
+SSH_CLIENT=169.233.27.241 51682 22
+IDL_DIR=/usr/local/envi/idl82
+PERL5LIB=/afs/cats.ucsc.edu/users/j/msharma7/perl5/lib/perl5:/opt/rh/devtoolset-3/root//usr/lib64/perl5/vendor_perl:/opt/rh/devtoolset-3/root/usr/lib/perl5:/opt/rh/devtoolset-3/root//usr/share/perl5/vendor_perl
+SELINUX_USE_CURRENT_RANGE=
+cmps012b=/afs/cats.ucsc.edu/courses/cmps012b-wm
+QTDIR=/usr/lib64/qt-3.3
+PERL_MB_OPT=--install_base /afs/cats.ucsc.edu/users/j/msharma7/perl5
+QTINC=/usr/lib64/qt-3.3/include
+SSH_TTY=/dev/pts/84
+JAVACONFDIRS=/opt/rh/devtoolset-3/root/etc/java:/opt/rh/rh-java-common/root/etc/java
+X_SCLS=rh-java-common 
+QT_GRAPHICSSYSTEM_CHECKED=1
+USER=msharma7
+PCP_DIR=/opt/rh/devtoolset-3/root
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+LD_LIBRARY_PATH=/opt/rh/devtoolset-3/root/usr/lib64:/opt/rh/devtoolset-3/root/usr/lib
+GDFONTPATH=/usr/share/fonts/liberation
+XDG_CONFIG_DIRS=/opt/rh/devtoolset-3/root/etc/xdg:/opt/rh/rh-java-common/root/etc/xdg:/etc/xdg
+PATH=/usr/lib64/qt-3.3/bin:/afs/cats.ucsc.edu/users/j/msharma7/perl5/bin:/opt/rh/devtoolset-3/root/usr/bin:/opt/rh/rh-java-common/root/usr/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/var/cfengine/bin:/usr/local/texlive/2012/bin/x86_64-linux:/usr/local/python3/bin:/usr/local/codebench/bin:/afs/cats.ucsc.edu/users/j/msharma7/bin:.:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+MAIL=/var/spool/mail/msharma7
+PWD=/afs/cats.ucsc.edu/users/j/msharma7/private/cmps012b/lab5
+LANG=en_US.UTF-8
+KDEDIRS=/usr
+SELINUX_LEVEL_REQUESTED=
+EXELIS_DIR=/usr/local/envi
+KRB5CCNAME=KEYRING:persistent:201939
+HISTCONTROL=ignoredups
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+HOME=/afs/cats.ucsc.edu/users/j/msharma7
+SHLVL=8
+PERL_LOCAL_LIB_ROOT=:/afs/cats.ucsc.edu/users/j/msharma7/perl5
+LOGNAME=msharma7
+PYTHONPATH=/opt/rh/devtoolset-3/root/usr/lib64/python2.7/site-packages:/opt/rh/devtoolset-3/root/usr/lib/python2.7/site-packages:/opt/rh/rh-java-common/root/usr/lib/python2.7/site-packages
+CVS_RSH=ssh
+QTLIB=/usr/lib64/qt-3.3/lib
+SSH_CONNECTION=169.233.27.241 51682 128.114.104.56 22
+XDG_DATA_DIRS=/opt/rh/devtoolset-3/root/usr/share::/usr/local/share:/usr/share
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+INFOPATH=/opt/rh/devtoolset-3/root/usr/share/info:/usr/local/texlive/2012/texmf/doc/info
+XDG_RUNTIME_DIR=/run/user/201939
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+PERL_MM_OPT=INSTALL_BASE=/afs/cats.ucsc.edu/users/j/msharma7/perl5
+_=./environ
+bash-4.2$ exit
+exit
+Script done, file is part10.typescript
+bash-4.2$ ls
+environ        list3	     mk			part09.typescript
+environ.c      list3.c	     part01.typescript	part10.typescript
+environ.c.log  list3.c.log   part02.typescript	RCS
+list1	       list4	     part03.typescript	uninit
+list1.c        list4.c	     part04.typescript	uninit.c
+list1.c.log    list4.c.log   part05.typescript	uninit.c.log
+list2	       malloc	     part06.typescript
+list2.c        malloc.c      part07.typescript
+list2.c.log    malloc.c.log  part08.typescript
+bash-4.2$ subtmi12[K[K[K[K[Kmit12b lab4 [K[K6[K5 part10.typescript environ.c
+Submitting the files you specified...
+copying part10\.typescript
+copying environ\.c
+
+2 Files submitted: 
+  environ.c (revision 1)
+  part10.typescript (revision 1)
+
+bash-4.2$ ls
+environ        list3	     mk			part09.typescript
+environ.c      list3.c	     part01.typescript	part10.typescript
+environ.c.log  list3.c.log   part02.typescript	RCS
+list1	       list4	     part03.typescript	uninit
+list1.c        list4.c	     part04.typescript	uninit.c
+list1.c.log    list4.c.log   part05.typescript	uninit.c.log
+list2	       malloc	     part06.typescript
+list2.c        malloc.c      part07.typescript
+list2.c.log    malloc.c.log  part08.typescript
+bash-4.2$ cd ~
+bash-4.2$ ls
+12b    Desktop	  Downloads  Music  Pictures  Public	   Templates  welcome
+cs12a  Documents  links      perl5  private   public_html  Videos
+bash-4.2$ grep Subit:[K[K[K[K[K[K[K[K[Kcd 12b
+bash-4.2$ ls
+adminbin      HEADER.html		Readme.all.cmps012b.txt   TA
+Assignments   Jargon-File		README.cat		  test-xpdf
+bin	      Labs-cmps012m		README.html		  Tutorials
+Coding-style  links			Readme.new.cmps012b.html  Unix-Style
+Downloads     Old-Exams			Readme.new.cmps012b.pdf   Unix-Tutorial
+etc	      public_html		Readme.new.cmps012b.ps	  usr
+Examples      RCS			Readme.new.cmps012b.txt   vireadme
+gdb	      Readme.all.cmps012b.html	reg.ucsc.edu.soc
+groff	      Readme.all.cmps012b.pdf	safaribooksonline.html
+HEADER.cat    Readme.all.cmps012b.ps	Syllabus
+bash-4.2$ cd la[K[KLabs-cmps012m/
+bash-4.2$ ls
+HEADER.html		lab3c-rpnstack-array  lab7c-headers-adts
+lab0u-intro-unix	lab4c-stdio-getopt    lab8c-unixprog-stat
+lab1u-shells-etc	lab5c-gdb-valgrind    lab9c-voidstar-generic
+lab2u-utilities-c-make	lab6c-malloc-free
+bash-4.2$ cd lab5c-gdb-valgrind/
+bash-4.2$ ls
+code		       gdb-tutorials	      lab5c-gdb-valgrind.pdf  Makefile
+gdb-tutorial-ohio.pdf  HEADER.html	      lab5c-gdb-valgrind.ps   RCS
+gdb-tutorial-ohio.ps   lab5c-gdb-valgrind.mm  lab5c-gdb-valgrind.tt
+bash-4.2$ grep Submit [K: *tt
+   grep Submit: *.tt
+Submit:  part01.typescript
+Submit:  part02.typescript
+Submit:  part03.typescript
+Submit:  part04.typescript
+Submit:  part05.typescript
+Submit:  part06.typescript
+Submit:  list2.c
+Submit:  part07.typescript
+Submit:  part08.typescript
+Submit:  list3.c
+Submit:  part09.typescript
+Submit:  list4.c
+Submit:  part10.typescript
+Submit:  environ.c
+bash-4.2$ cd ~
+bash-4.2$ ls
+12b    Desktop	  Downloads  Music  Pictures  Public	   Templates  welcome
+cs12a  Documents  links      perl5  private   public_html  Videos
+bash-4.2$ cd private/
+bash-4.2$ ls
+cmps012b
+bash-4.2$ cd cmps012b/
+bash-4.2$ ls [K[K[Kcd lab5
+bash-4.2$ ls
+environ        list3	     mk			part09.typescript
+environ.c      list3.c	     part01.typescript	part10.typescript
+environ.c.log  list3.c.log   part02.typescript	RCS
+list1	       list4	     part03.typescript	uninit
+list1.c        list4.c	     part04.typescript	uninit.c
+list1.c.log    list4.c.log   part05.typescript	uninit.c.log
+list2	       malloc	     part06.typescript
+list2.c        malloc.c      part07.typescript
+list2.c.log    malloc.c.log  part08.typescript
+bash-4.2$ vi list3[K2.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"list2.c" 29L, 675C[1;1H[4m      1 [m// $Id: list2.c,v 1.2 2016-02-10 21:25:40-08 - - $
+[4m      2 [m// Manav Sharma msharma7
+[4m      3 
+      4 [m#include <assert.h>
+[4m      5 [m#include <stdio.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mtypedef struct node node;
+[4m      9 [mstruct node {
+[4m     10 [m   char *word;
+[4m     11 [m   node *link;
+[4m     12 [m   node *head;
+[4m     13 [m};
+[4m     14 
+     15 [mint main (int argc, char **argv) {
+[4m     16 [m   node *head;
+[4m     17 [m   for (int argi = 0; argi < 5; ++argi) {
+[4m     18 [m      node *node = malloc (sizeof (struct node));
+[4m     19 [m      assert (node != NULL);
+[4m     20 [m      node->word = argv[argi];
+[4m     21 [m      node->link = head;
+[4m     22 [m      head = node;
+[4m     23 [m   }[1;9H[24;1H[1m-- INSERT --[0m[24;13H[K[1;9H[24;1H[K[1;9H[24;1H:wq"list2.c" 29L, 675C written[?1l>
+bash-4.2$ vi environ.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"environ.c" 15L, 286C[1;1H[4m      1 [m//$Id: environ.c,v 1.1 2016-02-10 21:46:08-08 - - $
+[4m      2 [m//Manav Sharma msharma7
+[4m      3 
+      4 [m#include <stdio.h>
+[4m      5 [m#include <assert.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mextern char **environ;
+[4m      9 
+     10 [mvoid main() {
+[4m     11 [m    for (int i = 0; environ[i] != NULL; i++){
+[4m     12 [m[8Cprintf("%s\n", environ[i]);
+[4m     13 [m[7C}
+[4m     14 [m      return 0;
+[4m     15 [m  }
+[1m~
+~
+~
+~
+~
+~
+~
+~[1;9H[0m[24;1H[K[24;1H:wq"environ.c" 15L, 286C written[?1l>
+bash-4.2$ vi environ.clist2.c[Kenviron.c
+[?1h=[1;24r[m[m[0m[H[J[24;1H"environ.c" 15L, 286C[1;1H[4m      1 [m//$Id: environ.c,v 1.1 2016-02-10 21:46:08-08 - - $
+[4m      2 [m//Manav Sharma msharma7
+[4m      3 
+      4 [m#include <stdio.h>
+[4m      5 [m#include <assert.h>
+[4m      6 [m#include <stdlib.h>
+[4m      7 
+      8 [mextern char **environ;
+[4m      9 
+     10 [mvoid main() {
+[4m     11 [m    for (int i = 0; environ[i] != NULL; i++){
+[4m     12 [m[8Cprintf("%s\n", environ[i]);
+[4m     13 [m[7C}
+[4m     14 [m      return 0;
+[4m     15 [m  }
+[1m~
+~
+~
+~
+~
+~
+~
+~[1;9H[0m[24;1H[K[24;1H:wq"environ.c" 15L, 286C written[?1l>
+bash-4.2$ ls
+environ        list3	     mk			part09.typescript

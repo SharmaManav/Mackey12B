@@ -1,0 +1,218 @@
+head	1.4;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.4
+date	2016.01.28.09.40.02;	author -;	state -;
+branches;
+next	1.3;
+
+1.3
+date	2016.01.27.10.46.51;	author -;	state -;
+branches;
+next	1.2;
+
+1.2
+date	2016.01.27.10.40.08;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2016.01.27.10.23.27;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.4
+log
+@-
+@
+text
+@// $Id: crpn.c,v 1.3 2016-01-27 02:46:51-08 - - $
+
+#include <assert.h>
+#include <libgen.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int exit_status = EXIT_SUCCESS;
+#define EMPTY (-1)
+#define SIZE 16
+
+struct stack {
+   int top;
+   double numbers[SIZE];
+};
+
+void bad_operator (const char *oper) {
+   fflush (NULL);
+   fprintf (stderr, "\"%s\": invalid operator\n", oper);
+   fflush (NULL);
+   exit_status = EXIT_FAILURE;
+}
+
+void push (struct stack *the_stack, double number) {
+     if (the_stack->top >= SIZE - 1){
+         printf("%f: stack overflow\n", number);
+       }else {
+         the_stack->numbers[++(the_stack)->top] = number;
+       }
+         
+  /* printf ("the_stack=%p, top=%d, number=%.15g\n",
+           the_stack, the_stack->top, number);*/
+}
+
+void do_binop (struct stack *the_stack, char oper) {
+         if (the_stack->top < 1) {
+            printf ("'%c': stack underflow\n", oper);
+        }else{
+         double right = the_stack->numbers[the_stack->top--];
+         double left = the_stack->numbers[the_stack->top--];
+         switch (oper) {
+            case '+': push (the_stack, left + right); break;
+            case '-': push (the_stack, left - right); break;
+            case '*': push (the_stack, left * right); break;
+            case '/': push (the_stack, left / right); break;
+        }
+    }
+}
+
+void do_print (struct stack *the_stack) {
+         if (the_stack->top == EMPTY) {
+            printf ("stack is empty\n");
+        }else {
+         for (int pos = 0; pos <= the_stack->top; ++pos) {
+            printf ("%.15g\n", the_stack->numbers[pos]);
+        }
+    }
+}
+
+void do_clear (struct stack *the_stack) {
+        the_stack->top = EMPTY;
+}
+
+void do_operator (struct stack *the_stack, const char *oper) {
+        switch (*oper) {
+        case '+': do_binop (the_stack, '+'); break;
+        case '-': do_binop (the_stack, '-'); break;
+        case '*': do_binop (the_stack, '*'); break;
+        case '/': do_binop (the_stack, '/'); break;
+        case ';': do_print (the_stack);      break;
+        case '@@': do_clear (the_stack);      break;
+        default: bad_operator (oper);        break;
+     }
+}
+
+
+int main (int argc, char **argv) {
+   if (argc != 1) {
+      fprintf (stderr, "Usage: %s\n", basename (argv[0]));
+      fflush (NULL);
+      exit (EXIT_FAILURE);
+   }
+   struct stack the_stack;
+   the_stack.top = EMPTY;
+   char buffer[1024];
+   for (;;) {
+      int scanrc = scanf ("%1023s", buffer);
+      if (scanrc == EOF) break;
+      assert (scanrc == 1);
+      if (buffer[0] == '#') {
+         scanrc = scanf ("%1023[^\n]", buffer);
+         continue;
+      }
+      char *endptr;
+      double number = strtod (buffer, &endptr);
+      if (*endptr == '\0') {
+         push (&the_stack, number);
+      }else if (buffer[1] != '\0') {
+         bad_operator (buffer);
+      }else {
+         do_operator (&the_stack, buffer);
+      }
+   }
+   return exit_status;
+}
+
+@
+
+
+1.3
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: crpn.c,v 1.2 2016-01-27 02:40:08-08 - - $
+d19 1
+a19 1
+   fprintf (stderr, "oper=\"%s\"\n", oper);
+d26 1
+a26 1
+         printf("%f: stack overflow/n", number);
+d28 1
+a28 1
+         the_stack->top[++(the_stack)->top] = number;
+a47 2
+  /* printf ("the_stack=%p, top=%d, oper='%c'\n",
+           the_stack, the_stack->top, oper);*/
+@
+
+
+1.2
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: crpn.c,v 1.1 2016-01-27 02:23:27-08 - - $
+d37 1
+a37 1
+            out.printf ("'%c': stack underflow\n", oper);
+d54 1
+a54 1
+            out.printf ("stack is empty\n");
+d57 1
+a57 1
+            out.printf ("%.15g\n", the_stack->numbers[pos]);
+a59 1
+  /* printf ("the_stack=%p, top=%d\n", the_stack, the_stack->top);*/
+a63 1
+  /* printf ("the_stack=%p, top=%d\n", the_stack, the_stack->top);*/
+a75 2
+  /* printf ("the_stack=%p, top=%d, oper=\"%s\"\n",*/
+           the_stack, the_stack->top, oper);
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 1
+a1 1
+// $Id: crpn.c,v 1.28 2014-04-08 15:23:19-07 - - $
+d36 12
+d49 1
+a49 1
+           the_stack, the_stack->top, oper);/*
+d53 8
+a60 1
+   printf ("the_stack=%p, top=%d\n", the_stack, the_stack->top);
+d64 2
+a65 1
+   printf ("the_stack=%p, top=%d\n", the_stack, the_stack->top);
+d69 10
+a78 1
+   printf ("the_stack=%p, top=%d, oper=\"%s\"\n",
+@

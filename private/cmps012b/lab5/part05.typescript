@@ -1,0 +1,57 @@
+Script started on Wed 10 Feb 2016 08:57:50 PM PST
+bash-4.2$ mk list1.c
+CSOURCE=list1.c EXECBIN=list1
++ cid + list1.c
++ checksource list1.c
++ tee list1.c.log
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
+list1.c: In function ‘main’:
+list1.c:15:7: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+       node *node = malloc (sizeof (struct node));
+       ^
+list1.c:15:20: warning: incompatible implicit declaration of built-in function ‘malloc’
+       node *node = malloc (sizeof (struct node));
+                    ^
+list1.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
++ set +x
+============================================================
+CSOURCE=malloc.c EXECBIN=malloc
++ cid + malloc.c
++ checksource malloc.c
++ tee malloc.c.log
++ gcc -g -O0 -Wall -Wextra -std=gnu99 malloc.c -o malloc -lm
+malloc.c: In function ‘main’:
+malloc.c:12:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+malloc.c:12:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
++ set +x
+============================================================
+CSOURCE=uninit.c EXECBIN=uninit
++ cid + uninit.c
++ checksource uninit.c
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
++ tee uninit.c.log
+uninit.c: In function ‘main’:
+uninit.c:6:15: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+               ^
+uninit.c:6:28: warning: unused parameter ‘argv’ [-Wunused-parameter]
+ int main (int argc, char **argv) {
+                            ^
+uninit.c:8:4: warning: ‘pointer’ is used uninitialized in this function [-Wuninitialized]
+    printf ("pointer=%p\n", pointer);
+    ^
+uninit.c:11:4: warning: ‘foo’ is used uninitialized in this function [-Wuninitialized]
+    printf ("foo=%d\n", foo);
+    ^
++ set +x
+============================================================
+bash-4.2$ exit
+exit
+
+Script done on Wed 10 Feb 2016 08:58:10 PM PST

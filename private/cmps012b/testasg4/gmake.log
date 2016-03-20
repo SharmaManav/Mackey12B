@@ -1,0 +1,7 @@
+flex -oscanner.c scanner.l
+gcc -g -O0 -Wall -Wextra -std=gnu11 -c scanner.c
+scanner.c: In function ‘yy_scan_bytes’:
+scanner.c:1760:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for ( i = 0; i < _yybytes_len; ++i )
+                 ^
+gcc -g -O0 -Wall -Wextra -std=gnu11 -o mydc debug.o stack.o bigint.o token.o main.o scanner.o

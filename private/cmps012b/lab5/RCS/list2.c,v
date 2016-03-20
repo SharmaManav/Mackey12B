@@ -1,0 +1,68 @@
+head	1.2;
+access;
+symbols;
+locks;
+comment	@ * @;
+
+
+1.2
+date	2016.02.11.05.25.40;	author -;	state -;
+branches;
+next	1.1;
+
+1.1
+date	2016.02.11.05.04.04;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@-
+@
+text
+@// $Id: list2.c,v 1.1 2016-02-10 21:04:04-08 - - $
+// Manav Sharma msharma7
+
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct node node;
+struct node {
+   char *word;
+   node *link;
+   node *head;
+};
+
+int main (int argc, char **argv) {
+   node *head;
+   for (int argi = 0; argi < 5; ++argi) {
+      node *node = malloc (sizeof (struct node));
+      assert (node != NULL);
+      node->word = argv[argi];
+      node->link = head;
+      head = node;
+   }
+   for (node *curr = head; curr->link != NULL; curr = curr->link) {
+      printf ("%p->node {word=%p->[%s], link=%p}\n",
+              curr, curr->word, curr->word, curr->link);
+   }
+   return 9;
+}
+@
+
+
+1.1
+log
+@-
+@
+text
+@d1 2
+a2 1
+// $Id: list1.c,v 1.1 2016-02-10 20:54:23-08 - - $
+@

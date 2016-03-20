@@ -1,0 +1,8 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting jarname.java
+jarname.java:
+     $Id: jarname.java,v 1.1 2015-12-11 17:06:45-08 - - $
+javac -Xlint jarname.java
+jar cfm jarname Manifest jarname.class
+chmod +x jarname
+rm -f jarname.class
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished jarname.java

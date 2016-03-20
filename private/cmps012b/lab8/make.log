@@ -1,0 +1,8 @@
+gcc -g -O0 -Wall -Wextra -std=gnu99 mstat.c -o mstat
+mstat.c: In function ‘main’:
+mstat.c:64:5: warning: implicit declaration of function ‘basename’ [-Wimplicit-function-declaration]
+     progname = basename (argv[0]);
+     ^
+mstat.c:64:14: warning: assignment makes pointer from integer without a cast
+     progname = basename (argv[0]);
+              ^

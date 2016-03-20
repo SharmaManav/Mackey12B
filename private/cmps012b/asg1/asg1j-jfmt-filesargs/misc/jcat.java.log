@@ -1,0 +1,8 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting jcat.java
+jcat.java:
+     $Id: jcat.java,v 1.1 2015-12-11 17:06:45-08 - - $
+javac -Xlint jcat.java
+jar cfm jcat Manifest jcat.class
+chmod +x jcat
+rm -f jcat.class
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished jcat.java

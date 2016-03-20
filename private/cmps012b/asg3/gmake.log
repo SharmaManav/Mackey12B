@@ -1,0 +1,9 @@
+echo Main-class: airport >Manifest
+jar cvfm airport Manifest airport.class treemap.class misc.class treemap\$tree.class
+added manifest
+adding: airport.class(in = 2477) (out= 1471)(deflated 40%)
+adding: treemap.class(in = 1873) (out= 996)(deflated 46%)
+adding: misc.class(in = 1881) (out= 1082)(deflated 42%)
+adding: treemap$tree.class(in = 402) (out= 286)(deflated 28%)
+rm Manifest
+chmod +x airport

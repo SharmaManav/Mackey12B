@@ -1,0 +1,4 @@
+#!/bin/sh
+# $Id: mk,v 1.1 2016-01-27 02:40:04-08 - - $
+# Manav Sharma
+gcc -g -O0 -Wall -Wextra -std=gnu11 crpn.c -o crpn

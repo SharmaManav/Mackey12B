@@ -1,0 +1,8 @@
+checksource nsort.c
+gcc -g -O0 -Wall -Wextra -std=gnu99 nsort.c -o nsort
+nsort.c: In function ‘main’:
+nsort.c:69:8: error: ‘opt’ undeclared (first use in this function)
+ while((opt = getopt(argc, argv, "d"))!= -1){
+        ^
+nsort.c:69:8: note: each undeclared identifier is reported only once for each function it appears in
+gmake: *** [nsort] Error 1

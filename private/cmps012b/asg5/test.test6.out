@@ -1,0 +1,29 @@
+24 words in the hash set
+63 size of the hash array
+   17 chains of size 1
+    2 chains of size 2
+    1 chains of size 3
+array[         0] =   3402586341 "steaks"
+array[         1] =   3147142226 "test3.in"
+array[         6] =     97205648 "misspelled"
+array[         7] =       116116 "usr"
+array[        11] =   3800931543 "plainly"
+array[        14] =   3188794406 "letter"
+array[        17] =   3147082644 "test1.in"
+array[        18] =   3058916928 "fooffoooofoo"
+array[        20] =   2170490494 "spellchk"
+array[        23] =   3426816794 "tolled"
+array[        28] =    113318569 "words"
+array[        32] =         2363 "Id"
+array[        33] =      3083190 "dict"
+array[        35] =    742740593 "chequer"
+                  =    108407411 "revue"
+array[        36] =       104616 "its"
+array[        41] =      3125534 "ever"
+array[        42] =   3000332139 "errors"
+                  =    109413654 "shows"
+array[        46] =    293797881 "user.dict"
+                  =   2170496442 "spelling"
+                  =   2448399064 "# $Id: user.dict,v 1.4 2013-03-11 12:56:16-07 - - $"
+array[        49] =    839444528 "marques"
+array[        59] =   3804391866 "pleased"

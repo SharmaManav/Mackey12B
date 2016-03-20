@@ -1,0 +1,8 @@
+#!/bin/bash
+# $Id: testhello,v 1.1 2016-01-14 23:54:43-08 - - $
+# Manav Sharma msharma7
+
+hello 1>test1.out 2>test1.err ; echo $?>test1.status
+hello world 1>test2.out 2>test2.err ; echo $?>test2.status
+
+

@@ -1,0 +1,36 @@
+::::::::::::::::::::::::::::::::
+../.score/test1.rpn
+::::::::::::::::::::::::::::::::
+     1	# $Id: test1.rpn,v 1.2 2015-01-26 13:26:15-08 - - $
+     2	# tests for simple operators
+     3	# Note that # starts a comment to end of line.
+     4	
+     5	34 .3 + 23 8 * - ; @
+     6	44 0 / ; @
+     7	2 4 / ; @
+::::::::::::::::::::::::::::::::
+ctest1.output
+::::::::::::::::::::::::::::::::
+     1	the_stack=0x7ffee0fb57f0, top=-1, number=34
+     2	the_stack=0x7ffee0fb57f0, top=-1, number=0.3
+     3	the_stack=0x7ffee0fb57f0, top=-1, oper="+"
+     4	the_stack=0x7ffee0fb57f0, top=-1, number=23
+     5	the_stack=0x7ffee0fb57f0, top=-1, number=8
+     6	the_stack=0x7ffee0fb57f0, top=-1, oper="*"
+     7	the_stack=0x7ffee0fb57f0, top=-1, oper="-"
+     8	the_stack=0x7ffee0fb57f0, top=-1, oper=";"
+     9	the_stack=0x7ffee0fb57f0, top=-1, oper="@"
+    10	the_stack=0x7ffee0fb57f0, top=-1, number=44
+    11	the_stack=0x7ffee0fb57f0, top=-1, number=0
+    12	the_stack=0x7ffee0fb57f0, top=-1, oper="/"
+    13	the_stack=0x7ffee0fb57f0, top=-1, oper=";"
+    14	the_stack=0x7ffee0fb57f0, top=-1, oper="@"
+    15	the_stack=0x7ffee0fb57f0, top=-1, number=2
+    16	the_stack=0x7ffee0fb57f0, top=-1, number=4
+    17	the_stack=0x7ffee0fb57f0, top=-1, oper="/"
+    18	the_stack=0x7ffee0fb57f0, top=-1, oper=";"
+    19	the_stack=0x7ffee0fb57f0, top=-1, oper="@"
+::::::::::::::::::::::::::::::::
+ctest1.status
+::::::::::::::::::::::::::::::::
+     1	STATUS = 0

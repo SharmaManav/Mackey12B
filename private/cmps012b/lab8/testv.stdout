@@ -1,0 +1,21 @@
+100644	0 Mar  2 15:25 checksource.log
+100644	413 Mar  2 14:25 Makefile
+100644	363 Mar  2 15:25 make.log
+100700	245 Mar  2 12:38 mk.build
+100700	493 Mar  2 12:38 mk.test
+100755	17631 Mar  2 15:25 mstat
+100644	1827 Mar  2 15:25 mstat.c
+100700	585 Mar  2 15:04 mstat.perl
+100644	152 Mar  2 15:25 partnercheck.log
+100644	9 Mar  2 15:25 test1.status
+100644	0 Mar  2 15:25 test1.stderr
+100644	133 Mar  2 15:25 test1.stdout
+100644	11 Mar  2 15:25 test2.status
+100644	0 Mar  2 15:25 test2.stderr
+100644	32 Mar  2 15:25 test2.stdout
+100644	9 Mar  2 15:25 test3.status
+100644	0 Mar  2 15:25 test3.stderr
+100644	1971 Mar  2 15:25 test3.stdout
+120755	81 Mar  2 13:29 testdir /afs/cats.ucsc.edu/courses/cmps012b-wm/Labs-cmps012m/lab8c-unixprog-stat/testdata
+100644	475 Mar  2 15:25 testv.stderr
+100644	0 Mar  2 15:25 testv.stdout
