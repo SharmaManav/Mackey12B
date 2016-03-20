@@ -1,2 +1,13 @@
 // Manav Sharma
 // CMPS-012B • Program 2 • Xref and Linked Lists
+/*
+In this assignment you will implement a singly-linked linear list of
+words to implement a cross referencing utility.  The words will be
+keys, and each will contain a queue of line numbers.  The queue will
+also be implemented as a linear linked list.  Your queue operations
+must run in $ O ( 1 ) $ time, but your map (dictionary) operations
+will run in $ O ( n ) $ time instead of the usually-expected $ O ( log
+sub 2 n ) $ time.  Thus, if your entire program scans $n$ words in a
+file, it will run at speed $ O ( n sup 2 ) $ instead of $ O ( n log
+sub 2 n ) $ time.
+*/
